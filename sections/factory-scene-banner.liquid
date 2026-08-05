@@ -1,0 +1,406 @@
+<div
+  class="factory_scene_section{% if section.settings.layout_width == 'page' %} page-width{% endif %}"
+  style="
+    --desktop-height: {{ section.settings.desktop_height }}px;
+    --mobile-image-height: {{ section.settings.mobile_image_height }}px;
+    --content-width: {{ section.settings.content_width }}px;
+    --content-position: {{ section.settings.content_position }};
+    --desktop-text-align: {{ section.settings.desktop_text_alignment }};
+    --mobile-text-align: {{ section.settings.mobile_text_alignment }};
+    --title-size: {{ section.settings.title_size }}px;
+    --mobile-title-size: {{ section.settings.mobile_title_size }}px;
+    --text-color: {{ section.settings.text_color }};
+    --overlay-color: {{ section.settings.overlay_color }};
+    --overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    --content-background: {{ section.settings.content_background }};
+    --image-position: {{ section.settings.image_position }};
+    --border-radius: {{ section.settings.border_radius }}px;
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="banner">
+    <div class="content">
+      <div class="content_frame page-width">
+        <div class="copy">
+          {%- if section.settings.title != blank -%}
+            <h2 class="title inline-richtext">{{ section.settings.title }}</h2>
+          {%- endif -%}
+
+          {%- if section.settings.description != blank -%}
+            <div class="description rte">{{ section.settings.description }}</div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+
+    <div class="media">
+      {%- if section.settings.image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 3840
+          | image_tag:
+            class: 'image',
+            widths: '750, 1100, 1500, 1920, 2560, 3200, 3840',
+            sizes: '100vw'
+        }}
+      {%- else -%}
+        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder' }}
+      {%- endif -%}
+    </div>
+
+    <div class="overlay" aria-hidden="true"></div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .factory_scene_section {
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+  }
+
+  .factory_scene_section .banner {
+    position: relative;
+    min-height: var(--desktop-height);
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background: var(--content-background);
+    isolation: isolate;
+  }
+
+  .factory_scene_section .media {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .factory_scene_section .media .image,
+  .factory_scene_section .media .placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--image-position);
+  }
+
+  .factory_scene_section .overlay {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: var(--overlay-color);
+    opacity: var(--overlay-opacity);
+    pointer-events: none;
+  }
+
+  .factory_scene_section .content {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    color: var(--text-color);
+  }
+
+  .factory_scene_section .content_frame {
+    display: flex;
+    align-items: center;
+    justify-content: var(--content-position);
+    height: 100%;
+  }
+
+  .factory_scene_section .copy {
+    width: min(100%, var(--content-width));
+    text-align: var(--desktop-text-align);
+  }
+
+  .factory_scene_section .title {
+    margin: 0;
+    color: inherit;
+    font-size: var(--title-size);
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  .factory_scene_section .description {
+    margin-top: 1.6rem;
+    color: inherit;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .factory_scene_section .description > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .factory_scene_section .banner {
+      display: flex;
+      min-height: 0;
+      flex-direction: column;
+    }
+
+    .factory_scene_section .content {
+      position: relative;
+      inset: auto;
+      order: 1;
+      color: var(--text-color);
+      background: var(--content-background);
+    }
+
+    .factory_scene_section .content_frame {
+      display: block;
+      height: auto;
+      padding-top: 3.2rem;
+      padding-bottom: 3.2rem;
+    }
+
+    .factory_scene_section .copy {
+      width: 100%;
+      text-align: var(--mobile-text-align);
+    }
+
+    .factory_scene_section .title {
+      font-size: var(--mobile-title-size);
+    }
+
+    .factory_scene_section .media {
+      position: relative;
+      inset: auto;
+      order: 2;
+      height: var(--mobile-image-height);
+      flex: 0 0 var(--mobile-image-height);
+    }
+
+    .factory_scene_section .overlay {
+      display: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "工厂实景横幅",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "图片与尺寸"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "工厂实景图片"
+    },
+    {
+      "type": "select",
+      "id": "layout_width",
+      "label": "区域宽度",
+      "options": [
+        {
+          "value": "page",
+          "label": "版心宽度"
+        },
+        {
+          "value": "full",
+          "label": "全屏宽度"
+        }
+      ],
+      "default": "page"
+    },
+    {
+      "type": "range",
+      "id": "desktop_height",
+      "min": 240,
+      "max": 700,
+      "step": 10,
+      "unit": "px",
+      "label": "PC 端图片高度",
+      "default": 360
+    },
+    {
+      "type": "range",
+      "id": "mobile_image_height",
+      "min": 180,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "移动端图片高度",
+      "default": 240
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "图片焦点位置",
+      "options": [
+        {
+          "value": "left center",
+          "label": "左侧"
+        },
+        {
+          "value": "center center",
+          "label": "居中"
+        },
+        {
+          "value": "right center",
+          "label": "右侧"
+        }
+      ],
+      "default": "center center"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "圆角",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "文案"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "标题",
+      "default": "Professional production, reliable delivery"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "描述",
+      "default": "<p>Explore our factory, production capabilities, quality standards, and fast turnaround service.</p>"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "PC 端文案位置",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "左侧"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        },
+        {
+          "value": "flex-end",
+          "label": "右侧"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "text_alignment",
+      "id": "desktop_text_alignment",
+      "label": "PC 端文字对齐",
+      "default": "center"
+    },
+    {
+      "type": "text_alignment",
+      "id": "mobile_text_alignment",
+      "label": "移动端文字对齐",
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "min": 300,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "label": "文案最大宽度",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 24,
+      "max": 64,
+      "step": 2,
+      "unit": "px",
+      "label": "PC 端标题字号",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "mobile_title_size",
+      "min": 20,
+      "max": 44,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端标题字号",
+      "default": 28
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "content_background",
+      "label": "移动端文案背景颜色",
+      "default": "#f3f3f3"
+    },
+    {
+      "type": "header",
+      "content": "图片遮罩"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "遮罩颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "label": "遮罩透明度",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "区域间距"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "顶部间距",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "底部间距",
+      "default": 48
+    }
+  ],
+  "presets": [
+    {
+      "name": "工厂实景横幅"
+    }
+  ]
+}
+{% endschema %}
