@@ -1,0 +1,86 @@
+{% doc %}
+Renders a product card for the tabbed product carousel.
+
+@param {product} product - Product displayed in the card.
+@param {string} section_id - Parent section ID.
+@param {string} block_id - Parent tab block ID.
+@param {number} card_index - Product position inside the tab.
+
+@example
+{% render 'tabbed-product-card', product: product, section_id: section.id, block_id: block.id, card_index: forloop.index %}
+{% enddoc %}
+
+{%- liquid
+  assign card_variant = product.selected_or_first_available_variant
+  assign card_tag = product.tags | first
+  assign product_form_id = 'TabbedProductForm-' | append: section_id | append: '-' | append: block_id | append: '-' | append: card_index
+-%}
+
+<article class="product_card">
+  <a class="media" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
+    {%- if product.featured_image != blank -%}
+      {{
+        product.featured_image
+        | image_url: width: 900
+        | image_tag:
+          class: 'image',
+          widths: '240, 360, 480, 720, 900',
+          sizes: '(min-width: 990px) 22vw, (min-width: 750px) 42vw, 82vw',
+          loading: 'lazy'
+      }}
+    {%- else -%}
+      {{ 'product-1' | placeholder_svg_tag: 'placeholder' }}
+    {%- endif -%}
+  </a>
+
+  <div class="information">
+    {%- if card_tag != blank -%}
+      <span class="tag">{{ card_tag | escape }}</span>
+    {%- endif -%}
+
+    <a class="title" href="{{ product.url }}">{{ product.title | escape }}</a>
+
+    {%- if product.description != blank -%}
+      <p class="product_description">{{ product.description | strip_html | truncate: 90 }}</p>
+    {%- endif -%}
+
+    <div class="footer">
+      <div class="prices">
+        {%- if card_variant.compare_at_price > card_variant.price -%}
+          <s class="compare_price">{{ card_variant.compare_at_price | money }}</s>
+        {%- endif -%}
+        <span class="final_price">{{ card_variant.price | money }}</span>
+      </div>
+
+      <product-form data-hide-errors="true">
+        {%- form 'product', product, id: product_form_id, class: 'product_form' -%}
+          <input type="hidden" name="id" value="{{ card_variant.id }}">
+          <input type="hidden" name="quantity" value="1">
+          <button
+            class="add_button"
+            type="submit"
+            name="add"
+            aria-label="{{ 'products.product.add_to_cart' | t }}: {{ product.title | escape }}"
+            {% unless card_variant.available %}
+              disabled
+              aria-disabled="true"
+            {% endunless %}
+          >
+            <span class="visually-hidden">
+              {%- if card_variant.available -%}
+                {{- 'products.product.add_to_cart' | t -}}
+              {%- else -%}
+                {{- 'products.product.sold_out' | t -}}
+              {%- endif -%}
+            </span>
+            <span class="sold-out-message hidden">{{ 'products.product.sold_out' | t }}</span>
+            <svg class="cart_icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M7.5 8.5V7a4.5 4.5 0 0 1 9 0v1.5M5.2 8.5h13.6l1 12H4.2l1-12Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/>
+            </svg>
+            {%- render 'loading-spinner' -%}
+          </button>
+        {%- endform -%}
+      </product-form>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,577 @@
+{% render 'swiper-assets' %}
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'tabbed-product-carousel.js' | asset_url }}" defer="defer"></script>
+
+<tabbed-product-carousel
+  class="tabbed_product_carousel"
+  style="
+    --section-background: {{ section.settings.section_background }};
+    --tab-color: {{ section.settings.tab_color }};
+    --active-tab-color: {{ section.settings.active_tab_color }};
+    --indicator-color: {{ section.settings.indicator_color }};
+    --card-background: {{ section.settings.card_background }};
+    --image-background: {{ section.settings.image_background }};
+    --card-radius: {{ section.settings.card_radius }}px;
+    --tag-color: {{ section.settings.tag_color }};
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="carousel_container page-width">
+    {%- if section.blocks.size > 0 -%}
+      <div class="tabs_scroller">
+        <div class="tabs" role="tablist" aria-label="{{ section.settings.tabs_label | escape }}">
+          {%- for block in section.blocks -%}
+            <button
+              id="Tab-{{ section.id }}-{{ block.id }}"
+              class="tab{% if forloop.first %} is-active{% endif %}"
+              type="button"
+              role="tab"
+              aria-controls="Panel-{{ section.id }}-{{ block.id }}"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+              tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
+              data-tab-button
+              data-block-id="{{ block.id }}"
+              {{ block.shopify_attributes }}
+            >
+              {{ block.settings.title | escape }}
+            </button>
+          {%- endfor -%}
+
+          <span class="indicator" data-tab-indicator aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="panels">
+        {%- for block in section.blocks -%}
+          <div
+            id="Panel-{{ section.id }}-{{ block.id }}"
+            class="panel{% if forloop.first %} is-active{% endif %}"
+            role="tabpanel"
+            aria-labelledby="Tab-{{ section.id }}-{{ block.id }}"
+            data-tab-panel
+            {% unless forloop.first %}
+              hidden
+            {% endunless %}
+          >
+            <div class="swiper product_swiper" data-product-swiper>
+              <div class="swiper-wrapper">
+                {%- if block.settings.products != blank -%}
+                  {%- for product in block.settings.products -%}
+                    <div class="swiper-slide">
+                      {%- render 'tabbed-product-card',
+                        product: product,
+                        section_id: section.id,
+                        block_id: block.id,
+                        card_index: forloop.index
+                      -%}
+                    </div>
+                  {%- endfor -%}
+                {%- else -%}
+                  {%- for placeholder_index in (1..4) -%}
+                    <div class="swiper-slide">
+                      <article class="product_card placeholder_card">
+                        <div class="media">
+                          {{ 'product-' | append: placeholder_index | placeholder_svg_tag: 'placeholder' }}
+                        </div>
+                        <div class="information">
+                          <span class="tag">Product tag</span>
+                          <span class="title">Choose products for this tab</span>
+                          <p class="product_description">Product information will appear here.</p>
+                          <div class="footer">
+                            <div class="prices">
+                              <s class="compare_price">{{ 4999 | money }}</s>
+                              <span class="final_price">{{ 3999 | money }}</span>
+                            </div>
+                            <button class="add_button" type="button" disabled aria-label="{{ 'products.product.add_to_cart' | t }}">
+                              <svg class="cart_icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M7.5 8.5V7a4.5 4.5 0 0 1 9 0v1.5M5.2 8.5h13.6l1 12H4.2l1-12Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  {%- endfor -%}
+                {%- endif -%}
+              </div>
+
+              <button
+                class="navigation previous"
+                type="button"
+                data-swiper-previous
+                aria-label="{{ 'general.slider.previous_slide' | t }}"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="m14.5 5-7 7 7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                </svg>
+              </button>
+              <button
+                class="navigation next"
+                type="button"
+                data-swiper-next
+                aria-label="{{ 'general.slider.next_slide' | t }}"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="m9.5 5 7 7-7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</tabbed-product-carousel>
+
+{% stylesheet %}
+  .tabbed_product_carousel {
+    display: block;
+    overflow: hidden;
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    background: var(--section-background);
+  }
+
+  .tabbed_product_carousel .tabs_scroller {
+    overflow-x: auto;
+    margin-bottom: 2.4rem;
+    scrollbar-width: none;
+  }
+
+  .tabbed_product_carousel .tabs_scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tabbed_product_carousel .tabs {
+    position: relative;
+    display: inline-flex;
+    gap: 3.6rem;
+    min-width: max-content;
+    padding-bottom: 1.2rem;
+  }
+
+  .tabbed_product_carousel .tab {
+    padding: 0;
+    border: 0;
+    color: var(--tab-color);
+    background: transparent;
+    font: inherit;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .tabbed_product_carousel .tab.is-active {
+    color: var(--active-tab-color);
+  }
+
+  .tabbed_product_carousel .tab:focus-visible {
+    outline: 0.2rem solid currentColor;
+    outline-offset: 0.4rem;
+  }
+
+  .tabbed_product_carousel .indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.3rem;
+    border-radius: 999px;
+    background: var(--indicator-color);
+    transform: translate3d(0, 0, 0);
+    transition: width 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .tabbed_product_carousel .panel[hidden] {
+    display: none;
+  }
+
+  .tabbed_product_carousel .panel.is-active {
+    animation: tabbed-product-panel-in 0.35s ease both;
+  }
+
+  .tabbed_product_carousel .product_swiper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tabbed_product_carousel .swiper-slide {
+    height: auto;
+  }
+
+  .tabbed_product_carousel .product_card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--card-radius);
+    background: var(--card-background);
+  }
+
+  .tabbed_product_carousel .product_card .media {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 1.6rem;
+    overflow: hidden;
+    background: var(--image-background);
+  }
+
+  .tabbed_product_carousel .product_card .image,
+  .tabbed_product_carousel .product_card .placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.35s ease;
+  }
+
+  .tabbed_product_carousel .product_card .media:hover .image {
+    transform: scale(1.035);
+  }
+
+  .tabbed_product_carousel .information {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.6rem;
+  }
+
+  .tabbed_product_carousel .tag {
+    align-self: flex-start;
+    margin-bottom: 0.8rem;
+    color: var(--tag-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .tabbed_product_carousel .title {
+    display: -webkit-box;
+    overflow: hidden;
+    color: rgb(var(--color-foreground));
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-decoration: none;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .tabbed_product_carousel a.title:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+
+  .tabbed_product_carousel .product_description {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: 0.8rem 0 0;
+    color: rgba(var(--color-foreground), 0.65);
+    font-size: 1.3rem;
+    line-height: 1.4;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .tabbed_product_carousel .footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.2rem;
+    margin-top: auto;
+    padding-top: 1.6rem;
+  }
+
+  .tabbed_product_carousel .prices {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  .tabbed_product_carousel .compare_price {
+    color: rgba(var(--color-foreground), 0.5);
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+
+  .tabbed_product_carousel .final_price {
+    color: rgb(var(--color-foreground));
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .tabbed_product_carousel .product_form {
+    margin: 0;
+  }
+
+  .tabbed_product_carousel .add_button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    color: #111111;
+    background: #f2f3f4;
+    cursor: pointer;
+    transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .tabbed_product_carousel .add_button:not(:disabled):hover {
+    color: #ffffff;
+    background: #111111;
+    transform: translateY(-0.2rem);
+  }
+
+  .tabbed_product_carousel .add_button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+  }
+
+  .tabbed_product_carousel .add_button .cart_icon {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .tabbed_product_carousel .add_button.loading .cart_icon {
+    opacity: 0;
+  }
+
+  .tabbed_product_carousel .add_button .loading__spinner {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    width: 1.8rem;
+    transform: translate(-50%, -50%);
+  }
+
+  .tabbed_product_carousel .navigation {
+    position: absolute;
+    z-index: 2;
+    top: 43%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    color: #ffffff;
+    background: rgba(17, 17, 17, 0.38);
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+  }
+
+  .tabbed_product_carousel .navigation:hover {
+    background: rgba(17, 17, 17, 0.7);
+  }
+
+  .tabbed_product_carousel .navigation svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .tabbed_product_carousel .navigation.previous {
+    left: 0.8rem;
+  }
+
+  .tabbed_product_carousel .navigation.next {
+    right: 0.8rem;
+  }
+
+  .tabbed_product_carousel .navigation.swiper-button-disabled {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  @keyframes tabbed-product-panel-in {
+    from {
+      opacity: 0;
+      transform: translateY(0.8rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .tabbed_product_carousel .tabs {
+      gap: 2.4rem;
+    }
+
+    .tabbed_product_carousel .tabs_scroller {
+      margin-bottom: 1.8rem;
+    }
+
+    .tabbed_product_carousel .title {
+      font-size: 1.6rem;
+    }
+
+    .tabbed_product_carousel .navigation {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Tab 产品轮播",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "tabs_label",
+      "label": "Tab 列表辅助名称",
+      "default": "产品分类"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "区域背景颜色",
+      "default": "#f4f5f6"
+    },
+    {
+      "type": "color",
+      "id": "tab_color",
+      "label": "Tab 默认文字颜色",
+      "default": "#8b8b8b"
+    },
+    {
+      "type": "color",
+      "id": "active_tab_color",
+      "label": "Tab 激活文字颜色",
+      "default": "#24c66a"
+    },
+    {
+      "type": "color",
+      "id": "indicator_color",
+      "label": "Tab 横条颜色",
+      "default": "#24c66a"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "商品卡片背景颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "image_background",
+      "label": "商品图片背景颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "tag_color",
+      "label": "商品 Tag 颜色",
+      "default": "#24c66a"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "商品卡片圆角",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "顶部间距",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "底部间距",
+      "default": 48
+    }
+  ],
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "产品 Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tab 文案",
+          "default": "产品分类"
+        },
+        {
+          "type": "product_list",
+          "id": "products",
+          "label": "产品",
+          "limit": 12
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tab 产品轮播",
+      "blocks": [
+        {
+          "type": "tab",
+          "settings": {
+            "title": "Multicolor Printer"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "title": "Mega Printer"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "title": "Hyper Speed"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "title": "DIY"
+          }
+        },
+        {
+          "type": "tab",
+          "settings": {
+            "title": "Printer Combo"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

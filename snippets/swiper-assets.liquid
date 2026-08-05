@@ -1,0 +1,8 @@
+{% doc %}
+Loads local Swiper CSS and JS from theme assets.
+@example
+{% render 'swiper-assets' %}
+{% enddoc %}
+
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
