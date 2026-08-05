@@ -13,7 +13,7 @@ theme watch
 git add --renormalize .
 
 # 开发已经存在的指定主题 id
-shopify theme dev -t 196470178161 --store=desceci-2.myshopify.com
+shopify theme dev -t 196474601841 --store=desceci-2.myshopify.com
 
 
 */
