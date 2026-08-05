@@ -1,42 +1,62 @@
 {
   "sections": {
     "image_banner": {
-      "type": "image-banner",
+      "type": "image-text-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "feature-quality": {
+          "type": "feature",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "icon": "shopify://shop_images/2.jpg",
+            "text": "Premium quality"
           }
         },
-        "button": {
-          "type": "buttons",
+        "feature-shipping": {
+          "type": "feature",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "icon": "shopify://shop_images/2.jpg",
+            "text": "Same Day Shipping"
+          }
+        },
+        "feature-no-minimum": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/2.jpg",
+            "text": "No Minimum Order"
+          }
+        },
+        "feature-turnaround": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/2.jpg",
+            "text": "Fast Turnaround"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "feature-quality",
+        "feature-shipping",
+        "feature-no-minimum",
+        "feature-turnaround"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "desktop_height": 640,
+        "mobile_height": 560,
+        "desktop_horizontal_position": "flex-start",
+        "desktop_vertical_position": "center",
+        "desktop_text_alignment": "left",
+        "content_width": 35,
+        "title": "DTF Dallas | DTF Transfers & Custom Tshirt Printing",
+        "description": "<p>Professional quality Direct-to-Film transfers, custom t-shirts and UV stickers. Fast turnaround, unbeatable prices.</p>",
+        "text_color": "#121212",
+        "title_size": 40,
+        "mobile_title_size": 32,
+        "button_label_1": "跳转 1",
+        "button_link_1": "",
+        "button_label_2": "跳转 2",
+        "button_link_2": "",
+        "button_background": "#ffbd1a",
+        "button_text_color": "#121212",
+        "button_radius": 40
       }
     },
     "featured_collection": {

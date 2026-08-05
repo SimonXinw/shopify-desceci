@@ -1,0 +1,510 @@
+{%- liquid
+  assign image_loading = 'lazy'
+  assign fetch_priority = 'auto'
+
+  if section.index == 1
+    assign image_loading = 'eager'
+    assign fetch_priority = 'high'
+  endif
+-%}
+
+<div
+  class="image_text_banner"
+  style="
+    --desktop-height: {{ section.settings.desktop_height }}px;
+    --mobile-height: {{ section.settings.mobile_height }}px;
+    --content-width: {{ section.settings.content_width }}%;
+    --desktop-justify: {{ section.settings.desktop_horizontal_position }};
+    --desktop-align: {{ section.settings.desktop_vertical_position }};
+    --desktop-text-align: {{ section.settings.desktop_text_alignment }};
+    --title-size: {{ section.settings.title_size }}px;
+    --mobile-title-size: {{ section.settings.mobile_title_size }}px;
+    --text-color: {{ section.settings.text_color }};
+    --fallback-background: {{ section.settings.fallback_background }};
+    --button-background: {{ section.settings.button_background }};
+    --button-text-color: {{ section.settings.button_text_color }};
+    --button-radius: {{ section.settings.button_radius }}px;
+  "
+>
+  <div class="background">
+    {%- if section.settings.background_image != blank -%}
+      {{
+        section.settings.background_image
+        | image_url: width: 3840
+        | image_tag:
+          class: 'image',
+          widths: '750, 1100, 1500, 1920, 2560, 3200, 3840',
+          sizes: '100vw',
+          loading: image_loading,
+          fetchpriority: fetch_priority
+      }}
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder' }}
+    {%- endif -%}
+  </div>
+
+  <div class="container page-width">
+    <div class="content">
+      {%- if section.settings.title != blank -%}
+        <h2 class="title inline-richtext">{{ section.settings.title }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <div class="description rte">{{ section.settings.description }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.button_label_1 != blank or section.settings.button_label_2 != blank -%}
+        <div class="actions">
+          {%- if section.settings.button_label_1 != blank -%}
+            <a
+              class="action"
+              {% if section.settings.button_link_1 != blank %}
+                href="{{ section.settings.button_link_1 }}"
+              {% else %}
+                role="link"
+                aria-disabled="true"
+              {% endif %}
+            >
+              {{ section.settings.button_label_1 | escape }}
+            </a>
+          {%- endif -%}
+
+          {%- if section.settings.button_label_2 != blank -%}
+            <a
+              class="action"
+              {% if section.settings.button_link_2 != blank %}
+                href="{{ section.settings.button_link_2 }}"
+              {% else %}
+                role="link"
+                aria-disabled="true"
+              {% endif %}
+            >
+              {{ section.settings.button_label_2 | escape }}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <div class="features">
+          {%- for block in section.blocks -%}
+            <div class="feature" {{ block.shopify_attributes }}>
+              {%- if block.settings.icon != blank -%}
+                {{
+                  block.settings.icon
+                  | image_url: width: 160
+                  | image_tag:
+                    class: 'icon',
+                    widths: '40, 80, 120, 160',
+                    sizes: '48px',
+                    loading: 'lazy'
+                }}
+              {%- endif -%}
+
+              {%- if block.settings.text != blank -%}
+                <div class="feature_text">{{ block.settings.text }}</div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .image_text_banner {
+    position: relative;
+    width: 100%;
+    min-height: var(--desktop-height);
+    overflow: hidden;
+    isolation: isolate;
+    color: var(--text-color);
+    background: var(--fallback-background);
+  }
+
+  .image_text_banner .background {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .image_text_banner .background .image,
+  .image_text_banner .background .placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image_text_banner .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: var(--desktop-align);
+    justify-content: var(--desktop-justify);
+    width: 100%;
+    min-height: var(--desktop-height);
+  }
+
+  .image_text_banner .content {
+    width: var(--content-width);
+    max-width: 100%;
+    text-align: var(--desktop-text-align);
+  }
+
+  .image_text_banner .title {
+    margin: 0;
+    color: inherit;
+    font-size: var(--title-size);
+    font-weight: 700;
+    line-height: 1.08;
+  }
+
+  .image_text_banner .description {
+    margin-top: 1.6rem;
+    color: inherit;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .image_text_banner .description > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .image_text_banner .actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: var(--desktop-justify);
+    gap: 1.2rem;
+    margin-top: 2.4rem;
+  }
+
+  .image_text_banner .action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.4rem;
+    padding: 1rem 2rem;
+    border-radius: var(--button-radius);
+    color: var(--button-text-color);
+    background: var(--button-background);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .image_text_banner .action:hover {
+    color: var(--button-text-color);
+    opacity: 0.85;
+  }
+
+  .image_text_banner .action[aria-disabled='true'] {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  .image_text_banner .features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-top: 2.4rem;
+  }
+
+  .image_text_banner .feature {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.8rem;
+    min-width: 0;
+  }
+
+  .image_text_banner .feature .icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    object-fit: contain;
+  }
+
+  .image_text_banner .feature_text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  @media screen and (max-width: 749px) {
+    .image_text_banner {
+      min-height: var(--mobile-height);
+    }
+
+    .image_text_banner .container {
+      align-items: center;
+      justify-content: center;
+      min-height: var(--mobile-height);
+    }
+
+    .image_text_banner .content {
+      width: 100%;
+      text-align: center;
+    }
+
+    .image_text_banner .title {
+      font-size: var(--mobile-title-size);
+    }
+
+    .image_text_banner .actions,
+    .image_text_banner .features {
+      justify-content: center;
+    }
+
+    .image_text_banner .feature {
+      justify-content: center;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "图片文字横幅",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "背景"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景图片"
+    },
+    {
+      "type": "color",
+      "id": "fallback_background",
+      "label": "无图片时的背景颜色",
+      "default": "#f3f3f3"
+    },
+    {
+      "type": "range",
+      "id": "desktop_height",
+      "min": 400,
+      "max": 900,
+      "step": 10,
+      "unit": "px",
+      "label": "PC 端高度",
+      "default": 640
+    },
+    {
+      "type": "range",
+      "id": "mobile_height",
+      "min": 360,
+      "max": 800,
+      "step": 10,
+      "unit": "px",
+      "label": "移动端高度",
+      "default": 560
+    },
+    {
+      "type": "header",
+      "content": "内容布局"
+    },
+    {
+      "type": "select",
+      "id": "desktop_horizontal_position",
+      "label": "PC 端水平位置",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "左侧"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        },
+        {
+          "value": "flex-end",
+          "label": "右侧"
+        }
+      ],
+      "default": "flex-start"
+    },
+    {
+      "type": "select",
+      "id": "desktop_vertical_position",
+      "label": "PC 端垂直位置",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "顶部"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        },
+        {
+          "value": "flex-end",
+          "label": "底部"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "text_alignment",
+      "id": "desktop_text_alignment",
+      "label": "PC 端文字对齐",
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "min": 25,
+      "max": 60,
+      "step": 1,
+      "unit": "%",
+      "label": "PC 端内容宽度",
+      "default": 35
+    },
+    {
+      "type": "header",
+      "content": "文字"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "标题",
+      "default": "DTF Dallas | DTF Transfers & Custom Tshirt Printing"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "描述",
+      "default": "<p>Professional quality Direct-to-Film transfers, custom t-shirts and UV stickers. Fast turnaround, unbeatable prices.</p>"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "label": "PC 端标题字号",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mobile_title_size",
+      "min": 20,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端标题字号",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "按钮"
+    },
+    {
+      "type": "text",
+      "id": "button_label_1",
+      "label": "按钮 1 文案",
+      "default": "跳转 1"
+    },
+    {
+      "type": "url",
+      "id": "button_link_1",
+      "label": "按钮 1 链接"
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "按钮 2 文案",
+      "default": "跳转 2"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "按钮 2 链接"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "按钮背景颜色",
+      "default": "#ffbd1a"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "按钮文字颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "button_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "按钮圆角",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "图标文案"
+    }
+  ],
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "图标文案",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "图标"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "文案",
+          "default": "Same Day Shipping"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "图片文字横幅",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "text": "Premium quality"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text": "Same Day Shipping"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

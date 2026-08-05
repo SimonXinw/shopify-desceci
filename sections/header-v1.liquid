@@ -97,12 +97,24 @@
 
 {%- style -%}
   .header-v1 {
+    min-height: {{ section.settings.mobile_nav_height }}px;
     padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 1.6rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
   }
 
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+    {%- if section.settings.sticky_header_type != 'none' -%}
+      top: {{ section.settings.sticky_top }}px;
+    {%- endif -%}
+  }
+
+  .section-header.shopify-section-header-sticky {
+    top: {{ section.settings.sticky_top }}px;
+  }
+
+  .section-header.shopify-section-header-hidden.menu-open {
+    top: {{ section.settings.sticky_top }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -113,6 +125,7 @@
 
   @media screen and (min-width: 990px) {
     .header-v1 {
+      min-height: {{ section.settings.desktop_nav_height }}px;
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
@@ -589,8 +602,19 @@
           "label": "t:sections.header.settings.sticky_header_type.options__4.label"
         }
       ],
-      "default": "on-scroll-up",
+      "default": "always",
       "label": "t:sections.header.settings.sticky_header_type.label"
+    },
+    {
+      "type": "range",
+      "id": "sticky_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Sticky Top",
+      "info": "吸顶时距离顶部的偏移，PC 和移动端共用，默认 0。需配合 Sticky header 开启使用。",
+      "default": 0
     },
     {
       "type": "checkbox",
@@ -655,6 +679,30 @@
     },
     {
       "type": "header",
+      "content": "导航高度"
+    },
+    {
+      "type": "range",
+      "id": "mobile_nav_height",
+      "min": 50,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端导航高度",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "desktop_nav_height",
+      "min": 50,
+      "max": 160,
+      "step": 2,
+      "unit": "px",
+      "label": "PC 端导航高度",
+      "default": 80
+    },
+    {
+      "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
     },
     {
@@ -665,7 +713,7 @@
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
-      "default": 20
+      "default": 0
     },
     {
       "type": "range",
@@ -675,7 +723,7 @@
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
-      "default": 20
+      "default": 0
     }
   ],
   "blocks": [
