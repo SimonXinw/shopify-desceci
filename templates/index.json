@@ -124,8 +124,10 @@
         "image_background": "#ffffff",
         "tag_color": "#24c66a",
         "card_radius": 16,
-        "padding_top": 48,
-        "padding_bottom": 48
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20
       }
     },
     "factory_scene": {
@@ -148,8 +150,52 @@
         "content_background": "#f3f3f3",
         "overlay_color": "#000000",
         "overlay_opacity": 0,
-        "padding_top": 48,
-        "padding_bottom": 48
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20
+      }
+    },
+    "printing_service": {
+      "type": "printing-service-showcase",
+      "blocks": {
+        "text-order": {
+          "type": "text_item",
+          "settings": {
+            "text": "下午两点之前下单，当天打印完成。如果你不在本地，将通过快递把货物送到你手里，当然你也可以自己上门提货。"
+          }
+        },
+        "text-minimum": {
+          "type": "text_item",
+          "settings": {
+            "text": "没有最小起订量，一个也能打印。"
+          }
+        },
+        "text-quality": {
+          "type": "text_item",
+          "settings": {
+            "text": "爱普生高质量打印头，高品质管理。"
+          }
+        }
+      },
+      "block_order": [
+        "text-order",
+        "text-minimum",
+        "text-quality"
+      ],
+      "settings": {
+        "heading": "Our Printing Service",
+        "content_title": "Printing Workshop",
+        "section_background": "#ffffff",
+        "content_background": "#f7f8f8",
+        "text_color": "#121212",
+        "accent_color": "#11a9a4",
+        "image_radius": 12,
+        "column_gap": 48,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20
       }
     },
     "featured_collection": {
@@ -185,6 +231,7 @@
     "image_banner",
     "tabbed_products",
     "factory_scene",
+    "printing_service",
     "featured_collection"
   ]
 }
