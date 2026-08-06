@@ -1,0 +1,365 @@
+<script src="{{ 'faq-section.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+  .faq_section-{{ section.id }} {
+    --faq-section-background: {{ section.settings.section_background }};
+    --faq-heading-color: {{ section.settings.heading_color }};
+    --faq-question-color: {{ section.settings.question_color }};
+    --faq-answer-color: {{ section.settings.answer_color }};
+    --faq-border-color: {{ section.settings.border_color }};
+    --faq-item-background: {{ section.settings.item_background }};
+    --faq-radius: {{ section.settings.item_radius }}px;
+    --faq-padding-top: {{ section.settings.mobile_padding_top }}px;
+    --faq-padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .faq_section-{{ section.id }} {
+      --faq-padding-top: {{ section.settings.padding_top }}px;
+      --faq-padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="faq_section faq_section-{{ section.id }}" id="FaqSection-{{ section.id }}">
+  <div class="page-width">
+    <div class="layout">
+      <div class="heading_area">
+        <h2 class="heading">{{ section.settings.heading | default: 'FAQ' | escape }}</h2>
+      </div>
+
+      {%- if section.blocks.size > 0 -%}
+        <faq-accordion class="accordion">
+          {%- for block in section.blocks -%}
+            <details class="item" {{ block.shopify_attributes }}>
+              <summary>
+                <span class="question">{{ block.settings.question | escape }}</span>
+                <span class="toggle_icon" aria-hidden="true"></span>
+              </summary>
+
+              {%- if block.settings.answer != blank -%}
+                <div class="answer">
+                  {{ block.settings.answer | escape | newline_to_br }}
+                </div>
+              {%- endif -%}
+            </details>
+          {%- endfor -%}
+        </faq-accordion>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .faq_section {
+    padding: var(--faq-padding-top) 0 var(--faq-padding-bottom);
+    background: var(--faq-section-background);
+  }
+
+  .faq_section .layout {
+    display: grid;
+    gap: 3.2rem;
+  }
+
+  .faq_section .heading {
+    margin: 0;
+    color: var(--faq-heading-color);
+    font-family: var(--font-heading-family);
+    font-style: var(--font-heading-style);
+    font-weight: var(--font-heading-weight);
+    font-size: calc(var(--font-heading-scale) * 3.2rem);
+    line-height: 1.15;
+  }
+
+  .faq_section .accordion {
+    display: grid;
+    gap: 1.2rem;
+  }
+
+  .faq_section .item {
+    overflow: hidden;
+    border: 0.1rem solid var(--faq-border-color);
+    border-radius: var(--faq-radius);
+    background: var(--faq-item-background);
+  }
+
+  .faq_section summary {
+    display: flex;
+    min-height: 5.6rem;
+    padding: 1.6rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .faq_section summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq_section .question {
+    color: var(--faq-question-color);
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  .faq_section .toggle_icon {
+    width: 1rem;
+    height: 1rem;
+    flex: 0 0 auto;
+    border-right: 0.15rem solid currentColor;
+    border-bottom: 0.15rem solid currentColor;
+    color: var(--faq-question-color);
+    transform: translateY(-0.2rem) rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+
+  .faq_section details[open] .toggle_icon {
+    transform: translateY(0.2rem) rotate(225deg);
+  }
+
+  .faq_section .answer {
+    padding: 0 2rem 2rem;
+    color: var(--faq-answer-color);
+    font-size: 1.4rem;
+    line-height: 1.7;
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .faq_section details.is-opening .answer {
+    animation: faq-answer-in 0.3s ease both;
+  }
+
+  .faq_section details.is-closing .answer {
+    opacity: 0;
+    transform: translateY(-0.8rem);
+  }
+
+  @keyframes faq-answer-in {
+    from {
+      opacity: 0;
+      transform: translateY(-0.8rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .faq_section .layout {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .faq_section .heading {
+      position: static;
+      font-size: calc(var(--font-heading-scale) * 4.8rem);
+    }
+
+    .faq_section summary {
+      min-height: 6.4rem;
+      padding: 1.8rem 2.4rem;
+    }
+
+    .faq_section .question,
+    .faq_section .answer {
+      font-size: 1.6rem;
+    }
+
+    .faq_section .answer {
+      padding: 0 2.4rem 2.4rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq_section .toggle_icon,
+    .faq_section .answer {
+      transition: none;
+    }
+
+    .faq_section details.is-opening .answer {
+      animation: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "FAQ 常见问题",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "标题",
+      "default": "FAQ"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "区块背景色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "item_background",
+      "label": "问题背景色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "标题颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "question_color",
+      "label": "问题颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "answer_color",
+      "label": "答案颜色",
+      "default": "#6b7280"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "边框颜色",
+      "default": "#d1d5db"
+    },
+    {
+      "type": "range",
+      "id": "item_radius",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "问题圆角",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "间距"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "PC 上内边距",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "PC 下内边距",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "移动端上内边距",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "移动端下内边距",
+      "default": 32
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "常见问题",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "问题",
+          "default": "请输入问题"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "答案",
+          "default": "请输入问题答案。"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "FAQ 常见问题",
+      "blocks": [
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "如何在线订购 DTF 转印图案？",
+            "answer": "选择需要的产品并上传设计文件，确认尺寸、数量和订单信息后即可完成下单。"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "DTF 转印图案水洗后能保持多久？",
+            "answer": "按照建议温度完成转印并正确洗护时，图案可承受多次水洗并保持鲜艳。"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "单件服装可以定制吗？",
+            "answer": "可以，我们支持一件起订，也支持团队服装和商业活动的大批量定制。"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "哪些面料适合使用 DTF 转印？",
+            "answer": "DTF 转印适用于棉、涤纶、混纺、帆布等多种常见面料。"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "订单通常需要多久发货？",
+            "answer": "实际处理时间取决于订单数量和文件情况，订单确认后我们会尽快安排生产和发货。"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

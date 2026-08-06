@@ -364,8 +364,85 @@
         "mobile_padding_top": 20,
         "mobile_padding_bottom": 20
       }
+    },
+    "newsletter_split": {
+      "type": "newsletter-split",
+      "settings": {
+        "heading": "Subscribe to our emails",
+        "description": "Be the first to know about new collections and exclusive offers.",
+        "section_background": "#ffffff",
+        "heading_color": "#121212",
+        "text_color": "#6b7280",
+        "border_color": "#e5e7eb",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "mobile_padding_top": 32,
+        "mobile_padding_bottom": 32
+      }
+    },
+    "faq": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "如何在线订购 DTF 转印图案？",
+            "answer": "选择需要的产品并上传设计文件，确认尺寸、数量和订单信息后即可完成下单。"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "DTF 转印图案水洗后能保持多久？",
+            "answer": "按照建议温度完成转印并正确洗护时，图案可承受多次水洗并保持鲜艳。"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "单件服装可以定制吗？",
+            "answer": "可以，我们支持一件起订，也支持团队服装和商业活动的大批量定制。"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "哪些面料适合使用 DTF 转印？",
+            "answer": "DTF 转印适用于棉、涤纶、混纺、帆布等多种常见面料。"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "订单通常需要多久发货？",
+            "answer": "实际处理时间取决于订单数量和文件情况，订单确认后我们会尽快安排生产和发货。"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5"
+      ],
+      "settings": {
+        "heading": "FAQ",
+        "section_background": "#ffffff",
+        "item_background": "#ffffff",
+        "heading_color": "#121212",
+        "question_color": "#121212",
+        "answer_color": "#6b7280",
+        "border_color": "#d1d5db",
+        "item_radius": 12,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "mobile_padding_top": 32,
+        "mobile_padding_bottom": 32
+      }
     }
   },
+
   "order": [
     "image_banner",
     "tabbed_products",
@@ -373,6 +450,8 @@
     "printing_service",
     "product_advantages",
     "shop_reasons",
-    "application_guide"
+    "application_guide",
+    "newsletter_split",
+    "faq"
   ]
 }
