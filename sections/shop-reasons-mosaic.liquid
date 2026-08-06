@@ -1,0 +1,378 @@
+{%- style -%}
+  .shop_reasons_mosaic-{{ section.id }} {
+    --mosaic-section-background: {{ section.settings.section_background }};
+    --mosaic-heading-color: {{ section.settings.heading_color }};
+    --mosaic-text-color: {{ section.settings.text_color }};
+    --mosaic-gap: {{ section.settings.gap }}px;
+    --mosaic-radius: {{ section.settings.item_radius }}px;
+    --mosaic-padding-top: {{ section.settings.mobile_padding_top }}px;
+    --mosaic-padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .shop_reasons_mosaic-{{ section.id }} {
+      --mosaic-padding-top: {{ section.settings.padding_top }}px;
+      --mosaic-padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section
+  class="shop_reasons_mosaic shop_reasons_mosaic-{{ section.id }}"
+  id="ShopReasonsMosaic-{{ section.id }}"
+>
+  <div class="page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="heading">{{ section.settings.heading | escape }}</h2>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="scroll_area">
+        <div class="mosaic">
+          {%- for column_index in (0..3) -%}
+            {%- assign block_offset = column_index | times: 2 -%}
+            {%- assign column_items = section.blocks | slice: block_offset, 2 -%}
+            {%- assign column_number = column_index | plus: 1 -%}
+            <div
+              class="column column-{{ column_number }}{% if column_items.size == 1 %} single{% endif %}"
+            >
+              {%- for block in column_items -%}
+                <article class="item" {{ block.shopify_attributes }}>
+                  {%- if block.settings.image != blank -%}
+                    {%- assign image_alt = block.settings.image.alt | default: block.settings.text -%}
+                    {{
+                      block.settings.image
+                      | image_url: width: 1200
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '300, 500, 750, 1000, 1200',
+                        sizes: '(min-width: 750px) 25vw, 200px',
+                        class: 'image',
+                        alt: image_alt
+                    }}
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'image placeholder' }}
+                  {%- endif -%}
+
+                  {%- if block.settings.text != blank -%}
+                    <p class="text">{{ block.settings.text | escape }}</p>
+                  {%- endif -%}
+                </article>
+              {%- endfor -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+  .shop_reasons_mosaic {
+    padding: var(--mosaic-padding-top) 0 var(--mosaic-padding-bottom);
+    background: var(--mosaic-section-background);
+  }
+
+  .shop_reasons_mosaic .heading {
+    margin: 0 0 3.2rem;
+    color: var(--mosaic-heading-color);
+    font-family: var(--font-heading-family);
+    font-style: var(--font-heading-style);
+    font-weight: var(--font-heading-weight);
+    font-size: calc(var(--font-heading-scale) * 2.4rem);
+    line-height: 1.25;
+  }
+
+  .shop_reasons_mosaic .scroll_area {
+    width: 100%;
+    padding-bottom: 0.8rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-color: rgba(18, 18, 18, 0.3) transparent;
+    scrollbar-width: thin;
+  }
+
+  .shop_reasons_mosaic .scroll_area::-webkit-scrollbar {
+    height: 0.4rem;
+  }
+
+  .shop_reasons_mosaic .scroll_area::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .shop_reasons_mosaic .scroll_area::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(18, 18, 18, 0.3);
+  }
+
+  .shop_reasons_mosaic .mosaic {
+    display: grid;
+    width: 800px;
+    height: 250px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--mosaic-gap);
+  }
+
+  .shop_reasons_mosaic .column {
+    display: grid;
+    min-width: 0;
+    min-height: 0;
+    gap: var(--mosaic-gap);
+  }
+
+  .shop_reasons_mosaic .column-1,
+  .shop_reasons_mosaic .column-3 {
+    grid-template-rows: minmax(0, 1fr) minmax(0, 3fr);
+  }
+
+  .shop_reasons_mosaic .column-2,
+  .shop_reasons_mosaic .column-4 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .shop_reasons_mosaic .column.single {
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .shop_reasons_mosaic .item {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--mosaic-radius);
+    background: #ffffff;
+  }
+
+  .shop_reasons_mosaic .image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .shop_reasons_mosaic .placeholder {
+    color: rgba(18, 18, 18, 0.2);
+    background: #ffffff;
+  }
+
+  .shop_reasons_mosaic .item:hover .image {
+    transform: scale(1.06);
+  }
+
+  .shop_reasons_mosaic .text {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    left: 1.2rem;
+    z-index: 1;
+    margin: 0;
+    color: var(--mosaic-text-color);
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.35;
+    text-shadow: 0 0.1rem 0.4rem rgba(255, 255, 255, 0.8);
+  }
+
+  @media screen and (min-width: 750px) {
+    .shop_reasons_mosaic .heading {
+      margin-bottom: 4rem;
+      font-size: calc(var(--font-heading-scale) * 3.2rem);
+    }
+
+    .shop_reasons_mosaic .scroll_area {
+      padding-bottom: 0;
+      overflow: visible;
+    }
+
+    .shop_reasons_mosaic .mosaic {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 12 / 5;
+    }
+
+    .shop_reasons_mosaic .text {
+      top: 1.6rem;
+      right: 1.6rem;
+      left: 1.6rem;
+      font-size: 1.4rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "店铺服务展示",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "标题",
+      "default": "Why Shop at the CREALITY Store?"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "区块背景色",
+      "default": "#f4f5f6"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "标题颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "图片文案颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 4,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "图片间距",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "item_radius",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "图片圆角",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "间距"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "PC 上内边距",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "PC 下内边距",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "移动端上内边距",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "移动端下内边距",
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "reason_item",
+      "name": "图片条目",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "顶部文案",
+          "default": "请输入文案"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "店铺服务展示",
+      "blocks": [
+        {
+          "type": "reason_item",
+          "settings": {
+            "text": "打印膜明显褶皱"
+          }
+        },
+        {
+          "type": "reason_item",
+          "settings": {
+            "text": "打印图案颜色跟提供的文件图案差别很大"
+          }
+        },
+        {
+          "type": "reason_item",
+          "settings": {
+            "text": "打印膜膜图案脱落"
+          }
+        },
+        {
+          "type": "reason_item",
+          "settings": {
+            "text": "打印膜转印不完全，转印完图案脱落"
+          }
+        },
+        {
+          "type": "reason_item",
+          "settings": {
+            "text": "布料平铺在转印台上，确保平整"
+          }
+        },
+        {
+          "type": "reason_item",
+          "settings": {
+            "text": "压烫机温度150-160华摄氏度，压烫时间8-10秒"
+          }
+        },
+        {
+          "type": "reason_item",
+          "settings": {
+            "text": "将面料跟打印膜进行剥离"
+          }
+        },
+        {
+          "type": "reason_item",
+          "settings": {
+            "text": "转印好图案的面料150-160华摄氏度进行二次压烫，时间5s"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

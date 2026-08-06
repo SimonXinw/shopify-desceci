@@ -240,6 +240,81 @@
         "mobile_padding_top": 20,
         "mobile_padding_bottom": 20
       }
+    },
+    "shop_reasons": {
+      "type": "shop-reasons-mosaic",
+      "blocks": {
+        "reason_1": {
+          "type": "reason_item",
+          "settings": {
+            "text": "打印膜明显褶皱"
+          }
+        },
+        "reason_2": {
+          "type": "reason_item",
+          "settings": {
+            "text": "打印图案颜色跟提供的文件图案差别很大"
+          }
+        },
+        "reason_3": {
+          "type": "reason_item",
+          "settings": {
+            "text": "打印膜膜图案脱落"
+          }
+        },
+        "reason_4": {
+          "type": "reason_item",
+          "settings": {
+            "text": "打印膜转印不完全，转印完图案脱落"
+          }
+        },
+        "reason_5": {
+          "type": "reason_item",
+          "settings": {
+            "text": "布料平铺在转印台上，确保平整"
+          }
+        },
+        "reason_6": {
+          "type": "reason_item",
+          "settings": {
+            "text": "压烫机温度150-160华摄氏度，压烫时间8-10秒"
+          }
+        },
+        "reason_7": {
+          "type": "reason_item",
+          "settings": {
+            "text": "将面料跟打印膜进行剥离"
+          }
+        },
+        "reason_8": {
+          "type": "reason_item",
+          "settings": {
+            "text": "转印好图案的面料150-160华摄氏度进行二次压烫，时间5s"
+          }
+        }
+      },
+      "block_order": [
+        "reason_1",
+        "reason_2",
+        "reason_3",
+        "reason_4",
+        "reason_5",
+        "reason_6",
+        "reason_7",
+        "reason_8"
+      ],
+      "settings": {
+        "heading": "Why Shop at the CREALITY Store?",
+        "section_background": "#f4f5f6",
+        "heading_color": "#121212",
+        "text_color": "#121212",
+        "gap": 12,
+        "item_radius": 8,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20
+      }
     }
   },
   "order": [
@@ -247,6 +322,7 @@
     "tabbed_products",
     "factory_scene",
     "printing_service",
-    "product_advantages"
+    "product_advantages",
+    "shop_reasons"
   ]
 }
