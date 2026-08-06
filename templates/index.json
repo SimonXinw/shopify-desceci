@@ -315,6 +315,55 @@
         "mobile_padding_top": 20,
         "mobile_padding_bottom": 20
       }
+    },
+    "application_guide": {
+      "type": "application-guide-steps",
+      "blocks": {
+        "guide_step_1": {
+          "type": "guide_step",
+          "settings": {
+            "text": "布料平铺在转印台上，确保平整"
+          }
+        },
+        "guide_step_2": {
+          "type": "guide_step",
+          "settings": {
+            "text": "压烫机温度150-160华摄氏度，压烫时间8-10秒"
+          }
+        },
+        "guide_step_3": {
+          "type": "guide_step",
+          "settings": {
+            "text": "将面料跟打印膜进行剥离"
+          }
+        },
+        "guide_step_4": {
+          "type": "guide_step",
+          "settings": {
+            "text": "转印好图案的面料150-160华摄氏度进行二次压烫，时间5s"
+          }
+        }
+      },
+      "block_order": [
+        "guide_step_1",
+        "guide_step_2",
+        "guide_step_3",
+        "guide_step_4"
+      ],
+      "settings": {
+        "heading": "Step-by-Step Application Guide",
+        "section_background": "#ffffff",
+        "card_background": "#ffffff",
+        "heading_color": "#121212",
+        "text_color": "#121212",
+        "border_color": "#e5e7eb",
+        "arrow_color": "#11a9a4",
+        "card_radius": 6,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20
+      }
     }
   },
   "order": [
@@ -323,6 +372,7 @@
     "factory_scene",
     "printing_service",
     "product_advantages",
-    "shop_reasons"
+    "shop_reasons",
+    "application_guide"
   ]
 }

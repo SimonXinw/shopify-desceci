@@ -1,0 +1,408 @@
+{%- style -%}
+  .application_guide_steps-{{ section.id }} {
+    --guide-section-background: {{ section.settings.section_background }};
+    --guide-card-background: {{ section.settings.card_background }};
+    --guide-heading-color: {{ section.settings.heading_color }};
+    --guide-text-color: {{ section.settings.text_color }};
+    --guide-border-color: {{ section.settings.border_color }};
+    --guide-arrow-color: {{ section.settings.arrow_color }};
+    --guide-radius: {{ section.settings.card_radius }}px;
+    --guide-padding-top: {{ section.settings.mobile_padding_top }}px;
+    --guide-padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .application_guide_steps-{{ section.id }} {
+      --guide-padding-top: {{ section.settings.padding_top }}px;
+      --guide-padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section
+  class="application_guide_steps application_guide_steps-{{ section.id }}"
+  id="ApplicationGuideSteps-{{ section.id }}"
+>
+  <div class="page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="heading">{{ section.settings.heading | escape }}</h2>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="scroll_area">
+        <div class="steps">
+          {%- for block in section.blocks -%}
+            <article class="step" {{ block.shopify_attributes }}>
+              <div class="card">
+                <div class="image_area">
+                  {%- if block.settings.image != blank -%}
+                    {%- assign step_image_alt = block.settings.image.alt | default: block.settings.text -%}
+                    {{
+                      block.settings.image
+                      | image_url: width: 500
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '150, 250, 350, 500',
+                        sizes: '(min-width: 1440px) 220px, (min-width: 750px) 15vw, 150px',
+                        class: 'image',
+                        alt: step_image_alt
+                    }}
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'image placeholder' }}
+                  {%- endif -%}
+                </div>
+
+                <div class="content">
+                  {%- if block.settings.text != blank -%}
+                    <p class="text">{{ block.settings.text | escape }}</p>
+                  {%- endif -%}
+                </div>
+              </div>
+
+              {%- unless forloop.last -%}
+                <span class="connector" aria-hidden="true"></span>
+              {%- endunless -%}
+            </article>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+  .application_guide_steps {
+    --guide-step-gap: 5.6rem;
+    padding: var(--guide-padding-top) 0 var(--guide-padding-bottom);
+    background: var(--guide-section-background);
+  }
+
+  .application_guide_steps .heading {
+    margin: 0 0 3.2rem;
+    color: var(--guide-heading-color);
+    text-align: center;
+    font-family: var(--font-heading-family);
+    font-style: var(--font-heading-style);
+    font-weight: var(--font-heading-weight);
+    font-size: calc(var(--font-heading-scale) * 2.4rem);
+    line-height: 1.25;
+  }
+
+  .application_guide_steps .scroll_area {
+    width: 100%;
+    padding-bottom: 0.8rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-color: rgba(18, 18, 18, 0.3) transparent;
+    scrollbar-width: thin;
+  }
+
+  .application_guide_steps .scroll_area::-webkit-scrollbar {
+    height: 0.4rem;
+  }
+
+  .application_guide_steps .scroll_area::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .application_guide_steps .scroll_area::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(18, 18, 18, 0.3);
+  }
+
+  .application_guide_steps .steps {
+    display: flex;
+    width: max-content;
+    min-width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--guide-step-gap);
+  }
+
+  .application_guide_steps .step {
+    position: relative;
+    flex: 0 0 15rem;
+    width: 15rem;
+    height: 21rem;
+  }
+
+  .application_guide_steps .card {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 0.1rem solid var(--guide-border-color);
+    border-radius: var(--guide-radius);
+    background: var(--guide-card-background);
+    grid-template-rows: 60% 40%;
+  }
+
+  .application_guide_steps .image_area {
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .application_guide_steps .image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.35s ease;
+  }
+
+  .application_guide_steps .placeholder {
+    color: rgba(18, 18, 18, 0.2);
+    background: rgba(18, 18, 18, 0.03);
+  }
+
+  .application_guide_steps .card:hover .image {
+    transform: scale(1.06);
+  }
+
+  .application_guide_steps .content {
+    display: flex;
+    min-height: 0;
+    padding: 1.2rem;
+    border-top: 0.1rem solid var(--guide-border-color);
+    align-items: center;
+  }
+
+  .application_guide_steps .text {
+    width: 100%;
+    margin: 0;
+    color: var(--guide-text-color);
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .application_guide_steps .connector {
+    position: absolute;
+    top: 30%;
+    left: calc(100% + 1rem);
+    width: calc(var(--guide-step-gap) - 2rem);
+    height: 0.1rem;
+    background: var(--guide-arrow-color);
+    transform: translateY(-50%);
+  }
+
+  .application_guide_steps .connector::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--guide-arrow-color);
+    content: "";
+    transform: translateY(-50%);
+  }
+
+  .application_guide_steps .connector::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-top: 0.15rem solid var(--guide-arrow-color);
+    border-right: 0.15rem solid var(--guide-arrow-color);
+    content: "";
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  @media screen and (min-width: 750px) {
+    .application_guide_steps {
+      --guide-step-gap: clamp(5.6rem, 6vw, 8.6rem);
+    }
+
+    .application_guide_steps .heading {
+      margin-bottom: 4rem;
+      font-size: calc(var(--font-heading-scale) * 3.2rem);
+    }
+
+    .application_guide_steps .scroll_area {
+      padding-bottom: 0;
+      overflow: visible;
+    }
+
+    .application_guide_steps .steps {
+      justify-content: center;
+    }
+
+    .application_guide_steps .step {
+      flex: 0 0 clamp(11rem, 15.28vw, 22rem);
+      width: clamp(11rem, 15.28vw, 22rem);
+      height: auto;
+      aspect-ratio: 11 / 16;
+    }
+
+    .application_guide_steps .content {
+      padding: clamp(0.8rem, 1vw, 1.6rem);
+    }
+
+    .application_guide_steps .text {
+      font-size: clamp(1rem, 0.9vw, 1.4rem);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "操作流程指南",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "标题",
+      "default": "Step-by-Step Application Guide"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "区块背景色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "卡片背景色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "标题颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文案颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "边框与分割线颜色",
+      "default": "#e5e7eb"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "流程箭头颜色",
+      "default": "#11a9a4"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "卡片圆角",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "间距"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "PC 上内边距",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "PC 下内边距",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "移动端上内边距",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "移动端下内边距",
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "guide_step",
+      "name": "流程步骤",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "步骤图片"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "步骤文案",
+          "default": "请输入步骤说明"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "操作流程指南",
+      "blocks": [
+        {
+          "type": "guide_step",
+          "settings": {
+            "text": "布料平铺在转印台上，确保平整"
+          }
+        },
+        {
+          "type": "guide_step",
+          "settings": {
+            "text": "压烫机温度150-160华摄氏度，压烫时间8-10秒"
+          }
+        },
+        {
+          "type": "guide_step",
+          "settings": {
+            "text": "将面料跟打印膜进行剥离"
+          }
+        },
+        {
+          "type": "guide_step",
+          "settings": {
+            "text": "转印好图案的面料150-160华摄氏度进行二次压烫，时间5s"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
