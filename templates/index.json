@@ -58,14 +58,14 @@
         "content_width": 35,
         "title": "Premium DTF Transfers Made Simple",
         "description": "<h5><br/>1.Upload your artwork.</h5><h5>2.We print professional-quality DTF transfers.</h5><h5>3.You press, create, and grow your apparel business.<br/><br/></h5>",
-        "text_color": "#9dff00",
+        "text_color": "#73B50A",
         "title_size": 40,
         "mobile_title_size": 32,
         "button_label_1": "Upload Your Design",
         "button_link_1": "",
         "button_label_2": "Shop Ready To Press",
         "button_link_2": "",
-        "button_background": "#9dff00",
+        "button_background": "#73B50A",
         "button_text_color": "#121212",
         "button_radius": 40
       }
@@ -76,7 +76,7 @@
         "tab-multicolor": {
           "type": "tab",
           "settings": {
-            "title": "DTF TRANSFER",
+            "title": "Multicolor Printer",
             "products": [
               "asset-pack-86653763586-example-product-1",
               "asset-pack-88794169346-example-product-2",
@@ -87,28 +87,28 @@
         "tab-mega": {
           "type": "tab",
           "settings": {
-            "title": "UV DTF Sticker",
+            "title": "Mega Printer",
             "products": []
           }
         },
         "tab-hyper-speed": {
           "type": "tab",
           "settings": {
-            "title": "DTF Consumable",
+            "title": "Hyper Speed",
             "products": []
           }
         },
         "tab-diy": {
           "type": "tab",
           "settings": {
-            "title": "Heat Press Machine",
+            "title": "DIY",
             "products": []
           }
         },
         "tab-combo": {
           "type": "tab",
           "settings": {
-            "title": "Printer Parts",
+            "title": "Printer Combo",
             "products": []
           }
         }
@@ -210,6 +210,7 @@
         "advantage_color": {
           "type": "advantage_item",
           "settings": {
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
             "item_title": "颜色鲜艳",
             "text": "水洗牢度好，水洗50次不变形。"
           }
@@ -257,6 +258,7 @@
         "reason_1": {
           "type": "reason_item",
           "settings": {
+            "image": "shopify://shop_images/2_117d179b-115c-456e-837a-0108af6ae9d0.png",
             "text": "打印膜明显褶皱"
           }
         },
@@ -332,6 +334,7 @@
         "guide_step_1": {
           "type": "guide_step",
           "settings": {
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
             "text": "布料平铺在转印台上，确保平整"
           }
         },
@@ -380,7 +383,7 @@
       "settings": {
         "heading": "Subscribe to our emails",
         "description": "Be the first to know about new collections and exclusive offers.",
-        "section_background": "#ffffff",
+        "section_background": "#CAF2C7",
         "heading_color": "#121212",
         "text_color": "#6b7280",
         "border_color": "#e5e7eb",
