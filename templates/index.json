@@ -16,21 +16,21 @@
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/2.jpg",
-            "text": "Premium quality"
+            "text": "Fast Production"
           }
         },
         "feature-shipping": {
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/2.jpg",
-            "text": "Same Day Shipping"
+            "text": "Vibrant Colors"
           }
         },
         "feature-no-minimum": {
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/2.jpg",
-            "text": "No Minimum Order"
+            "text": "USA Local Shipping"
           }
         },
         "feature-turnaround": {
@@ -48,22 +48,24 @@
         "feature-turnaround"
       ],
       "settings": {
+        "background_image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
+        "fallback_background": "#f3f3f3",
         "desktop_height": 640,
         "mobile_height": 560,
         "desktop_horizontal_position": "flex-start",
         "desktop_vertical_position": "center",
         "desktop_text_alignment": "left",
         "content_width": 35,
-        "title": "DTF Dallas | DTF Transfers & Custom Tshirt Printing",
-        "description": "<p>Professional quality Direct-to-Film transfers, custom t-shirts and UV stickers. Fast turnaround, unbeatable prices.</p>",
-        "text_color": "#121212",
+        "title": "DESCECI| Premium DTF Transfers Made Simple",
+        "description": "<p><br/>1.Upload your artwork.</p><p>2.We print professional-quality DTF transfers.</p><p>3.You press, create, and grow your apparel business.<br/><br/></p>",
+        "text_color": "#9DFF00",
         "title_size": 40,
         "mobile_title_size": 32,
-        "button_label_1": "跳转 1",
+        "button_label_1": "Upload Your Design",
         "button_link_1": "",
-        "button_label_2": "跳转 2",
+        "button_label_2": "Shop Ready To Press",
         "button_link_2": "",
-        "button_background": "#ffbd1a",
+        "button_background": "#9DFF00",
         "button_text_color": "#121212",
         "button_radius": 40
       }
@@ -178,7 +180,11 @@
           }
         }
       },
-      "block_order": ["text-order", "text-minimum", "text-quality"],
+      "block_order": [
+        "text-order",
+        "text-minimum",
+        "text-quality"
+      ],
       "settings": {
         "heading": "Our Printing Service",
         "content_title": "Printing Workshop",
@@ -442,7 +448,6 @@
       }
     }
   },
-
   "order": [
     "image_banner",
     "tabbed_products",
