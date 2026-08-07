@@ -58,14 +58,14 @@
         "content_width": 35,
         "title": "Premium DTF Transfers Made Simple",
         "description": "<h5><br/>1.Upload your artwork.</h5><h5>2.We print professional-quality DTF transfers.</h5><h5>3.You press, create, and grow your apparel business.<br/><br/></h5>",
-        "text_color": "#9DFF00",
+        "text_color": "#9dff00",
         "title_size": 40,
         "mobile_title_size": 32,
         "button_label_1": "Upload Your Design",
         "button_link_1": "",
         "button_label_2": "Shop Ready To Press",
         "button_link_2": "",
-        "button_background": "#9DFF00",
+        "button_background": "#9dff00",
         "button_text_color": "#121212",
         "button_radius": 40
       }
@@ -76,35 +76,38 @@
         "tab-multicolor": {
           "type": "tab",
           "settings": {
-            "title": "Multicolor Printer",
-            "products": []
+            "title": "DTF TRANSFER",
+            "products": [
+              "asset-pack-86653763586-example-product-1",
+              "asset-pack-88794169346-example-product-2"
+            ]
           }
         },
         "tab-mega": {
           "type": "tab",
           "settings": {
-            "title": "Mega Printer",
+            "title": "UV DTF Sticker",
             "products": []
           }
         },
         "tab-hyper-speed": {
           "type": "tab",
           "settings": {
-            "title": "Hyper Speed",
+            "title": "DTF Consumable",
             "products": []
           }
         },
         "tab-diy": {
           "type": "tab",
           "settings": {
-            "title": "DIY",
+            "title": "Heat Press Machine",
             "products": []
           }
         },
         "tab-combo": {
           "type": "tab",
           "settings": {
-            "title": "Printer Combo",
+            "title": "Printer Parts",
             "products": []
           }
         }
