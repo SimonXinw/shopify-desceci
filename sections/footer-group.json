@@ -1,1 +1,60 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","settings":{"color_scheme":"scheme-1","newsletter_enable":true,"newsletter_heading":"Subscribe to our emails","enable_follow_on_shop":true,"show_social":true,"enable_country_selector":true,"enable_language_selector":true,"payment_enable":true,"show_policy":true,"margin_top":0,"padding_top":36,"padding_bottom":36}}},"order":["footer"]}
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer-v1",
+      "blocks": {
+        "support": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Support",
+            "menu": "footer"
+          }
+        },
+        "products": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Products",
+            "menu": "main-menu"
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "heading": "Contact Us",
+            "address": "903 N Bowser Rd\nSuite 250\nRichardson, TX 75081",
+            "email": "info@dtfdallas.com",
+            "phone": "+1 (469) 769-8949",
+            "extra_link_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "support",
+        "products",
+        "contact"
+      ],
+      "settings": {
+        "background_color": "#001820",
+        "heading_color": "#ffffff",
+        "text_color": "#d6e0e3",
+        "link_hover_color": "#ffffff",
+        "border_color": "#34505a",
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_image_width": 320,
+        "show_copyright": true,
+        "show_policy": false,
+        "column_gap": 64,
+        "margin_top": 0,
+        "padding_top": 60,
+        "padding_bottom": 40,
+        "mobile_padding_top": 40,
+        "mobile_padding_bottom": 32
+      }
+    }
+  },
+  "order": ["footer"]
+}
