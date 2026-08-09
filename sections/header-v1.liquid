@@ -93,6 +93,38 @@
       padding-top: 0.5rem;
     }
   }
+
+  @media screen and (min-width: 990px) {
+    /* 轨道必须为 auto，1fr 会吃掉全部剩余空间导致 justify-content 无效 */
+    .header-v1.header--middle-left.header--has-menu {
+      grid-template-columns: auto auto auto;
+      justify-content: space-between;
+    }
+
+    .header-v1 .header__inline-menu > .list-menu > li > a.header__menu-item,
+    .header-v1 .header__inline-menu > .list-menu > li > a.header__menu-item span,
+    .header-v1 .header__inline-menu > .list-menu > li > header-menu > details > summary.header__menu-item,
+    .header-v1 .header__inline-menu > .list-menu > li > header-menu > details > summary.header__menu-item span {
+      text-decoration: none;
+    }
+
+    .header-v1 .header__inline-menu > .list-menu > li > a.header__menu-item,
+    .header-v1 .header__inline-menu > .list-menu > li > header-menu > details > summary.header__menu-item {
+      transition: background-color var(--duration-short) ease, color var(--duration-short) ease;
+    }
+
+    .header-v1 .header__inline-menu > .list-menu > li > a.header__menu-item:hover,
+    .header-v1 .header__inline-menu > .list-menu > li > header-menu > details > summary.header__menu-item:hover {
+      background-color: #22afe5;
+      color: #fff;
+    }
+
+    .header-v1 .header__inline-menu > .list-menu > li > a.header__menu-item:hover span,
+    .header-v1 .header__inline-menu > .list-menu > li > header-menu > details > summary.header__menu-item:hover span {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
 </style>
 
 {%- style -%}
