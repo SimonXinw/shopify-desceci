@@ -1,71 +1,102 @@
 {% render 'swiper-assets' %}
 <script src="{{ 'product-advantages.js' | asset_url }}" defer="defer"></script>
 
-{%- style -%}
-  .product_advantages-{{ section.id }} {
-    --advantages-padding-top: {{ section.settings.mobile_padding_top }}px;
-    --advantages-padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
-    --advantages-section-bg: {{ section.settings.section_background }};
-    --advantages-card-bg: {{ section.settings.card_background }};
-    --advantages-title-color: {{ section.settings.title_color }};
-    --advantages-item-title-color: {{ section.settings.item_title_color }};
-    --advantages-text-color: {{ section.settings.text_color }};
-    --advantages-divider-color: {{ section.settings.divider_color }};
-    --advantages-card-radius: {{ section.settings.card_radius }}px;
-    --advantages-card-shadow: {{ section.settings.card_shadow }};
-  }
-
-  @media screen and (min-width: 750px) {
-    .product_advantages-{{ section.id }} {
-      --advantages-padding-top: {{ section.settings.padding_top }}px;
-      --advantages-padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
-<section
-  class="product_advantages product_advantages-{{ section.id }} color-{{ section.settings.color_scheme }}"
-  id="ProductAdvantages-{{ section.id }}"
+<div
+  class="product_advantages_section"
+  style="
+    --pa-section-background: {{ section.settings.section_background }};
+    --pa-heading-color: {{ section.settings.heading_color }};
+    --pa-heading-size: {{ section.settings.heading_size }}px;
+    --pa-mobile-heading-size: {{ section.settings.mobile_heading_size }}px;
+    --pa-description-color: {{ section.settings.description_color }};
+    --pa-description-size: {{ section.settings.description_size }}px;
+    --pa-card-background: {{ section.settings.card_background }};
+    --pa-card-border-color: {{ section.settings.card_border_color }};
+    --pa-card-radius: {{ section.settings.card_radius }}px;
+    --pa-card-title-color: {{ section.settings.card_title_color }};
+    --pa-card-title-size: {{ section.settings.card_title_size }}px;
+    --pa-underline-color: {{ section.settings.title_underline_color }};
+    --pa-card-description-color: {{ section.settings.card_description_color }};
+    --pa-card-description-size: {{ section.settings.card_description_size }}px;
+    --pa-icon-size: {{ section.settings.icon_size }}px;
+    --pa-icon-label-color: {{ section.settings.icon_label_color }};
+    --pa-icon-label-size: {{ section.settings.icon_label_size }}px;
+    --pa-padding-top: {{ section.settings.padding_top }}px;
+    --pa-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --pa-mobile-padding-top: {{ section.settings.mobile_padding_top }}px;
+    --pa-mobile-padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+  "
 >
   <div class="page-width">
     {%- if section.settings.heading != blank -%}
-      <h2 class="heading">{{ section.settings.heading | escape }}</h2>
+      <h2 class="pa_heading inline-richtext">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    {%- if section.settings.description != blank -%}
+      <p class="pa_description">{{ section.settings.description | escape }}</p>
     {%- endif -%}
 
     {%- if section.blocks.size > 0 -%}
       <product-advantages>
-        <div class="carousel" data-advantages-swiper>
+        <div class="swiper pa_carousel" data-advantages-swiper>
           <div class="swiper-wrapper">
             {%- for block in section.blocks -%}
               <div class="swiper-slide" {{ block.shopify_attributes }}>
-                <article class="item">
-                  <div class="icon_area">
-                    {%- if block.settings.image != blank -%}
-                      {%- assign advantage_image_alt = block.settings.image.alt | default: block.settings.item_title -%}
-                      {{
-                        block.settings.image
-                        | image_url: width: 280
-                        | image_tag:
-                          loading: 'lazy',
-                          widths: '140, 280',
-                          sizes: '140px',
-                          class: 'icon',
-                          alt: advantage_image_alt
-                      }}
-                    {%- else -%}
-                      <div class="icon placeholder">
-                        {{ 'image' | placeholder_svg_tag }}
-                      </div>
-                    {%- endif -%}
-                  </div>
+                <article class="pa_card">
+                  {%- if block.settings.image != blank -%}
+                    {%- assign card_image_alt = block.settings.image.alt | default: block.settings.item_title -%}
+                    {{
+                      block.settings.image
+                      | image_url: width: 1200
+                      | image_tag:
+                        class: 'pa_card_image',
+                        widths: '400, 600, 800, 1200',
+                        sizes: '(min-width: 750px) 32vw, 90vw',
+                        alt: card_image_alt
+                    }}
+                  {%- else -%}
+                    {{ 'lifestyle-1' | placeholder_svg_tag: 'pa_card_image pa_card_placeholder' }}
+                  {%- endif -%}
 
-                  <div class="content">
+                  <div class="pa_card_body">
                     {%- if block.settings.item_title != blank -%}
-                      <h3 class="item_title">{{ block.settings.item_title | escape }}</h3>
+                      <h3 class="pa_card_title">{{ block.settings.item_title | escape }}</h3>
                     {%- endif -%}
 
-                    {%- if block.settings.text != blank -%}
-                      <p class="text">{{ block.settings.text | escape | newline_to_br }}</p>
+                    {%- if block.settings.item_description != blank -%}
+                      <p class="pa_card_description">
+                        {{- block.settings.item_description | escape | newline_to_br -}}
+                      </p>
+                    {%- endif -%}
+
+                    {%- capture icon_items -%}
+                      {%- assign icon_indexes = '1,2,3,4' | split: ',' -%}
+                      {%- for icon_index in icon_indexes -%}
+                        {%- assign icon_key = 'icon_' | append: icon_index -%}
+                        {%- assign icon_label_key = 'icon_label_' | append: icon_index -%}
+                        {%- assign icon_image = block.settings[icon_key] -%}
+                        {%- assign icon_label = block.settings[icon_label_key] -%}
+
+                        {%- if icon_image != blank or icon_label != blank -%}
+                          <li class="pa_icon_item">
+                            {%- if icon_image != blank -%}
+                              {{
+                                icon_image
+                                | image_url: width: 160
+                                | image_tag: class: 'pa_icon', widths: '80, 160', alt: icon_label
+                              }}
+                            {%- endif -%}
+
+                            {%- if icon_label != blank -%}
+                              <span class="pa_icon_label">{{ icon_label | escape }}</span>
+                            {%- endif -%}
+                          </li>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- endcapture -%}
+
+                    {%- if icon_items != blank -%}
+                      <ul class="pa_icon_row" role="list">{{ icon_items }}</ul>
                     {%- endif -%}
                   </div>
                 </article>
@@ -75,15 +106,16 @@
 
           <button
             type="button"
-            class="nav_button previous"
+            class="pa_nav_button previous"
             data-swiper-previous
             aria-label="{{ 'general.slider.previous_slide' | t }}"
           >
             <span aria-hidden="true">‹</span>
           </button>
+
           <button
             type="button"
-            class="nav_button next"
+            class="pa_nav_button next"
             data-swiper-next
             aria-label="{{ 'general.slider.next_slide' | t }}"
           >
@@ -93,102 +125,139 @@
       </product-advantages>
     {%- endif -%}
   </div>
-</section>
+</div>
 
 {% stylesheet %}
-  .product_advantages {
-    padding: var(--advantages-padding-top) 0 var(--advantages-padding-bottom);
-    background: var(--advantages-section-bg);
+  .product_advantages_section {
+    padding-top: var(--pa-mobile-padding-top);
+    padding-bottom: var(--pa-mobile-padding-bottom);
+    background: var(--pa-section-background);
   }
 
-  .product_advantages .heading {
-    margin: 0 0 3.2rem;
-    color: var(--advantages-title-color);
+  .product_advantages_section .pa_heading {
+    margin: 0;
+    color: var(--pa-heading-color);
+    font-size: var(--pa-mobile-heading-size);
+    font-weight: 700;
+    line-height: 1.2;
     text-align: center;
-    font-family: var(--font-heading-family);
-    font-style: var(--font-heading-style);
-    font-weight: var(--font-heading-weight);
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
-    line-height: 1.25;
-    letter-spacing: calc(var(--font-heading-scale) * 0.04rem);
   }
 
-  .product_advantages .carousel {
-    position: relative;
+  .product_advantages_section .pa_description {
+    margin: 1.2rem 0 0;
+    color: var(--pa-description-color);
+    font-size: var(--pa-description-size);
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .product_advantages_section .pa_carousel {
+    margin-top: 2.4rem;
+  }
+
+  .product_advantages_section .swiper-slide {
+    display: flex;
+    height: auto;
+  }
+
+  .product_advantages_section .pa_card {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
     overflow: hidden;
+    border: 0.1rem solid var(--pa-card-border-color);
+    border-radius: var(--pa-card-radius);
+    background: var(--pa-card-background);
   }
 
-  .product_advantages .item {
-    height: 100%;
-    padding: 2.4rem;
-    border-radius: var(--advantages-card-radius);
-    background: var(--advantages-card-bg);
-    box-shadow: var(--advantages-card-shadow);
-  }
-
-  .product_advantages .icon_area {
-    width: 140px;
-  }
-
-  .product_advantages .icon_area::after {
+  .product_advantages_section .pa_card_image {
     display: block;
     width: 100%;
-    height: 0.1rem;
-    margin: 4rem 0;
-    background: var(--advantages-divider-color);
-    content: '';
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
 
-  .product_advantages .icon {
-    display: block;
-    width: 14rem;
-    height: 14rem;
-    object-fit: contain;
-    transition: transform 0.35s ease;
-  }
-
-  .product_advantages .icon.placeholder {
-    color: rgba(18, 18, 18, 0.2);
+  .product_advantages_section .pa_card_placeholder {
     background: rgba(18, 18, 18, 0.04);
   }
 
-  .product_advantages .icon.placeholder svg {
-    width: 100%;
+  .product_advantages_section .pa_card_body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 2.4rem 1.6rem;
+    text-align: center;
   }
 
-  .product_advantages .item:hover .icon {
-    transform: scale(1.08);
-  }
-
-  .product_advantages .item_title {
-    margin: 0 0 0.8rem;
-    color: var(--advantages-item-title-color);
-    text-align: left;
-    font-family: var(--font-heading-family);
-    font-style: var(--font-heading-style);
-    font-weight: var(--font-heading-weight);
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
+  .product_advantages_section .pa_card_title {
+    margin: 0;
+    color: var(--pa-card-title-color);
+    font-size: var(--pa-card-title-size);
+    font-weight: 700;
     line-height: 1.3;
   }
 
-  .product_advantages .text {
-    margin: 0;
-    color: var(--advantages-text-color);
-    text-align: left;
-    font-size: 1.4rem;
+  .product_advantages_section .pa_card_title::after {
+    display: block;
+    width: 4rem;
+    height: 0.2rem;
+    margin: 1.2rem auto 0;
+    border-radius: 999px;
+    background: var(--pa-underline-color);
+    content: "";
+  }
+
+  .product_advantages_section .pa_card_description {
+    margin: 1.6rem 0 0;
+    color: var(--pa-card-description-color);
+    font-size: var(--pa-card-description-size);
     line-height: 1.6;
   }
 
-  .product_advantages .nav_button {
+  .product_advantages_section .pa_icon_row {
+    display: flex;
+    gap: 1.2rem;
+    margin: auto 0 0;
+    padding: 2.4rem 0 0;
+    list-style: none;
+  }
+
+  .product_advantages_section .pa_icon_item {
+    display: flex;
+    min-width: 0;
+    flex: 1 1 0;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .product_advantages_section .pa_icon {
+    display: block;
+    width: var(--pa-icon-size);
+    height: var(--pa-icon-size);
+    object-fit: contain;
+  }
+
+  .product_advantages_section .pa_icon_label {
+    color: var(--pa-icon-label-color);
+    font-size: var(--pa-icon-label-size);
+    line-height: 1.4;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .product_advantages_section .pa_nav_button {
     position: absolute;
     top: 50%;
     z-index: 2;
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
     width: 3.6rem;
     height: 3.6rem;
     padding: 0;
+    align-items: center;
+    justify-content: center;
     border: 0.1rem solid rgba(18, 18, 18, 0.12);
     border-radius: 50%;
     background: #ffffff;
@@ -200,53 +269,38 @@
     box-shadow: 0 0.4rem 1.2rem rgba(18, 18, 18, 0.08);
   }
 
-  .product_advantages .nav_button.previous {
+  .product_advantages_section .pa_nav_button.previous {
     left: 0.4rem;
   }
 
-  .product_advantages .nav_button.next {
+  .product_advantages_section .pa_nav_button.next {
     right: 0.4rem;
   }
 
-  .product_advantages .nav_button.swiper-button-disabled {
+  .product_advantages_section .pa_nav_button.swiper-button-disabled {
     opacity: 0.35;
     cursor: default;
   }
 
   @media screen and (min-width: 750px) {
-    .product_advantages .swiper-wrapper {
-      justify-content: center;
+    .product_advantages_section {
+      padding-top: var(--pa-padding-top);
+      padding-bottom: var(--pa-padding-bottom);
     }
 
-    .product_advantages .swiper-slide {
-      width: 36rem;
+    .product_advantages_section .pa_heading {
+      font-size: var(--pa-heading-size);
     }
 
-    .product_advantages .heading {
-      margin-bottom: 4rem;
-      font-size: calc(var(--font-heading-scale) * 3.2rem);
+    .product_advantages_section .pa_carousel {
+      margin-top: 4rem;
     }
 
-    .product_advantages .item {
-      display: flex;
-      width: 33rem;
-      height: 36rem;
-      padding: 2.8rem;
-      box-sizing: border-box;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .product_advantages .icon_area {
-      width: 140px;
-    }
- 
-
-    .product_advantages .content {
-      width: 100%;
-      min-height: 80px;
+    .product_advantages_section .pa_card_body {
+      padding: 2.8rem 2.4rem;
     }
 
-    .product_advantages .nav_button {
+    .product_advantages_section .pa_nav_button {
       display: none;
     }
   }
@@ -262,20 +316,66 @@
   },
   "settings": [
     {
-      "type": "text",
+      "type": "header",
+      "content": "标题"
+    },
+    {
+      "type": "inline_richtext",
       "id": "heading",
       "label": "标题",
       "default": "Why Choose Our DTF Transfers"
     },
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
+      "type": "color",
+      "id": "heading_color",
+      "label": "标题颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 56,
+      "step": 2,
+      "unit": "px",
+      "label": "PC 端标题字号",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "min": 18,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端标题字号",
+      "default": 26
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "标题下方描述",
+      "default": "PREMIUM QUALITY. VIBRANT COLORS. BUILT TO LAST."
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "描述颜色",
+      "default": "#4b5563"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "描述字号",
+      "default": 14
     },
     {
       "type": "header",
-      "content": "样式"
+      "content": "卡片样式"
     },
     {
       "type": "color",
@@ -291,43 +391,87 @@
     },
     {
       "type": "color",
-      "id": "title_color",
-      "label": "标题颜色",
-      "default": "#121212"
-    },
-    {
-      "type": "color",
-      "id": "item_title_color",
-      "label": "条目标题颜色",
-      "default": "#121212"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "正文颜色",
-      "default": "#6b7280"
-    },
-    {
-      "type": "color",
-      "id": "divider_color",
-      "label": "分割线颜色",
+      "id": "card_border_color",
+      "label": "卡片描边颜色",
       "default": "#e5e7eb"
     },
     {
       "type": "range",
       "id": "card_radius",
       "min": 0,
-      "max": 24,
+      "max": 32,
       "step": 2,
       "unit": "px",
       "label": "卡片圆角",
-      "default": 12
+      "default": 16
     },
     {
-      "type": "text",
-      "id": "card_shadow",
-      "label": "卡片阴影",
-      "default": "inset 0 0 0 1px rgba(18, 18, 18, 0.12)"
+      "type": "header",
+      "content": "卡片文字与图标"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "卡片标题颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "card_title_size",
+      "min": 14,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "label": "卡片标题字号",
+      "default": 22
+    },
+    {
+      "type": "color",
+      "id": "title_underline_color",
+      "label": "卡片标题下划线颜色",
+      "default": "#11a9a4"
+    },
+    {
+      "type": "color",
+      "id": "card_description_color",
+      "label": "卡片描述颜色",
+      "default": "#6b7280"
+    },
+    {
+      "type": "range",
+      "id": "card_description_size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "卡片描述字号",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 16,
+      "max": 64,
+      "step": 2,
+      "unit": "px",
+      "label": "图标尺寸",
+      "default": 34
+    },
+    {
+      "type": "color",
+      "id": "icon_label_color",
+      "label": "图标文案颜色",
+      "default": "#4b5563"
+    },
+    {
+      "type": "range",
+      "id": "icon_label_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "图标文案字号",
+      "default": 12
     },
     {
       "type": "header",
@@ -374,32 +518,80 @@
       "default": 20
     }
   ],
+  "max_blocks": 3,
   "blocks": [
     {
       "type": "advantage_item",
-      "name": "优势条目",
+      "name": "优势卡片",
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "图标图片（140 x 140）"
+          "label": "卡片图片（4:3）"
         },
         {
           "type": "text",
           "id": "item_title",
-          "label": "条目标题",
+          "label": "卡片标题",
           "default": "颜色鲜艳"
         },
         {
           "type": "textarea",
-          "id": "text",
-          "label": "描述文本",
+          "id": "item_description",
+          "label": "卡片描述",
           "default": "水洗牢度好，水洗50次不变形。"
+        },
+        {
+          "type": "header",
+          "content": "图标行（最多 4 个）"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "图标 1"
+        },
+        {
+          "type": "text",
+          "id": "icon_label_1",
+          "label": "图标 1 文案",
+          "default": "耐水洗"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "图标 2"
+        },
+        {
+          "type": "text",
+          "id": "icon_label_2",
+          "label": "图标 2 文案",
+          "default": "不易褪色"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "图标 3"
+        },
+        {
+          "type": "text",
+          "id": "icon_label_3",
+          "label": "图标 3 文案",
+          "default": "环保墨水"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_4",
+          "label": "图标 4"
+        },
+        {
+          "type": "text",
+          "id": "icon_label_4",
+          "label": "图标 4 文案",
+          "default": "持久耐用"
         }
       ]
     }
   ],
-  "max_blocks": 3,
   "presets": [
     {
       "name": "产品优势",
@@ -407,22 +599,49 @@
         {
           "type": "advantage_item",
           "settings": {
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
             "item_title": "颜色鲜艳",
-            "text": "水洗牢度好，水洗50次不变形。"
+            "item_description": "水洗牢度好，水洗50次不变形。",
+            "icon_1": "shopify://shop_images/2.jpg",
+            "icon_label_1": "耐水洗",
+            "icon_2": "shopify://shop_images/2.jpg",
+            "icon_label_2": "不易褪色",
+            "icon_3": "shopify://shop_images/2.jpg",
+            "icon_label_3": "环保墨水",
+            "icon_4": "shopify://shop_images/2.jpg",
+            "icon_label_4": "持久耐用"
           }
         },
         {
           "type": "advantage_item",
           "settings": {
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
             "item_title": "适用多种面料",
-            "text": "适用丁名科面料，衣服，帆布袋，帽子，帆布。"
+            "item_description": "适用于多种面料，衣服，帆布袋，帽子，帆布，牛仔等。",
+            "icon_1": "shopify://shop_images/2.jpg",
+            "icon_label_1": "衣服",
+            "icon_2": "shopify://shop_images/2.jpg",
+            "icon_label_2": "帆布袋",
+            "icon_3": "shopify://shop_images/2.jpg",
+            "icon_label_3": "帽子",
+            "icon_4": "shopify://shop_images/2.jpg",
+            "icon_label_4": "更多面料"
           }
         },
         {
           "type": "advantage_item",
           "settings": {
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
             "item_title": "灵活定制",
-            "text": "一件或多件定制，支持团队服装商业活动定制。"
+            "item_description": "一件或多件定制，支持团队服装商业活动定制。",
+            "icon_1": "shopify://shop_images/2.jpg",
+            "icon_label_1": "无起订量",
+            "icon_2": "shopify://shop_images/2.jpg",
+            "icon_label_2": "免费设计",
+            "icon_3": "shopify://shop_images/2.jpg",
+            "icon_label_3": "快速交付",
+            "icon_4": "shopify://shop_images/2.jpg",
+            "icon_label_4": "团队定制"
           }
         }
       ]

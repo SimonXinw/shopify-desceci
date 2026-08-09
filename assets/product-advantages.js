@@ -18,15 +18,15 @@ if (!customElements.get("product-advantages")) {
         return;
       }
 
-      const carousel = this.querySelector("[data-advantages-swiper]");
+      const carouselElement = this.querySelector("[data-advantages-swiper]");
 
-      if (!carousel) return;
+      if (!carouselElement) return;
 
-      const previousButton = carousel.querySelector("[data-swiper-previous]");
-      const nextButton = carousel.querySelector("[data-swiper-next]");
+      const previousButton = carouselElement.querySelector("[data-swiper-previous]");
+      const nextButton = carouselElement.querySelector("[data-swiper-next]");
 
-      this.swiperInstance = new window.Swiper(carousel, {
-        slidesPerView: 1.15,
+      this.swiperInstance = new window.Swiper(carouselElement, {
+        slidesPerView: 1.1,
         spaceBetween: 12,
         observer: true,
         observeParents: true,
@@ -37,7 +37,7 @@ if (!customElements.get("product-advantages")) {
         },
         breakpoints: {
           750: {
-            slidesPerView: "auto",
+            slidesPerView: 3,
             spaceBetween: 20,
             allowTouchMove: false,
           },
