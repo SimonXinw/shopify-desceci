@@ -4,12 +4,17 @@
     --desktop-height: {{ section.settings.desktop_height }}px;
     --mobile-image-height: {{ section.settings.mobile_image_height }}px;
     --content-width: {{ section.settings.content_width }}px;
-    --content-position: {{ section.settings.content_position }};
     --desktop-text-align: {{ section.settings.desktop_text_alignment }};
     --mobile-text-align: {{ section.settings.mobile_text_alignment }};
+    --eyebrow-size: {{ section.settings.eyebrow_size }}px;
+    --mobile-eyebrow-size: {{ section.settings.mobile_eyebrow_size }}px;
+    --eyebrow-color: {{ section.settings.eyebrow_color }};
     --title-size: {{ section.settings.title_size }}px;
     --mobile-title-size: {{ section.settings.mobile_title_size }}px;
-    --text-color: {{ section.settings.text_color }};
+    --title-color: {{ section.settings.title_color }};
+    --description-size: {{ section.settings.description_size }}px;
+    --mobile-description-size: {{ section.settings.mobile_description_size }}px;
+    --description-color: {{ section.settings.description_color }};
     --overlay-color: {{ section.settings.overlay_color }};
     --overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
     --content-background: {{ section.settings.content_background }};
@@ -23,8 +28,12 @@
 >
   <div class="banner">
     <div class="content">
-      <div class="content_frame page-width">
+      <div class="content_frame">
         <div class="copy">
+          {%- if section.settings.eyebrow_text != blank -%}
+            <p class="eyebrow">{{ section.settings.eyebrow_text }}</p>
+          {%- endif -%}
+
           {%- if section.settings.title != blank -%}
             <h2 class="title inline-richtext">{{ section.settings.title }}</h2>
           {%- endif -%}
@@ -49,9 +58,9 @@
       {%- else -%}
         {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder' }}
       {%- endif -%}
-    </div>
 
-    <div class="overlay" aria-hidden="true"></div>
+      <div class="overlay" aria-hidden="true"></div>
+    </div>
   </div>
 </div>
 
@@ -62,20 +71,65 @@
   }
 
   .factory_scene_section .banner {
-    position: relative;
-    min-height: var(--desktop-height);
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     border-radius: var(--border-radius);
     background: var(--content-background);
-    isolation: isolate;
+  }
+
+  .factory_scene_section .content {
+    width: 100%;
+    background: var(--content-background);
+  }
+
+  .factory_scene_section .content_frame {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 4rem 1.5rem 3.2rem;
+  }
+
+  .factory_scene_section .copy {
+    width: min(100%, var(--content-width));
+    text-align: var(--desktop-text-align);
+  }
+
+  .factory_scene_section .eyebrow {
+    margin: 0 0 1.2rem;
+    color: var(--eyebrow-color);
+    font-size: var(--eyebrow-size);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .factory_scene_section .title {
+    margin: 0;
+    color: var(--title-color);
+    font-size: var(--title-size);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .factory_scene_section .description {
+    margin-top: 1.6rem;
+    color: var(--description-color);
+    font-size: var(--description-size);
+    line-height: 1.5;
+  }
+
+  .factory_scene_section .description > * {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .factory_scene_section .media {
-    position: absolute;
-    z-index: 0;
-    inset: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: var(--desktop-height);
+    overflow: hidden;
   }
 
   .factory_scene_section .media .image,
@@ -96,91 +150,36 @@
     pointer-events: none;
   }
 
-  .factory_scene_section .content {
-    position: absolute;
-    z-index: 2;
-    inset: 0;
-    color: var(--text-color);
-  }
-
-  .factory_scene_section .content_frame {
-    display: flex;
-    align-items: center;
-    justify-content: var(--content-position);
-    height: 100%;
-  }
-
-  .factory_scene_section .copy {
-    width: min(100%, var(--content-width));
-    text-align: var(--desktop-text-align);
-  }
-
-  .factory_scene_section .title {
-    margin: 0;
-    color: inherit;
-    font-size: var(--title-size);
-    font-weight: 700;
-    line-height: 1.15;
-  }
-
-  .factory_scene_section .description {
-    margin-top: 1.6rem;
-    color: inherit;
-    font-size: 1.6rem;
-    line-height: 1.5;
-  }
-
-  .factory_scene_section .description > * {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
   @media screen and (max-width: 749px) {
     .factory_scene_section {
       padding-top: var(--mobile-padding-top);
       padding-bottom: var(--mobile-padding-bottom);
     }
 
-    .factory_scene_section .banner {
-      display: flex;
-      min-height: 0;
-      flex-direction: column;
-    }
-
-    .factory_scene_section .content {
-      position: relative;
-      inset: auto;
-      order: 1;
-      color: var(--text-color);
-      background: var(--content-background);
-    }
-
     .factory_scene_section .content_frame {
-      display: block;
-      height: auto;
-      padding-top: 3.2rem;
-      padding-bottom: 3.2rem;
+      padding: 2.4rem 1.5rem 2rem;
     }
 
     .factory_scene_section .copy {
-      width: 100%;
       text-align: var(--mobile-text-align);
+    }
+
+    .factory_scene_section .eyebrow {
+      margin-bottom: 1rem;
+      font-size: var(--mobile-eyebrow-size);
     }
 
     .factory_scene_section .title {
       font-size: var(--mobile-title-size);
     }
 
-    .factory_scene_section .media {
-      position: relative;
-      inset: auto;
-      order: 2;
-      height: var(--mobile-image-height);
-      flex: 0 0 var(--mobile-image-height);
+    .factory_scene_section .description {
+      margin-top: 1.2rem;
+      font-size: var(--mobile-description-size);
     }
 
-    .factory_scene_section .overlay {
-      display: none;
+    .factory_scene_section .media {
+      height: var(--mobile-image-height);
     }
   }
 {% endstylesheet %}
@@ -274,58 +273,42 @@
       "content": "文案"
     },
     {
+      "type": "text",
+      "id": "eyebrow_text",
+      "label": "顶部小字",
+      "default": "BUILT TO LAST. DELIVERED TO YOU."
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "PC 端顶部小字字号",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "mobile_eyebrow_size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "移动端顶部小字字号",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "顶部小字颜色",
+      "default": "#1B878D"
+    },
+    {
       "type": "inline_richtext",
       "id": "title",
       "label": "标题",
       "default": "Professional production, reliable delivery"
-    },
-    {
-      "type": "richtext",
-      "id": "description",
-      "label": "描述",
-      "default": "<p>Explore our factory, production capabilities, quality standards, and fast turnaround service.</p>"
-    },
-    {
-      "type": "select",
-      "id": "content_position",
-      "label": "PC 端文案位置",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "左侧"
-        },
-        {
-          "value": "center",
-          "label": "居中"
-        },
-        {
-          "value": "flex-end",
-          "label": "右侧"
-        }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "text_alignment",
-      "id": "desktop_text_alignment",
-      "label": "PC 端文字对齐",
-      "default": "center"
-    },
-    {
-      "type": "text_alignment",
-      "id": "mobile_text_alignment",
-      "label": "移动端文字对齐",
-      "default": "center"
-    },
-    {
-      "type": "range",
-      "id": "content_width",
-      "min": 300,
-      "max": 900,
-      "step": 20,
-      "unit": "px",
-      "label": "文案最大宽度",
-      "default": 600
     },
     {
       "type": "range",
@@ -349,15 +332,69 @@
     },
     {
       "type": "color",
-      "id": "text_color",
-      "label": "文字颜色",
+      "id": "title_color",
+      "label": "标题颜色",
       "default": "#121212"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "描述",
+      "default": "<p>Explore our factory, production capabilities, quality standards, and fast turnaround service.</p>"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "PC 端描述字号",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mobile_description_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "移动端描述字号",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "描述颜色",
+      "default": "#353C42"
+    },
+    {
+      "type": "text_alignment",
+      "id": "desktop_text_alignment",
+      "label": "PC 端文字对齐",
+      "default": "center"
+    },
+    {
+      "type": "text_alignment",
+      "id": "mobile_text_alignment",
+      "label": "移动端文字对齐",
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "min": 300,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "label": "文案最大宽度",
+      "default": 760
     },
     {
       "type": "color",
       "id": "content_background",
-      "label": "移动端文案背景颜色",
-      "default": "#f3f3f3"
+      "label": "文案背景颜色",
+      "default": "#F6F7F9"
     },
     {
       "type": "header",
