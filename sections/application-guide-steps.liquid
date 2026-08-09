@@ -73,6 +73,7 @@
 {% stylesheet %}
   .application_guide_steps {
     --guide-step-gap: 5.6rem;
+    --guide-arrow-size: 2.8rem;
     padding: var(--guide-padding-top) 0 var(--guide-padding-bottom);
     background: var(--guide-section-background);
   }
@@ -180,40 +181,31 @@
   .application_guide_steps .connector {
     position: absolute;
     top: 30%;
-    left: calc(100% + 1rem);
-    width: calc(var(--guide-step-gap) - 2rem);
-    height: 0.1rem;
-    background: var(--guide-arrow-color);
-    transform: translateY(-50%);
-  }
-
-  .application_guide_steps .connector::before {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 0.5rem;
-    height: 0.5rem;
+    left: calc(100% + (var(--guide-step-gap) - var(--guide-arrow-size)) / 2);
+    width: var(--guide-arrow-size);
+    height: var(--guide-arrow-size);
     border-radius: 50%;
     background: var(--guide-arrow-color);
-    content: "";
     transform: translateY(-50%);
+    box-shadow: 0 0.2rem 0.6rem rgba(18, 18, 18, 0.12);
   }
 
   .application_guide_steps .connector::after {
     position: absolute;
     top: 50%;
-    right: 0;
-    width: 0.8rem;
-    height: 0.8rem;
-    border-top: 0.15rem solid var(--guide-arrow-color);
-    border-right: 0.15rem solid var(--guide-arrow-color);
+    left: 50%;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-top: 0.2rem solid var(--guide-card-background);
+    border-right: 0.2rem solid var(--guide-card-background);
     content: "";
-    transform: translateY(-50%) rotate(45deg);
+    transform: translate(-65%, -50%) rotate(45deg);
   }
 
   @media screen and (min-width: 750px) {
     .application_guide_steps {
       --guide-step-gap: clamp(5.6rem, 6vw, 8.6rem);
+      --guide-arrow-size: clamp(2.8rem, 2.4vw, 3.6rem);
     }
 
     .application_guide_steps .heading {
