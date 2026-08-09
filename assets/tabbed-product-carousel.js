@@ -62,8 +62,8 @@ if (!customElements.get("tabbed-product-carousel")) {
               spaceBetween: 16,
             },
             990: {
-              slidesPerView: 4,
-              spaceBetween: 16,
+              slidesPerView: 3,
+              spaceBetween: 20,
             },
           },
         });

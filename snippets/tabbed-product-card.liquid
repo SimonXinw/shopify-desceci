@@ -25,7 +25,7 @@ Renders a product card for the tabbed product carousel.
         | image_tag:
           class: 'image',
           widths: '240, 360, 480, 720, 900',
-          sizes: '(min-width: 990px) 22vw, (min-width: 750px) 42vw, 82vw',
+          sizes: '(min-width: 990px) 30vw, (min-width: 750px) 42vw, 82vw',
           loading: 'lazy'
       }}
     {%- else -%}
@@ -44,14 +44,14 @@ Renders a product card for the tabbed product carousel.
       <p class="product_description">{{ product.description | strip_html | truncate: 90 }}</p>
     {%- endif -%}
 
-    <div class="footer">
-      <div class="prices">
-        {%- if card_variant.compare_at_price > card_variant.price -%}
-          <s class="compare_price">{{ card_variant.compare_at_price | money }}</s>
-        {%- endif -%}
-        <span class="final_price">{{ card_variant.price | money }}</span>
-      </div>
+    <div class="prices">
+      {%- if card_variant.compare_at_price > card_variant.price -%}
+        <s class="compare_price">{{ card_variant.compare_at_price | money }}</s>
+      {%- endif -%}
+      <span class="final_price">{{ card_variant.price | money }}</span>
+    </div>
 
+    <div class="footer">
       <product-form data-hide-errors="true">
         {%- form 'product', product, id: product_form_id, class: 'product_form' -%}
           <input type="hidden" name="id" value="{{ card_variant.id }}">
