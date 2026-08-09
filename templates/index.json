@@ -39,13 +39,68 @@
             "icon": "shopify://shop_images/2.jpg",
             "text": "Fast Turnaround"
           }
+        },
+        "bottom-no-minimum": {
+          "type": "bottom_item",
+          "settings": {
+            "icon": "shopify://shop_images/2.jpg",
+            "text_1": "NO MINIMUM",
+            "text_1_color": "#ffffff",
+            "text_2": "ORDER",
+            "text_2_color": "#b4bfd4"
+          }
+        },
+        "bottom-premium-quality": {
+          "type": "bottom_item",
+          "settings": {
+            "icon": "shopify://shop_images/2.jpg",
+            "text_1": "PREMIUM",
+            "text_1_color": "#ffffff",
+            "text_2": "QUALITY",
+            "text_2_color": "#b4bfd4"
+          }
+        },
+        "bottom-long-lasting": {
+          "type": "bottom_item",
+          "settings": {
+            "icon": "shopify://shop_images/2.jpg",
+            "text_1": "LONG LASTING",
+            "text_1_color": "#ffffff",
+            "text_2": "& DURABLE",
+            "text_2_color": "#b4bfd4"
+          }
+        },
+        "bottom-all-fabrics": {
+          "type": "bottom_item",
+          "settings": {
+            "icon": "shopify://shop_images/2.jpg",
+            "text_1": "PERFECT FOR",
+            "text_1_color": "#ffffff",
+            "text_2": "ALL FABRICS",
+            "text_2_color": "#b4bfd4"
+          }
+        },
+        "bottom-support": {
+          "type": "bottom_item",
+          "settings": {
+            "icon": "shopify://shop_images/2.jpg",
+            "text_1": "DEDICATED",
+            "text_1_color": "#ffffff",
+            "text_2": "SUPPORT",
+            "text_2_color": "#b4bfd4"
+          }
         }
       },
       "block_order": [
         "feature-quality",
         "feature-shipping",
         "feature-no-minimum",
-        "feature-turnaround"
+        "feature-turnaround",
+        "bottom-no-minimum",
+        "bottom-premium-quality",
+        "bottom-long-lasting",
+        "bottom-all-fabrics",
+        "bottom-support"
       ],
       "settings": {
         "background_image": "shopify://shop_images/2_117d179b-115c-456e-837a-0108af6ae9d0.png",
@@ -55,19 +110,18 @@
         "desktop_horizontal_position": "flex-start",
         "desktop_vertical_position": "flex-start",
         "desktop_text_alignment": "left",
-        "content_width": 35,
+        "content_width": 40,
         "title": "Premium DTF Transfers Made Simple",
         "description": "<h5><br/>1.Upload your artwork.</h5><h5>2.We print professional-quality DTF transfers.</h5><h5>3.You press, create, and grow your apparel business.<br/><br/></h5>",
         "text_color": "#73B50A",
         "title_size": 40,
         "mobile_title_size": 32,
-        "button_label_1": "Upload Your Design",
+        "button_label_1": "UPLOAD YOUR DESIGN",
         "button_link_1": "",
-        "button_label_2": "Shop Ready To Press",
+        "button_label_2": "SHOP READY TO PRESS",
         "button_link_2": "",
-        "button_background": "#73B50A",
-        "button_text_color": "#121212",
-        "button_radius": 40
+        "button_text_color": "#000000",
+        "bottom_bar_background": "#152c5b"
       }
     },
     "tabbed_products": {

@@ -6,6 +6,37 @@
     assign image_loading = 'eager'
     assign fetch_priority = 'high'
   endif
+
+  assign feature_blocks = section.blocks | where: 'type', 'feature'
+  assign bottom_blocks = section.blocks | where: 'type', 'bottom_item'
+
+  assign eyebrow_classes = 'eyebrow'
+  unless section.settings.eyebrow_show_desktop
+    assign eyebrow_classes = eyebrow_classes | append: ' hidden_desktop'
+  endunless
+  unless section.settings.eyebrow_show_mobile
+    assign eyebrow_classes = eyebrow_classes | append: ' hidden_mobile'
+  endunless
+
+  assign eyebrow_has_background = false
+  if section.settings.eyebrow_background.alpha > 0
+    assign eyebrow_has_background = true
+  endif
+
+  assign title_has_background = false
+  if section.settings.title_background.alpha > 0
+    assign title_has_background = true
+  endif
+
+  assign subtitle_has_background = false
+  if section.settings.subtitle_background.alpha > 0
+    assign subtitle_has_background = true
+  endif
+
+  assign description_has_background = false
+  if section.settings.description_background.alpha > 0
+    assign description_has_background = true
+  endif
 -%}
 
 <div
@@ -20,10 +51,20 @@
     --title-size: {{ section.settings.title_size }}px;
     --mobile-title-size: {{ section.settings.mobile_title_size }}px;
     --text-color: {{ section.settings.text_color }};
+    --eyebrow-color: {{ section.settings.eyebrow_color }};
+    --eyebrow-background: {{ section.settings.eyebrow_background }};
+    --title-color: {{ section.settings.title_color }};
+    --title-background: {{ section.settings.title_background }};
+    --subtitle-size: {{ section.settings.subtitle_size }}px;
+    --subtitle-color: {{ section.settings.subtitle_color }};
+    --subtitle-background: {{ section.settings.subtitle_background }};
+    --description-color: {{ section.settings.description_color }};
+    --description-background: {{ section.settings.description_background }};
     --fallback-background: {{ section.settings.fallback_background }};
-    --button-background: {{ section.settings.button_background }};
+    --button-hover-background: {{ section.settings.button_hover_background }};
     --button-text-color: {{ section.settings.button_text_color }};
-    --button-radius: {{ section.settings.button_radius }}px;
+    --button-font-size: {{ section.settings.button_font_size }}px;
+    --bottom-bar-background: {{ section.settings.bottom_bar_background }};
   "
 >
   <div class="background">
@@ -45,49 +86,41 @@
 
   <div class="container page-width">
     <div class="content">
-      {%- if section.settings.title != blank -%}
-        <h2 class="title inline-richtext">{{ section.settings.title }}</h2>
-      {%- endif -%}
-
-      {%- if section.settings.description != blank -%}
-        <div class="description rte">{{ section.settings.description }}</div>
-      {%- endif -%}
-
-      {%- if section.settings.button_label_1 != blank or section.settings.button_label_2 != blank -%}
-        <div class="actions">
-          {%- if section.settings.button_label_1 != blank -%}
-            <a
-              class="action"
-              {% if section.settings.button_link_1 != blank %}
-                href="{{ section.settings.button_link_1 }}"
-              {% else %}
-                role="link"
-                aria-disabled="true"
-              {% endif %}
-            >
-              {{ section.settings.button_label_1 | escape }}
-            </a>
-          {%- endif -%}
-
-          {%- if section.settings.button_label_2 != blank -%}
-            <a
-              class="action"
-              {% if section.settings.button_link_2 != blank %}
-                href="{{ section.settings.button_link_2 }}"
-              {% else %}
-                role="link"
-                aria-disabled="true"
-              {% endif %}
-            >
-              {{ section.settings.button_label_2 | escape }}
-            </a>
-          {%- endif -%}
+      {%- if section.settings.eyebrow_text != blank -%}
+        <div class="{{ eyebrow_classes }}">
+          <span class="text inline-richtext{% if eyebrow_has_background %} has_background{% endif %}">
+            {{- section.settings.eyebrow_text -}}
+          </span>
         </div>
       {%- endif -%}
 
-      {%- if section.blocks.size > 0 -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="title">
+          <span class="text inline-richtext{% if title_has_background %} has_background{% endif %}">
+            {{- section.settings.title -}}
+          </span>
+        </h2>
+      {%- endif -%}
+
+      {%- if section.settings.subtitle_text != blank -%}
+        <div class="subtitle">
+          <span class="text inline-richtext{% if subtitle_has_background %} has_background{% endif %}">
+            {{- section.settings.subtitle_text -}}
+          </span>
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <div class="description">
+          <div class="text rte{% if description_has_background %} has_background{% endif %}">
+            {{- section.settings.description -}}
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- if feature_blocks.size > 0 -%}
         <div class="features">
-          {%- for block in section.blocks -%}
+          {%- for block in feature_blocks -%}
             <div class="feature" {{ block.shopify_attributes }}>
               {%- if block.settings.icon != blank -%}
                 {{
@@ -102,19 +135,123 @@
               {%- endif -%}
 
               {%- if block.settings.text != blank -%}
-                <div class="feature_text">{{ block.settings.text }}</div>
+                <div class="feature_text" style="--line-color: {{ block.settings.text_color }};">
+                  {{- block.settings.text -}}
+                </div>
+              {%- endif -%}
+
+              {%- if block.settings.text_2 != blank -%}
+                <div class="feature_text" style="--line-color: {{ block.settings.text_2_color }};">
+                  {{- block.settings.text_2 -}}
+                </div>
               {%- endif -%}
             </div>
           {%- endfor -%}
         </div>
       {%- endif -%}
+
+      {%- if section.settings.button_label_1 != blank or section.settings.button_label_2 != blank -%}
+        <div class="actions">
+          {%- if section.settings.button_label_1 != blank -%}
+            <a
+              class="action"
+              {% if section.settings.button_link_1 != blank %}
+                href="{{ section.settings.button_link_1 }}"
+              {% else %}
+                role="link"
+                aria-disabled="true"
+              {% endif %}
+            >
+              <span class="inner">
+                {%- if section.settings.button_icon_1 != blank -%}
+                  {{
+                    section.settings.button_icon_1
+                    | image_url: width: 80
+                    | image_tag: class: 'icon', widths: '20, 40, 60, 80', sizes: '20px', loading: 'lazy'
+                  }}
+                {%- endif -%}
+
+                <span class="label">{{ section.settings.button_label_1 | escape }}</span>
+              </span>
+            </a>
+          {%- endif -%}
+
+          {%- if section.settings.button_label_2 != blank -%}
+            <a
+              class="action"
+              {% if section.settings.button_link_2 != blank %}
+                href="{{ section.settings.button_link_2 }}"
+              {% else %}
+                role="link"
+                aria-disabled="true"
+              {% endif %}
+            >
+              <span class="inner">
+                {%- if section.settings.button_icon_2 != blank -%}
+                  {{
+                    section.settings.button_icon_2
+                    | image_url: width: 80
+                    | image_tag: class: 'icon', widths: '20, 40, 60, 80', sizes: '20px', loading: 'lazy'
+                  }}
+                {%- endif -%}
+
+                <span class="label">{{ section.settings.button_label_2 | escape }}</span>
+              </span>
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+
     </div>
   </div>
+
+  {%- if bottom_blocks.size > 0 -%}
+    <div class="bottom_bar">
+      <div class="inner page-width">
+        {%- for block in bottom_blocks -%}
+          <div class="item" {{ block.shopify_attributes }}>
+            {%- if block.settings.icon != blank -%}
+              {{
+                block.settings.icon
+                | image_url: width: 128
+                | image_tag:
+                  class: 'icon',
+                  widths: '48, 96, 128',
+                  sizes: '48px',
+                  loading: 'lazy'
+              }}
+            {%- endif -%}
+
+            <div class="texts">
+              {%- if block.settings.text_1 != blank -%}
+                <div class="line line_top" style="--line-color: {{ block.settings.text_1_color }};">
+                  {{- block.settings.text_1 -}}
+                </div>
+              {%- endif -%}
+
+              {%- if block.settings.text_2 != blank -%}
+                <div class="line line_bottom" style="--line-color: {{ block.settings.text_2_color }};">
+                  {{- block.settings.text_2 -}}
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
 </div>
 
 {% stylesheet %}
   .image_text_banner {
+    --content-padding-top: 60px;
+    --button-skew: -10deg;
+    --bottom-bar-divider: rgba(255, 255, 255, 0.22);
+
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     min-height: var(--desktop-height);
     overflow: hidden;
@@ -143,43 +280,93 @@
     position: relative;
     z-index: 1;
     display: flex;
+    flex: 1 1 auto;
     align-items: var(--desktop-align);
     justify-content: var(--desktop-justify);
     width: 100%;
-    min-height: var(--desktop-height);
   }
 
   .image_text_banner .content {
     width: var(--content-width);
     max-width: 100%;
+    padding-top: var(--content-padding-top);
     text-align: var(--desktop-text-align);
+  }
+
+  .image_text_banner .eyebrow {
+    padding-bottom: 40px;
+    color: var(--eyebrow-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+  }
+
+  .image_text_banner .eyebrow .text {
+    display: inline-block;
+    background: var(--eyebrow-background);
   }
 
   .image_text_banner .title {
     margin: 0;
-    color: inherit;
+    color: var(--title-color);
     font-size: var(--title-size);
     font-weight: 700;
     line-height: 1.08;
   }
 
+  .image_text_banner .title .text {
+    display: inline-block;
+    background: var(--title-background);
+  }
+
+  .image_text_banner .subtitle {
+    margin-top: 1.6rem;
+  }
+
+  .image_text_banner .subtitle .text {
+    display: inline-block;
+    color: var(--subtitle-color);
+    background: var(--subtitle-background);
+    font-size: var(--subtitle-size);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  .image_text_banner .subtitle .text.has_background {
+    padding: 0.4rem 1.2rem;
+  }
+
   .image_text_banner .description {
     margin-top: 1.6rem;
-    color: inherit;
+    color: var(--description-color);
     font-size: 1.6rem;
     line-height: 1.5;
   }
 
-  .image_text_banner .description > * {
+  .image_text_banner .description .text {
+    background: var(--description-background);
+  }
+
+  .image_text_banner .description .text > * {
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  .image_text_banner .has_background {
+    padding: 0.6rem 1.6rem;
+  }
+
+  .image_text_banner .description .text.has_background {
+    display: inline-block;
   }
 
   .image_text_banner .actions {
     display: flex;
     flex-wrap: wrap;
     justify-content: var(--desktop-justify);
-    gap: 1.2rem;
+    gap: 1.6rem;
     margin-top: 2.4rem;
   }
 
@@ -187,21 +374,42 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 4.4rem;
-    padding: 1rem 2rem;
-    border-radius: var(--button-radius);
+    min-height: 4.8rem;
+    padding: 1rem 2.4rem;
+    border: 2px solid currentcolor;
+    border-radius: 14px 2px 14px 2px;
     color: var(--button-text-color);
-    background: var(--button-background);
-    font-size: 1.4rem;
+    background: transparent;
+    text-decoration: none;
+    transform: skewX(var(--button-skew));
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .image_text_banner .action .inner {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transform: skewX(calc(var(--button-skew) * -1));
+  }
+
+  .image_text_banner .action .icon {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    object-fit: contain;
+  }
+
+  .image_text_banner .action .label {
+    font-size: var(--button-font-size);
     font-weight: 700;
     line-height: 1.2;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
+    white-space: nowrap;
   }
 
   .image_text_banner .action:hover {
-    color: var(--button-text-color);
-    opacity: 0.85;
+    background: var(--button-hover-background);
+    background-origin: border-box;
+    border-color: transparent;
   }
 
   .image_text_banner .action[aria-disabled='true'] {
@@ -210,18 +418,21 @@
   }
 
   .image_text_banner .features {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: var(--desktop-justify);
+    gap: 2.4rem;
     margin-top: 2.4rem;
   }
 
   .image_text_banner .feature {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
     gap: 0.8rem;
     min-width: 0;
+    text-align: center;
   }
 
   .image_text_banner .feature .icon {
@@ -232,9 +443,82 @@
   }
 
   .image_text_banner .feature_text {
+    color: var(--line-color, inherit);
     font-size: 1.3rem;
     font-weight: 600;
     line-height: 1.25;
+    text-align: center;
+  }
+
+  .image_text_banner .bottom_bar {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: auto;
+    padding: 1.6rem 0;
+    background: var(--bottom-bar-background);
+  }
+
+  .image_text_banner .bottom_bar .inner {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .image_text_banner .bottom_bar .item {
+    position: relative;
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    min-width: 0;
+    padding: 0.4rem 1.6rem;
+  }
+
+  .image_text_banner .bottom_bar .item:not(:last-child)::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 2.8rem;
+    background: var(--bottom-bar-divider);
+    transform: translateY(-50%);
+    content: '';
+  }
+
+  .image_text_banner .bottom_bar .icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    object-fit: contain;
+  }
+
+  .image_text_banner .bottom_bar .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+  }
+
+  .image_text_banner .bottom_bar .line {
+    color: var(--line-color, inherit);
+    font-size: 1.3rem;
+    line-height: 1.25;
+  }
+
+  .image_text_banner .bottom_bar .line_top {
+    font-weight: 700;
+  }
+
+  .image_text_banner .bottom_bar .line_bottom {
+    font-weight: 500;
+  }
+
+  @media screen and (min-width: 750px) {
+    .image_text_banner .hidden_desktop {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 749px) {
@@ -242,10 +526,13 @@
       min-height: var(--mobile-height);
     }
 
+    .image_text_banner .hidden_mobile {
+      display: none;
+    }
+
     .image_text_banner .container {
       align-items: center;
       justify-content: center;
-      min-height: var(--mobile-height);
     }
 
     .image_text_banner .content {
@@ -262,8 +549,19 @@
       justify-content: center;
     }
 
-    .image_text_banner .feature {
-      justify-content: center;
+    .image_text_banner .bottom_bar .inner {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .image_text_banner .bottom_bar .item {
+      justify-content: flex-start;
+      padding: 0.4rem 0;
+    }
+
+    .image_text_banner .bottom_bar .item:not(:last-child)::after {
+      display: none;
     }
   }
 {% endstylesheet %}
@@ -374,6 +672,40 @@
     },
     {
       "type": "header",
+      "content": "顶部小字行"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "eyebrow_text",
+      "label": "小字文案",
+      "default": "— YOUR DESIGNS. OUR QUALITY. YOUR SUCCESS."
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "小字文案颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_background",
+      "label": "小字背景颜色",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "checkbox",
+      "id": "eyebrow_show_desktop",
+      "label": "PC 端显示小字行",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "eyebrow_show_mobile",
+      "label": "移动端显示小字行",
+      "default": true
+    },
+    {
+      "type": "header",
       "content": "文字"
     },
     {
@@ -383,6 +715,46 @@
       "default": "DTF Dallas | DTF Transfers & Custom Tshirt Printing"
     },
     {
+      "type": "color",
+      "id": "title_color",
+      "label": "标题颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "title_background",
+      "label": "标题背景颜色",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subtitle_text",
+      "label": "标题下方文案",
+      "default": "UPLOAD. WE PRINT. YOU PRESS. YOU GROW."
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "label": "标题下方文案字号",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "标题下方文案颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_background",
+      "label": "标题下方文案背景颜色",
+      "default": "#000000"
+    },
+    {
       "type": "richtext",
       "id": "description",
       "label": "描述",
@@ -390,8 +762,20 @@
     },
     {
       "type": "color",
+      "id": "description_color",
+      "label": "描述颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "description_background",
+      "label": "描述背景颜色",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
       "id": "text_color",
-      "label": "文字颜色",
+      "label": "整体文字颜色（未单独设置时生效）",
       "default": "#121212"
     },
     {
@@ -430,6 +814,11 @@
       "label": "按钮 1 链接"
     },
     {
+      "type": "image_picker",
+      "id": "button_icon_1",
+      "label": "按钮 1 图标"
+    },
+    {
       "type": "text",
       "id": "button_label_2",
       "label": "按钮 2 文案",
@@ -441,33 +830,45 @@
       "label": "按钮 2 链接"
     },
     {
-      "type": "color",
-      "id": "button_background",
-      "label": "按钮背景颜色",
-      "default": "#ffbd1a"
+      "type": "image_picker",
+      "id": "button_icon_2",
+      "label": "按钮 2 图标"
+    },
+    {
+      "type": "text",
+      "id": "button_hover_background",
+      "label": "按钮 hover 渐变背景",
+      "info": "支持颜色或渐变写法",
+      "default": "linear-gradient(90deg, #bdf807, #14bffd)"
     },
     {
       "type": "color",
       "id": "button_text_color",
-      "label": "按钮文字颜色",
-      "default": "#121212"
+      "label": "按钮文字及边框颜色",
+      "default": "#000000"
     },
     {
       "type": "range",
-      "id": "button_radius",
-      "min": 0,
-      "max": 40,
-      "step": 2,
+      "id": "button_font_size",
+      "min": 12,
+      "max": 30,
+      "step": 1,
       "unit": "px",
-      "label": "按钮圆角",
-      "default": 40
+      "label": "按钮文字大小",
+      "default": 14
     },
     {
       "type": "header",
-      "content": "图标文案"
+      "content": "底部图标栏"
+    },
+    {
+      "type": "color",
+      "id": "bottom_bar_background",
+      "label": "底部栏背景颜色",
+      "default": "#152c5b"
     }
   ],
-  "max_blocks": 4,
+  "max_blocks": 16,
   "blocks": [
     {
       "type": "feature",
@@ -481,8 +882,61 @@
         {
           "type": "inline_richtext",
           "id": "text",
-          "label": "文案",
-          "default": "Same Day Shipping"
+          "label": "文案第一行",
+          "default": "FAST"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "第一行文字颜色",
+          "default": "#121212"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_2",
+          "label": "文案第二行",
+          "default": "PRODUCTION"
+        },
+        {
+          "type": "color",
+          "id": "text_2_color",
+          "label": "第二行文字颜色",
+          "default": "#121212"
+        }
+      ]
+    },
+    {
+      "type": "bottom_item",
+      "name": "底部图标项",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "图标"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_1",
+          "label": "第一行文案",
+          "default": "NO MINIMUM"
+        },
+        {
+          "type": "color",
+          "id": "text_1_color",
+          "label": "第一行文字颜色",
+          "default": "#ffffff"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_2",
+          "label": "第二行文案",
+          "default": "ORDER"
+        },
+        {
+          "type": "color",
+          "id": "text_2_color",
+          "label": "第二行文字颜色",
+          "default": "#b4bfd4"
         }
       ]
     }
@@ -494,13 +948,64 @@
         {
           "type": "feature",
           "settings": {
-            "text": "Premium quality"
+            "text": "FAST",
+            "text_2": "PRODUCTION"
           }
         },
         {
           "type": "feature",
           "settings": {
-            "text": "Same Day Shipping"
+            "text": "VIBRANT",
+            "text_2": "COLORS"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text": "USA LOCAL",
+            "text_2": "SHIPPING"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text": "FAST",
+            "text_2": "TURNAROUND"
+          }
+        },
+        {
+          "type": "bottom_item",
+          "settings": {
+            "text_1": "NO MINIMUM",
+            "text_2": "ORDER"
+          }
+        },
+        {
+          "type": "bottom_item",
+          "settings": {
+            "text_1": "PREMIUM",
+            "text_2": "QUALITY"
+          }
+        },
+        {
+          "type": "bottom_item",
+          "settings": {
+            "text_1": "LONG LASTING",
+            "text_2": "& DURABLE"
+          }
+        },
+        {
+          "type": "bottom_item",
+          "settings": {
+            "text_1": "PERFECT FOR",
+            "text_2": "ALL FABRICS"
+          }
+        },
+        {
+          "type": "bottom_item",
+          "settings": {
+            "text_1": "DEDICATED",
+            "text_2": "SUPPORT"
           }
         }
       ]
