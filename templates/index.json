@@ -225,39 +225,75 @@
     "printing_service": {
       "type": "printing-service-showcase",
       "blocks": {
-        "text-order": {
-          "type": "text_item",
+        "card-quality": {
+          "type": "advantage_card",
           "settings": {
-            "text": "下午两点之前下单，当天打印完成。如果你不在本地，将通过快递把货物送到你手里，当然你也可以自己上门提货。"
+            "leading_icon": "shopify://shop_images/2.jpg",
+            "title_primary": "PREMIUM",
+            "title_primary_color": "#121212",
+            "title_secondary": "QUALITY",
+            "title_secondary_color": "#11a9a4",
+            "trailing_icon": "shopify://shop_images/2.jpg",
+            "tagline": "VIBRANT COLORS. SHARP DETAILS.",
+            "accent_color": "#11a9a4",
+            "feature_list": "High resolution printing with vivid, true-to-life colors.\nDurable transfers that last wash after wash.\nStrict quality control for every single print.",
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg"
           }
         },
-        "text-minimum": {
-          "type": "text_item",
+        "card-turnaround": {
+          "type": "advantage_card",
           "settings": {
-            "text": "没有最小起订量，一个也能打印。"
+            "leading_icon": "shopify://shop_images/2.jpg",
+            "title_primary": "FAST",
+            "title_primary_color": "#121212",
+            "title_secondary": "TURNAROUND",
+            "title_secondary_color": "#8cc63f",
+            "trailing_icon": "shopify://shop_images/2.jpg",
+            "tagline": "ORDER TODAY. SHIP TODAY.",
+            "accent_color": "#8cc63f",
+            "feature_list": "Orders placed before 2PM (CST) ship same day.\nEfficient workflow and advanced equipment.\nReliable & consistent on-time delivery.",
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg"
           }
         },
-        "text-quality": {
-          "type": "text_item",
+        "card-minimum": {
+          "type": "advantage_card",
           "settings": {
-            "text": "爱普生高质量打印头，高品质管理。"
+            "leading_icon": "shopify://shop_images/2.jpg",
+            "title_primary": "NO MINIMUM",
+            "title_primary_color": "#121212",
+            "title_secondary": "ORDER",
+            "title_secondary_color": "#11a9a4",
+            "trailing_icon": "shopify://shop_images/2.jpg",
+            "tagline": "ONE PIECE OR THOUSANDS, WE PRINT.",
+            "accent_color": "#11a9a4",
+            "feature_list": "No minimum order quantity.\nPerfect for test prints, samples and bulk orders.\nFlexibility to support your business growth.",
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg"
           }
         }
       },
       "block_order": [
-        "text-order",
-        "text-minimum",
-        "text-quality"
+        "card-quality",
+        "card-turnaround",
+        "card-minimum"
       ],
       "settings": {
-        "heading": "Our Printing Service",
-        "content_title": "Printing Workshop",
+        "heading": "OUR 3 CORE ADVANTAGES",
+        "heading_size": 34,
+        "mobile_heading_size": 24,
+        "heading_color": "#121212",
+        "divider_color": "#c9d6d8",
         "section_background": "#ffffff",
-        "content_background": "#f7f8f8",
-        "text_color": "#121212",
-        "accent_color": "#11a9a4",
-        "image_radius": 12,
-        "column_gap": 48,
+        "card_background": "#fafafa",
+        "card_radius": 12,
+        "column_gap": 24,
+        "leading_icon_size": 48,
+        "trailing_icon_size": 46,
+        "title_primary_size": 26,
+        "title_secondary_size": 26,
+        "tagline_size": 14,
+        "tagline_color": "#ffffff",
+        "feature_size": 15,
+        "feature_color": "#353c42",
         "padding_top": 60,
         "padding_bottom": 60,
         "mobile_padding_top": 20,

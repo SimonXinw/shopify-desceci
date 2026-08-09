@@ -2,11 +2,21 @@
   class="printing_service_showcase"
   style="
     --section-background: {{ section.settings.section_background }};
-    --text-color: {{ section.settings.text_color }};
-    --accent-color: {{ section.settings.accent_color }};
-    --content-background: {{ section.settings.content_background }};
-    --image-radius: {{ section.settings.image_radius }}px;
+    --heading-color: {{ section.settings.heading_color }};
+    --heading-size: {{ section.settings.heading_size }}px;
+    --mobile-heading-size: {{ section.settings.mobile_heading_size }}px;
+    --divider-color: {{ section.settings.divider_color }};
+    --card-background: {{ section.settings.card_background }};
+    --card-radius: {{ section.settings.card_radius }}px;
     --column-gap: {{ section.settings.column_gap }}px;
+    --leading-icon-size: {{ section.settings.leading_icon_size }}px;
+    --trailing-icon-size: {{ section.settings.trailing_icon_size }}px;
+    --title-primary-size: {{ section.settings.title_primary_size }}px;
+    --title-secondary-size: {{ section.settings.title_secondary_size }}px;
+    --tagline-size: {{ section.settings.tagline_size }}px;
+    --tagline-color: {{ section.settings.tagline_color }};
+    --feature-size: {{ section.settings.feature_size }}px;
+    --feature-color: {{ section.settings.feature_color }};
     --desktop-padding-top: {{ section.settings.padding_top }}px;
     --desktop-padding-bottom: {{ section.settings.padding_bottom }}px;
     --mobile-padding-top: {{ section.settings.mobile_padding_top }}px;
@@ -15,41 +25,86 @@
 >
   <div class="page-width">
     {%- if section.settings.heading != blank -%}
-      <h2 class="heading inline-richtext">{{ section.settings.heading }}</h2>
+      <div class="heading_row">
+        <span class="line" aria-hidden="true"></span>
+
+        <h2 class="heading inline-richtext">{{ section.settings.heading }}</h2>
+
+        <span class="line" aria-hidden="true"></span>
+      </div>
     {%- endif -%}
 
-    <div class="layout">
-      <div class="media">
-        {%- if section.settings.image != blank -%}
-          {{
-            section.settings.image
-            | image_url: width: 2400
-            | image_tag:
-              class: 'image',
-              widths: '550, 750, 1100, 1500, 2000, 2400',
-              sizes: '(min-width: 750px) 50vw, 100vw'
-          }}
-        {%- else -%}
-          {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder' }}
-        {%- endif -%}
-      </div>
+    <div class="cards">
+      {%- for block in section.blocks -%}
+        <div
+          class="advantage_card"
+          style="
+            --accent-color: {{ block.settings.accent_color }};
+            --title-primary-color: {{ block.settings.title_primary_color }};
+            --title-secondary-color: {{ block.settings.title_secondary_color }};
+          "
+          {{ block.shopify_attributes }}
+        >
+          <div class="head">
+            {%- if block.settings.leading_icon != blank -%}
+              {{
+                block.settings.leading_icon
+                | image_url: width: 240
+                | image_tag: class: 'leading_icon', widths: '80, 120, 240'
+              }}
+            {%- endif -%}
 
-      <div class="content">
-        {%- if section.settings.content_title != blank -%}
-          <h3 class="content_title inline-richtext">{{ section.settings.content_title }}</h3>
-        {%- endif -%}
+            <div class="head_text">
+              {%- if block.settings.title_primary != blank -%}
+                <p class="title_primary">{{ block.settings.title_primary }}</p>
+              {%- endif -%}
 
-        {%- if section.blocks.size > 0 -%}
-          <ul class="text_list" role="list">
-            {%- for block in section.blocks -%}
-              <li class="text_item" {{ block.shopify_attributes }}>
-                <span class="marker" aria-hidden="true"></span>
-                <div class="text">{{ block.settings.text | newline_to_br }}</div>
-              </li>
-            {%- endfor -%}
-          </ul>
-        {%- endif -%}
-      </div>
+              {%- if block.settings.title_secondary != blank -%}
+                <p class="title_secondary">{{ block.settings.title_secondary }}</p>
+              {%- endif -%}
+            </div>
+
+            {%- if block.settings.trailing_icon != blank -%}
+              {{
+                block.settings.trailing_icon
+                | image_url: width: 240
+                | image_tag: class: 'trailing_icon', widths: '80, 120, 240'
+              }}
+            {%- endif -%}
+          </div>
+
+          {%- if block.settings.tagline != blank -%}
+            <p class="tagline">{{ block.settings.tagline }}</p>
+          {%- endif -%}
+
+          {%- assign feature_lines = block.settings.feature_list | strip | newline_to_br | split: '<br />' -%}
+          {%- if feature_lines.size > 0 -%}
+            <ul class="feature_list" role="list">
+              {%- for feature_line in feature_lines -%}
+                {%- assign feature_text = feature_line | strip -%}
+                {%- if feature_text != blank -%}
+                  <li class="feature_item">{{ feature_text }}</li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
+          <div class="card_media">
+            {%- if block.settings.image != blank -%}
+              {{
+                block.settings.image
+                | image_url: width: 1600
+                | image_tag:
+                  class: 'card_image',
+                  widths: '400, 600, 800, 1200, 1600',
+                  sizes: '(min-width: 750px) 32vw, 100vw'
+              }}
+            {%- else -%}
+              {{ 'lifestyle-1' | placeholder_svg_tag: 'card_image placeholder' }}
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
     </div>
   </div>
 </div>
@@ -58,99 +113,139 @@
   .printing_service_showcase {
     padding-top: var(--desktop-padding-top);
     padding-bottom: var(--desktop-padding-bottom);
-    color: var(--text-color);
     background: var(--section-background);
   }
 
+  .printing_service_showcase .heading_row {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3.2rem;
+  }
+
+  .printing_service_showcase .line {
+    max-width: 20rem;
+    height: 1px;
+    flex: 1 1 auto;
+    background: var(--divider-color);
+  }
+
   .printing_service_showcase .heading {
-    margin: 0 0 4.8rem;
-    color: inherit;
-    font-size: clamp(3rem, 3vw, 4.8rem);
+    margin: 0;
+    color: var(--heading-color);
+    font-size: var(--heading-size);
     font-weight: 700;
-    line-height: 1.15;
+    line-height: 1.2;
     text-align: center;
   }
 
-  .printing_service_showcase .layout {
+  .printing_service_showcase .cards {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--column-gap);
-    align-items: stretch;
   }
 
-  .printing_service_showcase .media {
-    height: 600px;
-    overflow: hidden;
-    border-radius: var(--image-radius);
-    background: var(--content-background);
-  }
-
-  .printing_service_showcase .media .image,
-  .printing_service_showcase .media .placeholder {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .printing_service_showcase .content {
+  .printing_service_showcase .advantage_card {
     display: flex;
     min-width: 0;
     flex-direction: column;
-    justify-content: center;
-    padding: clamp(2.4rem, 4vw, 6rem);
-    border-radius: var(--image-radius);
+    padding: 2.4rem;
+    border-radius: var(--card-radius);
+    background: var(--card-background);
   }
 
-  .printing_service_showcase .content_title {
+  .printing_service_showcase .head {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  .printing_service_showcase .leading_icon {
+    width: var(--leading-icon-size);
+    height: var(--leading-icon-size);
+    flex: 0 0 auto;
+    object-fit: contain;
+  }
+
+  .printing_service_showcase .trailing_icon {
+    width: var(--trailing-icon-size);
+    height: var(--trailing-icon-size);
+    flex: 0 0 auto;
+    margin-left: auto;
+    object-fit: contain;
+  }
+
+  .printing_service_showcase .head_text {
+    min-width: 0;
+  }
+
+  .printing_service_showcase .title_primary {
     margin: 0;
-    color: inherit;
-    font-size: clamp(2.6rem, 2.4vw, 4rem);
-    font-weight: 700;
-    line-height: 1.2;
+    color: var(--title-primary-color);
+    font-size: var(--title-primary-size);
+    font-weight: 800;
+    line-height: 1.1;
   }
 
-  .printing_service_showcase .content_title::after {
-    display: block;
-    width: 5.6rem;
-    height: 0.3rem;
-    margin-top: 1.6rem;
-    border-radius: 999px;
+  .printing_service_showcase .title_secondary {
+    margin: 0.4rem 0 0;
+    color: var(--title-secondary-color);
+    font-size: var(--title-secondary-size);
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .printing_service_showcase .tagline {
+    margin: 2rem 0 0;
+    padding: 0.8rem 1.2rem;
+    color: var(--tagline-color);
     background: var(--accent-color);
-    content: "";
+    font-size: var(--tagline-size);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
   }
 
-  .printing_service_showcase .text_list {
+  .printing_service_showcase .feature_list {
     display: grid;
-    gap: 2.4rem;
-    margin: 3.2rem 0 0;
+    gap: 1.2rem;
+    margin: 2rem 0 0;
     padding: 0;
     list-style: none;
   }
 
-  .printing_service_showcase .text_item {
-    display: grid;
-    grid-template-columns: 1rem minmax(0, 1fr);
-    gap: 1.4rem;
-    align-items: start;
+  .printing_service_showcase .feature_item {
+    position: relative;
+    padding-left: 1.8rem;
+    color: var(--feature-color);
+    font-size: var(--feature-size);
+    line-height: 1.5;
   }
 
-  .printing_service_showcase .marker {
-    width: 0.8rem;
-    height: 0.8rem;
-    margin-top: 0.8rem;
+  .printing_service_showcase .feature_item::before {
+    position: absolute;
+    top: 0.65em;
+    left: 0;
+    width: 0.6rem;
+    height: 0.6rem;
     border-radius: 50%;
     background: var(--accent-color);
+    content: "";
   }
 
-  .printing_service_showcase .text {
-    font-size: 1.6rem;
-    line-height: 1.6;
+  .printing_service_showcase .card_media {
+    margin-top: 2.4rem;
+    overflow: hidden;
+    border-radius: calc(var(--card-radius) / 2);
   }
 
-  .printing_service_showcase .text > * {
-    margin-top: 0;
-    margin-bottom: 0;
+  .printing_service_showcase .card_image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 8 / 3;
+    object-fit: cover;
   }
 
   @media screen and (max-width: 749px) {
@@ -159,50 +254,32 @@
       padding-bottom: var(--mobile-padding-bottom);
     }
 
-    .printing_service_showcase .heading {
+    .printing_service_showcase .heading_row {
       margin-bottom: 2.4rem;
-      font-size: 3rem;
     }
 
-    .printing_service_showcase .layout {
+    .printing_service_showcase .line {
+      display: none;
+    }
+
+    .printing_service_showcase .heading {
+      font-size: var(--mobile-heading-size);
+    }
+
+    .printing_service_showcase .cards {
       grid-template-columns: minmax(0, 1fr);
-      gap: 2.4rem;
+      gap: 2rem;
     }
 
-    .printing_service_showcase .media {
-      width: 100%;
-      height: auto;
-    }
-
-    .printing_service_showcase .media .image {
-      width: 100%;
-      height: auto;
-    }
-
-    .printing_service_showcase .media .placeholder {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 4 / 3;
-    }
-
-    .printing_service_showcase .content {
-      padding: 2.4rem 1.6rem;
-    }
-
-    .printing_service_showcase .content_title {
-      font-size: 2.6rem;
-    }
-
-    .printing_service_showcase .text_list {
-      gap: 1.8rem;
-      margin-top: 2.4rem;
+    .printing_service_showcase .advantage_card {
+      padding: 2rem 1.6rem;
     }
   }
 {% endstylesheet %}
 
 {% schema %}
 {
-  "name": "打印服务图文",
+  "name": "打印服务优势卡片",
   "tag": "section",
   "class": "section",
   "disabled_on": {
@@ -211,28 +288,49 @@
   "settings": [
     {
       "type": "header",
-      "content": "内容"
+      "content": "标题"
     },
     {
       "type": "inline_richtext",
       "id": "heading",
       "label": "模块标题",
-      "default": "Our Printing Service"
+      "default": "OUR 3 CORE ADVANTAGES"
     },
     {
-      "type": "image_picker",
-      "id": "image",
-      "label": "工厂实景图片"
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 56,
+      "step": 2,
+      "unit": "px",
+      "label": "PC 端标题字号",
+      "default": 34
     },
     {
-      "type": "inline_richtext",
-      "id": "content_title",
-      "label": "文本容器标题",
-      "default": "Printing Workshop"
+      "type": "range",
+      "id": "mobile_heading_size",
+      "min": 18,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端标题字号",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "标题颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "标题两侧线条颜色",
+      "default": "#c9d6d8"
     },
     {
       "type": "header",
-      "content": "样式"
+      "content": "卡片样式"
     },
     {
       "type": "color",
@@ -242,41 +340,105 @@
     },
     {
       "type": "color",
-      "id": "content_background",
-      "label": "文本容器背景颜色",
-      "default": "#f7f8f8"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "文字颜色",
-      "default": "#121212"
-    },
-    {
-      "type": "color",
-      "id": "accent_color",
-      "label": "强调色",
-      "default": "#11a9a4"
+      "id": "card_background",
+      "label": "卡片背景颜色",
+      "default": "#fafafa"
     },
     {
       "type": "range",
-      "id": "image_radius",
+      "id": "card_radius",
       "min": 0,
       "max": 40,
       "step": 2,
       "unit": "px",
-      "label": "图片与文本容器圆角",
+      "label": "卡片圆角",
       "default": 12
     },
     {
       "type": "range",
       "id": "column_gap",
       "min": 0,
-      "max": 80,
+      "max": 60,
       "step": 4,
       "unit": "px",
-      "label": "PC 端两列间距",
+      "label": "PC 端列间距",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "卡片文字与图标"
+    },
+    {
+      "type": "range",
+      "id": "leading_icon_size",
+      "min": 24,
+      "max": 96,
+      "step": 2,
+      "unit": "px",
+      "label": "左侧图标尺寸",
       "default": 48
+    },
+    {
+      "type": "range",
+      "id": "trailing_icon_size",
+      "min": 24,
+      "max": 96,
+      "step": 2,
+      "unit": "px",
+      "label": "右侧图标尺寸",
+      "default": 46
+    },
+    {
+      "type": "range",
+      "id": "title_primary_size",
+      "min": 14,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "卡片主标题字号",
+      "default": 26
+    },
+    {
+      "type": "range",
+      "id": "title_secondary_size",
+      "min": 14,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "卡片副标题字号",
+      "default": 26
+    },
+    {
+      "type": "range",
+      "id": "tagline_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "强调条字号",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "tagline_color",
+      "label": "强调条文字颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "feature_size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "要点文案字号",
+      "default": 15
+    },
+    {
+      "type": "color",
+      "id": "feature_color",
+      "label": "要点文案颜色",
+      "default": "#353c42"
     },
     {
       "type": "header",
@@ -323,41 +485,110 @@
       "default": 20
     }
   ],
-  "max_blocks": 8,
+  "max_blocks": 3,
   "blocks": [
     {
-      "type": "text_item",
-      "name": "文本行",
+      "type": "advantage_card",
+      "name": "优势卡片",
       "settings": [
         {
+          "type": "image_picker",
+          "id": "leading_icon",
+          "label": "左侧图标"
+        },
+        {
+          "type": "text",
+          "id": "title_primary",
+          "label": "主标题",
+          "default": "PREMIUM"
+        },
+        {
+          "type": "color",
+          "id": "title_primary_color",
+          "label": "主标题颜色",
+          "default": "#121212"
+        },
+        {
+          "type": "text",
+          "id": "title_secondary",
+          "label": "副标题",
+          "default": "QUALITY"
+        },
+        {
+          "type": "color",
+          "id": "title_secondary_color",
+          "label": "副标题颜色",
+          "default": "#11a9a4"
+        },
+        {
+          "type": "image_picker",
+          "id": "trailing_icon",
+          "label": "右侧图标"
+        },
+        {
+          "type": "text",
+          "id": "tagline",
+          "label": "强调条文案",
+          "default": "VIBRANT COLORS. SHARP DETAILS."
+        },
+        {
+          "type": "color",
+          "id": "accent_color",
+          "label": "强调色（强调条背景与要点圆点）",
+          "default": "#11a9a4"
+        },
+        {
           "type": "textarea",
-          "id": "text",
-          "label": "文本",
-          "default": "配置这一行的文本内容。"
+          "id": "feature_list",
+          "label": "要点文案（每行一条）",
+          "default": "High resolution printing with vivid, true-to-life colors.\nDurable transfers that last wash after wash.\nStrict quality control for every single print."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "卡片图片（8:3）"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "打印服务图文",
+      "name": "打印服务优势卡片",
       "blocks": [
         {
-          "type": "text_item",
+          "type": "advantage_card",
           "settings": {
-            "text": "下午两点之前下单，当天打印完成。如果你不在本地，将通过快递把货物送到你手里，当然你也可以自己上门提货。"
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
+            "title_primary": "PREMIUM",
+            "title_secondary": "QUALITY",
+            "title_secondary_color": "#11a9a4",
+            "accent_color": "#11a9a4",
+            "tagline": "VIBRANT COLORS. SHARP DETAILS.",
+            "feature_list": "High resolution printing with vivid, true-to-life colors.\nDurable transfers that last wash after wash.\nStrict quality control for every single print."
           }
         },
         {
-          "type": "text_item",
+          "type": "advantage_card",
           "settings": {
-            "text": "没有最小起订量，一个也能打印。"
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
+            "title_primary": "FAST",
+            "title_secondary": "TURNAROUND",
+            "title_secondary_color": "#8cc63f",
+            "accent_color": "#8cc63f",
+            "tagline": "ORDER TODAY. SHIP TODAY.",
+            "feature_list": "Orders placed before 2PM (CST) ship same day.\nEfficient workflow and advanced equipment.\nReliable & consistent on-time delivery."
           }
         },
         {
-          "type": "text_item",
+          "type": "advantage_card",
           "settings": {
-            "text": "爱普生高质量打印头，高品质管理。"
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
+            "title_primary": "NO MINIMUM",
+            "title_secondary": "ORDER",
+            "title_secondary_color": "#11a9a4",
+            "accent_color": "#11a9a4",
+            "tagline": "ONE PIECE OR THOUSANDS, WE PRINT.",
+            "feature_list": "No minimum order quantity.\nPerfect for test prints, samples and bulk orders.\nFlexibility to support your business growth."
           }
         }
       ]
