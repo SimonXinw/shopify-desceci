@@ -170,9 +170,9 @@
           "settings": {
             "title": "DTF Consumables",
             "products": [
+              "dtf-ink",
               "dtf-film",
-              "dtf-powder",
-              "dtf-ink"
+              "dtf-powder"
             ]
           }
         },
@@ -339,48 +339,48 @@
           "type": "advantage_item",
           "settings": {
             "image": "shopify://shop_images/1493cb20-11d0-455c-85bb-201258c93537.png",
-            "item_title": "颜色鲜艳",
-            "item_description": "水洗牢度好，水洗50次不变形。",
+            "item_title": "Vibrant Colors",
+            "item_description": "Bright, detailed prints with excellent wash durability",
             "icon_1": "shopify://shop_images/15885382-0ac7-4ffa-ac23-42199ea71682.png",
-            "icon_label_1": "耐水洗",
+            "icon_label_1": "50+ Wash Cycles Tested",
             "icon_2": "shopify://shop_images/a1786707-d226-42fe-b5fb-957387ae30ce.png",
-            "icon_label_2": "不易褪色",
+            "icon_label_2": "Fade Resistant",
             "icon_3": "shopify://shop_images/791c9706-06fe-45ed-a8a8-725a58376122.png",
-            "icon_label_3": "环保墨水",
+            "icon_label_3": "Eco-Friendly Inks",
             "icon_4": "shopify://shop_images/c66ef3de-a3d9-4f76-b8dc-1a1819b2896b.png",
-            "icon_label_4": "持久耐用"
+            "icon_label_4": "Long-Lasting Prints"
           }
         },
         "advantage_fabric": {
           "type": "advantage_item",
           "settings": {
             "image": "shopify://shop_images/3b286a42-95b1-4255-9e6b-b7b9ebcd8996.png",
-            "item_title": "适用多种面料",
-            "item_description": "适用于多种面料，衣服，帆布袋，帽子，帆布，牛仔等。",
+            "item_title": "Works on Any Fabric",
+            "item_description": "Designed for cotton, polyester, canvas, and more",
             "icon_1": "shopify://shop_images/807d218d-f83b-4753-b567-816e55abfc91.png",
-            "icon_label_1": "衣服",
+            "icon_label_1": "T-Shirts",
             "icon_2": "shopify://shop_images/bb38e394-b7dd-472f-a1d1-60599c8c3437.png",
-            "icon_label_2": "帆布袋",
+            "icon_label_2": "Canvas Bags",
             "icon_3": "shopify://shop_images/c373c0b3-f399-4048-8bdd-e137636b2250.png",
-            "icon_label_3": "帽子",
+            "icon_label_3": "Headwear",
             "icon_4": "shopify://shop_images/7e29a5c4-c822-45a8-857c-1ecff08b0f1c.png",
-            "icon_label_4": "更多面料"
+            "icon_label_4": "More Fabrics"
           }
         },
         "advantage_custom": {
           "type": "advantage_item",
           "settings": {
             "image": "shopify://shop_images/0b6a5579-b1b5-4c6f-b487-adc26da5a362.png",
-            "item_title": "灵活定制",
-            "item_description": "一件或多件定制，支持团队服装商业活动定制。",
+            "item_title": "Unlimited Customization",
+            "item_description": "From one piece to bulk orders, we make custom printing easy",
             "icon_1": "shopify://shop_images/a46eb8ae-e03e-47c8-88c0-cf1138daac04.png",
-            "icon_label_1": "无起订量",
+            "icon_label_1": "No Minimum Order",
             "icon_2": "shopify://shop_images/1799ecd5-2f20-4cd5-b4ef-5a1588cd2baf.png",
-            "icon_label_2": "免费设计",
+            "icon_label_2": "Free Design Support",
             "icon_3": "shopify://shop_images/0eb06504-0130-483e-94c0-8659fde4bf2d.png",
-            "icon_label_3": "快速交付",
+            "icon_label_3": "Fast Turnaround",
             "icon_4": "shopify://shop_images/9b5e2c48-fb4b-42d1-9080-1aa7fd0c1cca.png",
-            "icon_label_4": "团队定制"
+            "icon_label_4": "Bulk & Team Orders"
           }
         }
       },
@@ -390,7 +390,7 @@
         "advantage_custom"
       ],
       "settings": {
-        "heading": "Why Choose Our DTF Transfers",
+        "heading": "Why Choose DESCECI DTF Transfers?",
         "heading_color": "#121212",
         "heading_size": 36,
         "mobile_heading_size": 26,
