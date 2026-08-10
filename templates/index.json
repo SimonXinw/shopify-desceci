@@ -647,6 +647,41 @@
             "question": "5. How long does production and shipping take?",
             "answer": "Production time depends on your order quantity, artwork requirements, and current order volume.\n\nAfter your order is confirmed, our team will process your files, complete production, perform quality inspection, and prepare your shipment as quickly as possible.\n\nTypical timeline:\n\nProduction: 1–3 business days\nShipping: Depends on destination and shipping method selected\n\nWe focus on reliable quality and fast turnaround to help your business keep moving."
           }
+        },
+        "faq_item_3BYacL": {
+          "type": "faq_item",
+          "settings": {
+            "question": "6. What file formats do you accept for artwork?",
+            "answer": "请输入问题答For the best printing results, we recommend high-resolution artwork files.\n\nSupported formats include:\n\n✓ PNG (transparent background recommended)\n✓ PDF\n✓ AI\n✓ PSD\n✓ SVG\n\nFor optimal results:\n\nUse 300 DPI artwork\nKeep important details clear\nUse transparent backgrounds when possible\n\nIf you are unsure about your file, our team can help review it before production.案。"
+          }
+        },
+        "faq_item_hVN7BY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "7. Do you offer artwork support or design assistance?",
+            "answer": "Yes.\n\nOur team can help optimize your artwork to ensure the best possible printing results.\n\nWe can assist with:\n\nFile checking\nBackground removal\nResolution improvement\nPrint preparation guidance\n\nOur goal is to make sure your designs look professional before they reach production."
+          }
+        },
+        "faq_item_PFdYPQ": {
+          "type": "faq_item",
+          "settings": {
+            "question": "8. Can I use DTF transfers for business or bulk orders?",
+            "answer": "Absolutely.\n\nDESCECI provides scalable solutions for businesses of all sizes.\n\nWhether you are:\n\nLaunching a clothing brand\nRunning a print shop\nCreating merchandise\nManaging team uniforms\nSelling custom apparel\n\nWe offer competitive bulk pricing and reliable production support to help your business grow."
+          }
+        },
+        "faq_item_wieXxD": {
+          "type": "faq_item",
+          "settings": {
+            "question": "9. What makes DESCECI DTF transfers different?",
+            "answer": "DESCECI combines premium materials, advanced printing technology, and reliable customer support to deliver professional-quality transfers.\n\nOur advantages:\n\n✓ Vibrant, detailed prints\n✓ Strong wash durability\n✓ Wide fabric compatibility\n✓ No minimum order requirements\n✓ Fast production times\n✓ Professional customer support\n\nWe help creators and businesses turn ideas into high-quality custom apparel."
+          }
+        },
+        "faq_item_3e7R8m": {
+          "type": "faq_item",
+          "settings": {
+            "question": "10. Do you offer refunds or replacements?",
+            "answer": "We stand behind the quality of our products.\n\nIf your order arrives damaged, defective, or has a production issue, please contact our support team with your order details and photos. We will review the issue and provide a solution as quickly as possible.\n\nFor the best customer experience, we recommend checking your artwork details carefully before placing custom orders."
+          }
         }
       },
       "block_order": [
@@ -654,7 +689,12 @@
         "faq_2",
         "faq_3",
         "faq_4",
-        "faq_5"
+        "faq_5",
+        "faq_item_3BYacL",
+        "faq_item_hVN7BY",
+        "faq_item_PFdYPQ",
+        "faq_item_wieXxD",
+        "faq_item_3e7R8m"
       ],
       "settings": {
         "heading": "Frequently Asked Questions",
