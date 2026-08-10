@@ -220,6 +220,7 @@
     "factory_scene": {
       "type": "factory-scene-banner",
       "settings": {
+        "image": "shopify://shop_images/c400e67d-6b8f-41eb-8f0e-66ae3d2b6274.png",
         "layout_width": "page",
         "desktop_height": 360,
         "mobile_image_height": 240,
@@ -365,7 +366,7 @@
         "advantage_custom": {
           "type": "advantage_item",
           "settings": {
-            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
+            "image": "shopify://shop_images/0b6a5579-b1b5-4c6f-b487-adc26da5a362.png",
             "item_title": "灵活定制",
             "item_description": "一件或多件定制，支持团队服装商业活动定制。",
             "icon_1": "shopify://shop_images/a46eb8ae-e03e-47c8-88c0-cf1138daac04.png",
@@ -474,7 +475,7 @@
         "reason_8"
       ],
       "settings": {
-        "heading": "Why Shop at the CREALITY Store?",
+        "heading": "Why Shop at the Desceci Store?",
         "section_background": "#f4f5f6",
         "heading_color": "#121212",
         "text_color": "#121212",
