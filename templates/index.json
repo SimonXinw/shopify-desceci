@@ -616,8 +616,8 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "如何在线订购 DTF 转印图案？",
-            "answer": "选择需要的产品并上传设计文件，确认尺寸、数量和订单信息后即可完成下单。"
+            "question": "1. How do I order custom DTF transfers?",
+            "answer": "Ordering your custom DTF transfers is simple.\n\nChoose your preferred transfer size, upload your artwork, select the quantity, and complete your order details. Our production team will review your file to ensure the best print quality before production begins.\n\nOrder Process:\n\n1.Upload your design file\n2.Select transfer size and quantity\n3.Confirm your order details\n4.We print, quality check, and ship your transfers\n\nWhether you need one custom transfer or thousands for your business, DESCECI makes the process fast and easy."
           }
         },
         "faq_2": {
@@ -657,7 +657,7 @@
         "faq_5"
       ],
       "settings": {
-        "heading": "FAQ",
+        "heading": "Frequently Asked Questions",
         "section_background": "#ffffff",
         "item_background": "#ffffff",
         "heading_color": "#121212",
