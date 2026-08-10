@@ -620,11 +620,11 @@
     "multicolumn_k4qyWK": {
       "type": "multicolumn",
       "blocks": {
-        "column_LWkzjJ": {
+        "column_7DFa9p": {
           "type": "column",
           "settings": {
-            "title": "Unlimited Customization OptionsCreate More. Sell More.",
-            "text": "<p><br/>From single custom orders to large production runs, DESCECI makes custom printing simple and efficient.<br/></p>",
+            "title": "Bring Your Designs to Life",
+            "text": "<p><br/>Our advanced printing technology delivers vibrant graphics that stand out on any garment while maintaining excellent wash durability.<br/><br/></p>",
             "link_label": "",
             "link": ""
           }
@@ -638,20 +638,20 @@
             "link": ""
           }
         },
-        "column_7DFa9p": {
+        "column_LWkzjJ": {
           "type": "column",
           "settings": {
-            "title": "Bring Your Designs to Life",
-            "text": "<p><br/>Our advanced printing technology delivers vibrant graphics that stand out on any garment while maintaining excellent wash durability.<br/><br/></p>",
+            "title": "Unlimited Customization OptionsCreate More. Sell More.",
+            "text": "<p><br/>From single custom orders to large production runs, DESCECI makes custom printing simple and efficient.<br/></p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_LWkzjJ",
+        "column_7DFa9p",
         "column_nAEnJB",
-        "column_7DFa9p"
+        "column_LWkzjJ"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
