@@ -55,7 +55,7 @@
         "bottom-no-minimum": {
           "type": "bottom_item",
           "settings": {
-            "icon": "shopify://shop_images/2.jpg",
+            "icon": "shopify://shop_images/2592e44d-86c8-4471-ba09-0f7ca989cc91.png",
             "text_1": "NO MINIMUM",
             "text_1_color": "#ffffff",
             "text_2": "ORDER",
@@ -65,7 +65,7 @@
         "bottom-premium-quality": {
           "type": "bottom_item",
           "settings": {
-            "icon": "shopify://shop_images/2.jpg",
+            "icon": "shopify://shop_images/087de6a6-6de9-4593-bf7a-adc8f9810632.png",
             "text_1": "PREMIUM",
             "text_1_color": "#ffffff",
             "text_2": "QUALITY",
@@ -75,7 +75,7 @@
         "bottom-long-lasting": {
           "type": "bottom_item",
           "settings": {
-            "icon": "shopify://shop_images/2.jpg",
+            "icon": "shopify://shop_images/e9d90b58-11b7-4e94-92a9-7dfbbcacce61.png",
             "text_1": "LONG LASTING",
             "text_1_color": "#ffffff",
             "text_2": "& DURABLE",
@@ -85,7 +85,7 @@
         "bottom-all-fabrics": {
           "type": "bottom_item",
           "settings": {
-            "icon": "shopify://shop_images/2.jpg",
+            "icon": "shopify://shop_images/a3ade8e8-817b-41f6-b289-0bc7f4e35ee4.png",
             "text_1": "PERFECT FOR",
             "text_1_color": "#ffffff",
             "text_2": "ALL FABRICS",
@@ -95,7 +95,7 @@
         "bottom-support": {
           "type": "bottom_item",
           "settings": {
-            "icon": "shopify://shop_images/2.jpg",
+            "icon": "shopify://shop_images/6269a8a7-e4ae-4fa8-bd61-935b94552a01.png",
             "text_1": "DEDICATED",
             "text_1_color": "#ffffff",
             "text_2": "SUPPORT",
