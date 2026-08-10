@@ -616,6 +616,60 @@
         "mobile_padding_top": 32,
         "mobile_padding_bottom": 32
       }
+    },
+    "multicolumn_k4qyWK": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LWkzjJ": {
+          "type": "column",
+          "settings": {
+            "title": "Unlimited Customization OptionsCreate More. Sell More.",
+            "text": "<p><br/>From single custom orders to large production runs, DESCECI makes custom printing simple and efficient.<br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_nAEnJB": {
+          "type": "column",
+          "settings": {
+            "title": "One Transfer Solution for Every Project",
+            "text": "<p><br/>Our DTF transfers are engineered to perform on a wide variety of materials, giving you the freedom to create more products without limitations.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7DFa9p": {
+          "type": "column",
+          "settings": {
+            "title": "Bring Your Designs to Life",
+            "text": "<p><br/>Our advanced printing technology delivers vibrant graphics that stand out on any garment while maintaining excellent wash durability.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_LWkzjJ",
+        "column_nAEnJB",
+        "column_7DFa9p"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Premium DTF Transfers Built for Creators & Businesses",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -627,6 +681,7 @@
     "shop_reasons",
     "application_guide",
     "newsletter_split",
-    "faq"
+    "faq",
+    "multicolumn_k4qyWK"
   ]
 }
