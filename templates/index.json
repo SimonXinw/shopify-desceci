@@ -425,6 +425,7 @@
         "column_7DFa9p": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/4fe72c6e-87c4-43e9-ab61-d32454d8b1fa.png",
             "title": "Bring Your Designs to Life",
             "text": "<p><br/>Our advanced printing technology delivers vibrant graphics that stand out on any garment while maintaining excellent wash durability.<br/><br/></p>",
             "link_label": "",
@@ -434,6 +435,7 @@
         "column_nAEnJB": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/327422dc-7099-403b-bec6-1d0bc4364f62.png",
             "title": "One Transfer Solution for Every Project",
             "text": "<p><br/>Our DTF transfers are engineered to perform on a wide variety of materials, giving you the freedom to create more products without limitations.<br/><br/></p>",
             "link_label": "",
@@ -443,6 +445,7 @@
         "column_LWkzjJ": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/b0967630-ef28-4141-82bb-661462910c06.png",
             "title": "Unlimited Customization OptionsCreate More. Sell More.",
             "text": "<p><br/>From single custom orders to large production runs, DESCECI makes custom printing simple and efficient.<br/></p>",
             "link_label": "",
