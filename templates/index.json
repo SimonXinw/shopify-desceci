@@ -169,7 +169,11 @@
           "type": "tab",
           "settings": {
             "title": "DTF Consumables",
-            "products": []
+            "products": [
+              "dtf-film",
+              "dtf-powder",
+              "dtf-ink"
+            ]
           }
         },
         "tab-hyper-speed": {
