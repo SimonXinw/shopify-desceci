@@ -45,7 +45,7 @@
         "feature-turnaround": {
           "type": "feature",
           "settings": {
-            "icon": "shopify://shop_images/2d96f248-ad4b-4ce1-be78-5f08268dbdc3_1.png",
+            "icon": "shopify://shop_images/2d96f248-ad4b-4ce1-be78-5f08268dbdc3.png",
             "text": "Fast Turnaround",
             "text_color": "#121212",
             "text_2": "PRODUCTION",
@@ -157,32 +157,32 @@
         "tab-multicolor": {
           "type": "tab",
           "settings": {
-            "title": "Multicolor Printer",
+            "title": "DTF Transfer",
             "products": [
+              "desceci-custom-dtf-transfer-by-size-delivered-nationwide-within-48-hours",
               "asset-pack-86653763586-example-product-1",
-              "asset-pack-88794169346-example-product-2",
-              "desceci-custom-dtf-transfer-by-size-delivered-nationwide-within-48-hours"
+              "asset-pack-88794169346-example-product-2"
             ]
           }
         },
         "tab-mega": {
           "type": "tab",
           "settings": {
-            "title": "Mega Printer",
+            "title": "DTF Consumables",
             "products": []
           }
         },
         "tab-hyper-speed": {
           "type": "tab",
           "settings": {
-            "title": "Hyper Speed",
+            "title": "DTF Press Machine",
             "products": []
           }
         },
         "tab-diy": {
           "type": "tab",
           "settings": {
-            "title": "DIY",
+            "title": "DTF Daily Maintenance Kit",
             "products": []
           }
         },
@@ -255,12 +255,12 @@
         "card-quality": {
           "type": "advantage_card",
           "settings": {
-            "leading_icon": "shopify://shop_images/2.jpg",
+            "leading_icon": "shopify://shop_images/48268cb4-1398-48c1-91dd-978c38046ecc.png",
             "title_primary": "PREMIUM",
             "title_primary_color": "#121212",
             "title_secondary": "QUALITY",
             "title_secondary_color": "#11a9a4",
-            "trailing_icon": "shopify://shop_images/2.jpg",
+            "trailing_icon": "shopify://shop_images/b600400a-5dfe-471f-8b48-b066dd166ea0.png",
             "tagline": "VIBRANT COLORS. SHARP DETAILS.",
             "accent_color": "#11a9a4",
             "feature_list": "High resolution printing with vivid, true-to-life colors.\nDurable transfers that last wash after wash.\nStrict quality control for every single print.",
@@ -270,12 +270,12 @@
         "card-turnaround": {
           "type": "advantage_card",
           "settings": {
-            "leading_icon": "shopify://shop_images/2.jpg",
+            "leading_icon": "shopify://shop_images/2f29135c-b11d-4576-845f-37e22cec268d.png",
             "title_primary": "FAST",
             "title_primary_color": "#121212",
             "title_secondary": "TURNAROUND",
             "title_secondary_color": "#8cc63f",
-            "trailing_icon": "shopify://shop_images/2.jpg",
+            "trailing_icon": "shopify://shop_images/fb5c6a87-2dae-4862-8ff6-74d3915b0695.png",
             "tagline": "ORDER TODAY. SHIP TODAY.",
             "accent_color": "#8cc63f",
             "feature_list": "Orders placed before 2PM (CST) ship same day.\nEfficient workflow and advanced equipment.\nReliable & consistent on-time delivery.",
@@ -285,12 +285,12 @@
         "card-minimum": {
           "type": "advantage_card",
           "settings": {
-            "leading_icon": "shopify://shop_images/2.jpg",
+            "leading_icon": "shopify://shop_images/9733c0c3-154e-4a0a-b538-a4b63e2ba0e1.png",
             "title_primary": "NO MINIMUM",
             "title_primary_color": "#121212",
             "title_secondary": "ORDER",
             "title_secondary_color": "#11a9a4",
-            "trailing_icon": "shopify://shop_images/2.jpg",
+            "trailing_icon": "shopify://shop_images/d38aa5f1-b672-485d-8efd-ad4d33790baf.png",
             "tagline": "ONE PIECE OR THOUSANDS, WE PRINT.",
             "accent_color": "#11a9a4",
             "feature_list": "No minimum order quantity.\nPerfect for test prints, samples and bulk orders.\nFlexibility to support your business growth.",
