@@ -187,6 +187,7 @@
         },
         "tab-diy": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "title": "DTF Daily Maintenance Kit",
             "products": []
@@ -194,6 +195,7 @@
         },
         "tab-combo": {
           "type": "tab",
+          "disabled": true,
           "settings": {
             "title": "Printer Combo",
             "products": []
