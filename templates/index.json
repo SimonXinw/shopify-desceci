@@ -221,7 +221,7 @@
       "type": "factory-scene-banner",
       "settings": {
         "image": "shopify://shop_images/c400e67d-6b8f-41eb-8f0e-66ae3d2b6274.png",
-        "layout_width": "page",
+        "layout_width": "full",
         "desktop_height": 360,
         "mobile_image_height": 240,
         "image_position": "center center",
