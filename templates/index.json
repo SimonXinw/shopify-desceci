@@ -230,7 +230,7 @@
       "settings": {
         "image": "shopify://shop_images/018c0ed6492dc515ded0c2e0d8c782df_be751fd7-e206-41c3-a524-ca21db595f3e.png",
         "layout_width": "full",
-        "desktop_height": 700,
+        "desktop_height": 500,
         "mobile_image_height": 240,
         "image_position": "center center",
         "border_radius": 24,
@@ -251,7 +251,7 @@
         "content_width": 760,
         "content_background": "#f6f7f9",
         "overlay_color": "#000000",
-        "overlay_opacity": 0,
+        "overlay_opacity": 10,
         "padding_top": 60,
         "padding_bottom": 60,
         "mobile_padding_top": 20,
