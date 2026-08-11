@@ -1,0 +1,1108 @@
+{%- style -%}
+  .quality_promise-{{ section.id }} {
+    --qp-section-background: {{ section.settings.section_background }};
+    --qp-eyebrow-color: {{ section.settings.eyebrow_color }};
+    --qp-eyebrow-size: {{ section.settings.eyebrow_size }}px;
+    --qp-title-color: {{ section.settings.title_color }};
+    --qp-title-size: {{ section.settings.mobile_title_size }}px;
+    --qp-underline-color: {{ section.settings.underline_color }};
+    --qp-desc-color: {{ section.settings.description_color }};
+    --qp-desc-size: {{ section.settings.description_size }}px;
+    --qp-eligible-title-color: {{ section.settings.eligible_title_color }};
+    --qp-eligible-title-size: {{ section.settings.eligible_title_size }}px;
+    --qp-eligible-line-color: {{ section.settings.eligible_line_color }};
+    --qp-not-eligible-title-color: {{ section.settings.not_eligible_title_color }};
+    --qp-not-eligible-title-size: {{ section.settings.not_eligible_title_size }}px;
+    --qp-not-eligible-line-color: {{ section.settings.not_eligible_line_color }};
+    --qp-not-eligible-background: {{ section.settings.not_eligible_background }};
+    --qp-card-title-color: {{ section.settings.card_title_color }};
+    --qp-card-title-size: {{ section.settings.card_title_size }}px;
+    --qp-card-desc-color: {{ section.settings.card_desc_color }};
+    --qp-card-desc-size: {{ section.settings.card_desc_size }}px;
+    --qp-request-background: {{ section.settings.request_background }};
+    --qp-request-title-color: {{ section.settings.request_title_color }};
+    --qp-request-title-size: {{ section.settings.request_title_size }}px;
+    --qp-request-desc-color: {{ section.settings.request_desc_color }};
+    --qp-request-desc-size: {{ section.settings.request_desc_size }}px;
+    --qp-request-item-color: {{ section.settings.request_item_color }};
+    --qp-request-item-size: {{ section.settings.request_item_size }}px;
+    --qp-padding-top: {{ section.settings.mobile_padding_top }}px;
+    --qp-padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .quality_promise-{{ section.id }} {
+      --qp-title-size: {{ section.settings.title_size }}px;
+      --qp-padding-top: {{ section.settings.padding_top }}px;
+      --qp-padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign eligible_blocks = section.blocks | where: 'type', 'eligible_item'
+  assign not_eligible_blocks = section.blocks | where: 'type', 'not_eligible_item'
+-%}
+
+<section
+  class="quality_promise quality_promise-{{ section.id }}"
+  id="QualityPromise-{{ section.id }}"
+>
+  <div class="page-width">
+    <div class="qp_header">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="qp_eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.title != blank -%}
+        <h2 class="qp_title">{{ section.settings.title | escape }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <div class="qp_desc rte">{{ section.settings.description }}</div>
+      {%- endif -%}
+    </div>
+
+    {%- if eligible_blocks.size > 0 or section.settings.eligible_title != blank -%}
+      <div class="qp_panel qp_panel_eligible">
+        {%- if section.settings.eligible_title != blank -%}
+          <div class="qp_panel_heading">
+            <span class="qp_panel_line" aria-hidden="true"></span>
+
+            <div class="qp_panel_title_wrap">
+              <span class="qp_panel_icon" aria-hidden="true">
+                {%- if section.settings.eligible_icon != blank -%}
+                  {{
+                    section.settings.eligible_icon
+                    | image_url: width: 96
+                    | image_tag: widths: '48, 96', class: 'qp_panel_icon_image', alt: ''
+                  }}
+                {%- else -%}
+                  <svg viewBox="0 0 32 32" focusable="false">
+                    <circle cx="16" cy="16" r="15" fill="currentColor"/>
+                    <path d="M9.5 16.4 13.6 20.4 22.5 11.4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"/>
+                  </svg>
+                {%- endif -%}
+              </span>
+              <h3 class="qp_panel_title">{{ section.settings.eligible_title | escape }}</h3>
+            </div>
+
+            <span class="qp_panel_line" aria-hidden="true"></span>
+          </div>
+        {%- endif -%}
+
+        {%- if eligible_blocks.size > 0 -%}
+          <div class="qp_cards">
+            {%- for block in eligible_blocks -%}
+              <article class="qp_card" {{ block.shopify_attributes }}>
+                <div class="qp_card_image_wrap">
+                  {%- if block.settings.image != blank -%}
+                    {%- assign card_alt = block.settings.image.alt | default: block.settings.title -%}
+                    {{
+                      block.settings.image
+                      | image_url: width: 600
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '200, 300, 400, 600',
+                        sizes: '(min-width: 990px) 16vw, (min-width: 750px) 30vw, 100vw',
+                        class: 'qp_card_image',
+                        alt: card_alt
+                    }}
+                  {%- else -%}
+                    {{ 'lifestyle-1' | placeholder_svg_tag: 'qp_card_image qp_card_placeholder' }}
+                  {%- endif -%}
+                </div>
+
+                {%- if block.settings.title != blank -%}
+                  <h4 class="qp_card_title">{{ block.settings.title | escape }}</h4>
+                {%- endif -%}
+
+                {%- if block.settings.text != blank -%}
+                  <p class="qp_card_desc">{{ block.settings.text | escape | newline_to_br }}</p>
+                {%- endif -%}
+              </article>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.request_title != blank or section.settings.request_desc != blank -%}
+          <div class="qp_request_bar">
+            <div class="qp_request_lead">
+              <span class="qp_request_lead_icon" aria-hidden="true">
+                {%- if section.settings.request_icon != blank -%}
+                  {{
+                    section.settings.request_icon
+                    | image_url: width: 120
+                    | image_tag: widths: '60, 120', class: 'qp_request_lead_icon_image', alt: ''
+                  }}
+                {%- else -%}
+                  <svg viewBox="0 0 48 48" focusable="false">
+                    <circle cx="24" cy="24" r="24" fill="currentColor"/>
+                    <circle cx="24" cy="17" r="5" fill="none" stroke="#fff" stroke-width="2"/>
+                    <path d="M14 34c1.8-5.2 5.4-8 10-8s8.2 2.8 10 8" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+                    <path d="M33 20h5v3h-2v7h-3z" fill="#fff"/>
+                  </svg>
+                {%- endif -%}
+              </span>
+
+              <div class="qp_request_lead_copy">
+                {%- if section.settings.request_title != blank -%}
+                  <p class="qp_request_title">{{ section.settings.request_title | escape }}</p>
+                {%- endif -%}
+
+                {%- if section.settings.request_desc != blank -%}
+                  <p class="qp_request_desc">{{ section.settings.request_desc | escape }}</p>
+                {%- endif -%}
+              </div>
+            </div>
+
+            <ul class="qp_request_items" role="list">
+              {%- for index in (1..3) -%}
+                {%- assign icon_key = 'request_item_icon_' | append: index -%}
+                {%- assign text_key = 'request_item_text_' | append: index -%}
+                {%- assign item_icon = section.settings[icon_key] -%}
+                {%- assign item_text = section.settings[text_key] -%}
+
+                {%- if item_icon != blank or item_text != blank -%}
+                  <li class="qp_request_item">
+                    <span class="qp_request_item_icon" aria-hidden="true">
+                      {%- if item_icon != blank -%}
+                        {{
+                          item_icon
+                          | image_url: width: 80
+                          | image_tag: widths: '40, 80', class: 'qp_request_item_icon_image', alt: ''
+                        }}
+                      {%- else -%}
+                        {%- case index -%}
+                          {%- when 1 -%}
+                            <svg viewBox="0 0 24 24" focusable="false">
+                              <rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                              <path d="M9 8h6M9 12h6M9 16h4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+                            </svg>
+                          {%- when 2 -%}
+                            <svg viewBox="0 0 24 24" focusable="false">
+                              <path d="M4 8h3l1.5-2h7L17 8h3v11H4z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/>
+                              <circle cx="12" cy="13.5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                            </svg>
+                          {%- else -%}
+                            <svg viewBox="0 0 24 24" focusable="false">
+                              <path d="M5 6h14v10H9l-4 3V6z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/>
+                            </svg>
+                        {%- endcase -%}
+                      {%- endif -%}
+                    </span>
+
+                    {%- if item_text != blank -%}
+                      <span class="qp_request_item_text">{{ item_text | escape }}</span>
+                    {%- endif -%}
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if not_eligible_blocks.size > 0 or section.settings.not_eligible_title != blank -%}
+      <div class="qp_panel qp_panel_not_eligible">
+        {%- if section.settings.not_eligible_title != blank -%}
+          <div class="qp_panel_heading">
+            <span class="qp_panel_line" aria-hidden="true"></span>
+
+            <div class="qp_panel_title_wrap">
+              <span class="qp_panel_icon" aria-hidden="true">
+                {%- if section.settings.not_eligible_icon != blank -%}
+                  {{
+                    section.settings.not_eligible_icon
+                    | image_url: width: 96
+                    | image_tag: widths: '48, 96', class: 'qp_panel_icon_image', alt: ''
+                  }}
+                {%- else -%}
+                  <svg viewBox="0 0 32 32" focusable="false">
+                    <circle cx="16" cy="16" r="15" fill="currentColor"/>
+                    <path d="M11 11 21 21M21 11 11 21" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.4"/>
+                  </svg>
+                {%- endif -%}
+              </span>
+              <h3 class="qp_panel_title">{{ section.settings.not_eligible_title | escape }}</h3>
+            </div>
+
+            <span class="qp_panel_line" aria-hidden="true"></span>
+          </div>
+        {%- endif -%}
+
+        {%- if not_eligible_blocks.size > 0 -%}
+          <div class="qp_cards">
+            {%- for block in not_eligible_blocks -%}
+              <article class="qp_card" {{ block.shopify_attributes }}>
+                <div class="qp_card_image_wrap">
+                  {%- if block.settings.image != blank -%}
+                    {%- assign card_alt = block.settings.image.alt | default: block.settings.title -%}
+                    {{
+                      block.settings.image
+                      | image_url: width: 600
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '200, 300, 400, 600',
+                        sizes: '(min-width: 990px) 16vw, (min-width: 750px) 30vw, 100vw',
+                        class: 'qp_card_image',
+                        alt: card_alt
+                    }}
+                  {%- else -%}
+                    {{ 'lifestyle-2' | placeholder_svg_tag: 'qp_card_image qp_card_placeholder' }}
+                  {%- endif -%}
+                </div>
+
+                {%- if block.settings.title != blank -%}
+                  <h4 class="qp_card_title">{{ block.settings.title | escape }}</h4>
+                {%- endif -%}
+
+                {%- if block.settings.text != blank -%}
+                  <p class="qp_card_desc">{{ block.settings.text | escape | newline_to_br }}</p>
+                {%- endif -%}
+              </article>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+  .quality_promise {
+    display: block;
+    padding-top: var(--qp-padding-top);
+    padding-bottom: var(--qp-padding-bottom);
+    background: var(--qp-section-background);
+  }
+
+  .quality_promise,
+  .quality_promise * {
+    box-sizing: border-box;
+  }
+
+  .quality_promise .qp_header {
+    max-width: 72rem;
+    margin: 0 auto 3.2rem;
+    text-align: center;
+  }
+
+  .quality_promise .qp_eyebrow {
+    margin: 0 0 1rem;
+    color: var(--qp-eyebrow-color);
+    font-size: var(--qp-eyebrow-size);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  .quality_promise .qp_title {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    color: var(--qp-title-color);
+    font-family: var(--font-heading-family);
+    font-size: var(--qp-title-size);
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .quality_promise .qp_title::after {
+    display: block;
+    width: 7.2rem;
+    height: 0.35rem;
+    margin: 0.8rem auto 0;
+    border-radius: 999px;
+    background: var(--qp-underline-color);
+    content: "";
+  }
+
+  .quality_promise .qp_desc {
+    margin: 1.6rem 0 0;
+    color: var(--qp-desc-color);
+    font-size: var(--qp-desc-size);
+    line-height: 1.6;
+  }
+
+  .quality_promise .qp_desc p {
+    margin: 0;
+  }
+
+  .quality_promise .qp_desc strong,
+  .quality_promise .qp_desc b {
+    color: var(--qp-eyebrow-color);
+    font-weight: 700;
+  }
+
+  .quality_promise .qp_panel {
+    padding: 2rem 1.6rem;
+    border: 0.1rem solid #e5e7eb;
+    border-radius: 1.6rem;
+    background: #ffffff;
+  }
+
+  .quality_promise .qp_panel + .qp_panel {
+    margin-top: 2rem;
+  }
+
+  .quality_promise .qp_panel_not_eligible {
+    background: var(--qp-not-eligible-background);
+  }
+
+  .quality_promise .qp_panel_heading {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .quality_promise .qp_panel_line {
+    display: block;
+    flex: 1 1 auto;
+    height: 0.1rem;
+    background: currentColor;
+    opacity: 0.28;
+  }
+
+  .quality_promise .qp_panel_eligible .qp_panel_line,
+  .quality_promise .qp_panel_eligible .qp_panel_icon,
+  .quality_promise .qp_panel_eligible .qp_panel_title {
+    color: var(--qp-eligible-title-color);
+  }
+
+  .quality_promise .qp_panel_eligible .qp_panel_line {
+    background: var(--qp-eligible-line-color);
+    opacity: 1;
+  }
+
+  .quality_promise .qp_panel_not_eligible .qp_panel_line,
+  .quality_promise .qp_panel_not_eligible .qp_panel_icon,
+  .quality_promise .qp_panel_not_eligible .qp_panel_title {
+    color: var(--qp-not-eligible-title-color);
+  }
+
+  .quality_promise .qp_panel_not_eligible .qp_panel_line {
+    background: var(--qp-not-eligible-line-color);
+    opacity: 1;
+  }
+
+  .quality_promise .qp_panel_title_wrap {
+    display: inline-flex;
+    gap: 0.8rem;
+    align-items: center;
+    flex: 0 1 auto;
+    max-width: 100%;
+  }
+
+  .quality_promise .qp_panel_icon {
+    display: block;
+    width: 2.4rem;
+    min-width: 2.4rem;
+    line-height: 0;
+  }
+
+  .quality_promise .qp_panel_icon svg,
+  .quality_promise .qp_panel_icon_image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .quality_promise .qp_panel_title {
+    margin: 0;
+    font-size: var(--qp-eligible-title-size);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .quality_promise .qp_panel_not_eligible .qp_panel_title {
+    font-size: var(--qp-not-eligible-title-size);
+  }
+
+  .quality_promise .qp_cards {
+    display: grid;
+    gap: 2rem 1.2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .quality_promise .qp_card {
+    min-width: 0;
+    text-align: center;
+  }
+
+  .quality_promise .qp_card_image_wrap {
+    overflow: hidden;
+    border-radius: 0.8rem;
+    aspect-ratio: 4 / 3;
+    background: #f3f4f6;
+  }
+
+  .quality_promise .qp_card_image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .quality_promise .qp_card_placeholder {
+    color: rgba(18, 18, 18, 0.18);
+  }
+
+  .quality_promise .qp_card_title {
+    margin: 1.2rem 0 0;
+    color: var(--qp-card-title-color);
+    font-size: var(--qp-card-title-size);
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  .quality_promise .qp_card_desc {
+    margin: 0.6rem 0 0;
+    color: var(--qp-card-desc-color);
+    font-size: var(--qp-card-desc-size);
+    line-height: 1.45;
+  }
+
+  .quality_promise .qp_request_bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 2.4rem;
+    padding: 1.6rem;
+    border-radius: 1.2rem;
+    background: var(--qp-request-background);
+  }
+
+  .quality_promise .qp_request_lead {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  .quality_promise .qp_request_lead_icon {
+    display: block;
+    width: 4.8rem;
+    min-width: 4.8rem;
+    color: var(--qp-eligible-title-color);
+    line-height: 0;
+  }
+
+  .quality_promise .qp_request_lead_icon svg,
+  .quality_promise .qp_request_lead_icon_image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .quality_promise .qp_request_lead_copy {
+    min-width: 0;
+  }
+
+  .quality_promise .qp_request_title {
+    margin: 0;
+    color: var(--qp-request-title-color);
+    font-size: var(--qp-request-title-size);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  .quality_promise .qp_request_desc {
+    margin: 0.4rem 0 0;
+    color: var(--qp-request-desc-color);
+    font-size: var(--qp-request-desc-size);
+    line-height: 1.45;
+  }
+
+  .quality_promise .qp_request_items {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .quality_promise .qp_request_item {
+    display: inline-flex;
+    flex: 1 1 0;
+    gap: 0.4rem;
+    align-items: center;
+    min-width: 0;
+    color: var(--qp-request-item-color);
+  }
+
+  .quality_promise .qp_request_item + .qp_request_item {
+    padding-left: 0.8rem;
+    border-left: 0.1rem solid rgba(18, 18, 18, 0.12);
+  }
+
+  .quality_promise .qp_request_item_icon {
+    display: block;
+    width: 2rem;
+    min-width: 2rem;
+    color: var(--qp-eligible-title-color);
+    line-height: 0;
+  }
+
+  .quality_promise .qp_request_item_icon svg,
+  .quality_promise .qp_request_item_icon_image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .quality_promise .qp_request_item_text {
+    min-width: 0;
+    font-size: var(--qp-request-item-size);
+    font-weight: 700;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  @media screen and (min-width: 750px) {
+    .quality_promise .qp_header {
+      margin-bottom: 4rem;
+    }
+
+    .quality_promise .qp_panel {
+      padding: 2.8rem 2.4rem;
+    }
+
+    .quality_promise .qp_cards {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 1.6rem 1.2rem;
+    }
+
+    .quality_promise .qp_request_bar {
+      flex-direction: row;
+      gap: 2.4rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.6rem 2rem;
+    }
+
+    .quality_promise .qp_request_lead {
+      flex: 0 1 42%;
+    }
+
+    .quality_promise .qp_request_items {
+      flex: 1 1 auto;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+    }
+
+    .quality_promise .qp_request_item {
+      flex: 0 1 auto;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "质量保障承诺",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "顶部文案"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "标题上方提示",
+      "default": "QUALITY GUARANTEE"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "提示颜色",
+      "default": "#e8913a"
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "提示字号",
+      "default": 13
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "Our Promise to You"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "标题颜色",
+      "default": "#1a2332"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 24,
+      "max": 56,
+      "step": 2,
+      "unit": "px",
+      "label": "PC 端标题字号",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mobile_title_size",
+      "min": 20,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端标题字号",
+      "default": 28
+    },
+    {
+      "type": "color",
+      "id": "underline_color",
+      "label": "标题下划线颜色",
+      "default": "#e8913a"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "描述",
+      "default": "<p>At <strong>DESCECI</strong>, we stand behind every DTF transfer we produce. Your satisfaction is always our top priority.</p>"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "描述颜色",
+      "default": "#2c3340"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "描述字号",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "正向模块（Eligible）"
+    },
+    {
+      "type": "text",
+      "id": "eligible_title",
+      "label": "模块标题",
+      "default": "ELIGIBLE FOR FREE REPLACEMENT"
+    },
+    {
+      "type": "image_picker",
+      "id": "eligible_icon",
+      "label": "模块标题图标"
+    },
+    {
+      "type": "color",
+      "id": "eligible_title_color",
+      "label": "模块标题颜色",
+      "default": "#1f8a3c"
+    },
+    {
+      "type": "range",
+      "id": "eligible_title_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "模块标题字号",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "eligible_line_color",
+      "label": "标题两侧线条颜色",
+      "default": "#1f8a3c"
+    },
+    {
+      "type": "header",
+      "content": "申请栏（正向模块底部）"
+    },
+    {
+      "type": "color",
+      "id": "request_background",
+      "label": "申请栏背景色",
+      "default": "#e8f6ea"
+    },
+    {
+      "type": "image_picker",
+      "id": "request_icon",
+      "label": "左侧主图标"
+    },
+    {
+      "type": "text",
+      "id": "request_title",
+      "label": "左侧标题",
+      "default": "HOW TO REQUEST A REPLACEMENT"
+    },
+    {
+      "type": "color",
+      "id": "request_title_color",
+      "label": "左侧标题颜色",
+      "default": "#1f8a3c"
+    },
+    {
+      "type": "range",
+      "id": "request_title_size",
+      "min": 11,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "左侧标题字号",
+      "default": 14
+    },
+    {
+      "type": "text",
+      "id": "request_desc",
+      "label": "左侧描述",
+      "default": "Please contact us within 7 days of delivery and provide:"
+    },
+    {
+      "type": "color",
+      "id": "request_desc_color",
+      "label": "左侧描述颜色",
+      "default": "#1a2332"
+    },
+    {
+      "type": "range",
+      "id": "request_desc_size",
+      "min": 11,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "左侧描述字号",
+      "default": 13
+    },
+    {
+      "type": "image_picker",
+      "id": "request_item_icon_1",
+      "label": "右侧图标 1"
+    },
+    {
+      "type": "text",
+      "id": "request_item_text_1",
+      "label": "右侧文案 1",
+      "default": "Order Number"
+    },
+    {
+      "type": "image_picker",
+      "id": "request_item_icon_2",
+      "label": "右侧图标 2"
+    },
+    {
+      "type": "text",
+      "id": "request_item_text_2",
+      "label": "右侧文案 2",
+      "default": "Photos of the Issue"
+    },
+    {
+      "type": "image_picker",
+      "id": "request_item_icon_3",
+      "label": "右侧图标 3"
+    },
+    {
+      "type": "text",
+      "id": "request_item_text_3",
+      "label": "右侧文案 3",
+      "default": "Details of the Problem"
+    },
+    {
+      "type": "color",
+      "id": "request_item_color",
+      "label": "右侧文案颜色",
+      "default": "#1a2332"
+    },
+    {
+      "type": "range",
+      "id": "request_item_size",
+      "min": 11,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "右侧文案字号",
+      "default": 13
+    },
+    {
+      "type": "header",
+      "content": "反向模块（Not Eligible）"
+    },
+    {
+      "type": "text",
+      "id": "not_eligible_title",
+      "label": "模块标题",
+      "default": "NOT ELIGIBLE FOR FREE REPLACEMENT"
+    },
+    {
+      "type": "image_picker",
+      "id": "not_eligible_icon",
+      "label": "模块标题图标"
+    },
+    {
+      "type": "color",
+      "id": "not_eligible_title_color",
+      "label": "模块标题颜色",
+      "default": "#d6453d"
+    },
+    {
+      "type": "range",
+      "id": "not_eligible_title_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "模块标题字号",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "not_eligible_line_color",
+      "label": "标题两侧线条颜色",
+      "default": "#d6453d"
+    },
+    {
+      "type": "color",
+      "id": "not_eligible_background",
+      "label": "模块背景色",
+      "default": "#fff4f1"
+    },
+    {
+      "type": "header",
+      "content": "卡片文字"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "卡片标题颜色",
+      "default": "#1a2332"
+    },
+    {
+      "type": "range",
+      "id": "card_title_size",
+      "min": 11,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "卡片标题字号",
+      "default": 13
+    },
+    {
+      "type": "color",
+      "id": "card_desc_color",
+      "label": "卡片描述颜色",
+      "default": "#4b5563"
+    },
+    {
+      "type": "range",
+      "id": "card_desc_size",
+      "min": 11,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "卡片描述字号",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "区块样式"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "区块背景色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "PC 上内边距",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "PC 下内边距",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "移动端上内边距",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "移动端下内边距",
+      "default": 28
+    }
+  ],
+  "blocks": [
+    {
+      "type": "eligible_item",
+      "name": "正向卡片",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "PRINTING DEFECTS"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "描述",
+          "default": "Blurry, incomplete, or defective prints caused by production issues."
+        }
+      ]
+    },
+    {
+      "type": "not_eligible_item",
+      "name": "反向卡片",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "ARTWORK ISSUES"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "描述",
+          "default": "Low-resolution, pixelated, or incorrectly prepared artwork files."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "质量保障承诺",
+      "blocks": [
+        {
+          "type": "eligible_item",
+          "settings": {
+            "title": "PRINTING DEFECTS",
+            "text": "Blurry, incomplete, or defective prints caused by production issues."
+          }
+        },
+        {
+          "type": "eligible_item",
+          "settings": {
+            "title": "WRONG SIZE / DESIGN",
+            "text": "Incorrect size or design shipped due to our fulfillment error."
+          }
+        },
+        {
+          "type": "eligible_item",
+          "settings": {
+            "title": "DAMAGED IN TRANSIT",
+            "text": "Transfers damaged during shipping with clear packaging evidence."
+          }
+        },
+        {
+          "type": "eligible_item",
+          "settings": {
+            "title": "MISSING ITEMS",
+            "text": "Items confirmed missing from your delivered order."
+          }
+        },
+        {
+          "type": "eligible_item",
+          "settings": {
+            "title": "QUALITY FAILURE",
+            "text": "Transfers that fail under normal recommended pressing conditions."
+          }
+        },
+        {
+          "type": "not_eligible_item",
+          "settings": {
+            "title": "ARTWORK ISSUES",
+            "text": "Low-resolution, pixelated, or incorrectly prepared artwork files."
+          }
+        },
+        {
+          "type": "not_eligible_item",
+          "settings": {
+            "title": "SIZE / DESIGN ERRORS",
+            "text": "Incorrect sizing or placement caused by customer-provided specifications."
+          }
+        },
+        {
+          "type": "not_eligible_item",
+          "settings": {
+            "title": "IMPROPER APPLICATION",
+            "text": "Issues caused by incorrect temperature, pressure, or press time."
+          }
+        },
+        {
+          "type": "not_eligible_item",
+          "settings": {
+            "title": "FABRIC INCOMPATIBILITY",
+            "text": "Results affected by unsupported or unsuitable garment materials."
+          }
+        },
+        {
+          "type": "not_eligible_item",
+          "settings": {
+            "title": "NORMAL VARIATION",
+            "text": "Slight color or finish differences that fall within normal production range."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

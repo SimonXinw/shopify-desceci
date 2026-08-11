@@ -552,6 +552,136 @@
         "mobile_padding_bottom": 20
       }
     },
+    "quality_promise": {
+      "type": "quality-promise",
+      "blocks": {
+        "eligible_1": {
+          "type": "eligible_item",
+          "settings": {
+            "title": "PRINTING DEFECTS",
+            "text": "Blurry, incomplete, or defective prints caused by production issues."
+          }
+        },
+        "eligible_2": {
+          "type": "eligible_item",
+          "settings": {
+            "title": "WRONG SIZE / DESIGN",
+            "text": "Incorrect size or design shipped due to our fulfillment error."
+          }
+        },
+        "eligible_3": {
+          "type": "eligible_item",
+          "settings": {
+            "title": "DAMAGED IN TRANSIT",
+            "text": "Transfers damaged during shipping with clear packaging evidence."
+          }
+        },
+        "eligible_4": {
+          "type": "eligible_item",
+          "settings": {
+            "title": "MISSING ITEMS",
+            "text": "Items confirmed missing from your delivered order."
+          }
+        },
+        "eligible_5": {
+          "type": "eligible_item",
+          "settings": {
+            "title": "QUALITY FAILURE",
+            "text": "Transfers that fail under normal recommended pressing conditions."
+          }
+        },
+        "not_eligible_1": {
+          "type": "not_eligible_item",
+          "settings": {
+            "title": "ARTWORK ISSUES",
+            "text": "Low-resolution, pixelated, or incorrectly prepared artwork files."
+          }
+        },
+        "not_eligible_2": {
+          "type": "not_eligible_item",
+          "settings": {
+            "title": "SIZE / DESIGN ERRORS",
+            "text": "Incorrect sizing or placement caused by customer-provided specifications."
+          }
+        },
+        "not_eligible_3": {
+          "type": "not_eligible_item",
+          "settings": {
+            "title": "IMPROPER APPLICATION",
+            "text": "Issues caused by incorrect temperature, pressure, or press time."
+          }
+        },
+        "not_eligible_4": {
+          "type": "not_eligible_item",
+          "settings": {
+            "title": "FABRIC INCOMPATIBILITY",
+            "text": "Results affected by unsupported or unsuitable garment materials."
+          }
+        },
+        "not_eligible_5": {
+          "type": "not_eligible_item",
+          "settings": {
+            "title": "NORMAL VARIATION",
+            "text": "Slight color or finish differences that fall within normal production range."
+          }
+        }
+      },
+      "block_order": [
+        "eligible_1",
+        "eligible_2",
+        "eligible_3",
+        "eligible_4",
+        "eligible_5",
+        "not_eligible_1",
+        "not_eligible_2",
+        "not_eligible_3",
+        "not_eligible_4",
+        "not_eligible_5"
+      ],
+      "settings": {
+        "eyebrow": "QUALITY GUARANTEE",
+        "eyebrow_color": "#e8913a",
+        "eyebrow_size": 13,
+        "title": "Our Promise to You",
+        "title_color": "#1a2332",
+        "title_size": 40,
+        "mobile_title_size": 28,
+        "underline_color": "#e8913a",
+        "description": "<p>At <strong>DESCECI</strong>, we stand behind every DTF transfer we produce. Your satisfaction is always our top priority.</p>",
+        "description_color": "#2c3340",
+        "description_size": 16,
+        "eligible_title": "ELIGIBLE FOR FREE REPLACEMENT",
+        "eligible_title_color": "#1f8a3c",
+        "eligible_title_size": 16,
+        "eligible_line_color": "#1f8a3c",
+        "request_background": "#e8f6ea",
+        "request_title": "HOW TO REQUEST A REPLACEMENT",
+        "request_title_color": "#1f8a3c",
+        "request_title_size": 14,
+        "request_desc": "Please contact us within 7 days of delivery and provide:",
+        "request_desc_color": "#1a2332",
+        "request_desc_size": 13,
+        "request_item_text_1": "Order Number",
+        "request_item_text_2": "Photos of the Issue",
+        "request_item_text_3": "Details of the Problem",
+        "request_item_color": "#1a2332",
+        "request_item_size": 13,
+        "not_eligible_title": "NOT ELIGIBLE FOR FREE REPLACEMENT",
+        "not_eligible_title_color": "#d6453d",
+        "not_eligible_title_size": 16,
+        "not_eligible_line_color": "#d6453d",
+        "not_eligible_background": "#fff4f1",
+        "card_title_color": "#1a2332",
+        "card_title_size": 13,
+        "card_desc_color": "#4b5563",
+        "card_desc_size": 12,
+        "section_background": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "mobile_padding_top": 28,
+        "mobile_padding_bottom": 28
+      }
+    },
     "application_guide": {
       "type": "application-guide-steps",
       "blocks": {
@@ -736,6 +866,7 @@
     "product_advantages",
     "multicolumn_k4qyWK",
     "shop_reasons",
+    "quality_promise",
     "application_guide",
     "newsletter_split",
     "faq"
