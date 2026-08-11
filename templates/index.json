@@ -513,19 +513,19 @@
         "reason_6": {
           "type": "reason_item",
           "settings": {
-            "text": "压烫机温度150-160华摄氏度，压烫时间8-10秒"
+            "text": "压烫机温度 150-160°C，压烫时间 8-10 秒"
           }
         },
         "reason_7": {
           "type": "reason_item",
           "settings": {
-            "text": "将面料跟打印膜进行剥离"
+            "text": "将面料与打印膜进行剥离"
           }
         },
         "reason_8": {
           "type": "reason_item",
           "settings": {
-            "text": "转印好图案的面料150-160华摄氏度进行二次压烫，时间5s"
+            "text": "转印后的面料以 150-160°C 二次压烫 5 秒"
           }
         }
       },
@@ -565,18 +565,21 @@
         "guide_step_2": {
           "type": "guide_step",
           "settings": {
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
             "text": "压烫机温度150-160华摄氏度，压烫时间8-10秒"
           }
         },
         "guide_step_3": {
           "type": "guide_step",
           "settings": {
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
             "text": "将面料跟打印膜进行剥离"
           }
         },
         "guide_step_4": {
           "type": "guide_step",
           "settings": {
+            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
             "text": "转印好图案的面料150-160华摄氏度进行二次压烫，时间5s"
           }
         }
@@ -589,12 +592,18 @@
       ],
       "settings": {
         "heading": "Step-by-Step Application Guide",
-        "section_background": "#caf2c7",
-        "card_background": "#ffffff",
+        "section_background": "#ffffff",
         "heading_color": "#121212",
-        "text_color": "#121212",
-        "border_color": "#e5e7eb",
-        "arrow_color": "#11a9a4",
+        "heading_icon_size": 58,
+        "heading_size": 36,
+        "mobile_heading_size": 24,
+        "content_background": "#050505",
+        "text_color": "#ffffff",
+        "text_size": 14,
+        "content_icon_size": 34,
+        "content_padding": 14,
+        "content_gap": 10,
+        "arrow_color": "#8dc63f",
         "card_radius": 6,
         "padding_top": 60,
         "padding_bottom": 60,

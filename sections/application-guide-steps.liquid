@@ -1,240 +1,385 @@
+{% render 'swiper-assets' %}
+<script src="{{ 'application-guide-steps.js' | asset_url }}" defer="defer"></script>
+
 {%- style -%}
   .application_guide_steps-{{ section.id }} {
-    --guide-section-background: {{ section.settings.section_background }};
-    --guide-card-background: {{ section.settings.card_background }};
-    --guide-heading-color: {{ section.settings.heading_color }};
-    --guide-text-color: {{ section.settings.text_color }};
-    --guide-border-color: {{ section.settings.border_color }};
-    --guide-arrow-color: {{ section.settings.arrow_color }};
-    --guide-radius: {{ section.settings.card_radius }}px;
-    --guide-padding-top: {{ section.settings.mobile_padding_top }}px;
-    --guide-padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    --ags-section-background: {{ section.settings.section_background }};
+    --ags-heading-color: {{ section.settings.heading_color }};
+    --ags-heading-size: {{ section.settings.heading_size }}px;
+    --ags-mobile-heading-size: {{ section.settings.mobile_heading_size }}px;
+    --ags-heading-icon-size: {{ section.settings.heading_icon_size }}px;
+    --ags-content-background: {{ section.settings.content_background }};
+    --ags-text-color: {{ section.settings.text_color }};
+    --ags-text-size: {{ section.settings.text_size }}px;
+    --ags-content-icon-size: {{ section.settings.content_icon_size }}px;
+    --ags-content-padding: {{ section.settings.content_padding }}px;
+    --ags-content-gap: {{ section.settings.content_gap }}px;
+    --ags-arrow-color: {{ section.settings.arrow_color }};
+    --ags-card-radius: {{ section.settings.card_radius }}px;
+    --ags-padding-top: {{ section.settings.mobile_padding_top }}px;
+    --ags-padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    --ags-step-count: {{ section.blocks.size }};
   }
 
   @media screen and (min-width: 750px) {
     .application_guide_steps-{{ section.id }} {
-      --guide-padding-top: {{ section.settings.padding_top }}px;
-      --guide-padding-bottom: {{ section.settings.padding_bottom }}px;
+      --ags-padding-top: {{ section.settings.padding_top }}px;
+      --ags-padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
 {%- endstyle -%}
 
-<section
+<application-guide-steps
   class="application_guide_steps application_guide_steps-{{ section.id }}"
   id="ApplicationGuideSteps-{{ section.id }}"
 >
   <div class="page-width">
     {%- if section.settings.heading != blank -%}
-      <h2 class="heading">{{ section.settings.heading | escape }}</h2>
+      <div class="ags_heading_row">
+        <span class="ags_heading_icon" aria-hidden="true">
+          {%- if section.settings.heading_left_icon != blank -%}
+            {{
+              section.settings.heading_left_icon
+              | image_url: width: 160
+              | image_tag: widths: '80, 160', class: 'ags_heading_icon_image', alt: ''
+            }}
+          {%- else -%}
+            <svg viewBox="0 0 58 24" focusable="false">
+              <path d="M8 2h22l-5 6H3z" fill="#179cb4"/>
+              <path d="M34 2h21l-5 6H29z" fill="#171a1c"/>
+              <path d="M3 10h22l-5 6H0z" fill="#73bd39"/>
+              <path d="M29 10h21l-5 6H24z" fill="#179cb4"/>
+            </svg>
+          {%- endif -%}
+        </span>
+
+        <h2 class="ags_heading">{{ section.settings.heading | escape }}</h2>
+
+        <span class="ags_heading_icon" aria-hidden="true">
+          {%- if section.settings.heading_right_icon != blank -%}
+            {{
+              section.settings.heading_right_icon
+              | image_url: width: 160
+              | image_tag: widths: '80, 160', class: 'ags_heading_icon_image', alt: ''
+            }}
+          {%- else -%}
+            <svg viewBox="0 0 58 24" focusable="false">
+              <path d="M8 2h22l-5 6H3z" fill="#179cb4"/>
+              <path d="M34 2h21l-5 6H29z" fill="#171a1c"/>
+              <path d="M3 10h22l-5 6H0z" fill="#73bd39"/>
+              <path d="M29 10h21l-5 6H24z" fill="#179cb4"/>
+            </svg>
+          {%- endif -%}
+        </span>
+      </div>
     {%- endif -%}
 
     {%- if section.blocks.size > 0 -%}
-      <div class="scroll_area">
-        <div class="steps">
+      <div class="swiper ags_carousel" data-guide-swiper>
+        <div class="swiper-wrapper ags_steps">
           {%- for block in section.blocks -%}
-            <article class="step" {{ block.shopify_attributes }}>
-              <div class="card">
-                <div class="image_area">
+            <div class="swiper-slide ags_slide" {{ block.shopify_attributes }}>
+              <article class="ags_card">
+                <div class="ags_image_area">
                   {%- if block.settings.image != blank -%}
                     {%- assign step_image_alt = block.settings.image.alt | default: block.settings.text -%}
                     {{
                       block.settings.image
-                      | image_url: width: 500
+                      | image_url: width: 800
                       | image_tag:
                         loading: 'lazy',
-                        widths: '150, 250, 350, 500',
-                        sizes: '(min-width: 1440px) 220px, (min-width: 750px) 15vw, 150px',
-                        class: 'image',
+                        widths: '240, 360, 500, 800',
+                        sizes: '(min-width: 1200px) 260px, (min-width: 750px) 22vw, 86vw',
+                        class: 'ags_card_image',
                         alt: step_image_alt
                     }}
                   {%- else -%}
-                    {{ 'image' | placeholder_svg_tag: 'image placeholder' }}
+                    {{ 'lifestyle-1' | placeholder_svg_tag: 'ags_card_image ags_card_placeholder' }}
                   {%- endif -%}
                 </div>
 
-                <div class="content">
-                  {%- if block.settings.text != blank -%}
-                    <p class="text">{{ block.settings.text | escape }}</p>
+                <div class="ags_step_badge" aria-hidden="true">
+                  {%- if block.settings.badge_icon != blank -%}
+                    {{
+                      block.settings.badge_icon
+                      | image_url: width: 160
+                      | image_tag: widths: '80, 160', class: 'ags_step_badge_image', alt: ''
+                    }}
+                  {%- else -%}
+                    <svg viewBox="0 0 64 64" focusable="false">
+                      <path d="m32 1 7 8 11-2 2 11 10 5-5 10 5 10-10 5-2 11-11-2-7 8-7-8-11 2-2-11-10-5 5-10-5-10 10-5 2-11 11 2z" fill="currentColor"/>
+                      <text x="32" y="41" fill="#fff" font-size="27" font-weight="700" text-anchor="middle">{{ forloop.index }}</text>
+                    </svg>
                   {%- endif -%}
                 </div>
-              </div>
+
+                <div class="ags_content">
+                  <span class="ags_content_icon" aria-hidden="true">
+                    {%- if block.settings.content_icon != blank -%}
+                      {{
+                        block.settings.content_icon
+                        | image_url: width: 160
+                        | image_tag: widths: '80, 160', class: 'ags_content_icon_image', alt: ''
+                      }}
+                    {%- else -%}
+                      <svg viewBox="0 0 32 32" focusable="false">
+                        <path d="M10 5 6 7l-4 7 5 3 2-3v13h14V14l2 3 5-3-4-7-4-2c-1 3-3 4-6 4s-5-1-6-4Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"/>
+                      </svg>
+                    {%- endif -%}
+                  </span>
+
+                  {%- if block.settings.text != blank -%}
+                    <p class="ags_text">{{ block.settings.text | escape | newline_to_br }}</p>
+                  {%- endif -%}
+                </div>
+              </article>
 
               {%- unless forloop.last -%}
-                <span class="connector" aria-hidden="true"></span>
+                <span class="ags_connector" aria-hidden="true">
+                  <svg viewBox="0 0 36 20" focusable="false">
+                    <path d="M0 8h24.8L19 2.2 21.2 0 36 10 21.2 20 19 17.8 24.8 12H0z" fill="currentColor"/>
+                  </svg>
+                </span>
               {%- endunless -%}
-            </article>
+            </div>
           {%- endfor -%}
         </div>
+
+        <div class="swiper-pagination ags_pagination" data-guide-pagination></div>
       </div>
     {%- endif -%}
   </div>
-</section>
+</application-guide-steps>
 
 {% stylesheet %}
   .application_guide_steps {
-    --guide-step-gap: 5.6rem;
-    --guide-arrow-size: 2.8rem;
-    padding: var(--guide-padding-top) 0 var(--guide-padding-bottom);
-    background: var(--guide-section-background);
+    --ags-card-gap: clamp(3.2rem, 4.2vw, 6.4rem);
+    display: block;
+    overflow: hidden;
+    padding-top: var(--ags-padding-top);
+    padding-bottom: var(--ags-padding-bottom);
+    background: var(--ags-section-background);
   }
 
-  .application_guide_steps .heading {
-    margin: 0 0 3.2rem;
-    color: var(--guide-heading-color);
-    text-align: center;
-    font-family: var(--font-heading-family);
-    font-style: var(--font-heading-style);
-    font-weight: var(--font-heading-weight);
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
-    line-height: 1.25;
+  .application_guide_steps,
+  .application_guide_steps * {
+    box-sizing: border-box;
   }
 
-  .application_guide_steps .scroll_area {
-    width: 100%;
-    padding-bottom: 0.8rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-color: rgba(18, 18, 18, 0.3) transparent;
-    scrollbar-width: thin;
-  }
-
-  .application_guide_steps .scroll_area::-webkit-scrollbar {
-    height: 0.4rem;
-  }
-
-  .application_guide_steps .scroll_area::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .application_guide_steps .scroll_area::-webkit-scrollbar-thumb {
-    border-radius: 999px;
-    background: rgba(18, 18, 18, 0.3);
-  }
-
-  .application_guide_steps .steps {
+  .application_guide_steps .ags_heading_row {
     display: flex;
-    width: max-content;
-    min-width: 100%;
+    gap: 1.2rem;
     align-items: center;
-    justify-content: flex-start;
-    gap: var(--guide-step-gap);
+    justify-content: center;
+    margin-bottom: 3.2rem;
   }
 
-  .application_guide_steps .step {
+  .application_guide_steps .ags_heading {
+    min-width: 0;
+    margin: 0;
+    color: var(--ags-heading-color);
+    font-family: var(--font-heading-family);
+    font-size: var(--ags-mobile-heading-size);
+    font-style: var(--font-heading-style);
+    font-weight: 800;
+    line-height: 1.15;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .application_guide_steps .ags_heading_icon {
+    display: block;
+    width: min(var(--ags-heading-icon-size), 12vw);
+    min-width: min(var(--ags-heading-icon-size), 12vw);
+    line-height: 0;
+  }
+
+  .application_guide_steps .ags_heading_icon svg,
+  .application_guide_steps .ags_heading_icon_image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .application_guide_steps .ags_carousel {
+    overflow: visible;
+    padding: 0.8rem 0 3rem;
+  }
+
+  .application_guide_steps .ags_slide {
+    display: flex;
+    height: auto;
+  }
+
+  .application_guide_steps .ags_card {
     position: relative;
-    flex: 0 0 15rem;
-    width: 15rem;
-    height: 21rem;
-  }
-
-  .application_guide_steps .card {
     display: grid;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border: 0.1rem solid var(--guide-border-color);
-    border-radius: var(--guide-radius);
-    background: var(--guide-card-background);
-    grid-template-rows: 60% 40%;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--ags-card-radius);
+    background: var(--ags-content-background);
+    grid-template-rows: 7fr 3fr;
+    box-shadow: 0 0.3rem 1rem rgba(18, 18, 18, 0.12);
   }
 
-  .application_guide_steps .image_area {
+  .application_guide_steps .ags_image_area {
     min-width: 0;
     min-height: 0;
     overflow: hidden;
+    border-radius: var(--ags-card-radius) var(--ags-card-radius) 0 0;
   }
 
-  .application_guide_steps .image {
+  .application_guide_steps .ags_card_image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.35s ease;
+  }
+
+  .application_guide_steps .ags_card_placeholder {
+    color: rgba(18, 18, 18, 0.2);
+    background: #f1f2f2;
+  }
+
+  .application_guide_steps .ags_card:hover .ags_card_image {
+    transform: scale(1.035);
+  }
+
+  .application_guide_steps .ags_step_badge {
+    position: absolute;
+    z-index: 2;
+    top: -0.8rem;
+    left: -0.8rem;
+    width: clamp(4.8rem, 5vw, 6.4rem);
+    height: clamp(4.8rem, 5vw, 6.4rem);
+    color: #75b82a;
+    line-height: 0;
+    filter: drop-shadow(0 0.2rem 0.3rem rgba(18, 18, 18, 0.18));
+  }
+
+  .application_guide_steps .ags_slide:nth-child(2) .ags_step_badge {
+    color: #16a8b1;
+  }
+
+  .application_guide_steps .ags_slide:nth-child(3) .ags_step_badge {
+    color: #177faa;
+  }
+
+  .application_guide_steps .ags_slide:nth-child(4) .ags_step_badge {
+    color: #42a9c8;
+  }
+
+  .application_guide_steps .ags_step_badge svg,
+  .application_guide_steps .ags_step_badge_image {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transition: transform 0.35s ease;
   }
 
-  .application_guide_steps .placeholder {
-    color: rgba(18, 18, 18, 0.2);
-    background: rgba(18, 18, 18, 0.03);
-  }
-
-  .application_guide_steps .card:hover .image {
-    transform: scale(1.06);
-  }
-
-  .application_guide_steps .content {
+  .application_guide_steps .ags_content {
     display: flex;
+    min-width: 0;
     min-height: 0;
-    padding: 1.2rem;
-    border-top: 0.1rem solid var(--guide-border-color);
+    gap: var(--ags-content-gap);
     align-items: center;
+    padding: var(--ags-content-padding);
+    overflow: hidden;
+    border-radius: 0 0 var(--ags-card-radius) var(--ags-card-radius);
+    background: var(--ags-content-background);
   }
 
-  .application_guide_steps .text {
+  .application_guide_steps .ags_content_icon {
+    display: block;
+    width: var(--ags-content-icon-size);
+    min-width: var(--ags-content-icon-size);
+    color: #79bd31;
+    line-height: 0;
+  }
+
+  .application_guide_steps .ags_slide:nth-child(n + 2) .ags_content_icon {
+    color: #18a6bd;
+  }
+
+  .application_guide_steps .ags_content_icon svg,
+  .application_guide_steps .ags_content_icon_image {
+    display: block;
     width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .application_guide_steps .ags_text {
+    min-width: 0;
     margin: 0;
-    color: var(--guide-text-color);
+    color: var(--ags-text-color);
+    font-size: var(--ags-text-size);
+    font-weight: 600;
+    line-height: 1.45;
     text-align: left;
-    font-size: 1.2rem;
-    line-height: 1.4;
+    overflow-wrap: anywhere;
   }
 
-  .application_guide_steps .connector {
-    position: absolute;
-    top: 30%;
-    left: calc(100% + (var(--guide-step-gap) - var(--guide-arrow-size)) / 2);
-    width: var(--guide-arrow-size);
-    height: var(--guide-arrow-size);
-    border-radius: 50%;
-    background: var(--guide-arrow-color);
-    transform: translateY(-50%);
-    box-shadow: 0 0.2rem 0.6rem rgba(18, 18, 18, 0.12);
+  .application_guide_steps .ags_connector {
+    display: none;
+    color: var(--ags-arrow-color);
+    line-height: 0;
   }
 
-  .application_guide_steps .connector::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0.7rem;
-    height: 0.7rem;
-    border-top: 0.2rem solid var(--guide-card-background);
-    border-right: 0.2rem solid var(--guide-card-background);
-    content: "";
-    transform: translate(-65%, -50%) rotate(45deg);
+  .application_guide_steps .ags_connector svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .application_guide_steps .ags_pagination {
+    bottom: 0;
+  }
+
+  .application_guide_steps .ags_pagination .swiper-pagination-bullet-active {
+    background: var(--ags-arrow-color);
   }
 
   @media screen and (min-width: 750px) {
-    .application_guide_steps {
-      --guide-step-gap: clamp(5.6rem, 6vw, 8.6rem);
-      --guide-arrow-size: clamp(2.8rem, 2.4vw, 3.6rem);
-    }
-
-    .application_guide_steps .heading {
+    .application_guide_steps .ags_heading_row {
+      gap: 1.6rem;
       margin-bottom: 4rem;
-      font-size: calc(var(--font-heading-scale) * 3.2rem);
     }
 
-    .application_guide_steps .scroll_area {
-      padding-bottom: 0;
-      overflow: visible;
+    .application_guide_steps .ags_heading {
+      font-size: var(--ags-heading-size);
     }
 
-    .application_guide_steps .steps {
-      justify-content: center;
+    .application_guide_steps .ags_carousel {
+      padding: 0.8rem 0;
     }
 
-    .application_guide_steps .step {
-      flex: 0 0 clamp(11rem, 15.28vw, 22rem);
-      width: clamp(11rem, 15.28vw, 22rem);
-      height: auto;
-      aspect-ratio: 11 / 16;
+    .application_guide_steps .ags_steps {
+      display: grid;
+      grid-template-columns: repeat(var(--ags-step-count), minmax(0, 1fr));
+      gap: var(--ags-card-gap);
+      transform: none !important;
     }
 
-    .application_guide_steps .content {
-      padding: clamp(0.8rem, 1vw, 1.6rem);
+    .application_guide_steps .ags_slide {
+      width: auto !important;
     }
 
-    .application_guide_steps .text {
-      font-size: clamp(1rem, 0.9vw, 1.4rem);
+    .application_guide_steps .ags_connector {
+      position: absolute;
+      top: 50%;
+      left: calc(100% + var(--ags-card-gap) / 2);
+      display: block;
+      width: clamp(2.4rem, 2.6vw, 3.6rem);
+      height: clamp(1.4rem, 1.6vw, 2.2rem);
+      transform: translate(-50%, -50%);
+    }
+
+    .application_guide_steps .ags_pagination {
+      display: none;
     }
   }
 {% endstylesheet %}
@@ -249,10 +394,64 @@
   },
   "settings": [
     {
+      "type": "header",
+      "content": "标题"
+    },
+    {
       "type": "text",
       "id": "heading",
       "label": "标题",
       "default": "Step-by-Step Application Guide"
+    },
+    {
+      "type": "image_picker",
+      "id": "heading_left_icon",
+      "label": "标题左侧图标"
+    },
+    {
+      "type": "image_picker",
+      "id": "heading_right_icon",
+      "label": "标题右侧图标"
+    },
+    {
+      "type": "range",
+      "id": "heading_icon_size",
+      "min": 24,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "标题图标宽度",
+      "default": 58
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "标题颜色",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 56,
+      "step": 2,
+      "unit": "px",
+      "label": "PC 端标题字号",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "min": 18,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端标题字号",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "卡片样式"
     },
     {
       "type": "color",
@@ -262,33 +461,61 @@
     },
     {
       "type": "color",
-      "id": "card_background",
-      "label": "卡片背景色",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "heading_color",
-      "label": "标题颜色",
-      "default": "#121212"
+      "id": "content_background",
+      "label": "文案区域背景色",
+      "default": "#050505"
     },
     {
       "type": "color",
       "id": "text_color",
       "label": "文案颜色",
-      "default": "#121212"
+      "default": "#ffffff"
     },
     {
-      "type": "color",
-      "id": "border_color",
-      "label": "边框与分割线颜色",
-      "default": "#e5e7eb"
+      "type": "range",
+      "id": "text_size",
+      "min": 10,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "文案字号",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "content_icon_size",
+      "min": 20,
+      "max": 64,
+      "step": 2,
+      "unit": "px",
+      "label": "文案图标尺寸",
+      "default": 34
+    },
+    {
+      "type": "range",
+      "id": "content_padding",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "文案区域内边距",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "content_gap",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "图标与文案间距",
+      "default": 10
     },
     {
       "type": "color",
       "id": "arrow_color",
       "label": "流程箭头颜色",
-      "default": "#11a9a4"
+      "default": "#8dc63f"
     },
     {
       "type": "range",
@@ -302,7 +529,7 @@
     },
     {
       "type": "header",
-      "content": "间距"
+      "content": "区块间距"
     },
     {
       "type": "range",
@@ -356,6 +583,16 @@
           "label": "步骤图片"
         },
         {
+          "type": "image_picker",
+          "id": "badge_icon",
+          "label": "图片左上角图标"
+        },
+        {
+          "type": "image_picker",
+          "id": "content_icon",
+          "label": "文案左侧图标"
+        },
+        {
           "type": "textarea",
           "id": "text",
           "label": "步骤文案",
@@ -378,19 +615,19 @@
         {
           "type": "guide_step",
           "settings": {
-            "text": "压烫机温度150-160华摄氏度，压烫时间8-10秒"
+            "text": "压烫机温度 150-160°C，压烫时间 8-10 秒"
           }
         },
         {
           "type": "guide_step",
           "settings": {
-            "text": "将面料跟打印膜进行剥离"
+            "text": "将面料与打印膜进行剥离"
           }
         },
         {
           "type": "guide_step",
           "settings": {
-            "text": "转印好图案的面料150-160华摄氏度进行二次压烫，时间5s"
+            "text": "转印后的面料以 150-160°C 二次压烫 5 秒"
           }
         }
       ]
