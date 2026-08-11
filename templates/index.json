@@ -228,7 +228,7 @@
     "factory_scene": {
       "type": "factory-scene-banner",
       "settings": {
-        "image": "shopify://shop_images/c400e67d-6b8f-41eb-8f0e-66ae3d2b6274_7517b762-ac63-46d2-a933-964be57c4ea8.png",
+        "image": "shopify://shop_images/018c0ed6492dc515ded0c2e0d8c782df_be751fd7-e206-41c3-a524-ca21db595f3e.png",
         "layout_width": "full",
         "desktop_height": 450,
         "mobile_image_height": 240,
@@ -703,7 +703,7 @@
           "type": "guide_step",
           "settings": {
             "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
-            "text": "将面料跟打印膜进行剥离"
+            "text": "将面料跟打印膜进行剥离."
           }
         },
         "guide_step_4": {
@@ -722,11 +722,11 @@
       ],
       "settings": {
         "heading": "Step-by-Step Application Guide",
-        "section_background": "#ffffff",
-        "heading_color": "#121212",
         "heading_icon_size": 58,
+        "heading_color": "#121212",
         "heading_size": 36,
         "mobile_heading_size": 24,
+        "section_background": "#ffffff",
         "content_background": "#050505",
         "text_color": "#ffffff",
         "text_size": 14,
