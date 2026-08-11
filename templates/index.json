@@ -699,29 +699,33 @@
         "guide_step_1": {
           "type": "guide_step",
           "settings": {
-            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
-            "text": "布料平铺在转印台上，确保平整"
+            "image": "shopify://shop_images/df421c6b-7c2d-47c9-9cca-0c4789808173.png",
+            "content_icon": "shopify://shop_images/f4584658-6d24-48e7-8ce5-e612b621cbb4.png",
+            "text": "1. PLACE & ALIGN\nPlace the transfer on the garment and ensure it is flat and centered."
           }
         },
         "guide_step_2": {
           "type": "guide_step",
           "settings": {
-            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
-            "text": "压烫机温度150-160华摄氏度，压烫时间8-10秒"
+            "image": "shopify://shop_images/bc92049d-c947-4e4c-a6a3-65f498858b55.png",
+            "content_icon": "shopify://shop_images/bcb03b11-4ca4-4dd4-9a2e-af26b07a8a0b.png",
+            "text": "2. HEAT PRESS\nPress at 150-160°C (302-320°F) with medium pressure for 8-10 seconds."
           }
         },
         "guide_step_3": {
           "type": "guide_step",
           "settings": {
-            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
-            "text": "将面料跟打印膜进行剥离."
+            "image": "shopify://shop_images/e4ff946d-4335-446c-87c3-0ff3d02b7a80.png",
+            "content_icon": "shopify://shop_images/d7427453-55ea-4bb5-b6aa-f03b9e18f352.png",
+            "text": "3. PEEL\nPeel the film off while it's still hot."
           }
         },
         "guide_step_4": {
           "type": "guide_step",
           "settings": {
-            "image": "shopify://shop_images/6391ace427ade714b70fb966024ae804.jpg",
-            "text": "转印好图案的面料150-160华摄氏度进行二次压烫，时间5s"
+            "image": "shopify://shop_images/74a3f944-72f9-4efa-80d5-f13157ebdeea.png",
+            "content_icon": "shopify://shop_images/3508a269-3c57-4084-a19c-e5261dd519ad.png",
+            "text": "4. FINAL PRESS\nPress again for 150-160°C (302-320°F) with medium pressure for 5 seconds."
           }
         }
       },
@@ -733,6 +737,7 @@
       ],
       "settings": {
         "heading": "Step-by-Step Application Guide",
+        "heading_left_icon": "shopify://shop_images/logo_1dc30dd9-e1f8-458b-b62a-aa0c06d88ece.png",
         "heading_icon_size": 58,
         "heading_color": "#121212",
         "heading_size": 36,
