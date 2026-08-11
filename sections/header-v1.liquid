@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-{%- if section.settings.menu_type_desktop == 'mega' -%}
-  <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- if section.settings.menu_type_desktop != 'drawer' -%}
+  <link rel="stylesheet" href="{{ 'component-header-v1-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
 <style>
@@ -114,15 +114,23 @@
     }
 
     .header-v1 .header__inline-menu > .list-menu > li > a.header__menu-item:hover,
+    .header-v1 .header__inline-menu > .list-menu > li > header-menu > details[open] > summary.header__menu-item,
     .header-v1 .header__inline-menu > .list-menu > li > header-menu > details > summary.header__menu-item:hover {
       background-color: #22afe5;
       color: #fff;
+      text-decoration: none;
     }
 
     .header-v1 .header__inline-menu > .list-menu > li > a.header__menu-item:hover span,
+    .header-v1 .header__inline-menu > .list-menu > li > header-menu > details[open] > summary.header__menu-item span,
     .header-v1 .header__inline-menu > .list-menu > li > header-menu > details > summary.header__menu-item:hover span {
       color: #fff;
       text-decoration: none;
+    }
+
+    .header-v1 .header__inline-menu > .list-menu > li > header-menu > details[open] > summary.header__menu-item .icon-caret,
+    .header-v1 .header__inline-menu > .list-menu > li > header-menu > details > summary.header__menu-item:hover .icon-caret {
+      color: #fff;
     }
   }
 </style>
@@ -251,12 +259,8 @@
     {%- endif -%}
 
     {%- liquid
-      if section.settings.menu != blank
-        if section.settings.menu_type_desktop == 'dropdown'
-          render 'header-dropdown-menu'
-        elsif section.settings.menu_type_desktop != 'drawer'
-          render 'header-mega-menu'
-        endif
+      if section.settings.menu != blank and section.settings.menu_type_desktop != 'drawer'
+        render 'header-v1-menu'
       endif
     %}
 
@@ -493,6 +497,43 @@
   }
 
   customElements.define('sticky-header', StickyHeader);
+
+  (function initHeaderV1MenuHover() {
+    const desktopMediaQuery = window.matchMedia('(min-width: 990px)');
+
+    document.querySelectorAll('.header-v1 header-menu').forEach((menu) => {
+      const details = menu.querySelector('details');
+      const menuItem = menu.closest('li') || menu;
+
+      if (!details) return;
+
+      let closeTimer;
+
+      const openMenu = () => {
+        if (!desktopMediaQuery.matches) return;
+
+        clearTimeout(closeTimer);
+
+        document.querySelectorAll('.header-v1 header-menu details[open]').forEach((openDetails) => {
+          if (openDetails !== details) openDetails.removeAttribute('open');
+        });
+
+        details.setAttribute('open', '');
+      };
+
+      const scheduleCloseMenu = () => {
+        if (!desktopMediaQuery.matches) return;
+
+        closeTimer = setTimeout(() => {
+          details.removeAttribute('open');
+        }, 180);
+      };
+
+      menuItem.addEventListener('mouseenter', openMenu);
+      menuItem.addEventListener('mouseleave', scheduleCloseMenu);
+      details.addEventListener('focusin', openMenu);
+    });
+  })();
 {% endjavascript %}
 
 <script type="application/ld+json">

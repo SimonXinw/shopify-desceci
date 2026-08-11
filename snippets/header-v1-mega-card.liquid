@@ -1,0 +1,53 @@
+{% comment %}
+  header-v1 mega 产品卡片：上图（1:1 / 210x210）+ 标题 + 一行价格
+  Accepts:
+  - product: {Object} 必填
+  - link_id_prefix: {String} 可选，用于生成锚点 id
+{% endcomment %}
+
+{%- liquid
+  assign mega_price = product.price_min | money
+
+  if product.price_varies
+    assign mega_price = 'products.product.price.from_price_html' | t: price: mega_price
+  endif
+-%}
+
+<li class="header-v1-mega__item">
+  <a
+    {% if link_id_prefix != blank %}
+      id="{{ link_id_prefix }}-{{ product.handle }}"
+    {% endif %}
+    href="{{ product.url }}"
+    class="header-v1-mega__card"
+  >
+    <div class="header-v1-mega__media">
+      {%- if product.featured_media != blank -%}
+        {%- assign product_image_alt = product.featured_media.alt | default: product.title | escape -%}
+        {{
+          product.featured_media
+          | image_url: width: 420
+          | image_tag:
+            loading: 'lazy',
+            widths: '210, 315, 420',
+            sizes: '210px',
+            class: 'header-v1-mega__image',
+            alt: product_image_alt,
+            width: 210,
+            height: 210
+        }}
+      {%- else -%}
+        {{ 'product-1' | placeholder_svg_tag: 'header-v1-mega__image header-v1-mega__image--placeholder' }}
+      {%- endif -%}
+    </div>
+
+    <p class="header-v1-mega__title">{{ product.title | escape }}</p>
+
+    <div class="header-v1-mega__price">
+      {%- if product.compare_at_price > product.price -%}
+        <s class="header-v1-mega__compare">{{ product.compare_at_price | money }}</s>
+      {%- endif -%}
+      <span class="header-v1-mega__amount">{{ mega_price }}</span>
+    </div>
+  </a>
+</li>

@@ -27,7 +27,7 @@
         "logo": "shopify://shop_images/logo_1dc30dd9-e1f8-458b-b62a-aa0c06d88ece.png",
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
-        "menu": "main-menu",
+        "menu": "main-menu-v1",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "always",
         "sticky_top": 0,

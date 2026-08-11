@@ -1,0 +1,147 @@
+/* header-v1：系列产品 mega 浮窗（PC 主导航，>=990px 才显示） */
+
+.section-header,
+.header-wrapper:has(.header-v1),
+.header-v1 {
+  overflow: visible;
+}
+
+.header-v1 header-menu > details.header-v1-mega {
+  position: static;
+}
+
+.header-v1-mega__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 5;
+  background: #fff;
+  border: 1px solid #22afe5;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  padding: 3.2rem 4rem 3.6rem;
+  max-height: min(70vh, 52rem);
+  overflow-y: auto;
+}
+
+.js .header-v1-mega__content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-1.2rem);
+  pointer-events: none;
+}
+
+.js .header-v1-mega[open] > .header-v1-mega__content,
+.header-v1-mega[open] > .header-v1-mega__content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  animation: animateMenuOpen var(--duration-default) ease;
+  animation-fill-mode: forwards;
+}
+
+.header-v1-mega__list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 21rem);
+  justify-content: center;
+  gap: 3.2rem 4rem;
+  max-width: 88rem;
+}
+
+.header-v1-mega__item {
+  width: 21rem;
+}
+
+.header-v1-mega__empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #6b7280;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.header-v1-mega__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-v1-mega__media {
+  width: 21rem;
+  height: 21rem;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+.header-v1-mega__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header-v1-mega__image--placeholder {
+  fill: #d0d0d0;
+}
+
+.header-v1-mega__title {
+  display: -webkit-box;
+  width: 100%;
+  margin: 1.2rem 0 0;
+  overflow: hidden;
+  color: #111;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.header-v1-mega__price {
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.6rem;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.header-v1-mega__compare {
+  color: #9ca3af;
+  font-size: 1.3rem;
+}
+
+.header-v1-mega__amount {
+  color: #111;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.header-v1-mega__card:hover .header-v1-mega__title {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+@media screen and (max-width: 1199px) {
+  .header-v1-mega__content {
+    padding: 2.4rem;
+  }
+
+  .header-v1-mega__list {
+    grid-template-columns: repeat(3, 21rem);
+    gap: 2.4rem 2.8rem;
+  }
+}
