@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -24,9 +33,11 @@
           "settings": {
             "heading": "Contact Us",
             "address": "903 N Bowser Rd\nSuite 250\nRichardson, TX 75081",
-            "email": "info@dtfdallas.com",
-            "phone": "+1 (469) 769-8949",
-            "extra_link_label": ""
+            "address_url": "",
+            "email": "desceci@outlook.com",
+            "phone": "+1 732 808 7033",
+            "extra_link_label": "",
+            "extra_link_url": ""
           }
         }
       },
@@ -42,9 +53,9 @@
         "link_hover_color": "#ffffff",
         "border_color": "#34505a",
         "show_social": true,
+        "payment_image_width": 320,
         "enable_country_selector": true,
         "enable_language_selector": true,
-        "payment_image_width": 320,
         "show_copyright": true,
         "show_policy": false,
         "column_gap": 64,
@@ -56,5 +67,7 @@
       }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }
