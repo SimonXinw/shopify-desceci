@@ -180,6 +180,147 @@
         "padding_bottom": 28
       }
     },
+    "quality_promise_YJiqk9": {
+      "type": "quality-promise",
+      "blocks": {
+        "eligible_item_EthWFd": {
+          "type": "eligible_item",
+          "settings": {
+            "image": "shopify://shop_images/a4658cbc-004c-4be1-80ff-c8a94fad193c.png",
+            "title": "PRINTING DEFECTS",
+            "text": "Blurry, incomplete, or defective prints caused by production issues."
+          }
+        },
+        "eligible_item_XDjPFA": {
+          "type": "eligible_item",
+          "settings": {
+            "image": "shopify://shop_images/059997aa-a20e-4da5-b461-9cb96cf78679.png",
+            "title": "WRONG SIZE / DESIGN",
+            "text": "Incorrect size or design shipped due to our fulfillment error."
+          }
+        },
+        "eligible_item_w9kdg7": {
+          "type": "eligible_item",
+          "settings": {
+            "image": "shopify://shop_images/276e8e12-b2e8-4847-bc12-46e54dbe31cd.png",
+            "title": "DAMAGED IN TRANSIT",
+            "text": "Transfers damaged during shipping with clear packaging evidence."
+          }
+        },
+        "eligible_item_Ca94eB": {
+          "type": "eligible_item",
+          "settings": {
+            "image": "shopify://shop_images/88c02f8c-1bbb-4e0c-a595-ae0584fdf24c.png",
+            "title": "MISSING ITEMS",
+            "text": "Items confirmed missing from your delivered order."
+          }
+        },
+        "eligible_item_7wKt4J": {
+          "type": "eligible_item",
+          "settings": {
+            "image": "shopify://shop_images/ab4a0996-6d34-48ed-88d7-8a192a7f19ad.png",
+            "title": "QUALITY FAILURE",
+            "text": "Transfers that fail under normal recommended pressing conditions."
+          }
+        },
+        "not_eligible_item_dCb4xR": {
+          "type": "not_eligible_item",
+          "settings": {
+            "image": "shopify://shop_images/2f9164ae-2859-4fda-a6e3-e67d8fd15006.png",
+            "title": "ARTWORK ISSUES",
+            "text": "Low-resolution, pixelated, or incorrectly prepared artwork files."
+          }
+        },
+        "not_eligible_item_gALxgN": {
+          "type": "not_eligible_item",
+          "settings": {
+            "image": "shopify://shop_images/e3f7b953-0aec-4653-9096-0b8ecb259862.png",
+            "title": "SIZE / DESIGN ERRORS",
+            "text": "Incorrect sizing or placement caused by customer-provided specifications."
+          }
+        },
+        "not_eligible_item_nTH4VX": {
+          "type": "not_eligible_item",
+          "settings": {
+            "image": "shopify://shop_images/339c90e4-c04c-47da-9203-092327967512.png",
+            "title": "IMPROPER APPLICATION",
+            "text": "Issues caused by incorrect temperature, pressure, or press time."
+          }
+        },
+        "not_eligible_item_eXprG8": {
+          "type": "not_eligible_item",
+          "settings": {
+            "image": "shopify://shop_images/02d47b27-f8d9-4feb-a02a-0c662b3ace8d.png",
+            "title": "FABRIC INCOMPATIBILITY",
+            "text": "Results affected by unsupported or unsuitable garment materials."
+          }
+        },
+        "not_eligible_item_xxEdwE": {
+          "type": "not_eligible_item",
+          "settings": {
+            "image": "shopify://shop_images/35c2c8da-23e0-43cd-884b-75204be775c9.png",
+            "title": "NORMAL VARIATION",
+            "text": "Slight color or finish differences that fall within normal production range."
+          }
+        }
+      },
+      "block_order": [
+        "eligible_item_EthWFd",
+        "eligible_item_XDjPFA",
+        "eligible_item_w9kdg7",
+        "eligible_item_Ca94eB",
+        "eligible_item_7wKt4J",
+        "not_eligible_item_dCb4xR",
+        "not_eligible_item_gALxgN",
+        "not_eligible_item_nTH4VX",
+        "not_eligible_item_eXprG8",
+        "not_eligible_item_xxEdwE"
+      ],
+      "name": "质量保障承诺",
+      "settings": {
+        "eyebrow": "QUALITY GUARANTEE",
+        "eyebrow_color": "#e8913a",
+        "eyebrow_size": 13,
+        "title": "Our Promise to You",
+        "title_color": "#1a2332",
+        "title_size": 40,
+        "mobile_title_size": 28,
+        "underline_color": "#e8913a",
+        "description": "<p>At <strong>DESCECI</strong>, we stand behind every DTF transfer we produce. Your satisfaction is always our top priority.</p>",
+        "description_color": "#2c3340",
+        "description_size": 16,
+        "eligible_title": "ELIGIBLE FOR FREE REPLACEMENT",
+        "eligible_title_color": "#1f8a3c",
+        "eligible_title_size": 16,
+        "eligible_line_color": "#1f8a3c",
+        "request_background": "#e8f6ea",
+        "request_title": "HOW TO REQUEST A REPLACEMENT",
+        "request_title_color": "#1f8a3c",
+        "request_title_size": 14,
+        "request_desc": "Please contact us within 7 days of delivery and provide:",
+        "request_desc_color": "#1a2332",
+        "request_desc_size": 13,
+        "request_item_text_1": "Order Number",
+        "request_item_text_2": "Photos of the Issue",
+        "request_item_text_3": "Details of the Problem",
+        "request_item_color": "#1a2332",
+        "request_item_size": 13,
+        "not_eligible_title": "NOT ELIGIBLE FOR FREE REPLACEMENT",
+        "not_eligible_title_color": "#d6453d",
+        "not_eligible_title_size": 16,
+        "not_eligible_line_color": "#d6453d",
+        "not_eligible_background": "#fff4f1",
+        "card_title_color": "#1a2332",
+        "card_title_size": 13,
+        "card_desc_color": "#4b5563",
+        "card_desc_size": 12,
+        "section_background": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "mobile_padding_top": 28,
+        "mobile_padding_bottom": 28
+      }
+    },
     "contact_form_Cd8YLV": {
       "type": "contact-form",
       "name": "t:sections.contact-form.presets.name",
@@ -197,6 +338,7 @@
     "multirow_43gGEX",
     "disclosures",
     "related-products",
+    "quality_promise_YJiqk9",
     "contact_form_Cd8YLV"
   ]
 }
