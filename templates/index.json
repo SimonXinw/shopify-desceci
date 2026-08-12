@@ -752,9 +752,20 @@
         "arrow_color": "#8dc63f",
         "card_radius": 6,
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 20,
         "mobile_padding_top": 20,
         "mobile_padding_bottom": 20
+      }
+    },
+    "contact_form_RU4gRa": {
+      "type": "contact-form",
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "heading": "Need Help Choosing the Right Transfer?",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "newsletter_split": {
@@ -872,17 +883,6 @@
         "padding_bottom": 60,
         "mobile_padding_top": 32,
         "mobile_padding_bottom": 32
-      }
-    },
-    "contact_form_RU4gRa": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
-      "settings": {
-        "heading": "Contact form",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
