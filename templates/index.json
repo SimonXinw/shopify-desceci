@@ -759,6 +759,7 @@
     },
     "newsletter_split": {
       "type": "newsletter-split",
+      "disabled": true,
       "settings": {
         "heading": "Subscribe to our emails",
         "description": "Be the first to know about new collections and exclusive offers.",
@@ -872,6 +873,17 @@
         "mobile_padding_top": 32,
         "mobile_padding_bottom": 32
       }
+    },
+    "contact_form_RU4gRa": {
+      "type": "contact-form",
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "heading": "Contact form",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -884,6 +896,7 @@
     "shop_reasons",
     "quality_promise",
     "application_guide",
+    "contact_form_RU4gRa",
     "newsletter_split",
     "faq"
   ]
