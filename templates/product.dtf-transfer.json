@@ -91,6 +91,65 @@
         "padding_bottom": 12
       }
     },
+    "multirow_43gGEX": {
+      "type": "multirow",
+      "blocks": {
+        "row_w4mRGP": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/138ca37a-3596-48bc-9007-31dfe5c7f022.png",
+            "caption": "Why Choose DESCECI DTF Transfers?",
+            "heading": "Vibrant Colors & High Definition Printing",
+            "text": "<p>Experience sharp details, rich colors, and smooth gradients with advanced DTF printing technology.<br/><br/>Perfect for logos, artwork, custom designs, and detailed graphics.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_ima9mt": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/b76f3676-f0c5-4406-9a7b-924e57486190.png",
+            "caption": "Caption",
+            "heading": "Soft Feel & Strong Durability",
+            "text": "<p>Our DTF transfers provide a soft-touch finish while maintaining excellent stretch resistance and wash durability.<br/><br/>Designed for professional apparel production.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_VW7k8U": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/c86fa395-eb57-4aba-9ce0-6f151a7f9170.png",
+            "caption": "Caption",
+            "heading": "Ready To Press",
+            "text": "<p><br/>No weeding. No cutting. No complicated preparation.<br/><br/>Simply press, peel, and create professional garments in minutes.<br/><br/></p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_w4mRGP",
+        "row_ima9mt",
+        "row_VW7k8U"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "disclosures": {
       "type": "disclosures",
       "settings": {
@@ -119,11 +178,24 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "contact_form_Cd8YLV": {
+      "type": "contact-form",
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "heading": "Contact form",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
+    "multirow_43gGEX",
     "disclosures",
-    "related-products"
+    "related-products",
+    "contact_form_Cd8YLV"
   ]
 }
