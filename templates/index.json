@@ -567,7 +567,7 @@
         "eligible_2": {
           "type": "eligible_item",
           "settings": {
-            "image": "shopify://shop_images/059997aa-a20e-4da5-b461-9cb96cf78679.png",
+            "image": "shopify://shop_images/276e8e12-b2e8-4847-bc12-46e54dbe31cd.png",
             "title": "WRONG SIZE / DESIGN",
             "text": "Incorrect size or design shipped due to our fulfillment error."
           }
@@ -575,7 +575,7 @@
         "eligible_3": {
           "type": "eligible_item",
           "settings": {
-            "image": "shopify://shop_images/276e8e12-b2e8-4847-bc12-46e54dbe31cd.png",
+            "image": "shopify://shop_images/059997aa-a20e-4da5-b461-9cb96cf78679.png",
             "title": "DAMAGED IN TRANSIT",
             "text": "Transfers damaged during shipping with clear packaging evidence."
           }
