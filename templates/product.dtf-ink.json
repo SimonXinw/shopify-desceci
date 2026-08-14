@@ -202,9 +202,9 @@
         "collapsible_row_w6Y9t6": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Product Details",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>DESCECI Premium DTF Ink is formulated for professional Direct to Film printing, delivering vibrant color reproduction, smooth ink flow, and consistent printing performance.</p><ul><li><strong>Ink Type:</strong> Water-Based Pigment Ink</li><li><strong>Colors:</strong> Cyan, Magenta, Yellow, Black & White</li><li><strong>Available Sizes:</strong> 250ML / 500ML / 1000ML</li><li><strong>Application:</strong> Direct to Film (DTF) Printing</li><li><strong>Recommended For:</strong> T-Shirts, Hoodies, Tote Bags, Sweatshirts & More</li></ul>",
             "page": ""
           }
         },
@@ -244,8 +244,8 @@
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
-        "caption": "",
-        "heading": "Collapsible content",
+        "caption": "About DESCECI DTF Ink",
+        "heading": "DTF Ink Product Information",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
