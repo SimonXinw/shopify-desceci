@@ -47,6 +47,20 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "kixxl_gangify_upload_button_DzGLBY": {
+          "type": "shopify://apps/kixxl/blocks/gangify_upload_button/cdfbfad9-7b2b-47ff-a143-b116e7f6339b",
+          "settings": {
+            "product": "{{product}}",
+            "text": "Create a Gang Sheet",
+            "colour": "#008656",
+            "cssClass": "",
+            "inlineStyle": "",
+            "textUpload": "Upload a Gang Sheet",
+            "colourUpload": "#008656",
+            "cssClassUpload": "",
+            "inlineStyleUpload": ""
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -100,6 +114,7 @@
         "inventory_hiBiYL",
         "variant_picker",
         "quantity_selector",
+        "kixxl_gangify_upload_button_DzGLBY",
         "buy_buttons",
         "icon_with_text_YYxGpe",
         "icon_with_text_UjxtEQ",
