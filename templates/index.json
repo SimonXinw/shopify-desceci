@@ -230,7 +230,7 @@
       "settings": {
         "image": "shopify://shop_images/1_c57b96aa-2087-4639-95e9-6074b7f37eda.png",
         "layout_width": "full",
-        "desktop_height": 610,
+        "desktop_height": 650,
         "mobile_image_height": 240,
         "image_position": "center center",
         "border_radius": 24,
