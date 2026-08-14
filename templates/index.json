@@ -119,7 +119,7 @@
         "fallback_background": "#f3f3f3",
         "desktop_height": 690,
         "mobile_height": 560,
-        "desktop_horizontal_position": "flex-start",
+        "desktop_horizontal_position": "center",
         "desktop_vertical_position": "flex-start",
         "desktop_text_alignment": "left",
         "content_width": 40,
