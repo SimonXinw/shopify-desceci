@@ -95,6 +95,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -109,6 +110,90 @@
         "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 28
+      }
+    },
+    "product_advantages_atd6MJ": {
+      "type": "product-advantages",
+      "blocks": {
+        "advantage_item_dpRABR": {
+          "type": "advantage_item",
+          "settings": {
+            "image": "shopify://shop_images/32a04a92-7bc6-4b72-997b-078ff76a9420.png",
+            "item_title": "PRINT",
+            "item_description": "High color density for brilliant and vivid prints.",
+            "icon_1": "shopify://shop_images/15885382-0ac7-4ffa-ac23-42199ea71682.png",
+            "icon_label_1": "50+ Wash Cycles Tested",
+            "icon_2": "shopify://shop_images/a1786707-d226-42fe-b5fb-957387ae30ce.png",
+            "icon_label_2": "Fade Resistant",
+            "icon_3": "shopify://shop_images/791c9706-06fe-45ed-a8a8-725a58376122.png",
+            "icon_label_3": "Eco-Friendly Inks",
+            "icon_4": "shopify://shop_images/d38aa5f1-b672-485d-8efd-ad4d33790baf.png",
+            "icon_label_4": "Long-Lasting Prints"
+          }
+        },
+        "advantage_item_bTLtmw": {
+          "type": "advantage_item",
+          "settings": {
+            "image": "shopify://shop_images/e4ff946d-4335-446c-87c3-0ff3d02b7a80.png",
+            "item_title": "TRANSFER",
+            "item_description": "Excellent flowability, no clogging, no fading.",
+            "icon_1": "shopify://shop_images/807d218d-f83b-4753-b567-816e55abfc91.png",
+            "icon_label_1": "T-SHIRTS",
+            "icon_2": "shopify://shop_images/bb38e394-b7dd-472f-a1d1-60599c8c3437.png",
+            "icon_label_2": "Canvas Bags",
+            "icon_3": "shopify://shop_images/c373c0b3-f399-4048-8bdd-e137636b2250.png",
+            "icon_label_3": "Headwear",
+            "icon_4": "shopify://shop_images/3c0a9680-adea-4d92-9e5c-5abf67fea834.png",
+            "icon_label_4": "HOODIES"
+          }
+        },
+        "advantage_item_6mAhXC": {
+          "type": "advantage_item",
+          "settings": {
+            "image": "shopify://shop_images/4fe72c6e-87c4-43e9-ab61-d32454d8b1fa.png",
+            "item_title": "FINISHED",
+            "item_description": "High opacity and strong coverage for perfect white prints.",
+            "icon_1": "shopify://shop_images/b4e14a15-72b7-4c8c-9cc2-7b6d5f4d307f.png",
+            "icon_label_1": "VIBRANT COLORS",
+            "icon_2": "shopify://shop_images/2d96f248-ad4b-4ce1-be78-5f08268dbdc3.png",
+            "icon_label_2": "SMOOTH PRINTING",
+            "icon_3": "shopify://shop_images/3508a269-3c57-4084-a19c-e5261dd519ad.png",
+            "icon_label_3": "STABLE WHITE INK",
+            "icon_4": "shopify://shop_images/9b5e2c48-fb4b-42d1-9080-1aa7fd0c1cca.png",
+            "icon_label_4": "EXCELLENT WASH DURABILITY"
+          }
+        }
+      },
+      "block_order": [
+        "advantage_item_dpRABR",
+        "advantage_item_bTLtmw",
+        "advantage_item_6mAhXC"
+      ],
+      "name": "产品优势",
+      "settings": {
+        "heading": "FROM PRINT TO PERFECTION",
+        "heading_color": "#121212",
+        "heading_size": 36,
+        "mobile_heading_size": 26,
+        "description": "VIBRANT COLORS. STRONG ADHESION. LONG LASTING.",
+        "description_color": "#4b5563",
+        "description_size": 14,
+        "section_background": "#f7f8f8",
+        "card_background": "#ffffff",
+        "card_border_color": "#e5e7eb",
+        "card_radius": 16,
+        "card_title_color": "#121212",
+        "card_title_size": 22,
+        "title_underline_color": "#11a9a4",
+        "card_description_color": "#6b7280",
+        "card_description_size": 14,
+        "icon_size": 34,
+        "icon_label_color": "#4b5563",
+        "icon_label_size": 12,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20
       }
     },
     "collapsible_content_fdKQDU": {
@@ -212,6 +297,7 @@
     "main",
     "disclosures",
     "related-products",
+    "product_advantages_atd6MJ",
     "collapsible_content_fdKQDU",
     "newsletter_77jK67"
   ]
