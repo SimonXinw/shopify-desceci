@@ -117,9 +117,9 @@
       "settings": {
         "background_image": "shopify://shop_images/4_8d3a740d-fa60-462f-bf68-473d19a0d94b.png",
         "fallback_background": "#f3f3f3",
-        "desktop_height": 690,
+        "desktop_height": 750,
         "mobile_height": 560,
-        "desktop_horizontal_position": "center",
+        "desktop_horizontal_position": "flex-start",
         "desktop_vertical_position": "flex-start",
         "desktop_text_alignment": "left",
         "content_width": 40,
