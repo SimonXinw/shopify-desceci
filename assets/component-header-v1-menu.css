@@ -1,4 +1,4 @@
-/* header-v1：系列产品 mega 浮窗（PC 主导航，>=990px 才显示） */
+/* header-v1：二级菜单产品 mega 浮窗（PC >=990px） */
 
 .section-header,
 .header-wrapper:has(.header-v1),
@@ -6,8 +6,20 @@
   overflow: visible;
 }
 
-.header-v1 header-menu > details.header-v1-mega {
+.header-v1-nav__item--has-mega {
   position: static;
+}
+
+.header-v1-nav__link--has-caret {
+  position: relative;
+  padding-right: 2.7rem;
+}
+
+.header-v1-nav__link--has-caret .icon-caret {
+  position: absolute;
+  right: 0.8rem;
+  top: calc(50% - 0.2rem);
+  height: 0.6rem;
 }
 
 .header-v1-mega__content {
@@ -31,8 +43,8 @@
   pointer-events: none;
 }
 
-.js .header-v1-mega[open] > .header-v1-mega__content,
-.header-v1-mega[open] > .header-v1-mega__content {
+.js .header-v1-nav__item--has-mega.is-open > .header-v1-mega__content,
+.header-v1-nav__item--has-mega:hover > .header-v1-mega__content {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -54,14 +66,6 @@
 
 .header-v1-mega__item {
   width: 21rem;
-}
-
-.header-v1-mega__empty {
-  grid-column: 1 / -1;
-  margin: 0;
-  color: #6b7280;
-  font-size: 1.4rem;
-  text-align: center;
 }
 
 .header-v1-mega__card {
@@ -135,7 +139,52 @@
   text-underline-offset: 0.2rem;
 }
 
-@media screen and (max-width: 1199px) {
+/* 移动端抽屉内产品网格 */
+.header-v1-drawer__parent-link {
+  display: block;
+  margin: 0 1.5rem 1.2rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(var(--color-foreground), 0.12);
+  color: rgb(var(--color-foreground));
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.header-v1-drawer__parent-link:hover {
+  background-color: rgba(var(--color-foreground), 0.04);
+}
+
+.header-v1-drawer__products {
+  list-style: none;
+  margin: 0;
+  padding: 0 1.5rem 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+.header-v1-drawer__products .header-v1-mega__item {
+  width: 100%;
+}
+
+.header-v1-drawer__products .header-v1-mega__media {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.header-v1-drawer__products .header-v1-mega__title {
+  font-size: 1.3rem;
+}
+
+.header-v1-drawer__products .header-v1-mega__amount,
+.header-v1-drawer__products .header-v1-mega__compare {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1199px) and (min-width: 990px) {
   .header-v1-mega__content {
     padding: 2.4rem;
   }
@@ -143,5 +192,11 @@
   .header-v1-mega__list {
     grid-template-columns: repeat(3, 21rem);
     gap: 2.4rem 2.8rem;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .header-v1-mega__content {
+    display: none;
   }
 }

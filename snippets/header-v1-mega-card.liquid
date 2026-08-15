@@ -2,10 +2,12 @@
   header-v1 mega 产品卡片：上图（1:1 / 210x210）+ 标题 + 一行价格
   Accepts:
   - product: {Object} 必填
+  - title: {String} 可选，菜单配置标题优先
   - link_id_prefix: {String} 可选，用于生成锚点 id
 {% endcomment %}
 
 {%- liquid
+  assign card_title = title | default: product.title
   assign mega_price = product.price_min | money
 
   if product.price_varies
@@ -23,14 +25,14 @@
   >
     <div class="header-v1-mega__media">
       {%- if product.featured_media != blank -%}
-        {%- assign product_image_alt = product.featured_media.alt | default: product.title | escape -%}
+        {%- assign product_image_alt = product.featured_media.alt | default: card_title | escape -%}
         {{
           product.featured_media
           | image_url: width: 420
           | image_tag:
             loading: 'lazy',
             widths: '210, 315, 420',
-            sizes: '210px',
+            sizes: '(max-width: 989px) 42vw, 210px',
             class: 'header-v1-mega__image',
             alt: product_image_alt,
             width: 210,
@@ -41,7 +43,7 @@
       {%- endif -%}
     </div>
 
-    <p class="header-v1-mega__title">{{ product.title | escape }}</p>
+    <p class="header-v1-mega__title">{{ card_title | escape }}</p>
 
     <div class="header-v1-mega__price">
       {%- if product.compare_at_price > product.price -%}

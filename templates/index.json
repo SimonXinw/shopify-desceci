@@ -12,6 +12,24 @@
     "image_banner": {
       "type": "image-text-banner",
       "blocks": {
+        "desc-upload": {
+          "type": "description_item",
+          "settings": {
+            "text": "Upload your artwork."
+          }
+        },
+        "desc-print": {
+          "type": "description_item",
+          "settings": {
+            "text": "We print professional-quality DTF transfers."
+          }
+        },
+        "desc-grow": {
+          "type": "description_item",
+          "settings": {
+            "text": "You press, create, and grow your apparel business."
+          }
+        },
         "feature-quality": {
           "type": "feature",
           "settings": {
@@ -104,6 +122,9 @@
         }
       },
       "block_order": [
+        "desc-upload",
+        "desc-print",
+        "desc-grow",
         "feature-quality",
         "feature-shipping",
         "feature-no-minimum",
@@ -135,7 +156,7 @@
         "subtitle_size": 20,
         "subtitle_color": "#ffffff",
         "subtitle_background": "#000000",
-        "description": "<h5><br/>1.Upload your artwork.</h5><h5>2.We print professional-quality DTF transfers.</h5><h5>3.You press, create, and grow your apparel business.<br/><br/></h5>",
+        "description": "",
         "description_color": "#121212",
         "description_background": "rgba(0,0,0,0)",
         "text_color": "#73b50a",

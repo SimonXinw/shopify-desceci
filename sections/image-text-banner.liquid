@@ -9,6 +9,7 @@
 
   assign feature_blocks = section.blocks | where: 'type', 'feature'
   assign bottom_blocks = section.blocks | where: 'type', 'bottom_item'
+  assign description_blocks = section.blocks | where: 'type', 'description_item'
 
   assign eyebrow_classes = 'eyebrow'
   unless section.settings.eyebrow_show_desktop
@@ -110,7 +111,46 @@
         </div>
       {%- endif -%}
 
-      {%- if section.settings.description != blank -%}
+      {%- if description_blocks.size > 0 -%}
+        <div class="description description_list">
+          {%- for block in description_blocks -%}
+            {%- if block.settings.text != blank -%}
+              <div class="item" {{ block.shopify_attributes }}>
+                {%- if block.settings.icon != blank -%}
+                  {{
+                    block.settings.icon
+                    | image_url: width: 28
+                    | image_tag:
+                      class: 'item_icon',
+                      widths: '14, 28',
+                      sizes: '14px',
+                      loading: 'lazy',
+                      width: 14,
+                      height: 14
+                  }}
+                {%- else -%}
+                  <svg
+                    class="item_icon"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <circle cx="7" cy="7" r="6.25" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M4 7.1 6.1 9 10 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                {%- endif -%}
+
+                <div class="text inline-richtext{% if description_has_background %} has_background{% endif %}">
+                  {{- block.settings.text -}}
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- elsif section.settings.description != blank -%}
         <div class="description">
           <div class="text rte{% if description_has_background %} has_background{% endif %}">
             {{- section.settings.description -}}
@@ -347,6 +387,33 @@
 
   .image_text_banner .description .text {
     background: var(--description-background);
+  }
+
+  .image_text_banner .description_list {
+    font-size: 14px;
+  }
+
+  .image_text_banner .description_list .item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .image_text_banner .description_list .item + .item {
+    margin-top: 0.6rem;
+  }
+
+  .image_text_banner .description_list .item_icon {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+    margin-top: 0.25em;
+    object-fit: contain;
+  }
+
+  .image_text_banner .description_list .text {
+    flex: 1;
+    min-width: 0;
   }
 
   .image_text_banner .description .text > * {
@@ -868,8 +935,26 @@
       "default": "#152c5b"
     }
   ],
-  "max_blocks": 16,
+  "max_blocks": 20,
   "blocks": [
+    {
+      "type": "description_item",
+      "name": "描述项",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "图标",
+          "info": "建议 14x14；未上传时显示默认勾选图标"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "文案",
+          "default": "Upload your artwork."
+        }
+      ]
+    },
     {
       "type": "feature",
       "name": "图标文案",
@@ -945,6 +1030,24 @@
     {
       "name": "图片文字横幅",
       "blocks": [
+        {
+          "type": "description_item",
+          "settings": {
+            "text": "Upload your artwork."
+          }
+        },
+        {
+          "type": "description_item",
+          "settings": {
+            "text": "We print professional-quality DTF transfers."
+          }
+        },
+        {
+          "type": "description_item",
+          "settings": {
+            "text": "You press, create, and grow your apparel business."
+          }
+        },
         {
           "type": "feature",
           "settings": {

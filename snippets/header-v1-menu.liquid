@@ -1,38 +1,18 @@
 {% comment %}
   header-v1 桌面导航：
-  - 一级链接到产品系列 / 全部商品时，hover 展示系列内产品浮窗
-  - 一级下挂产品子链接时，hover 展示这些产品
-  - 有普通子菜单时，沿用文字下拉
-  - 无子项时，普通跳转
+  - 一级菜单始终可跳转（系列 → collection，页面 → page）
+  - 无二级菜单：无 hover 浮窗
+  - 有二级菜单：hover 浮窗，渲染二级配置的产品（UI 与现有 mega 卡片一致）
 {% endcomment %}
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
       {%- liquid
-        assign menu_collection = blank
-        assign mega_products = blank
         assign show_product_mega = false
         assign mega_card_id_prefix = 'HeaderMenu-' | append: link.handle
 
-        if link.type == 'collection_link' and link.object != blank
-          assign menu_collection = link.object
-        elsif link.type == 'catalog_link'
-          assign menu_collection = collections.all
-        elsif link.url contains '/collections/'
-          assign collection_handle = link.url | split: '/collections/' | last | split: '/' | first | split: '?' | first
-
-          if collection_handle == 'all'
-            assign menu_collection = collections.all
-          elsif collection_handle != blank
-            assign menu_collection = collections[collection_handle]
-          endif
-        endif
-
-        if menu_collection != blank
-          assign mega_products = menu_collection.products
-          assign show_product_mega = true
-        elsif link.links != blank
+        if link.links != blank
           for childlink in link.links
             if childlink.type == 'product_link' and childlink.object != blank
               assign show_product_mega = true
@@ -42,10 +22,54 @@
         endif
       -%}
 
-      <li>
+      <li
+        class="header-v1-nav__item{% if show_product_mega %} header-v1-nav__item--has-mega{% elsif link.links != blank %} header-v1-nav__item--has-submenu{% endif %}"
+      >
         {%- if show_product_mega -%}
+          <a
+            id="HeaderMenu-{{ link.handle }}"
+            href="{{ link.url }}"
+            class="header__menu-item list-menu__item link link--text focus-inset header-v1-nav__link--has-caret"
+            {% if link.current %}
+              aria-current="page"
+            {% endif %}
+          >
+            <span
+              {%- if link.child_active or link.current %}
+                class="header__active-menu-item"
+              {% endif %}
+            >
+              {{- link.title | escape -}}
+            </span>
+            {{- 'icon-caret.svg' | inline_asset_content -}}
+          </a>
+
+          <div
+            id="HeaderMenu-Mega-{{ forloop.index }}"
+            class="header-v1-mega__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce"
+            tabindex="-1"
+          >
+            <ul class="header-v1-mega__list" role="list">
+              {%- assign product_mega_index = 0 -%}
+
+              {%- for childlink in link.links -%}
+                {%- if childlink.type == 'product_link' and childlink.object != blank -%}
+                  {%- assign product_mega_index = product_mega_index | plus: 1 -%}
+
+                  {%- if product_mega_index <= 9 -%}
+                    {%- render 'header-v1-mega-card',
+                      product: childlink.object,
+                      title: childlink.title,
+                      link_id_prefix: mega_card_id_prefix
+                    -%}
+                  {%- endif -%}
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- elsif link.links != blank -%}
           <header-menu>
-            <details id="Details-HeaderMenu-{{ forloop.index }}" class="header-v1-mega">
+            <details id="Details-HeaderMenu-{{ forloop.index }}">
               <summary
                 id="HeaderMenu-{{ link.handle }}"
                 class="header__menu-item list-menu__item link focus-inset"
@@ -59,107 +83,32 @@
                 </span>
                 {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
-
-              <div
-                id="HeaderMenu-Collection-{{ forloop.index }}"
-                class="header-v1-mega__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce"
-                tabindex="-1"
-              >
-                <ul class="header-v1-mega__list" role="list">
-                  {%- if menu_collection != blank -%}
-                    {%- for product in mega_products limit: 9 -%}
-                      {%- render 'header-v1-mega-card',
-                        product: product,
-                        link_id_prefix: mega_card_id_prefix
-                      -%}
-                    {%- else -%}
-                      <li class="header-v1-mega__empty">该系列暂无可用商品</li>
-                    {%- endfor -%}
-                  {%- else -%}
-                    {%- assign product_mega_index = 0 -%}
-
-                    {%- for childlink in link.links -%}
-                      {%- if childlink.type == 'product_link' and childlink.object != blank -%}
-                        {%- assign product_mega_index = product_mega_index | plus: 1 -%}
-
-                        {%- if product_mega_index <= 9 -%}
-                          {%- render 'header-v1-mega-card',
-                            product: childlink.object,
-                            link_id_prefix: mega_card_id_prefix
-                          -%}
-                        {%- endif -%}
-                      {%- endif -%}
-                    {%- endfor -%}
-                  {%- endif -%}
-                </ul>
-              </div>
-            </details>
-          </header-menu>
-        {%- elsif link.links != blank -%}
-          <header-menu>
-            <details id="Details-HeaderMenu-{{ forloop.index }}">
-              <summary
-                id="HeaderMenu-{{ link.handle }}"
-                class="header__menu-item list-menu__item link focus-inset"
-              >
-                <span
-                  {%- if link.child_active %}
-                    class="header__active-menu-item"
-                  {% endif %}
-                >
-                  {{- link.title | escape -}}
-                </span>
-                {{- 'icon-caret.svg' | inline_asset_content -}}
-              </summary>
               <ul
                 id="HeaderMenu-MenuList-{{ forloop.index }}"
                 class="header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup"
                 role="list"
                 tabindex="-1"
               >
+                <li>
+                  <a
+                    href="{{ link.url }}"
+                    class="header__menu-item list-menu__item link link--text focus-inset caption-large"
+                  >
+                    {{ link.title | escape }}
+                  </a>
+                </li>
                 {%- for childlink in link.links -%}
                   <li>
-                    {%- if childlink.links == blank -%}
-                      <a
-                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                        href="{{ childlink.url }}"
-                        class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"
-                        {% if childlink.current %}
-                          aria-current="page"
-                        {% endif %}
-                      >
-                        {{ childlink.title | escape }}
-                      </a>
-                    {%- else -%}
-                      <details id="Details-HeaderSubMenu-{{ link.handle }}-{{ childlink.handle }}">
-                        <summary
-                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                          class="header__menu-item link link--text list-menu__item focus-inset caption-large"
-                        >
-                          <span>{{ childlink.title | escape }}</span>
-                          {{- 'icon-caret.svg' | inline_asset_content -}}
-                        </summary>
-                        <ul
-                          id="HeaderMenu-SubMenuList-{{ link.handle }}-{{ childlink.handle }}"
-                          class="header__submenu list-menu motion-reduce"
-                        >
-                          {%- for grandchildlink in childlink.links -%}
-                            <li>
-                              <a
-                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                href="{{ grandchildlink.url }}"
-                                class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"
-                                {% if grandchildlink.current %}
-                                  aria-current="page"
-                                {% endif %}
-                              >
-                                {{ grandchildlink.title | escape }}
-                              </a>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                      </details>
-                    {%- endif -%}
+                    <a
+                      id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                      href="{{ childlink.url }}"
+                      class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"
+                      {% if childlink.current %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      {{ childlink.title | escape }}
+                    </a>
                   </li>
                 {%- endfor -%}
               </ul>
