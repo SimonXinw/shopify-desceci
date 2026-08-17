@@ -8,7 +8,6 @@
   endif
 
   assign feature_blocks = section.blocks | where: 'type', 'feature'
-  assign bottom_blocks = section.blocks | where: 'type', 'bottom_item'
   assign description_blocks = section.blocks | where: 'type', 'description_item'
 
   assign eyebrow_classes = 'eyebrow'
@@ -65,21 +64,47 @@
     --button-hover-background: {{ section.settings.button_hover_background }};
     --button-text-color: {{ section.settings.button_text_color }};
     --button-font-size: {{ section.settings.button_font_size }}px;
-    --bottom-bar-background: {{ section.settings.bottom_bar_background }};
   "
 >
   <div class="background">
-    {%- if section.settings.background_image != blank -%}
-      {{
-        section.settings.background_image
-        | image_url: width: 3840
-        | image_tag:
-          class: 'image',
-          widths: '750, 1100, 1500, 1920, 2560, 3200, 3840',
-          sizes: '100vw',
-          loading: image_loading,
-          fetchpriority: fetch_priority
-      }}
+    {%- if section.settings.background_image != blank or section.settings.mobile_background_image != blank -%}
+      <picture>
+        {%- if section.settings.mobile_background_image != blank -%}
+          <source
+            media="(max-width: 749px)"
+            srcset="
+              {{ section.settings.mobile_background_image | image_url: width: 750 }} 750w,
+              {{ section.settings.mobile_background_image | image_url: width: 1100 }} 1100w,
+              {{ section.settings.mobile_background_image | image_url: width: 1500 }} 1500w
+            "
+            sizes="100vw"
+          >
+        {%- endif -%}
+
+        {%- if section.settings.background_image != blank -%}
+          {{
+            section.settings.background_image
+            | image_url: width: 3840
+            | image_tag:
+              class: 'image',
+              widths: '750, 1100, 1500, 1920, 2560, 3200, 3840',
+              sizes: '100vw',
+              loading: image_loading,
+              fetchpriority: fetch_priority
+          }}
+        {%- else -%}
+          {{
+            section.settings.mobile_background_image
+            | image_url: width: 1500
+            | image_tag:
+              class: 'image',
+              widths: '750, 1100, 1500',
+              sizes: '100vw',
+              loading: image_loading,
+              fetchpriority: fetch_priority
+          }}
+        {%- endif -%}
+      </picture>
     {%- else -%}
       {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder' }}
     {%- endif -%}
@@ -245,49 +270,12 @@
 
     </div>
   </div>
-
-  {%- if bottom_blocks.size > 0 -%}
-    <div class="bottom_bar">
-      <div class="inner page-width">
-        {%- for block in bottom_blocks -%}
-          <div class="item" {{ block.shopify_attributes }}>
-            {%- if block.settings.icon != blank -%}
-              {{
-                block.settings.icon
-                | image_url: width: 128
-                | image_tag:
-                  class: 'icon',
-                  widths: '48, 96, 128',
-                  sizes: '48px',
-                  loading: 'lazy'
-              }}
-            {%- endif -%}
-
-            <div class="texts">
-              {%- if block.settings.text_1 != blank -%}
-                <div class="line line_top" style="--line-color: {{ block.settings.text_1_color }};">
-                  {{- block.settings.text_1 -}}
-                </div>
-              {%- endif -%}
-
-              {%- if block.settings.text_2 != blank -%}
-                <div class="line line_bottom" style="--line-color: {{ block.settings.text_2_color }};">
-                  {{- block.settings.text_2 -}}
-                </div>
-              {%- endif -%}
-            </div>
-          </div>
-        {%- endfor -%}
-      </div>
-    </div>
-  {%- endif -%}
 </div>
 
 {% stylesheet %}
   .image_text_banner {
     --content-padding-top: 60px;
     --button-skew: -10deg;
-    --bottom-bar-divider: rgba(255, 255, 255, 0.22);
 
     position: relative;
     display: flex;
@@ -308,11 +296,16 @@
     height: 100%;
   }
 
+  .image_text_banner .background picture,
   .image_text_banner .background .image,
   .image_text_banner .background .placeholder {
     display: block;
     width: 100%;
     height: 100%;
+  }
+
+  .image_text_banner .background .image,
+  .image_text_banner .background .placeholder {
     object-fit: cover;
   }
 
@@ -517,71 +510,6 @@
     text-align: center;
   }
 
-  .image_text_banner .bottom_bar {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    margin-top: auto;
-    padding: 1.6rem 0;
-    background: var(--bottom-bar-background);
-  }
-
-  .image_text_banner .bottom_bar .inner {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-  }
-
-  .image_text_banner .bottom_bar .item {
-    position: relative;
-    display: flex;
-    flex: 1 1 0;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
-    min-width: 0;
-    padding: 0.4rem 1.6rem;
-  }
-
-  .image_text_banner .bottom_bar .item:not(:last-child)::after {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 1px;
-    height: 2.8rem;
-    background: var(--bottom-bar-divider);
-    transform: translateY(-50%);
-    content: '';
-  }
-
-  .image_text_banner .bottom_bar .icon {
-    width: 48px;
-    height: 48px;
-    flex: 0 0 48px;
-    object-fit: contain;
-  }
-
-  .image_text_banner .bottom_bar .texts {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    min-width: 0;
-  }
-
-  .image_text_banner .bottom_bar .line {
-    color: var(--line-color, inherit);
-    font-size: 1.3rem;
-    line-height: 1.25;
-  }
-
-  .image_text_banner .bottom_bar .line_top {
-    font-weight: 700;
-  }
-
-  .image_text_banner .bottom_bar .line_bottom {
-    font-weight: 500;
-  }
-
   @media screen and (min-width: 750px) {
     .image_text_banner .hidden_desktop {
       display: none;
@@ -615,21 +543,6 @@
     .image_text_banner .features {
       justify-content: center;
     }
-
-    .image_text_banner .bottom_bar .inner {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.2rem;
-    }
-
-    .image_text_banner .bottom_bar .item {
-      justify-content: flex-start;
-      padding: 0.4rem 0;
-    }
-
-    .image_text_banner .bottom_bar .item:not(:last-child)::after {
-      display: none;
-    }
   }
 {% endstylesheet %}
 
@@ -649,7 +562,13 @@
     {
       "type": "image_picker",
       "id": "background_image",
-      "label": "背景图片"
+      "label": "PC 端背景图片"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_background_image",
+      "label": "移动端背景图片",
+      "info": "不上传时，移动端沿用 PC 端背景图"
     },
     {
       "type": "color",
@@ -923,16 +842,6 @@
       "unit": "px",
       "label": "按钮文字大小",
       "default": 14
-    },
-    {
-      "type": "header",
-      "content": "底部图标栏"
-    },
-    {
-      "type": "color",
-      "id": "bottom_bar_background",
-      "label": "底部栏背景颜色",
-      "default": "#152c5b"
     }
   ],
   "max_blocks": 20,
@@ -989,41 +898,6 @@
           "default": "#121212"
         }
       ]
-    },
-    {
-      "type": "bottom_item",
-      "name": "底部图标项",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "icon",
-          "label": "图标"
-        },
-        {
-          "type": "inline_richtext",
-          "id": "text_1",
-          "label": "第一行文案",
-          "default": "NO MINIMUM"
-        },
-        {
-          "type": "color",
-          "id": "text_1_color",
-          "label": "第一行文字颜色",
-          "default": "#ffffff"
-        },
-        {
-          "type": "inline_richtext",
-          "id": "text_2",
-          "label": "第二行文案",
-          "default": "ORDER"
-        },
-        {
-          "type": "color",
-          "id": "text_2_color",
-          "label": "第二行文字颜色",
-          "default": "#b4bfd4"
-        }
-      ]
     }
   ],
   "presets": [
@@ -1074,41 +948,6 @@
           "settings": {
             "text": "FAST",
             "text_2": "TURNAROUND"
-          }
-        },
-        {
-          "type": "bottom_item",
-          "settings": {
-            "text_1": "NO MINIMUM",
-            "text_2": "ORDER"
-          }
-        },
-        {
-          "type": "bottom_item",
-          "settings": {
-            "text_1": "PREMIUM",
-            "text_2": "QUALITY"
-          }
-        },
-        {
-          "type": "bottom_item",
-          "settings": {
-            "text_1": "LONG LASTING",
-            "text_2": "& DURABLE"
-          }
-        },
-        {
-          "type": "bottom_item",
-          "settings": {
-            "text_1": "PERFECT FOR",
-            "text_2": "ALL FABRICS"
-          }
-        },
-        {
-          "type": "bottom_item",
-          "settings": {
-            "text_1": "DEDICATED",
-            "text_2": "SUPPORT"
           }
         }
       ]

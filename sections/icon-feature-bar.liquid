@@ -1,0 +1,224 @@
+{%- liquid
+  assign icon_items = section.blocks | where: 'type', 'icon_item'
+-%}
+
+{%- if icon_items.size > 0 -%}
+  <div
+    class="icon_feature_bar"
+    style="--bar-background: {{ section.settings.background_color }};"
+  >
+    <div class="inner page-width">
+      {%- for block in icon_items -%}
+        <div class="item" {{ block.shopify_attributes }}>
+          {%- if block.settings.icon != blank -%}
+            {{
+              block.settings.icon
+              | image_url: width: 128
+              | image_tag:
+                class: 'icon',
+                widths: '48, 96, 128',
+                sizes: '48px',
+                loading: 'lazy'
+            }}
+          {%- endif -%}
+
+          <div class="texts">
+            {%- if block.settings.text_1 != blank -%}
+              <div class="line line_top" style="--line-color: {{ block.settings.text_1_color }};">
+                {{- block.settings.text_1 -}}
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.text_2 != blank -%}
+              <div class="line line_bottom" style="--line-color: {{ block.settings.text_2_color }};">
+                {{- block.settings.text_2 -}}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .icon_feature_bar {
+    --bar-divider: rgba(255, 255, 255, 0.22);
+
+    width: 100%;
+    padding: 1.6rem 0;
+    background: var(--bar-background);
+  }
+
+  .icon_feature_bar .inner {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .icon_feature_bar .item {
+    position: relative;
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    min-width: 0;
+    padding: 0.4rem 1.6rem;
+  }
+
+  .icon_feature_bar .item:not(:last-child)::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 2.8rem;
+    background: var(--bar-divider);
+    transform: translateY(-50%);
+    content: '';
+  }
+
+  .icon_feature_bar .icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    object-fit: contain;
+  }
+
+  .icon_feature_bar .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+  }
+
+  .icon_feature_bar .line {
+    color: var(--line-color, inherit);
+    font-size: 1.3rem;
+    line-height: 1.25;
+  }
+
+  .icon_feature_bar .line_top {
+    font-weight: 700;
+  }
+
+  .icon_feature_bar .line_bottom {
+    font-weight: 500;
+  }
+
+  @media screen and (max-width: 749px) {
+    .icon_feature_bar .inner {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .icon_feature_bar .item {
+      justify-content: flex-start;
+      padding: 0.4rem 0;
+    }
+
+    .icon_feature_bar .item:not(:last-child)::after {
+      display: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "图标特性栏",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#152c5b"
+    }
+  ],
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "icon_item",
+      "name": "图标项",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "图标"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_1",
+          "label": "第一行文案",
+          "default": "NO MINIMUM"
+        },
+        {
+          "type": "color",
+          "id": "text_1_color",
+          "label": "第一行文字颜色",
+          "default": "#ffffff"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_2",
+          "label": "第二行文案",
+          "default": "ORDER"
+        },
+        {
+          "type": "color",
+          "id": "text_2_color",
+          "label": "第二行文字颜色",
+          "default": "#b4bfd4"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "图标特性栏",
+      "blocks": [
+        {
+          "type": "icon_item",
+          "settings": {
+            "text_1": "NO MINIMUM",
+            "text_2": "ORDER"
+          }
+        },
+        {
+          "type": "icon_item",
+          "settings": {
+            "text_1": "PREMIUM",
+            "text_2": "QUALITY"
+          }
+        },
+        {
+          "type": "icon_item",
+          "settings": {
+            "text_1": "LONG LASTING",
+            "text_2": "& DURABLE"
+          }
+        },
+        {
+          "type": "icon_item",
+          "settings": {
+            "text_1": "PERFECT FOR",
+            "text_2": "ALL FABRICS"
+          }
+        },
+        {
+          "type": "icon_item",
+          "settings": {
+            "text_1": "DEDICATED",
+            "text_2": "SUPPORT"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

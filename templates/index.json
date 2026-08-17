@@ -69,56 +69,6 @@
             "text_2": "",
             "text_2_color": "#121212"
           }
-        },
-        "bottom-no-minimum": {
-          "type": "bottom_item",
-          "settings": {
-            "icon": "shopify://shop_images/2592e44d-86c8-4471-ba09-0f7ca989cc91.png",
-            "text_1": "NO MINIMUM",
-            "text_1_color": "#ffffff",
-            "text_2": "ORDER",
-            "text_2_color": "#b4bfd4"
-          }
-        },
-        "bottom-premium-quality": {
-          "type": "bottom_item",
-          "settings": {
-            "icon": "shopify://shop_images/087de6a6-6de9-4593-bf7a-adc8f9810632.png",
-            "text_1": "PREMIUM",
-            "text_1_color": "#ffffff",
-            "text_2": "QUALITY",
-            "text_2_color": "#b4bfd4"
-          }
-        },
-        "bottom-long-lasting": {
-          "type": "bottom_item",
-          "settings": {
-            "icon": "shopify://shop_images/e9d90b58-11b7-4e94-92a9-7dfbbcacce61.png",
-            "text_1": "LONG LASTING",
-            "text_1_color": "#ffffff",
-            "text_2": "& DURABLE",
-            "text_2_color": "#b4bfd4"
-          }
-        },
-        "bottom-all-fabrics": {
-          "type": "bottom_item",
-          "settings": {
-            "icon": "shopify://shop_images/a3ade8e8-817b-41f6-b289-0bc7f4e35ee4.png",
-            "text_1": "PERFECT FOR",
-            "text_1_color": "#ffffff",
-            "text_2": "ALL FABRICS",
-            "text_2_color": "#b4bfd4"
-          }
-        },
-        "bottom-support": {
-          "type": "bottom_item",
-          "settings": {
-            "icon": "shopify://shop_images/6269a8a7-e4ae-4fa8-bd61-935b94552a01.png",
-            "text_1": "DEDICATED",
-            "text_1_color": "#ffffff",
-            "text_2": "SUPPORT",
-            "text_2_color": "#b4bfd4"
-          }
         }
       },
       "block_order": [
@@ -128,12 +78,7 @@
         "feature-quality",
         "feature-shipping",
         "feature-no-minimum",
-        "feature-turnaround",
-        "bottom-no-minimum",
-        "bottom-premium-quality",
-        "bottom-long-lasting",
-        "bottom-all-fabrics",
-        "bottom-support"
+        "feature-turnaround"
       ],
       "settings": {
         "background_image": "shopify://shop_images/5_d06cfb90-0b8b-4683-8c8a-f006e591c22f.png",
@@ -143,7 +88,7 @@
         "desktop_horizontal_position": "flex-start",
         "desktop_vertical_position": "flex-start",
         "desktop_text_alignment": "left",
-        "content_width": 50,
+        "content_width": 43,
         "eyebrow_text": "— YOUR DESIGNS. OUR QUALITY. YOUR SUCCESS.",
         "eyebrow_color": "#121212",
         "eyebrow_background": "rgba(0,0,0,0)",
@@ -168,8 +113,72 @@
         "button_link_2": "shopify://products/asset-pack-86653763586-example-product-1",
         "button_hover_background": "linear-gradient(90deg, #bdf807, #14bffd)",
         "button_text_color": "#000000",
-        "button_font_size": 14,
-        "bottom_bar_background": "#152c5b"
+        "button_font_size": 14
+      }
+    },
+    "icon_feature_bar": {
+      "type": "icon-feature-bar",
+      "blocks": {
+        "bottom-no-minimum": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify://shop_images/2592e44d-86c8-4471-ba09-0f7ca989cc91.png",
+            "text_1": "NO MINIMUM",
+            "text_1_color": "#ffffff",
+            "text_2": "ORDER",
+            "text_2_color": "#b4bfd4"
+          }
+        },
+        "bottom-premium-quality": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify://shop_images/087de6a6-6de9-4593-bf7a-adc8f9810632.png",
+            "text_1": "PREMIUM",
+            "text_1_color": "#ffffff",
+            "text_2": "QUALITY",
+            "text_2_color": "#b4bfd4"
+          }
+        },
+        "bottom-long-lasting": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify://shop_images/e9d90b58-11b7-4e94-92a9-7dfbbcacce61.png",
+            "text_1": "LONG LASTING",
+            "text_1_color": "#ffffff",
+            "text_2": "& DURABLE",
+            "text_2_color": "#b4bfd4"
+          }
+        },
+        "bottom-all-fabrics": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify://shop_images/a3ade8e8-817b-41f6-b289-0bc7f4e35ee4.png",
+            "text_1": "PERFECT FOR",
+            "text_1_color": "#ffffff",
+            "text_2": "ALL FABRICS",
+            "text_2_color": "#b4bfd4"
+          }
+        },
+        "bottom-support": {
+          "type": "icon_item",
+          "settings": {
+            "icon": "shopify://shop_images/6269a8a7-e4ae-4fa8-bd61-935b94552a01.png",
+            "text_1": "DEDICATED",
+            "text_1_color": "#ffffff",
+            "text_2": "SUPPORT",
+            "text_2_color": "#b4bfd4"
+          }
+        }
+      },
+      "block_order": [
+        "bottom-no-minimum",
+        "bottom-premium-quality",
+        "bottom-long-lasting",
+        "bottom-all-fabrics",
+        "bottom-support"
+      ],
+      "settings": {
+        "background_color": "#152c5b"
       }
     },
     "tabbed_products": {
@@ -909,6 +918,7 @@
   },
   "order": [
     "image_banner",
+    "icon_feature_bar",
     "tabbed_products",
     "factory_scene",
     "printing_service",
