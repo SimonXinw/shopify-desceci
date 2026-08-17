@@ -1,5 +1,112 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "rich_text_MVaP4j": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_V7Jec7": {
+          "type": "heading",
+          "settings": {
+            "heading": "We're Here to Help",
+            "heading_size": "h1"
+          }
+        },
+        "text_U9TTxk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Have a question about your DTF transfer order, artwork, gang sheet, or DTF supplies? Our team is here to help.</p><p>Whether you're placing your first order, checking an existing order, or need help choosing the right DTF product, send us a message and we'll get back to you as soon as possible.</p>"
+          }
+        },
+        "button_K3NBPk": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_V7Jec7",
+        "text_U9TTxk",
+        "button_K3NBPk"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_GPUzg6": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_VAyV3J": {
+          "type": "column",
+          "settings": {
+            "title": "DTF Transfer & Gang Sheet Orders",
+            "text": "<p><br/>Questions about sizes, quantities, artwork setup, gang sheet uploads, or placing your order.<br/><br/></p>",
+            "link_label": "",
+            "link": "shopify://collections/dtf-transfer"
+          }
+        },
+        "column_QqaKWP": {
+          "type": "column",
+          "settings": {
+            "title": "Artwork & File Questions",
+            "text": "<p><br/>Not sure if your artwork is print-ready? Send us your question and our team can help you check file requirements before production.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qPDF8x": {
+          "type": "column",
+          "settings": {
+            "title": "Order & Shipping Support",
+            "text": "<p><br/>Need help with an existing order, shipping status, or delivery question? Please include your order number so we can assist you faster.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_VAyV3J",
+        "column_QqaKWP",
+        "column_qPDF8x"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "What Can We Help With?",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Tell me",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -19,6 +126,8 @@
     }
   },
   "order": [
+    "rich_text_MVaP4j",
+    "multicolumn_GPUzg6",
     "main",
     "form"
   ]
