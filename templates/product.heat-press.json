@@ -209,12 +209,24 @@
         "paragraph_9V7QUD",
         "email_form_tTTRw7"
       ],
+      "disabled": true,
       "name": "t:sections.newsletter.presets.name",
       "settings": {
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "contact_form_q8mUnr": {
+      "type": "contact-form",
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "heading": "Contact form",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -223,6 +235,7 @@
     "disclosures",
     "related-products",
     "collapsible_content_fdKQDU",
-    "newsletter_77jK67"
+    "newsletter_77jK67",
+    "contact_form_q8mUnr"
   ]
 }
