@@ -105,7 +105,7 @@
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
-        "show_vendor": false,
+        "show_vendor": true,
         "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 28
