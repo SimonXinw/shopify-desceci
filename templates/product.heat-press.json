@@ -117,36 +117,45 @@
         "collapsible_row_w6Y9t6": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "1 — Product Specifications",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p><strong>Model:</strong> 6040 (7BE)<br/><br/><strong>Machine Type:</strong> Semi-Automatic Double Station Hydraulic Heat Press<br/><br/><strong>Pressure:</strong> Up to 30 kg/cm²<br/><br/><strong>Temperature Range:</strong> 0–399°C (32–750°F)<br/><br/><strong>Time Range:</strong> 0–999 seconds<br/><br/><strong>Available Platen Sizes:</strong> 40 × 40 cm, 40 × 50 cm, 40 × 60 cm, 50 × 70 cm, 60 × 80 cm<br/><br/><strong>Voltage Options:</strong> 220V Single Phase / 220V Three Phase / 380V Three Phase<br/><br/><strong>Power:</strong> 4.0–6.8 kW depending on platen size<br/><br/><strong>Operation:</strong> Hydraulic<br/><br/><strong>Stations:</strong> Dual Station<br/><br/><strong>Air Compressor:</strong> Not Required<br/><br/></p>",
             "page": ""
           }
         },
         "collapsible_row_DRx9MH": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "2 — Key Features",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p><strong>Dual-Station Workflow</strong><br/><br/>Prepare and position the next garment while the other station is pressing, helping reduce downtime and increase production efficiency.</p><p><strong>Powerful Hydraulic Pressure</strong><br/><br/>Delivers up to 30 kg/cm² of stable pressure for consistent heat-transfer results.</p><p><strong>No Air Compressor Required</strong><br/><br/>The integrated hydraulic system eliminates the need for an external air compressor, simplifying installation and operation.</p><p><strong>Digital Time & Temperature Control</strong><br/><br/>Easily adjust pressing temperature and time for repeatable production.</p><p><strong>Heavy-Duty Construction</strong><br/><br/>Designed for professional DTF shops, apparel decorators, print shops, and commercial production environments.</p><p><strong>Emergency Stop Protection</strong><br/><br/>Convenient emergency-stop controls provide additional protection during daily operation.</p>",
             "page": ""
           }
         },
         "collapsible_row_CVPTEf": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "3 — Applications",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Designed for professional heat-transfer and apparel-decoration applications.</p><p><strong>Recommended for:</strong></p><p>• DTF Transfers<br/><br/>• T-Shirts<br/><br/>• Hoodies & Sweatshirts<br/><br/>• Tote Bags<br/><br/>• Workwear<br/><br/>• Sportswear<br/><br/>• Promotional Apparel<br/><br/>• Compatible Heat Transfer Applications</p><p>The dual-station design is especially suitable for businesses that need higher production efficiency than a standard single-station heat press.</p>",
             "page": ""
           }
         },
         "collapsible_row_hmFQ83": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "4 — Shipping & Ordering",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p><strong>Important:</strong> This is a commercial industrial machine. Shipping methods and costs may vary depending on machine configuration and delivery location.</p><p><strong>Before placing your order, please confirm:</strong></p><p>• Platen size<br/><br/>• Required voltage and phase<br/><br/>• Delivery address<br/><br/>• Commercial or residential delivery location<br/><br/>• Any special delivery requirements</p><p>Due to the size and weight of the machine, freight delivery may be required.</p><p>If you're unsure which configuration is right for your business, please contact DESCECI before ordering. Our team can help you select the appropriate platen size and electrical configuration.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zwyB96": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "5 —Warranty & Support",
+            "icon": "check_mark",
+            "row_content": "<p>DESCECI provides professional support for machine setup, operation, troubleshooting, and replacement parts.</p><p>If you experience an issue with your heat press, contact our support team with your order number, machine model, and photos or videos showing the issue. This will help us diagnose the problem and provide a solution more efficiently.</p>",
             "page": ""
           }
         }
@@ -155,12 +164,13 @@
         "collapsible_row_w6Y9t6",
         "collapsible_row_DRx9MH",
         "collapsible_row_CVPTEf",
-        "collapsible_row_hmFQ83"
+        "collapsible_row_hmFQ83",
+        "collapsible_row_zwyB96"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "Collapsible content",
+        "heading": "Product Information",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
