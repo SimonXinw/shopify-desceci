@@ -72,7 +72,7 @@
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
@@ -117,36 +117,36 @@
         "collapsible_row_w6Y9t6": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "1. Product Specifications",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p><strong>DESCECI Premium DTF Powder</strong> is a hot melt adhesive powder designed for professional Direct-to-Film printing, providing reliable bonding and consistent transfer performance.</p><ul><li><strong>Product:</strong> DTF Hot Melt Adhesive Powder</li><li><strong>Material:</strong> TPU Hot Melt Adhesive</li><li><strong>Color:</strong> White</li><li><strong>Application:</strong> Direct-to-Film (DTF) Transfer Printing</li><li><strong>Compatible With:</strong> DTF Film & DTF Pigment Ink</li><li><strong>Suitable For:</strong> Commercial & Small-Business DTF Production</li><li><strong>Available Weight:</strong> 1KG / 5KG / 20KG</li></ul><p>Designed for smooth powder application, strong adhesion, flexible transfers, and dependable wash durability.</p>",
             "page": ""
           }
         },
         "collapsible_row_DRx9MH": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "2. How to Use",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Follow these steps for consistent DTF transfer results:</p><p><strong>Step 1 — Print Your Design</strong><br/>Print your artwork onto DTF film using compatible DTF pigment ink.</p><p><strong>Step 2 — Apply DTF Powder</strong><br/>While the ink is still wet, apply DTF powder evenly across the entire printed area.</p><p><strong>Step 3 — Remove Excess Powder</strong><br/>Gently shake off excess powder to leave an even adhesive coating over the printed design.</p><p><strong>Step 4 — Cure the Powder</strong><br/>Cure the powdered transfer using your DTF oven, shaker/oven system, or other compatible curing equipment.</p><p><strong>Step 5 — Heat Press</strong><br/>Place the cured transfer onto your garment and heat press according to your film, powder, fabric, and equipment requirements.</p><p>For best results, always test your complete DTF workflow before full production.</p>",
             "page": ""
           }
         },
         "collapsible_row_CVPTEf": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "3. Compatible Fabrics & Applications",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>DESCECI DTF Powder is designed for a wide range of custom apparel and textile applications.</p><p><strong>Common Fabric Applications:</strong></p><ul><li>Cotton</li><li>Polyester</li><li>Cotton/Poly Blends</li><li>Canvas</li><li>Performance Fabrics*</li></ul><p><strong>Perfect For:</strong></p><p>T-Shirts • Hoodies • Sweatshirts • Tote Bags • Workwear • Sportswear • Custom Apparel</p><p>Ideal for print shops, apparel decorators, custom clothing businesses, and commercial DTF production.</p><p>*Always test the complete transfer process on the specific fabric before production.</p>",
             "page": ""
           }
         },
         "collapsible_row_hmFQ83": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "4. Storage & Handling",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Proper storage helps maintain consistent powder performance and prevents moisture-related issues.</p><ul><li>Store in a <strong>cool, dry environment</strong></li><li>Keep away from <strong>direct sunlight, heat, and moisture</strong></li><li>Keep the package <strong>tightly sealed when not in use</strong></li><li>Avoid prolonged exposure to humid environments</li><li>Use clean, dry tools when handling the powder</li><li>Keep unused powder free from dust and contamination</li><li>Reseal immediately after each use</li></ul><p>For best performance, allow the powder and other DTF materials to acclimate to your production environment when necessary.</p>",
             "page": ""
           }
         }
@@ -160,7 +160,7 @@
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "Collapsible content",
+        "heading": "DTF POWDER PRODUCT DETAILS",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
