@@ -72,7 +72,7 @@
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
@@ -117,36 +117,36 @@
         "collapsible_row_w6Y9t6": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "1. Product Specifications",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p><strong>Premium DTF Transfer Film</strong> designed for consistent, high-quality direct-to-film printing.</p><ul><li><strong>Material:</strong> Premium PET Film</li><li><strong>Film Type:</strong> DTF Transfer Film</li><li><strong>Size:</strong> 24\" × 328 ft (60 cm × 100 m)</li><li><strong>Surface:</strong> Specially Coated Printing Surface</li><li><strong>Color:</strong> Translucent / Milky White</li><li><strong>Application:</strong> Direct-to-Film (DTF) Printing</li><li><strong>Compatible Inks:</strong> DTF Pigment Ink</li><li><strong>Compatible Powder:</strong> DTF Hot Melt Adhesive Powder</li></ul><p>Engineered for smooth ink absorption, sharp image details, vibrant color output, and reliable transfer performance.</p>",
             "page": ""
           }
         },
         "collapsible_row_DRx9MH": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "2. How to Use",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Getting professional DTF transfers is simple:</p><p><strong>Step 1 — Print Your Design</strong><br/>Print your artwork onto the coated side of the DTF film using compatible DTF ink.</p><p><strong>Step 2 — Apply DTF Powder</strong><br/>Apply hot melt adhesive powder evenly while the printed ink is still wet.</p><p><strong>Step 3 — Cure the Transfer</strong><br/>Cure the powder using your DTF curing system according to your equipment and powder specifications.</p><p><strong>Step 4 — Heat Press</strong><br/>Place the finished transfer onto the garment and heat press using the recommended settings for your transfer system.</p><p><strong>Step 5 — Peel & Finish</strong><br/>Peel the film according to the film's recommended peel method. A second press may be used when appropriate for your workflow.</p>",
             "page": ""
           }
         },
         "collapsible_row_CVPTEf": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "3. Compatibility & Applications",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>DESCECI DTF Film is designed for professional DTF printing workflows and can be used for custom apparel, print shops, small businesses, and commercial production.</p><p><strong>Suitable for decorating:</strong></p><ul><li>T-Shirts</li><li>Hoodies & Sweatshirts</li><li>Tote Bags</li><li>Workwear</li><li>Sportswear</li><li>Custom Apparel</li><li>Promotional Products</li></ul><p><strong>Common Fabric Applications:</strong></p><p>Cotton • Polyester • Cotton/Poly Blends • Canvas</p><p>For best results, always test your complete ink, powder, film, curing, and heat-press settings before production.</p>",
             "page": ""
           }
         },
         "collapsible_row_hmFQ83": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "4. Storage & Care",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Proper storage helps maintain consistent film performance.</p><ul><li>Store in a <strong>cool, dry environment</strong></li><li>Keep away from <strong>direct sunlight, heat, and excessive humidity</strong></li><li>Keep the film in its <strong>original protective packaging</strong> when not in use</li><li>Avoid touching the printable surface with bare hands</li><li>Keep the film surface clean and free from dust, moisture, and oil</li><li>Allow film to acclimate to your production environment before printing when necessary</li></ul><p>For consistent results, keep unused film properly sealed between production runs.</p>",
             "page": ""
           }
         }
@@ -160,7 +160,7 @@
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "Collapsible content",
+        "heading": "DTF FILM PRODUCT DETAILS",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
