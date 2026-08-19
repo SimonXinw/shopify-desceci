@@ -45,6 +45,40 @@
     display: flex;
   }
 
+  /* component-header-v1-menu.css 为异步加载，以下为首屏关键样式，避免样式生效前 mega 内容与 caret 图标撑开布局 */
+  .header-v1-nav__item--has-mega {
+    position: static;
+  }
+
+  .header-v1-nav__link--has-caret {
+    position: relative;
+    padding-right: 2.7rem;
+  }
+
+  .header-v1-nav__link--has-caret .icon-caret {
+    position: absolute;
+    right: 0.8rem;
+    top: calc(50% - 0.2rem);
+    height: 0.6rem;
+  }
+
+  .header-v1-mega__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 989px) {
+    .header-v1-mega__content {
+      display: none;
+    }
+  }
+
   .list-menu {
     list-style: none;
     padding: 0;
