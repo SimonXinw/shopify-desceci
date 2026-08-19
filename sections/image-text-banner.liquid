@@ -37,10 +37,15 @@
   if section.settings.description_background.alpha > 0
     assign description_has_background = true
   endif
+
+  assign banner_classes = 'image_text_banner'
+  if section.settings.mobile_bottom_stick
+    assign banner_classes = banner_classes | append: ' mobile_bottom_stick'
+  endif
 -%}
 
 <div
-  class="image_text_banner"
+  class="{{ banner_classes }}"
   style="
     --desktop-height: {{ section.settings.desktop_height }}px;
     --mobile-height: {{ section.settings.mobile_height }}px;
@@ -64,6 +69,29 @@
     --button-hover-background: {{ section.settings.button_hover_background }};
     --button-text-color: {{ section.settings.button_text_color }};
     --button-font-size: {{ section.settings.button_font_size }}px;
+    --mobile-align: {{ section.settings.mobile_horizontal_position }};
+    --mobile-text-align: {{ section.settings.mobile_text_alignment }};
+    --mobile-text-max-width: {{ section.settings.mobile_text_max_width }}px;
+    --mobile-content-padding-top: {{ section.settings.mobile_content_padding_top }}px;
+    --mobile-content-padding-bottom: {{ section.settings.mobile_content_padding_bottom }}px;
+    --mobile-eyebrow-size: {{ section.settings.mobile_eyebrow_size }}px;
+    --mobile-eyebrow-spacing: {{ section.settings.mobile_eyebrow_spacing }}px;
+    --mobile-block-spacing: {{ section.settings.mobile_block_spacing }}px;
+    --mobile-subtitle-size: {{ section.settings.mobile_subtitle_size }}px;
+    --mobile-description-size: {{ section.settings.mobile_description_size }}px;
+    --mobile-description-item-spacing: {{ section.settings.mobile_description_item_spacing }}px;
+    --mobile-description-icon-size: {{ section.settings.mobile_description_icon_size }}px;
+    --mobile-features-offset: {{ section.settings.mobile_features_offset }}px;
+    --mobile-features-gap: {{ section.settings.mobile_features_gap }}px;
+    --mobile-feature-icon-size: {{ section.settings.mobile_feature_icon_size }}px;
+    --mobile-feature-text-size: {{ section.settings.mobile_feature_text_size }}px;
+    --mobile-actions-offset: {{ section.settings.mobile_actions_offset }}px;
+    --mobile-actions-gap: {{ section.settings.mobile_actions_gap }}px;
+    --mobile-button-height: {{ section.settings.mobile_button_height }}px;
+    --mobile-button-padding-x: {{ section.settings.mobile_button_padding_x }}px;
+    --mobile-button-font-size: {{ section.settings.mobile_button_font_size }}px;
+    --mobile-actions-direction: {{ section.settings.mobile_actions_layout }};
+    --mobile-actions-align: {{ section.settings.mobile_actions_align }};
   "
 >
   <div class="background">
@@ -144,11 +172,11 @@
                 {%- if block.settings.icon != blank -%}
                   {{
                     block.settings.icon
-                    | image_url: width: 28
+                    | image_url: width: 56
                     | image_tag:
                       class: 'item_icon',
-                      widths: '14, 28',
-                      sizes: '14px',
+                      widths: '14, 28, 42, 56',
+                      sizes: '20px',
                       loading: 'lazy',
                       width: 14,
                       height: 14
@@ -526,26 +554,117 @@
     }
 
     .image_text_banner .container {
-      align-items: center;
-      justify-content: center;
+      align-items: stretch;
+      justify-content: flex-start;
     }
 
     .image_text_banner .content {
+      display: flex;
+      flex-direction: column;
+      align-items: var(--mobile-align);
       width: 100%;
-      text-align: center;
+      padding-top: var(--mobile-content-padding-top);
+      padding-bottom: var(--mobile-content-padding-bottom);
+      text-align: var(--mobile-text-align);
+    }
+
+    .image_text_banner .eyebrow,
+    .image_text_banner .title,
+    .image_text_banner .subtitle,
+    .image_text_banner .description {
+      width: 100%;
+      max-width: var(--mobile-text-max-width);
+    }
+
+    .image_text_banner .eyebrow {
+      padding-bottom: var(--mobile-eyebrow-spacing);
+      font-size: var(--mobile-eyebrow-size);
     }
 
     .image_text_banner .title {
       font-size: var(--mobile-title-size);
     }
 
-    .image_text_banner .actions,
-    .image_text_banner .features {
-      justify-content: center;
+    .image_text_banner .subtitle {
+      margin-top: var(--mobile-block-spacing);
+    }
+
+    .image_text_banner .subtitle .text {
+      font-size: var(--mobile-subtitle-size);
+    }
+
+    .image_text_banner .description {
+      margin-top: var(--mobile-block-spacing);
+      font-size: var(--mobile-description-size);
+    }
+
+    .image_text_banner .description_list {
+      font-size: var(--mobile-description-size);
+    }
+
+    .image_text_banner .description_list .item + .item {
+      margin-top: var(--mobile-description-item-spacing);
+    }
+
+    .image_text_banner .description_list .item_icon {
+      width: var(--mobile-description-icon-size);
+      height: var(--mobile-description-icon-size);
+      flex-basis: var(--mobile-description-icon-size);
     }
 
     .image_text_banner .features {
       flex-wrap: nowrap;
+      justify-content: var(--mobile-align);
+      width: 100%;
+      gap: var(--mobile-features-gap);
+      margin-top: var(--mobile-features-offset);
+    }
+
+    .image_text_banner .feature {
+      flex: 1 1 0;
+      gap: 0.4rem;
+    }
+
+    .image_text_banner .feature .icon {
+      width: var(--mobile-feature-icon-size);
+      height: var(--mobile-feature-icon-size);
+      flex-basis: var(--mobile-feature-icon-size);
+    }
+
+    .image_text_banner .feature_text {
+      font-size: var(--mobile-feature-text-size);
+    }
+
+    .image_text_banner .actions {
+      flex-direction: var(--mobile-actions-direction);
+      align-self: var(--mobile-actions-align);
+      align-items: var(--mobile-actions-align);
+      justify-content: var(--mobile-actions-align);
+      width: auto;
+      max-width: 100%;
+      gap: var(--mobile-actions-gap);
+      margin-top: var(--mobile-actions-offset);
+    }
+
+    .image_text_banner .action {
+      min-height: var(--mobile-button-height);
+      padding: 0.6rem var(--mobile-button-padding-x);
+    }
+
+    .image_text_banner .action .label {
+      font-size: var(--mobile-button-font-size);
+    }
+
+    .image_text_banner.mobile_bottom_stick .actions {
+      margin-top: auto;
+    }
+
+    .image_text_banner.mobile_bottom_stick .features {
+      margin-top: auto;
+    }
+
+    .image_text_banner.mobile_bottom_stick .features ~ .actions {
+      margin-top: var(--mobile-actions-offset);
     }
   }
 {% endstylesheet %}
@@ -598,7 +717,7 @@
       "step": 10,
       "unit": "px",
       "label": "移动端高度",
-      "default": 560
+      "default": 680
     },
     {
       "type": "header",
@@ -846,6 +965,279 @@
       "unit": "px",
       "label": "按钮文字大小",
       "default": 14
+    },
+    {
+      "type": "header",
+      "content": "移动端 · 顶部文字区",
+      "info": "以下设置只在屏幕宽度 749px 以下生效，不影响 PC 端"
+    },
+    {
+      "type": "select",
+      "id": "mobile_horizontal_position",
+      "label": "移动端内容水平位置",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "左侧"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        },
+        {
+          "value": "flex-end",
+          "label": "右侧"
+        }
+      ],
+      "default": "flex-start"
+    },
+    {
+      "type": "text_alignment",
+      "id": "mobile_text_alignment",
+      "label": "移动端文字对齐",
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "mobile_text_max_width",
+      "min": 160,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "移动端文字区最大宽度",
+      "info": "作用于小字行、标题、副标题、描述列表",
+      "default": 240
+    },
+    {
+      "type": "range",
+      "id": "mobile_content_padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "移动端内容上内边距",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "mobile_content_padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "移动端内容下内边距",
+      "info": "开启「底部区贴底」时，用它控制图标行离底部的距离",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "mobile_eyebrow_size",
+      "min": 8,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "移动端小字行字号",
+      "default": 11
+    },
+    {
+      "type": "range",
+      "id": "mobile_eyebrow_spacing",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端小字行与标题间距",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "mobile_block_spacing",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端标题/副标题/描述间距",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "mobile_subtitle_size",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "移动端标题下方文案字号",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "mobile_description_size",
+      "min": 8,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "移动端描述字号",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_description_item_spacing",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "移动端描述项行间距",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "mobile_description_icon_size",
+      "min": 8,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "移动端描述项图标大小",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "移动端 · 底部图标与按钮",
+      "info": "以下设置只在屏幕宽度 749px 以下生效，不影响 PC 端"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_bottom_stick",
+      "label": "底部区贴底显示",
+      "info": "开启后图标文案行与按钮行自动贴到横幅底部；关闭后用下面的「图标行上方间距」手动下移",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "mobile_features_offset",
+      "min": 0,
+      "max": 300,
+      "step": 4,
+      "unit": "px",
+      "label": "移动端图标行上方间距",
+      "info": "未开启贴底时生效",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "mobile_features_gap",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端图标之间的间距",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "mobile_feature_icon_size",
+      "min": 16,
+      "max": 96,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端图标大小",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "mobile_feature_text_size",
+      "min": 8,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "移动端图标文案字号",
+      "default": 11
+    },
+    {
+      "type": "select",
+      "id": "mobile_actions_layout",
+      "label": "移动端按钮排列方式",
+      "options": [
+        {
+          "value": "column",
+          "label": "上下两行"
+        },
+        {
+          "value": "row",
+          "label": "同一行并排"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "mobile_actions_align",
+      "label": "移动端按钮水平位置",
+      "info": "只控制按钮区，不影响上方文字的对齐",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "左侧"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        },
+        {
+          "value": "flex-end",
+          "label": "右侧"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "mobile_actions_offset",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端按钮行上方间距",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_actions_gap",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端按钮之间的间距",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "mobile_button_height",
+      "min": 28,
+      "max": 64,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端按钮高度",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mobile_button_padding_x",
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "移动端按钮左右内边距",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mobile_button_font_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "移动端按钮文字大小",
+      "default": 12
     }
   ],
   "max_blocks": 20,
