@@ -812,6 +812,76 @@
         "mobile_padding_bottom": 20
       }
     },
+    "featured_product_eMFm9b": {
+      "type": "featured-product",
+      "blocks": {
+        "text_ykaWai": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_fmFFce": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_J3Ebpk": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_WVwcUx": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_MGRcrc": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_Cpt4VV": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_4XfYRw": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_ykaWai",
+        "title_fmFFce",
+        "price_J3Ebpk",
+        "variant_picker_WVwcUx",
+        "quantity_selector_MGRcrc",
+        "buy_buttons_Cpt4VV",
+        "share_4XfYRw"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "dtf-ink",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "contact_form_RU4gRa": {
       "type": "contact-form",
       "name": "t:sections.contact-form.presets.name",
@@ -939,76 +1009,6 @@
         "mobile_padding_top": 32,
         "mobile_padding_bottom": 32
       }
-    },
-    "featured_product_eMFm9b": {
-      "type": "featured-product",
-      "blocks": {
-        "text_ykaWai": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_fmFFce": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_J3Ebpk": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_WVwcUx": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_MGRcrc": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_Cpt4VV": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_4XfYRw": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_ykaWai",
-        "title_fmFFce",
-        "price_J3Ebpk",
-        "variant_picker_WVwcUx",
-        "quantity_selector_MGRcrc",
-        "buy_buttons_Cpt4VV",
-        "share_4XfYRw"
-      ],
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "dtf-ink",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -1022,9 +1022,9 @@
     "shop_reasons",
     "quality_promise",
     "application_guide",
+    "featured_product_eMFm9b",
     "contact_form_RU4gRa",
     "newsletter_split",
-    "faq",
-    "featured_product_eMFm9b"
+    "faq"
   ]
 }
