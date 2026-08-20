@@ -852,6 +852,7 @@
         },
         "share_4XfYRw": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share"
           }
@@ -878,6 +879,47 @@
         "image_zoom": "lightbox",
         "hide_variants": false,
         "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_H77CFk": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_BRRhBD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dtf-conunadles"
+          }
+        },
+        "featured_collection_nELVLV": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dtf-daly-maintenance-kit"
+          }
+        },
+        "featured_collection_REgdb8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dtf-pres-machine"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_BRRhBD",
+        "featured_collection_nELVLV",
+        "featured_collection_REgdb8"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -1009,47 +1051,6 @@
         "mobile_padding_top": 32,
         "mobile_padding_bottom": 32
       }
-    },
-    "collection_list_H77CFk": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_BRRhBD": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "dtf-conunadles"
-          }
-        },
-        "featured_collection_nELVLV": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "dtf-daly-maintenance-kit"
-          }
-        },
-        "featured_collection_REgdb8": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "dtf-pres-machine"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_BRRhBD",
-        "featured_collection_nELVLV",
-        "featured_collection_REgdb8"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -1064,9 +1065,9 @@
     "quality_promise",
     "application_guide",
     "featured_product_eMFm9b",
+    "collection_list_H77CFk",
     "contact_form_RU4gRa",
     "newsletter_split",
-    "faq",
-    "collection_list_H77CFk"
+    "faq"
   ]
 }
