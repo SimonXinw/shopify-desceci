@@ -109,7 +109,7 @@
         "title_size": 40,
         "mobile_title_size": 32,
         "button_label_1": "UPLOAD YOUR DESIGN",
-        "button_link_1": "shopify://products/desceci-custom-dtf-transfer-by-size-delivered-nationwide-within-48-hours",
+        "button_link_1": "shopify://products/custom-dtf-transfers",
         "button_label_2": "SHOP READY TO PRESS",
         "button_link_2": "shopify://products/asset-pack-86653763586-example-product-1",
         "button_hover_background": "linear-gradient(90deg, #bdf807, #14bffd)",
@@ -214,7 +214,7 @@
           "settings": {
             "title": "DTF Transfer",
             "products": [
-              "desceci-custom-dtf-transfer-by-size-delivered-nationwide-within-48-hours",
+              "custom-dtf-transfers",
               "asset-pack-86653763586-example-product-1",
               "uv-dtf-sticker"
             ]
@@ -520,7 +520,7 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "Start Your Business",
-        "button_link": "shopify://products/desceci-custom-dtf-transfer-by-size-delivered-nationwide-within-48-hours",
+        "button_link": "shopify://products/custom-dtf-transfers",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
