@@ -43,9 +43,9 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "dtf-daly-maintenance-kit",
+        "collection": "dtf-pres-machine",
         "products_to_show": 3,
-        "title": "Shop DTF Accessories",
+        "title": "Shop Heat Press Machine",
         "heading_size": "h1",
         "description": "<p>Choose the transfer option that works best for your project</p>",
         "show_description": false,
