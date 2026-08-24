@@ -222,7 +222,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "dtf-conunadles",
+        "collection": "dtf-consumables",
         "products_to_show": 4,
         "title": "Featured collection",
         "heading_size": "h1",
