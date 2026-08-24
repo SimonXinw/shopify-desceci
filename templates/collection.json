@@ -52,7 +52,6 @@
         "text_8YxteL",
         "buttons_Ah4cLr"
       ],
-      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/b58ce7b99582c961375527c3c6b27ebb_29833718-daca-471c-955b-14a21fad6363.png",
@@ -70,7 +69,6 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "disabled": true,
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
@@ -93,9 +91,9 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "dtf-daly-maintenance-kit",
+        "collection": "dtf-transfer",
         "products_to_show": 3,
-        "title": "Shop DTF Accessories",
+        "title": "Shop DTF Trasnsfer",
         "heading_size": "h1",
         "description": "<p>Choose the transfer option that works best for your project</p>",
         "show_description": false,
@@ -152,7 +150,6 @@
         "text_jr4mNd",
         "button_wPmA38"
       ],
-      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -196,7 +193,6 @@
         "text_6WprAx",
         "button_Dfm3BH"
       ],
-      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -239,7 +235,6 @@
         "text_R9kbqM",
         "button_KVBQTr"
       ],
-      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/DTF_transfer_ce249d43-3323-4a45-bf13-531c1eee0deb.png",
@@ -329,7 +324,6 @@
         "column_H4RPAb",
         "column_hh6fBM"
       ],
-      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Why Choose DESCECI DTF Transfers?",
@@ -409,7 +403,6 @@
         "column_wgjhY8",
         "column_DtwYYC"
       ],
-      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "One Transfer. Endless Possibilities.",
@@ -465,7 +458,6 @@
         "text_TiDAA9",
         "buttons_Er6FkT"
       ],
-      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/fe8a3a853ef98ad8bcba93694bb06115.png",
@@ -547,7 +539,6 @@
         "collapsible_row_AUkNfU",
         "collapsible_row_pV3wHg"
       ],
-      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
@@ -598,7 +589,6 @@
         "text_4qJcNQ",
         "buttons_48Gnex"
       ],
-      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/dad6bf5ea5d32df82fefa2cf5f653c49.png",
