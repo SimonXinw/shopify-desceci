@@ -152,7 +152,7 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/DTF_transfer_4bb3ab7e-50c5-4c43-b417-fa06bdb8bcda.png",
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "image_behavior": "zoom-in",
