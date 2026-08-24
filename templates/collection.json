@@ -93,7 +93,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "dtf-consumables",
+        "collection": "dtf-pres-machine",
         "products_to_show": 3,
         "title": "Shop DTF Consumables",
         "heading_size": "h1",
