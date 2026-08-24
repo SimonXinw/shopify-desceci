@@ -43,7 +43,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "dtf-transfer",
+        "collection": "dtf-pres-machine",
         "products_to_show": 3,
         "title": "Shop DTF Trasnsfer",
         "heading_size": "h1",
