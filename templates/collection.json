@@ -264,7 +264,7 @@
           "settings": {
             "image": "shopify://shop_images/T.png",
             "title": "T-Shirts",
-            "text": "<p><br/>Everyday custom apparel<br/><br/></p>",
+            "text": "<p>Everyday custom apparel<br/></p>",
             "link_label": "",
             "link": ""
           }
@@ -274,7 +274,7 @@
           "settings": {
             "image": "shopify://shop_images/7c37ac7775385456f37e7fbe6fe7e327.png",
             "title": "Hoodies & Sweatshirts",
-            "text": "<p><br/>Streetwear & branded apparel<br/><br/></p>",
+            "text": "<p>Streetwear & branded apparel</p>",
             "link_label": "",
             "link": ""
           }
@@ -284,7 +284,7 @@
           "settings": {
             "image": "shopify://shop_images/a5d3b2bb3a82281af18dfd28ade6d7da.png",
             "title": "Tote Bags",
-            "text": "<p><br/>Custom merchandise<br/><br/></p>",
+            "text": "<p>Custom merchandise</p>",
             "link_label": "",
             "link": ""
           }
@@ -304,7 +304,7 @@
           "settings": {
             "image": "shopify://shop_images/dd331829702c5bbe3b6a07baf8ceeeab.png",
             "title": "Team & Event Apparel",
-            "text": "<p><br/>Sports, schools & events<br/><br/></p>",
+            "text": "<p>Sports, schools & events</p>",
             "link_label": "",
             "link": ""
           }
