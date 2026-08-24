@@ -325,7 +325,6 @@
         "column_H4RPAb",
         "column_hh6fBM"
       ],
-      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Why Choose DESCECI DTF Transfers?",
@@ -405,7 +404,6 @@
         "column_wgjhY8",
         "column_DtwYYC"
       ],
-      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "One Transfer. Endless Possibilities.",
@@ -461,7 +459,6 @@
         "text_TiDAA9",
         "buttons_Er6FkT"
       ],
-      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/fe8a3a853ef98ad8bcba93694bb06115.png",
@@ -543,7 +540,6 @@
         "collapsible_row_AUkNfU",
         "collapsible_row_pV3wHg"
       ],
-      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
@@ -594,7 +590,6 @@
         "text_4qJcNQ",
         "buttons_48Gnex"
       ],
-      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/dad6bf5ea5d32df82fefa2cf5f653c49.png",
