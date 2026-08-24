@@ -165,6 +165,96 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multicolumn_yiV7QJ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_gnbK8J": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/327422dc-7099-403b-bec6-1d0bc4364f62.png",
+            "title": "Vibrant Full Color",
+            "text": "<p><strong>Bold Colors. Fine Details.</strong></p><p>Bring detailed artwork, gradients, logos, and colorful designs to life.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_k3Gh6z": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/df421c6b-7c2d-47c9-9cca-0c4789808173.png",
+            "title": "Ready to Press",
+            "text": "<p><strong>No Printing. No Powder. No Weeding.</strong></p><p>Your transfers arrive ready for heat application.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_wYVDx3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/b0967630-ef28-4141-82bb-661462910c06.png",
+            "title": "Versatile Application",
+            "text": "<p><strong>More Fabrics. More Possibilities.</strong></p><p>Great for cotton, polyester, cotton/poly blends, and many commonly used apparel fabrics.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_f7WgEg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4fe72c6e-87c4-43e9-ab61-d32454d8b1fa.png",
+            "title": "Built for Everyday Wear",
+            "text": "<p><strong>Made to Look Good. Made to Last.</strong></p><p>Designed for everyday apparel when properly applied and cared for.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_H4RPAb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/276e8e12-b2e8-4847-bc12-46e54dbe31cd.png",
+            "title": "Small or Large Orders",
+            "text": "<p><strong>From One Design to Production Runs.</strong></p><p>Great for testing new designs, small businesses, or larger apparel orders.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hh6fBM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/339c90e4-c04c-47da-9203-092327967512.png",
+            "title": "Simple Ordering",
+            "text": "<p><strong>Upload. We Print. You Press.</strong></p><p>Spend less time preparing transfers and more time creating.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_gnbK8J",
+        "column_k3Gh6z",
+        "column_wYVDx3",
+        "column_f7WgEg",
+        "column_H4RPAb",
+        "column_hh6fBM"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Why Choose DESCECI DTF Transfers?",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -172,6 +262,7 @@
     "image_banner_fQaKHr",
     "product-grid",
     "featured_collection_JVqrWE",
-    "image_with_text_kVm9Hh"
+    "image_with_text_kVm9Hh",
+    "multicolumn_yiV7QJ"
   ]
 }
