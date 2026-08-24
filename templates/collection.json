@@ -306,7 +306,7 @@
             "title": "Team & Event Apparel",
             "text": "<p>Sports, schools & events</p>",
             "link_label": "",
-            "link": ""
+            "link": "shopify://products/products-custom-dtf-transfers-by-size"
           }
         }
       },
@@ -323,8 +323,8 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
-        "button_link": "",
+        "button_label": "",
+        "button_link": "shopify://products/products-custom-dtf-transfers-by-size",
         "columns_desktop": 5,
         "column_alignment": "left",
         "background_style": "primary",
