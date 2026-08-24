@@ -116,12 +116,60 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_kVm9Hh": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_C9faiQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Are DTF Transfers?",
+            "heading_size": "h1"
+          }
+        },
+        "text_R9kbqM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>DTF (Direct-to-Film) transfers are a simple and versatile way to create professional-quality custom apparel.</p><p>Your artwork is printed in full color onto specialized transfer film and prepared for heat application. Once your transfer arrives, simply position it on your garment, heat press, peel, and you're done.</p><p>Unlike traditional vinyl, DTF transfers require no cutting or weeding and are ideal for detailed artwork, small text, gradients, and vibrant colors.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_KVBQTr": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_C9faiQ",
+        "text_R9kbqM",
+        "button_KVBQTr"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "banner",
     "image_banner_fQaKHr",
     "product-grid",
-    "featured_collection_JVqrWE"
+    "featured_collection_JVqrWE",
+    "image_with_text_kVm9Hh"
   ]
 }
