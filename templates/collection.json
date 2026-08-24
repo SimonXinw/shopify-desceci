@@ -136,6 +136,7 @@
         },
         "button_KVBQTr": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Button label",
             "button_link": "",
@@ -150,10 +151,11 @@
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/DTF_transfer.png",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
+        "layout": "text_first",
+        "image_behavior": "zoom-in",
         "content_layout": "no-overlap",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
