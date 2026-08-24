@@ -202,6 +202,191 @@
         "mobile_content_alignment": "center",
         "show_text_below": true
       }
+    },
+    "multicolumn_tFC3De": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_686kDL": {
+          "type": "column",
+          "settings": {
+            "title": "1. Prepare the Artwork",
+            "text": "<p>The process begins with a digital design.</p><p>High-quality artwork helps preserve small details, clean edges, gradients, and text during printing. Transparent-background artwork is particularly useful when the final design should not have a visible rectangular background.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YM9eAh": {
+          "type": "column",
+          "settings": {
+            "title": "2. Print the Design Onto DTF Film",
+            "text": "<p>The artwork is printed onto coated PET transfer film using specialized DTF inks.</p><p>Color inks create the artwork, while a white ink underbase helps maintain opacity and color vibrancy, especially when the transfer is applied to dark garments.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fhhyRz": {
+          "type": "column",
+          "settings": {
+            "title": "3. Apply Adhesive Powder",
+            "text": "<p>While the printed ink is prepared for production, hot-melt adhesive powder is applied to the printed area.</p><p>This powder ultimately creates the bonding layer between the printed design and the fabric.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_U7VEer": {
+          "type": "column",
+          "settings": {
+            "title": "4. Cure the Transfer",
+            "text": "<p>The film is heated under controlled conditions to cure the adhesive.</p><p>After curing, the transfer becomes a ready-to-press product that can be stored, shipped, and applied later.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_RJLVRk": {
+          "type": "column",
+          "settings": {
+            "title": "5. Heat Press the Transfer",
+            "text": "<p>The transfer is positioned on the garment and applied using the appropriate combination of:</p><p><strong>Temperature + Time + Pressure</strong></p><p>Exact settings can vary depending on the transfer system and fabric, so always follow the application instructions supplied with your transfers.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_LMbqcN": {
+          "type": "column",
+          "settings": {
+            "title": "6. Peel and Finish",
+            "text": "<p>After the initial press, the carrier film is peeled according to the recommended hot-, warm-, or cold-peel instructions.</p><p>Some transfer systems also recommend a finishing press.</p><p>That's it—the original digital artwork is now applied to the garment.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_686kDL",
+        "column_YM9eAh",
+        "column_fhhyRz",
+        "column_U7VEer",
+        "column_RJLVRk",
+        "column_LMbqcN"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "How Does DTF Printing Work?",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_aMtaWr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_iwj9Tm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Are DTF Transfers So Popular?",
+            "heading_size": "h1"
+          }
+        },
+        "text_JV6P88": {
+          "type": "text",
+          "settings": {
+            "text": "<p>DTF has become attractive to both individual creators and growing apparel businesses because it combines flexibility with relatively simple application.</p><h3>Vibrant, Full-Color Designs</h3><p>DTF is well suited to colorful artwork, gradients, illustrations, logos, and detailed graphics.</p><p>The white underbase also helps designs remain vibrant when they're applied to darker garments.</p><h3>Works on Many Fabrics</h3><p>One of DTF's biggest advantages is versatility.</p><p>Depending on the garment and transfer specifications, DTF can be used with materials such as:</p><ul><li>Cotton</li><li>Polyester</li><li>Cotton/poly blends</li><li>Denim</li><li>Canvas</li><li>Many other apparel fabrics</li></ul><p>Always test specialty or heat-sensitive materials before production.</p><h3>No Weeding</h3><p>Unlike heat transfer vinyl, a finished DTF transfer does not require you to weed individual pieces of the design.</p><p>That can make intricate artwork and larger production runs much easier to manage.</p><h3>Great for Detailed Artwork</h3><p>Small text, complex illustrations, multicolor logos, and photographic-style artwork can all be good candidates for DTF.</p><h3>Flexible Order Quantities</h3><p>DTF works particularly well when you need multiple designs, several sizes, or relatively short production runs.</p><p>For businesses producing many graphics at once, a <strong>DTF gang sheet</strong> can help arrange multiple designs on one larger sheet.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_iwj9Tm",
+        "text_JV6P88"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_product_NMJfGc": {
+      "type": "featured-product",
+      "blocks": {
+        "text_7CrByV": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_Hc4AUD": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_BUNNzd": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_49dM8J": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_iyUCTy": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_CQgJgF": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_faRzRY": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_7CrByV",
+        "title_Hc4AUD",
+        "price_BUNNzd",
+        "variant_picker_49dM8J",
+        "quantity_selector_iyUCTy",
+        "buy_buttons_CQgJgF",
+        "share_faRzRY"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "custom-dtf-transfers",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -210,6 +395,9 @@
     "rich_text_wnUr3N",
     "multicolumn_QM3HcU",
     "rich_text_nCh4Ty",
-    "image_banner_qFrdVf"
+    "image_banner_qFrdVf",
+    "multicolumn_tFC3De",
+    "rich_text_aMtaWr",
+    "featured_product_NMJfGc"
   ]
 }
