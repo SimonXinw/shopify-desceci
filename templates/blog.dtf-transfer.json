@@ -300,7 +300,7 @@
         "text_JV6P88": {
           "type": "text",
           "settings": {
-            "text": "<p>DTF has become attractive to both individual creators and growing apparel businesses because it combines flexibility with relatively simple application.</p><h3>Vibrant, Full-Color Designs</h3><p>DTF is well suited to colorful artwork, gradients, illustrations, logos, and detailed graphics.</p><p>The white underbase also helps designs remain vibrant when they're applied to darker garments.</p><h3>Works on Many Fabrics</h3><p>One of DTF's biggest advantages is versatility.</p><p>Depending on the garment and transfer specifications, DTF can be used with materials such as:</p><ul><li>Cotton</li><li>Polyester</li><li>Cotton/poly blends</li><li>Denim</li><li>Canvas</li><li>Many other apparel fabrics</li></ul><p>Always test specialty or heat-sensitive materials before production.</p><h3>No Weeding</h3><p>Unlike heat transfer vinyl, a finished DTF transfer does not require you to weed individual pieces of the design.</p><p>That can make intricate artwork and larger production runs much easier to manage.</p><h3>Great for Detailed Artwork</h3><p>Small text, complex illustrations, multicolor logos, and photographic-style artwork can all be good candidates for DTF.</p><h3>Flexible Order Quantities</h3><p>DTF works particularly well when you need multiple designs, several sizes, or relatively short production runs.</p><p>For businesses producing many graphics at once, a <strong>DTF gang sheet</strong> can help arrange multiple designs on one larger sheet.</p>"
+            "text": "<p>DTF has become attractive to both individual creators and growing apparel businesses because it combines flexibility with relatively simple application.</p><h3>Vibrant, Full-Color Designs</h3><p>DTF is well suited to colorful artwork, gradients, illustrations, logos, and detailed graphics.</p><p>The white underbase also helps designs remain vibrant when they're applied to darker garments.</p><h3>Works on Many Fabrics</h3><p>One of DTF's biggest advantages is versatility.</p><p>Depending on the garment and transfer specifications, DTF can be used with materials such as:</p><ul><li>Cotton</li><li>Polyester</li><li>Cotton/poly blends</li><li>Denim</li><li>Canvas</li><li>Many other apparel fabrics</li></ul><p>Always test specialty or heat-sensitive materials before production.</p><h3>No Weeding</h3><p>Unlike heat transfer vinyl, a finished DTF transfer does not require you to weed individual pieces of the design.</p><p>That can make intricate artwork and larger production runs much easier to manage.</p><h3>Great for Detailed Artwork</h3><p>Small text, complex illustrations, multicolor logos, and photographic-style artwork can all be good candidates for DTF.</p><h3>Flexible Order Quantities</h3><p>DTF works particularly well when you need multiple designs, several sizes, or relatively short production runs.</p><p>For businesses producing many graphics at once, a <strong>DTF gang sheet</strong> can help arrange multiple designs on one larger sheet.</p><p></p><h2>What Is a DTF Gang Sheet?</h2><p>A <strong>DTF gang sheet</strong> is a larger sheet of transfer film containing multiple designs.</p><p>Instead of ordering every design individually, you can arrange several logos, graphics, names, or sizes together on one sheet.</p><p>For example, one gang sheet might contain:</p><ul><li>Large front T-shirt graphics</li><li>Small left-chest logos</li><li>Sleeve designs</li><li>Youth-size graphics</li><li>Brand logos</li><li>Multiple copies of your best-selling artwork</li></ul><p>This can be especially useful for clothing brands, print shops, event merchandise, sports teams, and small businesses that regularly press multiple designs.</p><p><strong>Need several designs at once? Upload your artwork and build a DESCECI DTF Gang Sheet.</strong></p>"
           }
         }
       },
@@ -387,6 +387,179 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_bj3bJ7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wjXC8n": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Can You Make With DTF Transfers?",
+            "heading_size": "h1"
+          }
+        },
+        "text_9XK9jD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>DTF transfers can be used for a wide range of custom apparel projects.</p><p>Popular applications include:</p><h3>T-Shirts</h3><p>From simple logos to large full-front artwork, DTF makes it easy to create colorful custom shirts.</p><h3>Hoodies & Sweatshirts</h3><p>Detailed graphics can be applied to the front, back, sleeves, or other suitable flat pressing areas.</p><h3>Tote Bags</h3><p>DTF is a useful option for branded merchandise, event bags, promotional products, and custom accessories.</p><h3>Workwear</h3><p>Businesses can use custom transfers for company logos, employee apparel, uniforms, and promotional clothing.</p><h3>Small Clothing Brands</h3><p>Instead of producing a large quantity of one design upfront, brands can order transfers and press garments according to demand.</p><p>That can make inventory planning more flexible.</p><h2>DTF vs. Screen Printing</h2><p>Both methods can produce excellent apparel, but they solve different production problems.</p><p><strong>DTF may be a better fit when you need:</strong></p><ul><li>Full-color artwork</li><li>Complex designs</li><li>Smaller quantities</li><li>Multiple designs</li><li>Fast design changes</li><li>No screen setup</li></ul><p><strong>Screen printing may make more sense when you need:</strong></p><ul><li>Very large quantities of the same design</li><li>Simple spot-color artwork</li><li>An established high-volume screen-printing workflow</li></ul><p>Neither method is automatically better for every project. The right choice depends on your artwork, quantity, garment, budget, and production setup.</p><h2>DTF vs. Sublimation</h2><p>The biggest difference is material compatibility.</p><p>Sublimation works by turning dye into gas and bonding it with compatible polyester fibers. It is therefore particularly well suited to light-colored polyester products.</p><p>DTF transfers create a printed and adhesive layer on the garment, giving them much broader flexibility across garment colors and fabric types.</p><p>For businesses that want to decorate cotton shirts, dark garments, polyester, and blends without relying on one specific fabric type, DTF can be an attractive option.</p><h2>DTF vs. Heat Transfer Vinyl</h2><p>Heat transfer vinyl (HTV) remains useful for names, numbers, lettering, and simple graphics.</p><p>But complex multicolor artwork can require several vinyl colors, cutting, alignment, and weeding.</p><p>With DTF, the complete artwork arrives as one ready-to-press transfer.</p><p>For detailed illustrations and full-color designs, this can save significant production time.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wjXC8n",
+        "text_9XK9jD"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_7wRAHj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kKNUAG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Do You Need a DTF Printer?",
+            "heading_size": "h1"
+          }
+        },
+        "text_R7gM8m": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Not necessarily.</p><p>There are two ways to work with DTF.</p><p>You can build your own production setup using a DTF printer, ink, film, powder, curing equipment, and a heat press.</p><p>Or you can simply order <strong>ready-to-press custom DTF transfers</strong>.</p><p>For creators and small businesses that don't want to maintain printing equipment, ordering transfers allows you to focus on designing, pressing, selling, and fulfilling apparel.</p><h2>Custom DTF Transfers vs. Gang Sheets: Which Should You Choose?</h2><p>Choose <strong>DTF Transfers by Size</strong> when you already know the finished dimensions you need and want an easy way to order individual transfers.</p><p>Choose a <strong>DTF Gang Sheet</strong> when you want to fit multiple designs or multiple copies onto a larger sheet.</p><p>A simple way to think about it is:</p><p><strong>Individual sizes → convenience</strong></p><p><strong>Gang sheets → maximize your available sheet space</strong></p><p>Both options can work well—the right choice depends on how you produce your apparel.</p><h2>Getting Started With DTF Transfers</h2><p>If you're ready to try DTF, the process can be straightforward:</p><ol><li>Prepare your artwork.</li><li>Choose your transfer size or gang sheet.</li><li>Upload your design.</li><li>Select your quantity.</li><li>Receive your ready-to-press transfers.</li><li>Heat press them onto your garments according to the supplied application instructions.</li></ol><p>You don't need to master the entire DTF printing process to start creating professional custom apparel.</p>"
+          }
+        },
+        "text_dxhpkD": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "button_rn7Lzg": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start trying to create",
+            "button_link": "shopify://collections/dtf-transfer",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kKNUAG",
+        "text_R7gM8m",
+        "text_dxhpkD",
+        "button_rn7Lzg"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_iyYcWw": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_VE4eic": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What does DTF stand for?",
+            "icon": "check_mark",
+            "row_content": "<p>DTF stands for <strong>Direct to Film</strong>. The artwork is printed onto transfer film before being heat pressed onto the final garment.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_a6KpY8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can DTF transfers be used on cotton?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes. DTF is commonly used for cotton apparel as well as many polyester and blended fabrics.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WJWDiY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can DTF transfers be used on dark shirts?",
+            "icon": "check_mark",
+            "row_content": "<p><br/>Yes. DTF printing uses a white ink underbase, which helps full-color designs remain visible and vibrant on dark garments.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_NxQiHX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do DTF transfers require weeding?",
+            "icon": "check_mark",
+            "row_content": "<p>No. Ready-to-press DTF transfers do not require the manual weeding commonly associated with heat transfer vinyl.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cAXntw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need a heat press?",
+            "icon": "check_mark",
+            "row_content": "<p>A quality heat press provides consistent heat and pressure and is the recommended tool for reliable application.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_D87PBx": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are DTF transfers good for small businesses?",
+            "icon": "check_mark",
+            "row_content": "<p>They can be especially useful for small apparel businesses because you can produce multiple designs and quantities without setting up screens for every graphic.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_E6tMik": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Ready to Create Your Own DTF Transfers?",
+            "icon": "check_mark",
+            "row_content": "<p>Whether you're making your first custom shirt, running a growing apparel brand, or producing merchandise for customers, DTF gives you a flexible way to turn digital artwork into professional custom apparel.</p><p>With DESCECI, you can choose the ordering method that fits your workflow:</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_VE4eic",
+        "collapsible_row_a6KpY8",
+        "collapsible_row_WJWDiY",
+        "collapsible_row_NxQiHX",
+        "collapsible_row_cAXntw",
+        "collapsible_row_D87PBx",
+        "collapsible_row_E6tMik"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions About DTF Transfers",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -398,6 +571,9 @@
     "image_banner_qFrdVf",
     "multicolumn_tFC3De",
     "rich_text_aMtaWr",
-    "featured_product_NMJfGc"
+    "featured_product_NMJfGc",
+    "rich_text_bj3bJ7",
+    "rich_text_7wRAHj",
+    "collapsible_content_iyYcWw"
   ]
 }
