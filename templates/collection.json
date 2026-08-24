@@ -52,6 +52,7 @@
         "text_8YxteL",
         "buttons_Ah4cLr"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/b58ce7b99582c961375527c3c6b27ebb_29833718-daca-471c-955b-14a21fad6363.png",
@@ -92,7 +93,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "collection": "dtf-transfer",
+        "collection": "dtf-consumables",
         "products_to_show": 3,
         "title": "Shop DTF Transfers",
         "heading_size": "h1",
