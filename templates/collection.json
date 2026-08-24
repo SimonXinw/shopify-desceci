@@ -95,7 +95,7 @@
       "settings": {
         "collection": "dtf-consumables",
         "products_to_show": 3,
-        "title": "Shop DTF Transfers",
+        "title": "Shop DTF Consumables",
         "heading_size": "h1",
         "description": "<p>Choose the transfer option that works best for your project</p>",
         "show_description": false,
