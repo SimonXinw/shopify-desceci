@@ -534,6 +534,24 @@
             "row_content": "<p>Whether you're making your first custom shirt, running a growing apparel brand, or producing merchandise for customers, DTF gives you a flexible way to turn digital artwork into professional custom apparel.</p><p>With DESCECI, you can choose the ordering method that fits your workflow:</p>",
             "page": ""
           }
+        },
+        "collapsible_row_3aWfr3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Shop Custom DTF Transfers →",
+            "icon": "check_mark",
+            "row_content": "<p>Upload your artwork and order ready-to-press transfers in the size you need.<br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3iHqcE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Upload Your DTF Gang Sheet →",
+            "icon": "check_mark",
+            "row_content": "<p>Combine multiple designs onto one sheet and make the most of your available print space.</p><p>Start with your artwork. We'll help turn it into a transfer that's ready for your next project.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -543,7 +561,9 @@
         "collapsible_row_NxQiHX",
         "collapsible_row_cAXntw",
         "collapsible_row_D87PBx",
-        "collapsible_row_E6tMik"
+        "collapsible_row_E6tMik",
+        "collapsible_row_3aWfr3",
+        "collapsible_row_3iHqcE"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
