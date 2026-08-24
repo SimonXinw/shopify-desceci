@@ -37,23 +37,11 @@
           "settings": {
             "text": "<p>If you're new to custom apparel printing, you've probably heard the term <strong>DTF transfer</strong>. But what exactly is DTF, how does it work, and why has it become such a popular option for T-shirts, hoodies, workwear, tote bags, and custom merchandise?</p><p>DTF stands for <strong>Direct to Film</strong>. Instead of printing directly onto a garment, the design is first printed onto a special transfer film. The finished transfer is then applied to the garment using heat and pressure.</p><p>For creators, apparel brands, print shops, and small businesses, DTF offers a flexible way to produce vibrant, detailed designs without the setup required by many traditional printing methods.</p><p>In this beginner's guide, we'll explain how DTF printing works, where it can be used, its biggest advantages, and how to get started.</p>"
           }
-        },
-        "button_yDci8G": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "heading_iq8pi8",
-        "text_8UaPVj",
-        "button_yDci8G"
+        "text_8UaPVj"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -64,10 +52,164 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "rich_text_wnUr3N": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KhNrHY": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Is a DTF Transfer?",
+            "heading_size": "h1"
+          }
+        },
+        "text_LJTQtk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A <strong>DTF transfer</strong>, or Direct to Film transfer, is a printed design carried on a special PET film and designed to be transferred onto fabric with a heat press.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KhNrHY",
+        "text_LJTQtk"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_QM3HcU": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_9KaiT3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_70afa989-2616-4db0-b290-050fe0278bff.png",
+            "title": "DTF transfer film",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/dtf-film"
+          }
+        },
+        "column_Ef3gwf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Premium_DTF_ink_for_Direct_to_Film_printers.png",
+            "title": "Specialized CMYK and white DTF inks",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/dtf-ink"
+          }
+        },
+        "column_h7tWdc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_3f855fc8-36c1-4fea-94af-48dbe21d643b.png",
+            "title": "Hot-melt adhesive powder",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/dtf-powder"
+          }
+        },
+        "column_PYbyAY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/appp.png",
+            "title": "A curing system",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NUj4JL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/02d47b27-f8d9-4feb-a02a-0c662b3ace8d.png",
+            "title": "A heat press",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://products/products-double-station-hydraulic-heat-press"
+          }
+        }
+      },
+      "block_order": [
+        "column_9KaiT3",
+        "column_Ef3gwf",
+        "column_h7tWdc",
+        "column_PYbyAY",
+        "column_NUj4JL"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "The production process typically uses:",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 5,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_nCh4Ty": {
+      "type": "rich-text",
+      "blocks": {
+        "text_W36p8w": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The artwork is printed onto the film, adhesive powder is applied to the printed area, and the transfer is cured. Once prepared, the finished transfer can be positioned on a garment and heat pressed.</strong></p><p><strong>After pressing and peeling the carrier film according to the transfer's application instructions, the printed design remains on the fabric.</strong></p><p><strong>The result is a full-color, detailed custom print that can work on a wide variety of apparel.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_W36p8w"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner_qFrdVf": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/bea52de3-f3bb-4409-8c12-28ae9af0ca84.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
     }
   },
   "order": [
     "main",
-    "rich_text_qqDAQy"
+    "rich_text_qqDAQy",
+    "rich_text_wnUr3N",
+    "multicolumn_QM3HcU",
+    "rich_text_nCh4Ty",
+    "image_banner_qFrdVf"
   ]
 }
