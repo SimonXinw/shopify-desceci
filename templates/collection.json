@@ -161,6 +161,49 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_3wwWtG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WKNxDj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Returns & Reprint Policy",
+            "heading_size": "h1"
+          }
+        },
+        "text_6WprAx": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>We'll Make It Right</h3><p>We want every DESCECI DTF transfer order to arrive exactly as expected.</p><p>If there is an issue with your order, please contact us with your <strong>order number and clear photos of the issue</strong>. Our team will review your request and work with you to provide an appropriate resolution.</p><p>We may offer a <strong>replacement, reprint, or other appropriate solution</strong> for verified production or fulfillment issues, including:</p><p>✓ Wrong transfer received<br/><br/>✓ Printing defects<br/><br/>✓ Transfers damaged before or during delivery<br/><br/>✓ Missing items<br/><br/>✓ Production or fulfillment errors</p><p>Please contact us as soon as possible after receiving your order so we can review the issue and help make it right.</p><h3>Custom Order Notice</h3><p>Because DTF transfers are <strong>custom-made specifically from the artwork, dimensions, quantities, and specifications submitted with your order</strong>, returns, refunds, or complimentary reprints generally do not apply to customer-submitted errors or changes requested after production has started.</p><p>This includes:</p><p>× Incorrect artwork uploaded<br/><br/>× Incorrect size or quantity selected<br/><br/>× Spelling or design errors in submitted artwork<br/><br/>× Low-resolution or poor-quality artwork<br/><br/>× Incorrect colors contained in the submitted design<br/><br/>× Change of mind after production has started</p><p><strong>Please review your artwork and order details carefully before submitting your order.</strong></p><p>If you're unsure whether an issue qualifies for a reprint or replacement, contact us. Our team will review the situation and help determine the best solution.</p>"
+          }
+        },
+        "button_Dfm3BH": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_WKNxDj",
+        "text_6WprAx",
+        "button_Dfm3BH"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_with_text_kVm9Hh": {
       "type": "image-with-text",
       "blocks": {
@@ -430,49 +473,6 @@
         "mobile_content_alignment": "center",
         "show_text_below": true
       }
-    },
-    "rich_text_3wwWtG": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_WKNxDj": {
-          "type": "heading",
-          "settings": {
-            "heading": "Returns & Reprint Policy",
-            "heading_size": "h1"
-          }
-        },
-        "text_6WprAx": {
-          "type": "text",
-          "settings": {
-            "text": "<h3>We'll Make It Right</h3><p>We want every DESCECI DTF transfer order to arrive exactly as expected.</p><p>If there is an issue with your order, please contact us with your <strong>order number and clear photos of the issue</strong>. Our team will review your request and work with you to provide an appropriate resolution.</p><p>We may offer a <strong>replacement, reprint, or other appropriate solution</strong> for verified production or fulfillment issues, including:</p><p>✓ Wrong transfer received<br/><br/>✓ Printing defects<br/><br/>✓ Transfers damaged before or during delivery<br/><br/>✓ Missing items<br/><br/>✓ Production or fulfillment errors</p><p>Please contact us as soon as possible after receiving your order so we can review the issue and help make it right.</p><h3>Custom Order Notice</h3><p>Because DTF transfers are <strong>custom-made specifically from the artwork, dimensions, quantities, and specifications submitted with your order</strong>, returns, refunds, or complimentary reprints generally do not apply to customer-submitted errors or changes requested after production has started.</p><p>This includes:</p><p>× Incorrect artwork uploaded<br/><br/>× Incorrect size or quantity selected<br/><br/>× Spelling or design errors in submitted artwork<br/><br/>× Low-resolution or poor-quality artwork<br/><br/>× Incorrect colors contained in the submitted design<br/><br/>× Change of mind after production has started</p><p><strong>Please review your artwork and order details carefully before submitting your order.</strong></p><p>If you're unsure whether an issue qualifies for a reprint or replacement, contact us. Our team will review the situation and help determine the best solution.</p>"
-          }
-        },
-        "button_Dfm3BH": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_WKNxDj",
-        "text_6WprAx",
-        "button_Dfm3BH"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -481,10 +481,10 @@
     "product-grid",
     "featured_collection_JVqrWE",
     "rich_text_a9NkM4",
+    "rich_text_3wwWtG",
     "image_with_text_kVm9Hh",
     "multicolumn_yiV7QJ",
     "multicolumn_6kjXth",
-    "image_banner_YXztd9",
-    "rich_text_3wwWtG"
+    "image_banner_YXztd9"
   ]
 }
