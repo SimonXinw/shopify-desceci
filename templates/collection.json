@@ -11,10 +11,60 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
         "color_scheme": "scheme-1"
+      }
+    },
+    "image_banner_fQaKHr": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_LCfFUV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom DTF Transfers Made Easy",
+            "heading_size": "h1"
+          }
+        },
+        "text_8YxteL": {
+          "type": "text",
+          "settings": {
+            "text": "Upload your artwork. We print it. You press it.Vibrant, durable, ready-to-press DTF transfers for T-shirts, hoodies, bags, workwear, and more.",
+            "text_style": "body"
+          }
+        },
+        "buttons_Ah4cLr": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "UPLOAD YOUR GANG SHEET",
+            "button_link_1": "shopify://products/custom-dtf-transfers",
+            "button_style_secondary_1": false,
+            "button_label_2": "SHOP BY SIZE",
+            "button_link_2": "shopify://products/products-custom-dtf-transfers-by-size",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_LCfFUV",
+        "text_8YxteL",
+        "buttons_Ah4cLr"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/b58ce7b99582c961375527c3c6b27ebb_29833718-daca-471c-955b-14a21fad6363.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "image_behavior": "fixed",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
       }
     },
     "product-grid": {
@@ -40,6 +90,7 @@
   },
   "order": [
     "banner",
+    "image_banner_fQaKHr",
     "product-grid"
   ]
 }
