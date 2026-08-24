@@ -11,18 +11,63 @@
   "sections": {
     "main": {
       "type": "main-blog",
+      "disabled": true,
       "settings": {
         "layout": "collage",
         "show_image": true,
-        "image_height": "medium",
+        "image_height": "adapt",
         "show_date": true,
         "show_author": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_qqDAQy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_iq8pi8": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Is DTF Transfer? A Complete Beginner’s Guide",
+            "heading_size": "h1"
+          }
+        },
+        "text_8UaPVj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you're new to custom apparel printing, you've probably heard the term <strong>DTF transfer</strong>. But what exactly is DTF, how does it work, and why has it become such a popular option for T-shirts, hoodies, workwear, tote bags, and custom merchandise?</p><p>DTF stands for <strong>Direct to Film</strong>. Instead of printing directly onto a garment, the design is first printed onto a special transfer film. The finished transfer is then applied to the garment using heat and pressure.</p><p>For creators, apparel brands, print shops, and small businesses, DTF offers a flexible way to produce vibrant, detailed designs without the setup required by many traditional printing methods.</p><p>In this beginner's guide, we'll explain how DTF printing works, where it can be used, its biggest advantages, and how to get started.</p>"
+          }
+        },
+        "button_yDci8G": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_iq8pi8",
+        "text_8UaPVj",
+        "button_yDci8G"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_qqDAQy"
   ]
 }
