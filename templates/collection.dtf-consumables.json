@@ -562,15 +562,6 @@
             "row_content": "<p>DESCECI offers DTF consumables suitable for businesses ranging from small apparel shops to regular transfer production environments.</p>",
             "page": ""
           }
-        },
-        "collapsible_row_qmMMrt": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -579,8 +570,7 @@
         "collapsible_row_dqnj88",
         "collapsible_row_pE4VKM",
         "collapsible_row_DrhyAB",
-        "collapsible_row_YxHMxR",
-        "collapsible_row_qmMMrt"
+        "collapsible_row_YxHMxR"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
@@ -597,6 +587,55 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_banner_eKLhxR": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_JhkAEm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Keep Your DTF Production Moving",
+            "heading_size": "h1"
+          }
+        },
+        "text_zhxPAi": {
+          "type": "text",
+          "settings": {
+            "text": "Stock up on dependable ink, film, and powder for your next production run.",
+            "text_style": "body"
+          }
+        },
+        "buttons_cpXfxd": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop DTF Supplies",
+            "button_link_1": "shopify://products/dtf-ink",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_JhkAEm",
+        "text_zhxPAi",
+        "buttons_cpXfxd"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/0eb5af11-4412-4de0-ae7a-b19520f979cb_d11e1b1c-4687-489a-a753-552f0341756c.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
     }
   },
   "order": [
@@ -609,6 +648,7 @@
     "multicolumn_pJVrt4",
     "rich_text_zndnwm",
     "multicolumn_RFwGqY",
-    "collapsible_content_DKAqqj"
+    "collapsible_content_DKAqqj",
+    "image_banner_eKLhxR"
   ]
 }
