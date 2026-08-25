@@ -157,6 +157,7 @@
         "collapsible_row_CVPTEf",
         "collapsible_row_hmFQ83"
       ],
+      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
