@@ -378,23 +378,11 @@
           "settings": {
             "text": "<h3>Same-Day Shipping</h3><p>In-stock DTF supplies are shipped the same business day to help keep your production moving.</p><h3>Los Angeles Warehouse</h3><p>Orders ship directly from our Baldwin Park, California warehouse for fast U.S. fulfillment.</p><h3>Local Pickup Available</h3><p>Located nearby? Pick up your order directly from our Baldwin Park </p><p>warehouse.</p><h3>Tracking Provided</h3><p>Receive tracking information after shipment and follow your order from our warehouse to your door.</p><p></p><p><strong><br/>View Full Shipping Policy →</strong><br/><br/></p>"
           }
-        },
-        "button_MCybfB": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "heading_kFyTwV",
-        "text_r7W7gt",
-        "button_MCybfB"
+        "text_r7W7gt"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -404,6 +392,110 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "multicolumn_RFwGqY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_i9ycXD": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bHKgAU": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bddLiA": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YUdM6H": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_98PrnW": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jU9rfM": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_PQchtg": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bkHELC": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_i9ycXD",
+        "column_bHKgAU",
+        "column_bddLiA",
+        "column_YUdM6H",
+        "column_98PrnW",
+        "column_jU9rfM",
+        "column_PQchtg",
+        "column_bkHELC"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -415,6 +507,7 @@
     "rich_text_efWEU6",
     "multicolumn_CEAyHy",
     "multicolumn_pJVrt4",
-    "rich_text_zndnwm"
+    "rich_text_zndnwm",
+    "multicolumn_RFwGqY"
   ]
 }
