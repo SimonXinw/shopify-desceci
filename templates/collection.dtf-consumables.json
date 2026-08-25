@@ -68,6 +68,139 @@
         "show_text_below": true
       }
     },
+    "image_text_banner_z9mUaY": {
+      "type": "image-text-banner",
+      "blocks": {
+        "description_item_zDbBXj": {
+          "type": "description_item",
+          "settings": {
+            "text": "Made for DTF Production"
+          }
+        },
+        "description_item_TM8i7w": {
+          "type": "description_item",
+          "settings": {
+            "text": "Built for print shops, apparel businesses, and creators who need dependable results from every production run."
+          }
+        },
+        "description_item_R7mGxY": {
+          "type": "description_item",
+          "disabled": true,
+          "settings": {
+            "text": "Reliable PerformanceDesigned to support stable printing, clean transfers, and repeatable production."
+          }
+        },
+        "feature_qBE9Uh": {
+          "type": "feature",
+          "disabled": true,
+          "settings": {
+            "text": "FAST",
+            "text_color": "#121212",
+            "text_2": "PRODUCTION",
+            "text_2_color": "#121212"
+          }
+        },
+        "feature_QraaMc": {
+          "type": "feature",
+          "disabled": true,
+          "settings": {
+            "text": "VIBRANT",
+            "text_color": "#121212",
+            "text_2": "COLORS",
+            "text_2_color": "#121212"
+          }
+        },
+        "feature_HUD6CB": {
+          "type": "feature",
+          "disabled": true,
+          "settings": {
+            "text": "USA LOCAL",
+            "text_color": "#121212",
+            "text_2": "SHIPPING",
+            "text_2_color": "#121212"
+          }
+        },
+        "feature_AJHzNA": {
+          "type": "feature",
+          "disabled": true,
+          "settings": {
+            "text": "FAST",
+            "text_color": "#121212",
+            "text_2": "TURNAROUND",
+            "text_2_color": "#121212"
+          }
+        }
+      },
+      "block_order": [
+        "description_item_zDbBXj",
+        "description_item_TM8i7w",
+        "description_item_R7mGxY",
+        "feature_qBE9Uh",
+        "feature_QraaMc",
+        "feature_HUD6CB",
+        "feature_AJHzNA"
+      ],
+      "name": "图片文字横幅",
+      "settings": {
+        "background_image": "shopify://shop_images/b58ce7b99582c961375527c3c6b27ebb_6d9ebc52-799e-4acc-a6ca-0785c4eb6e56.png",
+        "fallback_background": "#f3f3f3",
+        "desktop_height": 640,
+        "mobile_height": 680,
+        "desktop_horizontal_position": "flex-start",
+        "desktop_vertical_position": "flex-start",
+        "desktop_text_alignment": "left",
+        "content_width": 35,
+        "eyebrow_text": "Everything you need to keep your DTF workflow moving.",
+        "eyebrow_color": "#121212",
+        "eyebrow_background": "rgba(0,0,0,0)",
+        "eyebrow_show_desktop": true,
+        "eyebrow_show_mobile": true,
+        "title": "Premium DTF Supplies",
+        "title_color": "#121212",
+        "title_background": "rgba(0,0,0,0)",
+        "subtitle_text": "Reliable DTF ink, transfer film, and hot melt powder for smooth printing, vibrant colors, strong adhesion, and consistent production.",
+        "subtitle_size": 20,
+        "subtitle_color": "#ffffff",
+        "subtitle_background": "#000000",
+        "description": "",
+        "description_color": "#121212",
+        "description_background": "rgba(0,0,0,0)",
+        "text_color": "#121212",
+        "title_size": 40,
+        "mobile_title_size": 32,
+        "button_label_1": "DTF INK",
+        "button_link_1": "shopify://products/dtf-ink",
+        "button_label_2": "DTF  Film",
+        "button_link_2": "shopify://products/dtf-film",
+        "button_hover_background": "linear-gradient(90deg, #bdf807, #14bffd)",
+        "button_text_color": "#000000",
+        "button_font_size": 14,
+        "mobile_horizontal_position": "flex-start",
+        "mobile_text_alignment": "left",
+        "mobile_text_max_width": 240,
+        "mobile_content_padding_top": 24,
+        "mobile_content_padding_bottom": 24,
+        "mobile_eyebrow_size": 11,
+        "mobile_eyebrow_spacing": 10,
+        "mobile_block_spacing": 8,
+        "mobile_subtitle_size": 14,
+        "mobile_description_size": 12,
+        "mobile_description_item_spacing": 4,
+        "mobile_description_icon_size": 16,
+        "mobile_bottom_stick": true,
+        "mobile_features_offset": 24,
+        "mobile_features_gap": 10,
+        "mobile_feature_icon_size": 36,
+        "mobile_feature_text_size": 11,
+        "mobile_actions_layout": "column",
+        "mobile_actions_align": "center",
+        "mobile_actions_offset": 12,
+        "mobile_actions_gap": 8,
+        "mobile_button_height": 40,
+        "mobile_button_padding_x": 16,
+        "mobile_button_font_size": 12
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "disabled": true,
@@ -618,6 +751,7 @@
   "order": [
     "banner",
     "image_banner_fQaKHr",
+    "image_text_banner_z9mUaY",
     "product-grid",
     "featured_collection_JVqrWE",
     "rich_text_a9NkM4",
