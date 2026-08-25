@@ -544,13 +544,43 @@
             "row_content": "<p>DTF powder acts as the adhesive layer that bonds the printed design to the garment during heat pressing.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_DrhyAB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use different brands of ink, film and powder together?",
+            "icon": "check_mark",
+            "row_content": "<p>It may be possible, but testing is recommended because ink absorption, curing conditions and adhesion can vary between different consumables.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_YxHMxR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer DTF supplies for commercial production?",
+            "icon": "check_mark",
+            "row_content": "<p>DESCECI offers DTF consumables suitable for businesses ranging from small apparel shops to regular transfer production environments.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qmMMrt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "collapsible_row_Rd99fT",
         "collapsible_row_mbBzKk",
         "collapsible_row_dqnj88",
-        "collapsible_row_pE4VKM"
+        "collapsible_row_pE4VKM",
+        "collapsible_row_DrhyAB",
+        "collapsible_row_YxHMxR",
+        "collapsible_row_qmMMrt"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
