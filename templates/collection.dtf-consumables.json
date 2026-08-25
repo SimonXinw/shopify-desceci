@@ -400,8 +400,9 @@
         "column_i9ycXD": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/1.png",
+            "title": "Print Shops",
+            "text": "<p>Dependable DTF ink, film, and powder for regular transfer production and customer orders.<br/></p>",
             "link_label": "",
             "link": ""
           }
@@ -409,8 +410,9 @@
         "column_bHKgAU": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/2_fa836c93-bf7e-4b5a-bcf3-c3441811071f.png",
+            "title": "Custom Apparel Businesses",
+            "text": "<p>Dependable DTF ink, film, and powder for regular transfer production and customer orders.</p>",
             "link_label": "",
             "link": ""
           }
@@ -418,8 +420,9 @@
         "column_bddLiA": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/3_d0f53190-7f38-4052-a812-05a6ca435886.png",
+            "title": "Custom Apparel Businesses",
+            "text": "<p>Create custom T-shirts, hoodies, workwear, bags, uniforms, and more for your customers.<br/></p>",
             "link_label": "",
             "link": ""
           }
@@ -427,8 +430,9 @@
         "column_YUdM6H": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/4_df9271ce-9e91-45f7-a277-4a7ef515f5be.png",
+            "title": "Growing Brands",
+            "text": "<p>Reliable consumables for businesses expanding their in-house custom apparel production.</p>",
             "link_label": "",
             "link": ""
           }
@@ -436,8 +440,9 @@
         "column_98PrnW": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/6_d1793d22-c9e2-49fc-b4ae-5674cdd03c1a.png",
+            "title": "Online Sellers",
+            "text": "<p>Fulfill custom apparel orders for Etsy, Shopify, Amazon, social media, and other online marketplaces.</p>",
             "link_label": "",
             "link": ""
           }
@@ -445,8 +450,9 @@
         "column_jU9rfM": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/5_4ed5c949-e343-418d-9f0d-60fd6ce76e25.png",
+            "title": "Promotional Product Businesses",
+            "text": "<p>Produce branded apparel, event merchandise, company uniforms, teamwear, and promotional products.</p>",
             "link_label": "",
             "link": ""
           }
@@ -454,8 +460,9 @@
         "column_PQchtg": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/7_67430703-339f-4c0c-a14f-40e36cad9af6.png",
+            "title": "Schools, Teams & Organizations",
+            "text": "<p>Create custom shirts, hoodies, bags, and apparel for schools, sports teams, clubs, churches, and community groups.</p>",
             "link_label": "",
             "link": ""
           }
@@ -463,8 +470,9 @@
         "column_bkHELC": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/8_bbba6f89-4629-4762-b80d-487f159760ac.png",
+            "title": "DTF Beginners",
+            "text": "<p><br/>Essential supplies for getting started with DTF printing, from small projects to first customer orders.<br/><br/></p>",
             "link_label": "",
             "link": ""
           }
@@ -482,11 +490,11 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
+        "title": "DTF Supplies Built for Your Business",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 4,
         "column_alignment": "left",
