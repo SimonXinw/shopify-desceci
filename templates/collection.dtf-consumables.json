@@ -362,6 +362,49 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_zndnwm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kFyTwV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fast & Convenient U.S. Fulfillment",
+            "heading_size": "h1"
+          }
+        },
+        "text_r7W7gt": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Same-Day Shipping</h3><p>In-stock DTF supplies are shipped the same business day to help keep your production moving.</p><h3>Los Angeles Warehouse</h3><p>Orders ship directly from our Baldwin Park, California warehouse for fast U.S. fulfillment.</p><h3>Local Pickup Available</h3><p>Located nearby? Pick up your order directly from our Baldwin Park </p><p>warehouse.</p><h3>Tracking Provided</h3><p>Receive tracking information after shipment and follow your order from our warehouse to your door.</p><p></p><p><strong><br/>View Full Shipping Policy →</strong><br/><br/></p>"
+          }
+        },
+        "button_MCybfB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kFyTwV",
+        "text_r7W7gt",
+        "button_MCybfB"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -371,6 +414,7 @@
     "tabbed_product_carousel_3UL7LF",
     "rich_text_efWEU6",
     "multicolumn_CEAyHy",
-    "multicolumn_pJVrt4"
+    "multicolumn_pJVrt4",
+    "rich_text_zndnwm"
   ]
 }
