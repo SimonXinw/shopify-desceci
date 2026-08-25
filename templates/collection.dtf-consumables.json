@@ -295,63 +295,63 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_i6Abxw": {
+    "multicolumn_pJVrt4": {
       "type": "multicolumn",
       "blocks": {
-        "column_V8n8wh": {
+        "column_3fE4Uz": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/883c80e0195720c64b0355c1ac8f6f83.png",
             "title": "<strong>01 — Print</strong>",
-            "text": "<p>Print your artwork onto DTF transfer film using CMYK + White DTF ink.</p>",
+            "text": "<p>Print your artwork onto DTF transfer film using CMYK and white DTF ink.</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_hPBdhY": {
+        "column_eYmTRU": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/77e59bd0-6648-4c53-a930-34c980854c19_4f8a95cd-5b14-4574-9ac8-19199d0a6ef0.png",
             "title": "<strong>02 — Powder</strong>",
-            "text": "<p>Apply hot melt adhesive powder evenly to the printed design.</p>",
+            "text": "<p>Apply hot melt adhesive powder evenly while the printed ink is still wet.</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_zXWiN4": {
+        "column_hmXFMU": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/848ff48e-3305-4e26-8160-5dc18901fc73.png",
             "title": "<strong>03 — Cure</strong>",
-            "text": "<p>Cure the adhesive according to your equipment and production settings.</p>",
+            "text": "<p>Cure the powder according to your equipment and production setup.</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_8CaDbU": {
+        "column_pB7Ezi": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/d1fe9c2c-5db1-42fb-a50b-fb6a4deade5c.png",
             "title": "<strong>04 — Heat Press</strong>",
-            "text": "<p>Transfer the finished design onto the garment using the appropriate time, temperature, and pressure.</p>",
+            "text": "<p>Press the finished transfer onto compatible garments using the recommended temperature, time, and pressure.</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_V8n8wh",
-        "column_hPBdhY",
-        "column_zXWiN4",
-        "column_8CaDbU"
+        "column_3fE4Uz",
+        "column_eYmTRU",
+        "column_hmXFMU",
+        "column_pB7Ezi"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "From Print to Press Everything you need for a smooth DTF production workflow.",
+        "title": "<strong>From Print to PressEverything you need for a smooth DTF production workflow.</strong>",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "columns_desktop": 4,
         "column_alignment": "left",
@@ -371,6 +371,6 @@
     "tabbed_product_carousel_3UL7LF",
     "rich_text_efWEU6",
     "multicolumn_CEAyHy",
-    "multicolumn_i6Abxw"
+    "multicolumn_pJVrt4"
   ]
 }
