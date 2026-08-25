@@ -505,6 +505,68 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_DKAqqj": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Rd99fT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What supplies do I need for DTF printing?",
+            "icon": "check_mark",
+            "row_content": "<p>A typical DTF workflow requires DTF ink, PET transfer film, hot melt adhesive powder, a compatible printer, curing equipment, and a heat press.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_mbBzKk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can DESCECI DTF ink work with Epson printheads?",
+            "icon": "check_mark",
+            "row_content": "<p><br/>Compatibility depends on your printer, printhead model, ink system, and RIP setup. Always confirm compatibility before switching inks.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dqnj88": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is DTF transfer film used for?",
+            "icon": "check_mark",
+            "row_content": "<p>DTF film is the PET carrier used to receive the printed image before adhesive powder is applied and the transfer is heat pressed onto the garment.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_pE4VKM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What does DTF powder do?",
+            "icon": "check_mark",
+            "row_content": "<p>DTF powder acts as the adhesive layer that bonds the printed design to the garment during heat pressing.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Rd99fT",
+        "collapsible_row_mbBzKk",
+        "collapsible_row_dqnj88",
+        "collapsible_row_pE4VKM"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -516,6 +578,7 @@
     "multicolumn_CEAyHy",
     "multicolumn_pJVrt4",
     "rich_text_zndnwm",
-    "multicolumn_RFwGqY"
+    "multicolumn_RFwGqY",
+    "collapsible_content_DKAqqj"
   ]
 }
