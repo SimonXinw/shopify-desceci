@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -7,10 +16,15 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
-          "settings": { "text": "Welcome to our store", "link": "" }
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
         }
       },
-      "block_order": ["announcement-bar-0"],
+      "block_order": [
+        "announcement-bar-0"
+      ],
       "settings": {
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -24,7 +38,7 @@
     "header": {
       "type": "header-v1",
       "settings": {
-        "logo": "shopify://shop_images/logo_1dc30dd9-e1f8-458b-b62a-aa0c06d88ece.png",
+        "logo": "shopify://shop_images/3315457eba4b799ac08e62937da4d44c_c49629b3-39d0-4d52-8e45-b579e6d15b80.png",
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
         "menu": "main-menu-v1",
@@ -45,5 +59,8 @@
       }
     }
   },
-  "order": ["announcement-bar", "header"]
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
 }
