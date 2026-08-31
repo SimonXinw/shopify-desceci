@@ -288,7 +288,7 @@
         "layout_width": "page",
         "desktop_height": 700,
         "mobile_image_height": 240,
-        "image_position": "center center",
+        "image_position": "left center",
         "border_radius": 24,
         "eyebrow_text": "All sizes shown as Width × Height (cm / in)",
         "eyebrow_size": 14,
