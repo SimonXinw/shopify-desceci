@@ -280,8 +280,40 @@
         "mobile_padding_bottom": 20
       }
     },
+    "rich_text_bFcFJ4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rf9699": {
+          "type": "heading",
+          "settings": {
+            "heading": "DTF Transfer Size & Placement Guide",
+            "heading_size": "h1"
+          }
+        },
+        "text_TdkLXU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>See how each print size fits on a standard T-shirt and choose the best option for your design.All sizes shown as <strong>Width × Height (cm / in)</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rf9699",
+        "text_TdkLXU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "factory_scene_banner_pmXQwP": {
       "type": "factory-scene-banner",
+      "disabled": true,
       "name": "工厂实景横幅",
       "settings": {
         "image": "shopify://shop_images/a77173b2-d7b9-4bac-b060-640e92853344.png",
@@ -312,6 +344,23 @@
         "padding_bottom": 60,
         "mobile_padding_top": 20,
         "mobile_padding_bottom": 20
+      }
+    },
+    "image_banner_3EMzzV": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/a77173b2-d7b9-4bac-b060-640e92853344.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
       }
     },
     "factory_scene": {
@@ -1091,7 +1140,9 @@
     "image_banner",
     "icon_feature_bar",
     "tabbed_products",
+    "rich_text_bFcFJ4",
     "factory_scene_banner_pmXQwP",
+    "image_banner_3EMzzV",
     "factory_scene",
     "printing_service",
     "product_advantages",
