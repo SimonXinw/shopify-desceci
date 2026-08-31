@@ -350,7 +350,7 @@
       "type": "image-banner",
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/a77173b2-d7b9-4bac-b060-640e92853344.png",
+        "image": "shopify://shop_images/a77173b2-d7b9-4bac-b060-640e92853344_71f76555-a07c-4423-aa83-f578d837f3a9.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
