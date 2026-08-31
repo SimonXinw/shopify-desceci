@@ -284,7 +284,7 @@
       "type": "factory-scene-banner",
       "name": "工厂实景横幅",
       "settings": {
-        "image": "shopify://shop_images/a77173b2-d7b9-4bac-b060-640e92853344_a7daf344-aa60-45ca-8874-55e906647800.png",
+        "image": "shopify://shop_images/a77173b2-d7b9-4bac-b060-640e92853344.png",
         "layout_width": "page",
         "desktop_height": 700,
         "mobile_image_height": 240,
