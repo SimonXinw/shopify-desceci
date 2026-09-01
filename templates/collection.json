@@ -55,6 +55,8 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/0eb5af11-4412-4de0-ae7a-b19520f979cb_d11e1b1c-4687-489a-a753-552f0341756c.png",
+        "image_alt": "Premium DTF powder for Direct to Film transfer printing",
+        "image_alt_2": "",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "image_behavior": "none",
@@ -260,6 +262,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/327422dc-7099-403b-bec6-1d0bc4364f62.png",
+            "image_alt": "Vibrant full-color DTF transfers with detailed ready-to-press artwork – DESCECI",
             "title": "Vibrant Full Color",
             "text": "<p><strong>Bold Colors. Fine Details.</strong></p><p>Bring detailed artwork, gradients, logos, and colorful designs to life.</p>",
             "link_label": "",
@@ -270,6 +273,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/df421c6b-7c2d-47c9-9cca-0c4789808173.png",
+            "image_alt": "Ready-to-press DTF transfer applied with a heat press for custom apparel – DESCECI",
             "title": "Ready to Press",
             "text": "<p><strong>No Printing. No Powder. No Weeding.</strong></p><p>Your transfers arrive ready for heat application.</p>",
             "link_label": "",
@@ -280,6 +284,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/b0967630-ef28-4141-82bb-661462910c06.png",
+            "image_alt": "Custom DTF transfers for hoodies T-shirts tote bags and apparel – DESCECI",
             "title": "Versatile Application",
             "text": "<p><strong>More Fabrics. More Possibilities.</strong></p><p>Great for cotton, polyester, cotton/poly blends, and many commonly used apparel fabrics.</p>",
             "link_label": "",
@@ -290,6 +295,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/4fe72c6e-87c4-43e9-ab61-d32454d8b1fa.png",
+            "image_alt": "Colorful tiger DTF transfer for T-shirts with vibrant detailed printing – DESCECI",
             "title": "Built for Everyday Wear",
             "text": "<p><strong>Made to Look Good. Made to Last.</strong></p><p>Designed for everyday apparel when properly applied and cared for.</p>",
             "link_label": "",
@@ -300,6 +306,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/276e8e12-b2e8-4847-bc12-46e54dbe31cd.png",
+            "image_alt": "Premium DTF transfer with vivid colors sharp details and smooth print finish – DESCECI",
             "title": "Small or Large Orders",
             "text": "<p><strong>From One Design to Production Runs.</strong></p><p>Great for testing new designs, small businesses, or larger apparel orders.</p>",
             "link_label": "",
@@ -310,6 +317,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/339c90e4-c04c-47da-9203-092327967512.png",
+            "image_alt": "DTF artwork preparation and color setup for custom transfer printing – DESCECI",
             "title": "Simple Ordering",
             "text": "<p><strong>Upload. We Print. You Press.</strong></p><p>Spend less time preparing transfers and more time creating.</p>",
             "link_label": "",
@@ -350,6 +358,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/T.png",
+            "image_alt": "",
             "title": "T-Shirts",
             "text": "<p>Everyday custom apparel<br/></p>",
             "link_label": "",
@@ -360,6 +369,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/7c37ac7775385456f37e7fbe6fe7e327.png",
+            "image_alt": "",
             "title": "Hoodies & Sweatshirts",
             "text": "<p>Streetwear & branded apparel</p>",
             "link_label": "",
@@ -370,6 +380,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/a5d3b2bb3a82281af18dfd28ade6d7da.png",
+            "image_alt": "",
             "title": "Tote Bags",
             "text": "<p>Custom merchandise</p>",
             "link_label": "",
@@ -380,6 +391,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/7c03838ccbe76fc136fc4f21d74a5ce9.png",
+            "image_alt": "",
             "title": "Workwear & Uniforms",
             "text": "<p>Business & team branding</p>",
             "link_label": "",
@@ -390,6 +402,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/dd331829702c5bbe3b6a07baf8ceeeab.png",
+            "image_alt": "",
             "title": "Team & Event Apparel",
             "text": "<p>Sports, schools & events</p>",
             "link_label": "",
@@ -462,6 +475,8 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/fe8a3a853ef98ad8bcba93694bb06115.png",
+        "image_alt": "",
+        "image_alt_2": "",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
@@ -593,6 +608,8 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/dad6bf5ea5d32df82fefa2cf5f653c49.png",
+        "image_alt": "",
+        "image_alt_2": "",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
