@@ -352,8 +352,8 @@
       "type": "image-banner",
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/a77173b2-d7b9-4bac-b060-640e92853344_2c30dfac-51fc-4348-a80b-d71e91a833f8.png",
-        "image_alt": "DTF transfer size and placement guide for front and back T-shirt printing",
+        "image": "shopify://shop_images/dtf-transfer-size-placement-guide-shirts-desceci.png",
+        "image_alt": "DTF transfer size and placement guide for front and back T-shirt printing – DESCECI",
         "image_alt_2": "",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
@@ -370,7 +370,7 @@
     "factory_scene": {
       "type": "factory-scene-banner",
       "settings": {
-        "image": "shopify://shop_images/1_c57b96aa-2087-4639-95e9-6074b7f37eda.png",
+        "image": "shopify://shop_images/pc_premium-dtf-transfer-production-facility-desceci.png",
         "mobile_image": "shopify://shop_images/premium-dtf-transfer-production-facility-desceci.png",
         "image_alt": "DESCECI premium DTF transfer production facility with professional printing equipment and skilled production team",
         "layout_width": "full",
