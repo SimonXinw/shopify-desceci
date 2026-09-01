@@ -92,7 +92,8 @@
       ],
       "name": "图片文字横幅",
       "settings": {
-        "background_image": "shopify://shop_images/b58ce7b99582c961375527c3c6b27ebb_6d9ebc52-799e-4acc-a6ca-0785c4eb6e56.png",
+        "background_image": "shopify://shop_images/premium-dtf-supplies-ink-film-powder-desceci.png",
+        "background_image_alt": "Premium DTF supplies including DTF ink, transfer film and hot melt powder for professional printing – DESCECI",
         "fallback_background": "#f3f3f3",
         "desktop_height": 540,
         "mobile_height": 680,
@@ -245,6 +246,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/INK.png",
+            "image_alt": "",
             "title": "<strong>DTF Ink</strong>",
             "text": "<p>helps determine color, coverage, and print consistency.<br/><br/></p>",
             "link_label": "",
@@ -255,6 +257,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/4_a756dc43-7e66-476a-a1f0-123765fa563d.png",
+            "image_alt": "",
             "title": "<strong>DTF Film</strong>",
             "text": "<p>affects ink absorption, transfer release, and overall print quality.<br/></p>",
             "link_label": "",
@@ -265,6 +268,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/2_3f855fc8-36c1-4fea-94af-48dbe21d643b.png",
+            "image_alt": "",
             "title": "<strong>DTF Powder</strong>",
             "text": "<p>creates the adhesive layer that bonds your design to the garment.<br/></p>",
             "link_label": "",
@@ -302,6 +306,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/883c80e0195720c64b0355c1ac8f6f83.png",
+            "image_alt": "",
             "title": "<strong>01 — Print</strong>",
             "text": "<p>Print your artwork onto DTF transfer film using CMYK and white DTF ink.</p>",
             "link_label": "",
@@ -312,6 +317,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/77e59bd0-6648-4c53-a930-34c980854c19_4f8a95cd-5b14-4574-9ac8-19199d0a6ef0.png",
+            "image_alt": "",
             "title": "<strong>02 — Powder</strong>",
             "text": "<p>Apply hot melt adhesive powder evenly while the printed ink is still wet.</p>",
             "link_label": "",
@@ -322,6 +328,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/848ff48e-3305-4e26-8160-5dc18901fc73.png",
+            "image_alt": "",
             "title": "<strong>03 — Cure</strong>",
             "text": "<p>Cure the powder according to your equipment and production setup.</p>",
             "link_label": "",
@@ -332,6 +339,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/d1fe9c2c-5db1-42fb-a50b-fb6a4deade5c.png",
+            "image_alt": "",
             "title": "<strong>04 — Heat Press</strong>",
             "text": "<p>Press the finished transfer onto compatible garments using the recommended temperature, time, and pressure.</p>",
             "link_label": "",
@@ -401,6 +409,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/1.png",
+            "image_alt": "",
             "title": "Print Shops",
             "text": "<p>Dependable DTF ink, film, and powder for regular transfer production and customer orders.<br/></p>",
             "link_label": "",
@@ -411,6 +420,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/2_fa836c93-bf7e-4b5a-bcf3-c3441811071f.png",
+            "image_alt": "",
             "title": "Custom Apparel Businesses",
             "text": "<p>Dependable DTF ink, film, and powder for regular transfer production and customer orders.</p>",
             "link_label": "",
@@ -421,6 +431,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/3_d0f53190-7f38-4052-a812-05a6ca435886.png",
+            "image_alt": "",
             "title": "Custom Apparel Businesses",
             "text": "<p>Create custom T-shirts, hoodies, workwear, bags, uniforms, and more for your customers.<br/></p>",
             "link_label": "",
@@ -431,6 +442,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/4_df9271ce-9e91-45f7-a277-4a7ef515f5be.png",
+            "image_alt": "",
             "title": "Growing Brands",
             "text": "<p>Reliable consumables for businesses expanding their in-house custom apparel production.</p>",
             "link_label": "",
@@ -441,6 +453,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/6_d1793d22-c9e2-49fc-b4ae-5674cdd03c1a.png",
+            "image_alt": "",
             "title": "Online Sellers",
             "text": "<p>Fulfill custom apparel orders for Etsy, Shopify, Amazon, social media, and other online marketplaces.</p>",
             "link_label": "",
@@ -451,6 +464,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/5_4ed5c949-e343-418d-9f0d-60fd6ce76e25.png",
+            "image_alt": "",
             "title": "Promotional Product Businesses",
             "text": "<p>Produce branded apparel, event merchandise, company uniforms, teamwear, and promotional products.</p>",
             "link_label": "",
@@ -461,6 +475,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/7_67430703-339f-4c0c-a14f-40e36cad9af6.png",
+            "image_alt": "",
             "title": "Schools, Teams & Organizations",
             "text": "<p>Create custom shirts, hoodies, bags, and apparel for schools, sports teams, clubs, churches, and community groups.</p>",
             "link_label": "",
@@ -471,6 +486,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/8_bbba6f89-4629-4762-b80d-487f159760ac.png",
+            "image_alt": "",
             "title": "DTF Beginners",
             "text": "<p><br/>Essential supplies for getting started with DTF printing, from small projects to first customer orders.<br/><br/></p>",
             "link_label": "",
@@ -625,6 +641,8 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/0eb5af11-4412-4de0-ae7a-b19520f979cb_d11e1b1c-4687-489a-a753-552f0341756c.png",
+        "image_alt": "",
+        "image_alt_2": "",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
