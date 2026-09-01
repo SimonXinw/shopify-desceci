@@ -33,7 +33,7 @@
         "feature-quality": {
           "type": "feature",
           "settings": {
-            "icon": "shopify://shop_images/3ab039da-d023-40f3-88b2-ba38726c0c8b.png",
+            "icon": "shopify://shop_images/fast-turnaround-dtf-transfers-desceci.png",
             "text": "Fast Production",
             "text_color": "#121212",
             "text_2": "",
@@ -43,7 +43,7 @@
         "feature-shipping": {
           "type": "feature",
           "settings": {
-            "icon": "shopify://shop_images/b4e14a15-72b7-4c8c-9cc2-7b6d5f4d307f.png",
+            "icon": "shopify://shop_images/vibrant-dtf-transfer-print-desceci.png",
             "text": "Vibrant Colors",
             "text_color": "#121212",
             "text_2": "",
@@ -81,8 +81,9 @@
         "feature-turnaround"
       ],
       "settings": {
-        "background_image": "shopify://shop_images/5_d06cfb90-0b8b-4683-8c8a-f006e591c22f.png",
+        "background_image": "shopify://shop_images/professional-dtf-transfer-printing-desceci.png",
         "mobile_background_image": "shopify://shop_images/app_1_4633c608-e0f1-4b93-95c3-f14f3b26a25d.png",
+        "background_image_alt": "DESCECI premium custom DTF transfers printed with vibrant ready-to-press designs for T-shirts and apparel",
         "fallback_background": "#f3f3f3",
         "desktop_height": 810,
         "mobile_height": 700,
@@ -317,6 +318,7 @@
       "name": "工厂实景横幅",
       "settings": {
         "image": "shopify://shop_images/a77173b2-d7b9-4bac-b060-640e92853344.png",
+        "image_alt": "",
         "layout_width": "page",
         "desktop_height": 700,
         "mobile_image_height": 240,
@@ -352,6 +354,7 @@
       "settings": {
         "image": "shopify://shop_images/a77173b2-d7b9-4bac-b060-640e92853344_2c30dfac-51fc-4348-a80b-d71e91a833f8.png",
         "image_alt": "DTF transfer size and placement guide for front and back T-shirt printing",
+        "image_alt_2": "",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
@@ -368,6 +371,8 @@
       "type": "factory-scene-banner",
       "settings": {
         "image": "shopify://shop_images/1_c57b96aa-2087-4639-95e9-6074b7f37eda.png",
+        "mobile_image": "shopify://shop_images/premium-dtf-transfer-production-facility-desceci.png",
+        "image_alt": "DESCECI premium DTF transfer production facility with professional printing equipment and skilled production team",
         "layout_width": "full",
         "desktop_height": 650,
         "mobile_image_height": 300,
