@@ -61,22 +61,36 @@
           {%- endif -%}
 
           {%- if section.settings.image != blank -%}
+            {%- liquid
+              assign scene_image_alt = section.settings.image.alt
+              if scene_image_alt == blank
+                assign scene_image_alt = section.settings.image_alt
+              endif
+            -%}
             {{
               section.settings.image
               | image_url: width: 3840
               | image_tag:
                 class: 'image',
                 widths: '750, 1100, 1500, 1920, 2560, 3200, 3840',
-                sizes: '100vw'
+                sizes: '100vw',
+                alt: scene_image_alt
             }}
           {%- else -%}
+            {%- liquid
+              assign scene_image_alt = section.settings.mobile_image.alt
+              if scene_image_alt == blank
+                assign scene_image_alt = section.settings.image_alt
+              endif
+            -%}
             {{
               section.settings.mobile_image
               | image_url: width: 1500
               | image_tag:
                 class: 'image',
                 widths: '750, 1100, 1500',
-                sizes: '100vw'
+                sizes: '100vw',
+                alt: scene_image_alt
             }}
           {%- endif -%}
         </picture>
@@ -241,6 +255,12 @@
       "id": "mobile_image",
       "label": "移动端工厂实景图片",
       "info": "不上传时，移动端沿用 PC 端图片"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "图片 ALT 兜底文本",
+      "info": "优先使用 Shopify 媒体库「替代文本」；未填写时使用此处兜底"
     },
     {
       "type": "select",

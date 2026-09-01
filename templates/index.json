@@ -351,6 +351,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/a77173b2-d7b9-4bac-b060-640e92853344_2c30dfac-51fc-4348-a80b-d71e91a833f8.png",
+        "image_alt": "DTF transfer size and placement guide for front and back T-shirt printing",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
@@ -411,7 +412,8 @@
             "tagline": "VIBRANT COLORS. SHARP DETAILS.",
             "accent_color": "#11a9a4",
             "feature_list": "High resolution printing , true-to-life colors.\nDurable transfers that last wash after wash.\nStrict quality control for every single print.",
-            "image": "shopify://shop_images/a40a47f2-2732-4db4-bd45-a19bf2122925.png"
+            "image": "shopify://shop_images/a40a47f2-2732-4db4-bd45-a19bf2122925.png",
+            "image_alt": "Vibrant custom DTF transfer film with detailed full-color artwork"
           }
         },
         "card-turnaround": {
@@ -426,7 +428,8 @@
             "tagline": "ORDER TODAY. SHIP TODAY.",
             "accent_color": "#8cc63f",
             "feature_list": "Orders placed before 2PM (CST) ship same day.\nEfficient workflow and advanced equipment.\nReliable & consistent on-time delivery.",
-            "image": "shopify://shop_images/32a04a92-7bc6-4b72-997b-078ff76a9420.png"
+            "image": "shopify://shop_images/32a04a92-7bc6-4b72-997b-078ff76a9420.png",
+            "image_alt": "DESCECI DTF production team preparing artwork for fast turnaround"
           }
         },
         "card-minimum": {
@@ -441,7 +444,8 @@
             "tagline": "ONE PIECE OR THOUSANDS, WE PRINT.",
             "accent_color": "#11a9a4",
             "feature_list": "No minimum order quantity.\nPerfect for test prints, samples and bulk orders.\nFlexibility to support your business growth.",
-            "image": "shopify://shop_images/1175e92e-f1b3-4162-8e36-fa107c2bf793.png"
+            "image": "shopify://shop_images/1175e92e-f1b3-4162-8e36-fa107c2bf793.png",
+            "image_alt": "Packaged DTF transfer orders ready for shipping"
           }
         }
       },
@@ -481,6 +485,7 @@
           "type": "advantage_item",
           "settings": {
             "image": "shopify://shop_images/1493cb20-11d0-455c-85bb-201258c93537.png",
+            "image_alt": "Vibrant DTF tiger print on black T-shirt with sharp color detail",
             "item_title": "Vibrant Colors",
             "item_description": "Bright, detailed prints with excellent wash durability",
             "icon_1": "shopify://shop_images/15885382-0ac7-4ffa-ac23-42199ea71682.png",
@@ -497,6 +502,7 @@
           "type": "advantage_item",
           "settings": {
             "image": "shopify://shop_images/3b286a42-95b1-4255-9e6b-b7b9ebcd8996.png",
+            "image_alt": "Cotton polyester and blended fabrics compatible with DTF transfers",
             "item_title": "Works on Any Fabric",
             "item_description": "Designed for cotton, polyester, canvas, and more",
             "icon_1": "shopify://shop_images/807d218d-f83b-4753-b567-816e55abfc91.png",
@@ -513,6 +519,7 @@
           "type": "advantage_item",
           "settings": {
             "image": "shopify://shop_images/0b6a5579-b1b5-4c6f-b487-adc26da5a362.png",
+            "image_alt": "Custom DTF apparel artwork for T-shirts caps and merchandise",
             "item_title": "Unlimited Customization",
             "item_description": "From one piece to bulk orders, we make custom printing easy",
             "icon_1": "shopify://shop_images/a46eb8ae-e03e-47c8-88c0-cf1138daac04.png",
@@ -564,6 +571,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/4fe72c6e-87c4-43e9-ab61-d32454d8b1fa.png",
+            "image_alt": "Colorful DTF tiger transfer applied to a white T-shirt",
             "title": "Bring Your Designs to Life",
             "text": "<p><br/>Our advanced printing technology delivers vibrant graphics that stand out on any garment while maintaining excellent wash durability.<br/><br/></p>",
             "link_label": "",
@@ -574,6 +582,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/327422dc-7099-403b-bec6-1d0bc4364f62.png",
+            "image_alt": "Custom DTF gang sheet with multiple full-color designs",
             "title": "One Transfer Solution for Every Project",
             "text": "<p><br/>Our DTF transfers are engineered to perform on a wide variety of materials, giving you the freedom to create more products without limitations.<br/><br/></p>",
             "link_label": "",
@@ -584,6 +593,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/b0967630-ef28-4141-82bb-661462910c06.png",
+            "image_alt": "Custom DTF printing for hoodies tote bags and branded apparel",
             "title": "Unlimited Customization OptionsCreate More. Sell More.",
             "text": "<p><br/>From single custom orders to large production runs, DESCECI makes custom printing simple and efficient.<br/></p>",
             "link_label": "",
@@ -698,6 +708,7 @@
           "type": "eligible_item",
           "settings": {
             "image": "shopify://shop_images/a4658cbc-004c-4be1-80ff-c8a94fad193c.png",
+            "image_alt": "Close-up of printed DTF transfers showing print quality details",
             "title": "PRINTING DEFECTS",
             "text": "Blurry, incomplete, or defective prints caused by production issues."
           }
@@ -706,6 +717,7 @@
           "type": "eligible_item",
           "settings": {
             "image": "shopify://shop_images/276e8e12-b2e8-4847-bc12-46e54dbe31cd.png",
+            "image_alt": "Custom DTF transfer artwork example on clear transfer film",
             "title": "WRONG SIZE / DESIGN",
             "text": "Incorrect size or design shipped due to our fulfillment error."
           }
@@ -714,6 +726,7 @@
           "type": "eligible_item",
           "settings": {
             "image": "shopify://shop_images/059997aa-a20e-4da5-b461-9cb96cf78679.png",
+            "image_alt": "Damaged DESCECI shipping box used for transit damage example",
             "title": "DAMAGED IN TRANSIT",
             "text": "Transfers damaged during shipping with clear packaging evidence."
           }
@@ -722,6 +735,7 @@
           "type": "eligible_item",
           "settings": {
             "image": "shopify://shop_images/88c02f8c-1bbb-4e0c-a595-ae0584fdf24c.png",
+            "image_alt": "DTF transfer roll and printed transfers prepared for order fulfillment",
             "title": "MISSING ITEMS",
             "text": "Items confirmed missing from your delivered order."
           }
@@ -730,6 +744,7 @@
           "type": "eligible_item",
           "settings": {
             "image": "shopify://shop_images/ab4a0996-6d34-48ed-88d7-8a192a7f19ad.png",
+            "image_alt": "DTF transfer print inspected for adhesion and print quality",
             "title": "QUALITY FAILURE",
             "text": "Transfers that fail under normal recommended pressing conditions."
           }
@@ -738,6 +753,7 @@
           "type": "not_eligible_item",
           "settings": {
             "image": "shopify://shop_images/2f9164ae-2859-4fda-a6e3-e67d8fd15006.png",
+            "image_alt": "DTF artwork file displayed on computer for print preparation",
             "title": "ARTWORK ISSUES",
             "text": "Low-resolution, pixelated, or incorrectly prepared artwork files."
           }
@@ -746,6 +762,7 @@
           "type": "not_eligible_item",
           "settings": {
             "image": "shopify://shop_images/e3f7b953-0aec-4653-9096-0b8ecb259862.png",
+            "image_alt": "Measuring DTF transfer artwork size with a tape measure",
             "title": "SIZE / DESIGN ERRORS",
             "text": "Incorrect sizing or placement caused by customer-provided specifications."
           }
@@ -754,6 +771,7 @@
           "type": "not_eligible_item",
           "settings": {
             "image": "shopify://shop_images/339c90e4-c04c-47da-9203-092327967512.png",
+            "image_alt": "DTF artwork color setup and print preparation on design software",
             "title": "IMPROPER APPLICATION",
             "text": "Issues caused by incorrect temperature, pressure, or press time."
           }
@@ -762,6 +780,7 @@
           "type": "not_eligible_item",
           "settings": {
             "image": "shopify://shop_images/02d47b27-f8d9-4feb-a02a-0c662b3ace8d.png",
+            "image_alt": "Applying a DTF transfer to a black T-shirt with a heat press",
             "title": "FABRIC INCOMPATIBILITY",
             "text": "Results affected by unsupported or unsuitable garment materials."
           }
@@ -770,6 +789,7 @@
           "type": "not_eligible_item",
           "settings": {
             "image": "shopify://shop_images/35c2c8da-23e0-43cd-884b-75204be775c9.png",
+            "image_alt": "Customer inspecting a printed DTF transfer for color and quality",
             "title": "NORMAL VARIATION",
             "text": "Slight color or finish differences that fall within normal production range."
           }
@@ -838,6 +858,7 @@
           "type": "guide_step",
           "settings": {
             "image": "shopify://shop_images/df421c6b-7c2d-47c9-9cca-0c4789808173.png",
+            "image_alt": "Positioning a DTF transfer on a black T-shirt before heat pressing",
             "content_icon": "shopify://shop_images/f4584658-6d24-48e7-8ce5-e612b621cbb4.png",
             "text": "1. PLACE & ALIGN\nPlace the transfer on the garment and ensure it is flat and centered."
           }
@@ -846,6 +867,7 @@
           "type": "guide_step",
           "settings": {
             "image": "shopify://shop_images/bc92049d-c947-4e4c-a6a3-65f498858b55.png",
+            "image_alt": "Heat pressing a DTF transfer onto a black T-shirt",
             "content_icon": "shopify://shop_images/bcb03b11-4ca4-4dd4-9a2e-af26b07a8a0b.png",
             "text": "2. HEAT PRESS\nPress at 150-160°C (302-320°F) with medium pressure for 8-10 seconds."
           }
@@ -854,6 +876,7 @@
           "type": "guide_step",
           "settings": {
             "image": "shopify://shop_images/e4ff946d-4335-446c-87c3-0ff3d02b7a80.png",
+            "image_alt": "Peeling DTF transfer film from a pressed T-shirt design",
             "content_icon": "shopify://shop_images/d7427453-55ea-4bb5-b6aa-f03b9e18f352.png",
             "text": "3. PEEL\nPeel the film off while it's still hot."
           }
@@ -862,6 +885,7 @@
           "type": "guide_step",
           "settings": {
             "image": "shopify://shop_images/74a3f944-72f9-4efa-80d5-f13157ebdeea.png",
+            "image_alt": "Final heat press step for a DTF transfer on a black T-shirt",
             "content_icon": "shopify://shop_images/3508a269-3c57-4084-a19c-e5261dd519ad.png",
             "text": "4. FINAL PRESS\nPress again for 150-160°C (302-320°F) with medium pressure for 5 seconds."
           }

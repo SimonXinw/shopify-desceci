@@ -110,6 +110,12 @@
         {%- endif -%}
 
         {%- if section.settings.background_image != blank -%}
+          {%- liquid
+            assign background_image_alt = section.settings.background_image.alt
+            if background_image_alt == blank
+              assign background_image_alt = section.settings.background_image_alt
+            endif
+          -%}
           {{
             section.settings.background_image
             | image_url: width: 3840
@@ -118,9 +124,16 @@
               widths: '750, 1100, 1500, 1920, 2560, 3200, 3840',
               sizes: '100vw',
               loading: image_loading,
-              fetchpriority: fetch_priority
+              fetchpriority: fetch_priority,
+              alt: background_image_alt
           }}
         {%- else -%}
+          {%- liquid
+            assign background_image_alt = section.settings.mobile_background_image.alt
+            if background_image_alt == blank
+              assign background_image_alt = section.settings.background_image_alt
+            endif
+          -%}
           {{
             section.settings.mobile_background_image
             | image_url: width: 1500
@@ -129,7 +142,8 @@
               widths: '750, 1100, 1500',
               sizes: '100vw',
               loading: image_loading,
-              fetchpriority: fetch_priority
+              fetchpriority: fetch_priority,
+              alt: background_image_alt
           }}
         {%- endif -%}
       </picture>
@@ -179,7 +193,8 @@
                       sizes: '20px',
                       loading: 'lazy',
                       width: 14,
-                      height: 14
+                      height: 14,
+                      alt: ''
                   }}
                 {%- else -%}
                   <svg
@@ -223,7 +238,8 @@
                     class: 'icon',
                     widths: '40, 80, 120, 160',
                     sizes: '48px',
-                    loading: 'lazy'
+                    loading: 'lazy',
+                    alt: ''
                 }}
               {%- endif -%}
 
@@ -260,7 +276,7 @@
                   {{
                     section.settings.button_icon_1
                     | image_url: width: 80
-                    | image_tag: class: 'icon', widths: '20, 40, 60, 80', sizes: '20px', loading: 'lazy'
+                    | image_tag: class: 'icon', widths: '20, 40, 60, 80', sizes: '20px', loading: 'lazy', alt: ''
                   }}
                 {%- endif -%}
 
@@ -284,7 +300,7 @@
                   {{
                     section.settings.button_icon_2
                     | image_url: width: 80
-                    | image_tag: class: 'icon', widths: '20, 40, 60, 80', sizes: '20px', loading: 'lazy'
+                    | image_tag: class: 'icon', widths: '20, 40, 60, 80', sizes: '20px', loading: 'lazy', alt: ''
                   }}
                 {%- endif -%}
 
@@ -694,6 +710,12 @@
       "id": "mobile_background_image",
       "label": "移动端背景图片",
       "info": "不上传时，移动端沿用 PC 端背景图"
+    },
+    {
+      "type": "text",
+      "id": "background_image_alt",
+      "label": "背景图 ALT 兜底文本",
+      "info": "优先使用 Shopify 媒体库「替代文本」；未填写时使用此处兜底"
     },
     {
       "type": "color",

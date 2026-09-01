@@ -82,7 +82,15 @@
               <article class="ags_card">
                 <div class="ags_image_area">
                   {%- if block.settings.image != blank -%}
-                    {%- assign step_image_alt = block.settings.image.alt | default: block.settings.text -%}
+                    {%- liquid
+                      assign step_image_alt = block.settings.image.alt
+                      if step_image_alt == blank
+                        assign step_image_alt = block.settings.image_alt
+                      endif
+                      if step_image_alt == blank
+                        assign step_image_alt = block.settings.text
+                      endif
+                    -%}
                     {{
                       block.settings.image
                       | image_url: width: 800
@@ -581,6 +589,12 @@
           "type": "image_picker",
           "id": "image",
           "label": "步骤图片"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "图片 ALT 兜底文本",
+          "info": "优先使用 Shopify 媒体库「替代文本」；未填写时使用此处兜底，再回退到步骤文案"
         },
         {
           "type": "image_picker",

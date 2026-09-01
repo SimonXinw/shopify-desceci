@@ -50,7 +50,7 @@
               {{
                 block.settings.leading_icon
                 | image_url: width: 240
-                | image_tag: class: 'leading_icon', widths: '80, 120, 240'
+                | image_tag: class: 'leading_icon', widths: '80, 120, 240', alt: ''
               }}
             {%- endif -%}
 
@@ -68,7 +68,7 @@
               {{
                 block.settings.trailing_icon
                 | image_url: width: 240
-                | image_tag: class: 'trailing_icon', widths: '80, 120, 240'
+                | image_tag: class: 'trailing_icon', widths: '80, 120, 240', alt: ''
               }}
             {%- endif -%}
           </div>
@@ -91,13 +91,23 @@
 
           <div class="card_media">
             {%- if block.settings.image != blank -%}
+              {%- liquid
+                assign image_alt = block.settings.image.alt
+                if image_alt == blank
+                  assign image_alt = block.settings.image_alt
+                endif
+                if image_alt == blank
+                  assign image_alt = block.settings.title_primary
+                endif
+              -%}
               {{
                 block.settings.image
                 | image_url: width: 1600
                 | image_tag:
                   class: 'card_image',
                   widths: '400, 600, 800, 1200, 1600',
-                  sizes: '(min-width: 750px) 32vw, 100vw'
+                  sizes: '(min-width: 750px) 32vw, 100vw',
+                  alt: image_alt
               }}
             {%- else -%}
               {{ 'lifestyle-1' | placeholder_svg_tag: 'card_image placeholder' }}
@@ -547,6 +557,12 @@
           "type": "image_picker",
           "id": "image",
           "label": "卡片图片（8:3）"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "图片 ALT 兜底文本",
+          "info": "优先使用 Shopify 媒体库「替代文本」；未填写时使用此处兜底，再回退到卡片标题"
         }
       ]
     }

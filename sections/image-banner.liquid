@@ -69,6 +69,10 @@
         else
           assign sizes = full_width
         endif
+        assign image_alt = section.settings.image.alt
+        if image_alt == blank
+          assign image_alt = section.settings.image_alt
+        endif
       -%}
       {{
         section.settings.image
@@ -79,7 +83,8 @@
           class: image_class,
           sizes: sizes,
           widths: widths,
-          fetchpriority: fetch_priority
+          fetchpriority: fetch_priority,
+          alt: image_alt
       }}
     </div>
   {%- elsif section.settings.image_2 == blank -%}
@@ -101,6 +106,10 @@
         else
           assign sizes = full_width
         endif
+        assign image_alt_2 = section.settings.image_2.alt
+        if image_alt_2 == blank
+          assign image_alt_2 = section.settings.image_alt_2
+        endif
       -%}
       {{
         section.settings.image_2
@@ -111,7 +120,8 @@
           class: image_class_2,
           sizes: sizes,
           widths: widths,
-          fetchpriority: fetch_priority
+          fetchpriority: fetch_priority,
+          alt: image_alt_2
       }}
     </div>
   {%- endif -%}
@@ -181,9 +191,21 @@
       "label": "t:sections.image-banner.settings.image.label"
     },
     {
+      "type": "text",
+      "id": "image_alt",
+      "label": "图片 1 ALT 兜底文本",
+      "info": "优先使用 Shopify 媒体库「替代文本」；未填写时使用此处兜底"
+    },
+    {
       "type": "image_picker",
       "id": "image_2",
       "label": "t:sections.image-banner.settings.image_2.label"
+    },
+    {
+      "type": "text",
+      "id": "image_alt_2",
+      "label": "图片 2 ALT 兜底文本",
+      "info": "优先使用 Shopify 媒体库「替代文本」；未填写时使用此处兜底"
     },
     {
       "type": "range",
