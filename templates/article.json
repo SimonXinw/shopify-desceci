@@ -63,7 +63,7 @@
         "blog": "dtf-supplies",
         "post_limit": 4,
         "heading": "DTF Supplies",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "columns_desktop": 3,
         "show_view_all": true,
         "show_image": true,
