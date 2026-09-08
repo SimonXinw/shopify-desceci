@@ -248,6 +248,7 @@
           "type": "eligible_item",
           "settings": {
             "image": "shopify://shop_images/a4658cbc-004c-4be1-80ff-c8a94fad193c.png",
+            "image_alt": "",
             "title": "PRINTING DEFECTS",
             "text": "Blurry, incomplete, or defective prints caused by production issues."
           }
@@ -256,6 +257,7 @@
           "type": "eligible_item",
           "settings": {
             "image": "shopify://shop_images/276e8e12-b2e8-4847-bc12-46e54dbe31cd.png",
+            "image_alt": "",
             "title": "WRONG SIZE / DESIGN",
             "text": "Incorrect size or design shipped due to our fulfillment error."
           }
@@ -264,6 +266,7 @@
           "type": "eligible_item",
           "settings": {
             "image": "shopify://shop_images/059997aa-a20e-4da5-b461-9cb96cf78679.png",
+            "image_alt": "",
             "title": "DAMAGED IN TRANSIT",
             "text": "Transfers damaged during shipping with clear packaging evidence."
           }
@@ -272,6 +275,7 @@
           "type": "eligible_item",
           "settings": {
             "image": "shopify://shop_images/88c02f8c-1bbb-4e0c-a595-ae0584fdf24c.png",
+            "image_alt": "",
             "title": "MISSING ITEMS",
             "text": "Items confirmed missing from your delivered order."
           }
@@ -280,6 +284,7 @@
           "type": "eligible_item",
           "settings": {
             "image": "shopify://shop_images/ab4a0996-6d34-48ed-88d7-8a192a7f19ad.png",
+            "image_alt": "",
             "title": "QUALITY FAILURE",
             "text": "Transfers that fail under normal recommended pressing conditions."
           }
@@ -288,6 +293,7 @@
           "type": "not_eligible_item",
           "settings": {
             "image": "shopify://shop_images/2f9164ae-2859-4fda-a6e3-e67d8fd15006.png",
+            "image_alt": "",
             "title": "ARTWORK ISSUES",
             "text": "Low-resolution, pixelated, or incorrectly prepared artwork files."
           }
@@ -296,6 +302,7 @@
           "type": "not_eligible_item",
           "settings": {
             "image": "shopify://shop_images/e3f7b953-0aec-4653-9096-0b8ecb259862.png",
+            "image_alt": "",
             "title": "SIZE / DESIGN ERRORS",
             "text": "Incorrect sizing or placement caused by customer-provided specifications."
           }
@@ -304,6 +311,7 @@
           "type": "not_eligible_item",
           "settings": {
             "image": "shopify://shop_images/339c90e4-c04c-47da-9203-092327967512.png",
+            "image_alt": "",
             "title": "IMPROPER APPLICATION",
             "text": "Issues caused by incorrect temperature, pressure, or press time."
           }
@@ -312,6 +320,7 @@
           "type": "not_eligible_item",
           "settings": {
             "image": "shopify://shop_images/02d47b27-f8d9-4feb-a02a-0c662b3ace8d.png",
+            "image_alt": "",
             "title": "FABRIC INCOMPATIBILITY",
             "text": "Results affected by unsupported or unsuitable garment materials."
           }
@@ -320,6 +329,7 @@
           "type": "not_eligible_item",
           "settings": {
             "image": "shopify://shop_images/35c2c8da-23e0-43cd-884b-75204be775c9.png",
+            "image_alt": "",
             "title": "NORMAL VARIATION",
             "text": "Slight color or finish differences that fall within normal production range."
           }
@@ -392,6 +402,16 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_liquid_pDYbWp": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.press_temperature.value != blank %}\n  <div class=\"dtf-specifications\">\n    <h2>DTF Transfer Specifications</h2>\n    \n    <div class=\"dtf-spec-row\">\n      <span>Press Temperature</span>\n      <span>{{ product.metafields.custom.press_temperature.value }}</span>\n    </div>\n  </div>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -400,6 +420,7 @@
     "disclosures",
     "related-products",
     "quality_promise_YJiqk9",
-    "contact_form_Cd8YLV"
+    "contact_form_Cd8YLV",
+    "custom_liquid_pDYbWp"
   ]
 }
