@@ -26,7 +26,7 @@
       "type": "featured-blog",
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
-        "blog": "news",
+        "blog": "{{ blog }}",
         "post_limit": 4,
         "heading": "",
         "heading_size": "h1",
