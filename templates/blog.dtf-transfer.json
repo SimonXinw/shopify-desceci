@@ -24,6 +24,7 @@
     },
     "featured_blog_deJHM3": {
       "type": "featured-blog",
+      "disabled": true,
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
         "blog": "news",
@@ -42,6 +43,7 @@
     },
     "featured_blog_kH77fd": {
       "type": "featured-blog",
+      "disabled": true,
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
         "blog": "dtf-supplies",
