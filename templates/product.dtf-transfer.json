@@ -51,11 +51,11 @@
           "type": "shopify://apps/kixxl/blocks/gangify_upload_button/cdfbfad9-7b2b-47ff-a143-b116e7f6339b",
           "settings": {
             "product": "{{product}}",
-            "text": "Create a Gang Sheet",
+            "text": "Design Your Transfer",
             "colour": "#008656",
             "cssClass": "",
             "inlineStyle": "",
-            "textUpload": "Upload a Gang Sheet",
+            "textUpload": "Upload Your Design",
             "colourUpload": "#008656",
             "cssClassUpload": "",
             "inlineStyleUpload": ""
@@ -119,6 +119,20 @@
             "cssClassUpload": "",
             "inlineStyleUpload": ""
           }
+        },
+        "kixxl_gangify_upload_button_4A8Tp9": {
+          "type": "shopify://apps/kixxl/blocks/gangify_upload_button/cdfbfad9-7b2b-47ff-a143-b116e7f6339b",
+          "settings": {
+            "product": "{{product}}",
+            "text": "Create a Gang Sheet",
+            "colour": "#008656",
+            "cssClass": "",
+            "inlineStyle": "",
+            "textUpload": "Upload a Gang Sheet",
+            "colourUpload": "#008656",
+            "cssClassUpload": "",
+            "inlineStyleUpload": ""
+          }
         }
       },
       "block_order": [
@@ -134,7 +148,8 @@
         "icon_with_text_UjxtEQ",
         "description",
         "share",
-        "kixxl_gangify_upload_button_wmCR3c"
+        "kixxl_gangify_upload_button_wmCR3c",
+        "kixxl_gangify_upload_button_4A8Tp9"
       ],
       "settings": {
         "enable_sticky_info": true,
