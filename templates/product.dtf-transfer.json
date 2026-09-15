@@ -51,7 +51,7 @@
           "type": "shopify://apps/kixxl/blocks/gangify_upload_button/cdfbfad9-7b2b-47ff-a143-b116e7f6339b",
           "settings": {
             "product": "{{product}}",
-            "text": "Design Your Transfer",
+            "text": "Upload Your Design",
             "colour": "#008656",
             "cssClass": "",
             "inlineStyle": "",
