@@ -49,6 +49,7 @@
         },
         "kixxl_gangify_upload_button_DzGLBY": {
           "type": "shopify://apps/kixxl/blocks/gangify_upload_button/cdfbfad9-7b2b-47ff-a143-b116e7f6339b",
+          "disabled": true,
           "settings": {
             "product": "{{product}}",
             "text": "Upload Your Design",
@@ -63,9 +64,16 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
+          }
+        },
+        "uploadly_file_upload_app_block_TcRgRJ": {
+          "type": "shopify://apps/uploadly-file-upload/blocks/app-block/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
+          "settings": {
+            "featured_product": "custom-dtf-transfers"
           }
         },
         "icon_with_text_YYxGpe": {
@@ -116,6 +124,7 @@
         "quantity_selector",
         "kixxl_gangify_upload_button_DzGLBY",
         "buy_buttons",
+        "uploadly_file_upload_app_block_TcRgRJ",
         "icon_with_text_YYxGpe",
         "icon_with_text_UjxtEQ",
         "description",
