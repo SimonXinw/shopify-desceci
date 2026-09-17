@@ -181,6 +181,11 @@
         "type": "shopify://apps/ta-labels-badges/blocks/bss-pl-config-data/91bfe765-b604-49a1-805e-3599fa600b24",
         "disabled": false,
         "settings": {}
+      },
+      "2187360915322861293": {
+        "type": "shopify://apps/uploadly-file-upload/blocks/app-embed/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
