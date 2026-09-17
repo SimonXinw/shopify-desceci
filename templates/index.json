@@ -215,9 +215,9 @@
           "settings": {
             "title": "DTF Transfer",
             "products": [
+              "products-dtf-gang-sheet-builder",
               "custom-dtf-transfers",
-              "products-custom-dtf-transfers-by-size",
-              "products-custom-uv-dtf-stickers"
+              "products-custom-dtf-transfers-by-size"
             ]
           }
         },
