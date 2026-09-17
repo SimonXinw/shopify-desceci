@@ -43,6 +43,12 @@
             "swatch_shape": "square"
           }
         },
+        "uploadly_file_upload_app_block_TcRgRJ": {
+          "type": "shopify://apps/uploadly-file-upload/blocks/app-block/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
+          "settings": {
+            "featured_product": "custom-dtf-transfers"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -68,12 +74,6 @@
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
-          }
-        },
-        "uploadly_file_upload_app_block_TcRgRJ": {
-          "type": "shopify://apps/uploadly-file-upload/blocks/app-block/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
-          "settings": {
-            "featured_product": "custom-dtf-transfers"
           }
         },
         "icon_with_text_YYxGpe": {
@@ -121,10 +121,10 @@
         "price",
         "inventory_hiBiYL",
         "variant_picker",
+        "uploadly_file_upload_app_block_TcRgRJ",
         "quantity_selector",
         "kixxl_gangify_upload_button_DzGLBY",
         "buy_buttons",
-        "uploadly_file_upload_app_block_TcRgRJ",
         "icon_with_text_YYxGpe",
         "icon_with_text_UjxtEQ",
         "description",
