@@ -71,6 +71,7 @@
         },
         "icon_with_text_YYxGpe": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
             "layout": "horizontal",
             "icon_1": "heart",
