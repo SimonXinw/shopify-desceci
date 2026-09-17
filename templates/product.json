@@ -54,6 +54,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "uploadly_file_upload_app_block_WcGLFW": {
+          "type": "shopify://apps/uploadly-file-upload/blocks/app-block/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
+          "settings": {
+            "featured_product": "{{product}}"
+          }
         }
       },
       "block_order": [
@@ -64,7 +70,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "uploadly_file_upload_app_block_WcGLFW"
       ],
       "settings": {
         "enable_sticky_info": true,
