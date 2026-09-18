@@ -31,7 +31,7 @@
         "text_8YxteL": {
           "type": "text",
           "settings": {
-            "text": "Upload your artwork. We print it. You press it.Vibrant, durable, ready-to-press DTF transfers for T-shirts, hoodies, bags, workwear, and more.",
+            "text": "Choose the best way to order your DTF transfers — shop by size, upload a ready-to-print gang sheet, or build your own gang sheet online.",
             "text_style": "body"
           }
         },
@@ -96,7 +96,7 @@
       "settings": {
         "collection": "dtf-transfer",
         "products_to_show": 3,
-        "title": "Shop DTF Trasnsfer",
+        "title": "Shop DTF Trasnsfers",
         "heading_size": "h1",
         "description": "<p>Choose the transfer option that works best for your project</p>",
         "show_description": false,
