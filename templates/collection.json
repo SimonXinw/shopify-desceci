@@ -96,9 +96,9 @@
       "settings": {
         "collection": "dtf-transfer",
         "products_to_show": 3,
-        "title": "Shop DTF Trasnsfers",
+        "title": "Choose How to Order Your DTF Transfers",
         "heading_size": "h1",
-        "description": "<p>Choose the transfer option that works best for your project</p>",
+        "description": "<h2>Whether you need a single design or a full gang sheet, choose the ordering option that fits your artwork.</h2>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 3,
