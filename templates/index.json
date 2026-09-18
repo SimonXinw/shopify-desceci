@@ -377,6 +377,7 @@
         "tab-diy",
         "tab-combo"
       ],
+      "disabled": true,
       "settings": {
         "tabs_label": "产品分类",
         "section_background": "#f4f5f6",
@@ -414,6 +415,7 @@
         "heading_rf9699",
         "text_TdkLXU"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -517,6 +519,7 @@
         "card-turnaround",
         "card-minimum"
       ],
+      "disabled": true,
       "settings": {
         "heading": "OUR 3 CORE ADVANTAGES",
         "heading_size": 34,
@@ -601,6 +604,7 @@
         "advantage_fabric",
         "advantage_custom"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Why Choose DESCECI DTF Transfers?",
         "heading_color": "#121212",
@@ -669,6 +673,7 @@
         "column_nAEnJB",
         "column_LWkzjJ"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Premium DTF Transfers Built for Creators & Businesses",
@@ -870,6 +875,7 @@
         "not_eligible_4",
         "not_eligible_5"
       ],
+      "disabled": true,
       "settings": {
         "eyebrow": "QUALITY GUARANTEE",
         "eyebrow_color": "#e8913a",
@@ -960,6 +966,7 @@
         "guide_step_3",
         "guide_step_4"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Step-by-Step Application Guide",
         "heading_left_icon": "shopify://shop_images/logo_1dc30dd9-e1f8-458b-b62a-aa0c06d88ece.png",
@@ -1037,6 +1044,7 @@
         "buy_buttons_Cpt4VV",
         "share_4XfYRw"
       ],
+      "disabled": true,
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "dtf-ink",
@@ -1080,6 +1088,7 @@
         "featured_collection_nELVLV",
         "featured_collection_REgdb8"
       ],
+      "disabled": true,
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "title": "",
