@@ -69,6 +69,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_3Xejdc": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"desceci-contact\">\n\n\n<div class=\"contact-container\">\n\n\n\n<div class=\"contact-label\">\nDESCECI SUPPORT\n</div>\n\n\n\n\n<h2>\nNeed Help With Your DTF Order?\n</h2>\n\n\n\n<p>\nHave questions about products, compatibility,\nbulk orders, or shipping?\nOur team is ready to help.\n</p>\n\n\n\n\n\n<div class=\"contact-email\">\n\n\n<a href=\"mailto:sales@desceci.com\">\n\nsales@desceci.com\n\n</a>\n\n\n</div>\n\n\n\n\n\n<a href=\"mailto:sales@desceci.com\"\nclass=\"contact-btn\">\n\nContact Us →\n\n</a>\n\n\n\n\n\n</div>\n\n\n</section>\n\n\n\n\n\n\n\n<style>\n\n\n.desceci-contact{\n\n\npadding:70px 20px;\n\nbackground:#f8f9fb;\n\n\n}\n\n\n\n\n.contact-container{\n\n\nmax-width:800px;\n\nmargin:auto;\n\ntext-align:center;\n\n\n}\n\n\n\n\n.contact-label{\n\n\nfont-size:14px;\n\nletter-spacing:3px;\n\nfont-weight:600;\n\ncolor:#61865d;\n\nmargin-bottom:15px;\n\n\n}\n\n\n\n\n\n.contact-container h2{\n\n\nfont-size:36px;\n\nfont-weight:700;\n\ncolor:#111827;\n\nmargin:10px 0 18px;\n\n\n}\n\n\n\n\n\n.contact-container p{\n\n\nfont-size:17px;\n\nline-height:1.6;\n\ncolor:#6b7280;\n\nmax-width:600px;\n\nmargin:0 auto 25px;\n\n\n}\n\n\n\n\n\n.contact-email{\n\n\nmargin-bottom:25px;\n\n\n}\n\n\n\n\n\n.contact-email a{\n\n\nfont-size:24px;\n\nfont-weight:600;\n\ncolor:#111827;\n\ntext-decoration:none;\n\n\n}\n\n\n\n.contact-email a:hover{\n\n\ncolor:#61865d;\n\n\n}\n\n\n\n\n\n\n.contact-btn{\n\n\ndisplay:inline-block;\n\nbackground:#111827;\n\ncolor:white;\n\npadding:15px 40px;\n\nfont-size:16px;\n\nfont-weight:600;\n\ntext-decoration:none;\n\n\n}\n\n\n\n.contact-btn:hover{\n\n\nopacity:.85;\n\n\n}\n\n\n\n\n\n\n\n@media(max-width:600px){\n\n\n.contact-container h2{\n\n\nfont-size:30px;\n\n\n}\n\n\n\n.contact-email a{\n\n\nfont-size:20px;\n\n\n}\n\n\n\n}\n\n\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "disabled": true,
@@ -689,6 +699,7 @@
     "custom_liquid_npM4km",
     "custom_liquid_T9NG4x",
     "custom_liquid_BFfVpW",
+    "custom_liquid_3Xejdc",
     "banner",
     "image_text_banner_z9mUaY",
     "product-grid",
