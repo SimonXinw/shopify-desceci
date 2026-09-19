@@ -82,6 +82,26 @@
         "padding_bottom": 12
       }
     },
+    "custom_liquid_VW3Ngf": {
+      "type": "custom-liquid",
+      "name": "参数表",
+      "settings": {
+        "custom_liquid": "<section class=\"desceci-specs\">\n\n<div class=\"desceci-specs-container\">\n\n\n<div class=\"desceci-specs-header\">\n\n<span>\nPRODUCT SPECIFICATIONS\n</span>\n\n<h2>\nDTF Ink Technical Specifications\n</h2>\n\n<p>\nProfessional DTF printing ink engineered for stable performance,\nvibrant colors, and reliable production.\n</p>\n\n\n</div>\n\n\n\n\n\n<div class=\"desceci-specs-box\">\n\n\n\n<div class=\"spec-row\">\n\n<div class=\"spec-title\">\nInk Type\n</div>\n\n<div class=\"spec-value\">\nDirect To Film (DTF) Printing Ink\n</div>\n\n</div>\n\n\n\n\n\n<div class=\"spec-row\">\n\n<div class=\"spec-title\">\nColor System\n</div>\n\n<div class=\"spec-value\">\nCMYK + White\n</div>\n\n</div>\n\n\n\n\n\n<div class=\"spec-row\">\n\n<div class=\"spec-title\">\nBottle Size\n</div>\n\n<div class=\"spec-value\">\n1000ml Bottle\n</div>\n\n</div>\n\n\n\n\n\n<div class=\"spec-row\">\n\n<div class=\"spec-title\">\nCompatible Printheads\n</div>\n\n<div class=\"spec-value\">\nEpson I3200 / I1600 / F1080 / XP600\n</div>\n\n</div>\n\n\n\n\n\n<div class=\"spec-row\">\n\n<div class=\"spec-title\">\nApplication\n</div>\n\n<div class=\"spec-value\">\nDTF Transfer Printing for Apparel & Textiles\n</div>\n\n</div>\n\n\n\n\n\n<div class=\"spec-row\">\n\n<div class=\"spec-title\">\nFabric Compatibility\n</div>\n\n<div class=\"spec-value\">\nCotton, Polyester, Blended Fabrics\n</div>\n\n</div>\n\n\n\n\n\n<div class=\"spec-row\">\n\n<div class=\"spec-title\">\nPrinting Performance\n</div>\n\n<div class=\"spec-value\">\nHigh Color Density & Smooth Ink Flow\n</div>\n\n</div>\n\n\n\n\n\n<div class=\"spec-row\">\n\n<div class=\"spec-title\">\nStorage Conditions\n</div>\n\n<div class=\"spec-value\">\nStore in a Cool, Dry Place Away From Direct Sunlight\n</div>\n\n</div>\n\n\n\n\n\n<div class=\"spec-row\">\n\n<div class=\"spec-title\">\nRecommended Shelf Life\n</div>\n\n<div class=\"spec-value\">\n12 Months\n</div>\n\n</div>\n\n\n\n</div>\n\n\n</div>\n\n\n</section>\n\n\n\n\n\n\n<style>\n\n\n.desceci-specs{\n\n\npadding:65px 20px;\n\nbackground:#f8fafc;\n\n\n}\n\n\n\n.desceci-specs-container{\n\n\nmax-width:1100px;\n\nmargin:auto;\n\n\n}\n\n\n\n.desceci-specs-header{\n\n\ntext-align:center;\n\nmargin-bottom:40px;\n\n\n}\n\n\n\n.desceci-specs-header span{\n\n\nfont-size:12px;\n\nletter-spacing:3px;\n\nfont-weight:600;\n\ncolor:#6f8664;\n\n\n}\n\n\n\n.desceci-specs-header h2{\n\n\nfont-size:36px;\n\nmargin:12px 0;\n\ncolor:#111827;\n\nfont-weight:700;\n\n\n}\n\n\n\n.desceci-specs-header p{\n\n\nfont-size:16px;\n\ncolor:#6b7280;\n\nmax-width:700px;\n\nmargin:auto;\n\nline-height:1.6;\n\n\n}\n\n\n\n\n.desceci-specs-box{\n\n\nbackground:white;\n\nborder:1px solid #e5e7eb;\n\n\n}\n\n\n\n\n\n.spec-row{\n\n\ndisplay:grid;\n\ngrid-template-columns:280px 1fr;\n\nborder-bottom:1px solid #e5e7eb;\n\n\n}\n\n\n\n.spec-row:last-child{\n\n\nborder-bottom:none;\n\n\n}\n\n\n\n\n.spec-title{\n\n\npadding:20px 25px;\n\nfont-weight:600;\n\ncolor:#111827;\n\nbackground:#f8fafc;\n\n\n}\n\n\n\n\n.spec-value{\n\n\npadding:20px 25px;\n\ncolor:#4b5563;\n\nfont-size:15px;\n\n\n}\n\n\n\n\n@media(max-width:700px){\n\n\n.spec-row{\n\n\ngrid-template-columns:1fr;\n\n\n}\n\n\n\n.spec-title{\n\n\npadding:15px 20px;\n\n\n}\n\n\n\n.spec-value{\n\n\npadding:15px 20px;\n\n\n}\n\n\n\n.desceci-specs-header h2{\n\n\nfont-size:30px;\n\n\n}\n\n\n\n}\n\n\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_BYthXQ": {
+      "type": "custom-liquid",
+      "name": "Technical Performance & Quality Testing",
+      "settings": {
+        "custom_liquid": "<section class=\"desceci-ink-testing\">\n\n<div class=\"desceci-ink-testing__inner\">\n\n\n<div class=\"desceci-ink-testing__header\">\n\n<span class=\"desceci-ink-testing__eyebrow\">\nDESCECI DTF INK TESTING\n</span>\n\n\n<h2 class=\"desceci-ink-testing__title\">\nTechnical Performance & Quality Testing\n</h2>\n\n\n<p class=\"desceci-ink-testing__subtitle\">\nDESCECI DTF Ink is tested for printing stability,\ncolor performance, and transfer reliability.\n</p>\n\n\n</div>\n\n\n\n\n\n<div class=\"desceci-ink-testing__accordion\">\n\n\n\n<!-- 01 -->\n\n<details class=\"desceci-test-item\">\n\n\n<summary class=\"desceci-test-summary\">\n\n<div class=\"desceci-test-summary__left\">\n\n<span class=\"desceci-test-number\">\n01\n</span>\n\n\n<div class=\"desceci-test-heading\">\n\n<h3>\nInk Flow Stability Test\n</h3>\n\n<p>\nContinuous printing performance\n</p>\n\n</div>\n\n</div>\n\n\n<span class=\"desceci-test-toggle\">\n+\n</span>\n\n\n</summary>\n\n\n\n\n\n<div class=\"desceci-test-content\">\n\n\n<p class=\"desceci-test-intro\">\nContinuous printing tests ensure smooth ink delivery and stable output performance across CMYK + White ink channels.\n</p>\n\n\n\n<ul class=\"desceci-test-points\">\n\n<li>\n✓ CMYK + White ink channels tested\n</li>\n\n<li>\n✓ 100㎡ continuous printing test\n</li>\n\n<li>\n✓ Stable printing performance\n</li>\n\n<li>\n✓ No broken lines during testing\n</li>\n\n\n</ul>\n\n\n\n</div>\n\n\n</details>\n\n\n\n\n\n\n\n<!-- 02 -->\n\n\n<details class=\"desceci-test-item\">\n\n\n<summary class=\"desceci-test-summary\">\n\n\n<div class=\"desceci-test-summary__left\">\n\n\n<span class=\"desceci-test-number\">\n02\n</span>\n\n\n<div class=\"desceci-test-heading\">\n\n\n<h3>\nNozzle Stability Test\n</h3>\n\n\n<p>\nStandby printhead performance\n</p>\n\n\n</div>\n\n\n</div>\n\n\n\n<span class=\"desceci-test-toggle\">\n+\n</span>\n\n\n</summary>\n\n\n\n\n<div class=\"desceci-test-content\">\n\n\n<p class=\"desceci-test-intro\">\n\nEvaluated after extended standby periods to maintain reliable printhead performance.\n\n</p>\n\n\n\n<ul class=\"desceci-test-points\">\n\n\n<li>\n✓ 12 Hour Standby Test\n</li>\n\n<li>\n✓ 24 Hour Standby Test\n</li>\n\n<li>\n✓ 36 Hour Standby Test\n</li>\n\n<li>\n✓ Stable nozzle performance\n</li>\n\n\n</ul>\n\n\n</div>\n\n\n</details>\n\n\n\n\n\n\n\n<!-- 03 -->\n\n\n<details class=\"desceci-test-item\">\n\n\n<summary class=\"desceci-test-summary\">\n\n\n<div class=\"desceci-test-summary__left\">\n\n\n<span class=\"desceci-test-number\">\n03\n</span>\n\n\n\n<div class=\"desceci-test-heading\">\n\n\n<h3>\nColor Fastness Performance\n</h3>\n\n\n<p>\nDurability after transfer\n</p>\n\n\n</div>\n\n\n</div>\n\n\n\n<span class=\"desceci-test-toggle\">\n+\n</span>\n\n\n</summary>\n\n\n\n\n\n<div class=\"desceci-test-content\">\n\n\n<p class=\"desceci-test-intro\">\n\nTested for color durability after transfer application.\n\n</p>\n\n\n\n<ul class=\"desceci-test-points\">\n\n\n<li>\n✓ Dry Rubbing: 4-5 Grade\n</li>\n\n\n<li>\n✓ Wet Rubbing: 3 Grade\n</li>\n\n\n<li>\n✓ Washing Resistance: 4-5 Grade\n</li>\n\n\n<li>\n✓ Excellent color retention\n</li>\n\n\n</ul>\n\n\n<p class=\"desceci-test-note\">\n\nGrade scale: 0-5, with 5 being the best performance.\n\n</p>\n\n\n\n</div>\n\n\n</details>\n\n\n\n\n\n\n\n<!-- 04 -->\n\n\n<details class=\"desceci-test-item\">\n\n\n<summary class=\"desceci-test-summary\">\n\n\n<div class=\"desceci-test-summary__left\">\n\n\n<span class=\"desceci-test-number\">\n04\n</span>\n\n\n\n<div class=\"desceci-test-heading\">\n\n\n<h3>\nApplication Compatibility\n</h3>\n\n\n<p>\nSystem-level print application tests\n</p>\n\n\n</div>\n\n\n</div>\n\n\n\n<span class=\"desceci-test-toggle\">\n+\n</span>\n\n\n</summary>\n\n\n\n\n<div class=\"desceci-test-content\">\n\n\n<p class=\"desceci-test-intro\">\n\nVerified across key DTF application scenarios for reliable production performance.\n\n</p>\n\n\n\n<ul class=\"desceci-test-points\">\n\n\n<li>\n✓ Color density testing\n</li>\n\n\n<li>\n✓ White & color ink compatibility\n</li>\n\n\n<li>\n✓ Ink mixing stability\n</li>\n\n\n<li>\n✓ High ink volume printing test\n</li>\n\n\n<li>\n✓ Clean peel performance\n</li>\n\n\n</ul>\n\n\n\n</div>\n\n\n</details>\n\n\n\n\n</div>\n\n\n</div>\n\n\n</section>\n\n\n\n\n\n\n\n<style>\n\n\n.desceci-ink-testing{\n\n\npadding:55px 20px;\n\nbackground:#ffffff;\n\n\n}\n\n\n\n.desceci-ink-testing__inner{\n\n\nmax-width:1180px;\n\nmargin:auto;\n\n\n}\n\n\n\n\n.desceci-ink-testing__header{\n\n\ntext-align:center;\n\nmargin-bottom:35px;\n\n\n}\n\n\n\n\n.desceci-ink-testing__eyebrow{\n\n\nfont-size:12px;\n\nletter-spacing:3px;\n\nfont-weight:600;\n\ncolor:#6f8664;\n\n\n}\n\n\n\n\n.desceci-ink-testing__title{\n\n\nfont-size:36px;\n\nline-height:1.2;\n\nfont-weight:700;\n\ncolor:#111827;\n\nmargin:12px 0;\n\n\n}\n\n\n\n\n\n.desceci-ink-testing__subtitle{\n\n\nfont-size:16px;\n\nline-height:1.6;\n\ncolor:#6b7280;\n\nmax-width:720px;\n\nmargin:auto;\n\n\n}\n\n\n\n\n\n.desceci-ink-testing__accordion{\n\n\ndisplay:grid;\n\ngrid-template-columns:repeat(2,1fr);\n\ngap:18px;\n\n\n}\n\n\n\n\n\n.desceci-test-item{\n\n\nbackground:#f8fafc;\n\nborder:1px solid #e5e7eb;\n\n\n}\n\n\n\n\n.desceci-test-summary{\n\n\npadding:20px 22px;\n\ndisplay:flex;\n\njustify-content:space-between;\n\nalign-items:center;\n\ncursor:pointer;\n\nlist-style:none;\n\n\n}\n\n\n\n.desceci-test-summary::-webkit-details-marker{\n\n\ndisplay:none;\n\n\n}\n\n\n\n\n.desceci-test-summary__left{\n\n\ndisplay:flex;\n\nalign-items:center;\n\ngap:18px;\n\n\n}\n\n\n\n\n\n.desceci-test-number{\n\n\nfont-size:32px;\n\nfont-weight:700;\n\ncolor:#6f8664;\n\n\n}\n\n\n\n\n.desceci-test-heading h3{\n\n\nfont-size:22px;\n\nline-height:1.25;\n\nfont-weight:700;\n\ncolor:#111827;\n\nmargin:0 0 5px;\n\n\n}\n\n\n\n\n.desceci-test-heading p{\n\n\nfont-size:14px;\n\ncolor:#6b7280;\n\nmargin:0;\n\n\n}\n\n\n\n\n.desceci-test-toggle{\n\n\nfont-size:24px;\n\ncolor:#111827;\n\n\n}\n\n\n\n\n.desceci-test-content{\n\n\npadding:0 22px 22px;\n\nborder-top:1px solid #e5e7eb;\n\n\n}\n\n\n\n\n.desceci-test-intro{\n\n\nfont-size:15px;\n\nline-height:1.7;\n\ncolor:#6b7280;\n\nmargin:18px 0;\n\n\n}\n\n\n\n\n\n.desceci-test-points{\n\n\npadding-left:0;\n\nlist-style:none;\n\nmargin:0;\n\n\n}\n\n\n\n.desceci-test-points li{\n\n\nfont-size:15px;\n\ncolor:#374151;\n\nmargin-bottom:10px;\n\n\n}\n\n\n\n\n.desceci-test-note{\n\n\nfont-size:13px;\n\ncolor:#6b7280;\n\nmargin-top:15px;\n\n\n}\n\n\n\n\n.desceci-test-item[open] .desceci-test-toggle{\n\n\ntransform:rotate(45deg);\n\n\n}\n\n\n\n\n\n@media(max-width:900px){\n\n\n.desceci-ink-testing__accordion{\n\n\ngrid-template-columns:1fr;\n\n\n}\n\n\n\n.desceci-ink-testing__title{\n\n\nfont-size:30px;\n\n\n}\n\n\n}\n\n\n\n</style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_djKKCe": {
       "type": "custom-liquid",
       "name": "WHY CHOSS",
@@ -112,11 +132,11 @@
         "padding_bottom": 0
       }
     },
-    "custom_liquid_BYthXQ": {
+    "custom_liquid_zBMLaK": {
       "type": "custom-liquid",
-      "name": "Technical Performance & Quality Testing",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<section class=\"desceci-ink-testing\">\n\n<div class=\"desceci-ink-testing__inner\">\n\n\n<div class=\"desceci-ink-testing__header\">\n\n<span class=\"desceci-ink-testing__eyebrow\">\nDESCECI DTF INK TESTING\n</span>\n\n\n<h2 class=\"desceci-ink-testing__title\">\nTechnical Performance & Quality Testing\n</h2>\n\n\n<p class=\"desceci-ink-testing__subtitle\">\nDESCECI DTF Ink is tested for printing stability,\ncolor performance, and transfer reliability.\n</p>\n\n\n</div>\n\n\n\n\n\n<div class=\"desceci-ink-testing__accordion\">\n\n\n\n<!-- 01 -->\n\n<details class=\"desceci-test-item\">\n\n\n<summary class=\"desceci-test-summary\">\n\n<div class=\"desceci-test-summary__left\">\n\n<span class=\"desceci-test-number\">\n01\n</span>\n\n\n<div class=\"desceci-test-heading\">\n\n<h3>\nInk Flow Stability Test\n</h3>\n\n<p>\nContinuous printing performance\n</p>\n\n</div>\n\n</div>\n\n\n<span class=\"desceci-test-toggle\">\n+\n</span>\n\n\n</summary>\n\n\n\n\n\n<div class=\"desceci-test-content\">\n\n\n<p class=\"desceci-test-intro\">\nContinuous printing tests ensure smooth ink delivery and stable output performance across CMYK + White ink channels.\n</p>\n\n\n\n<ul class=\"desceci-test-points\">\n\n<li>\n✓ CMYK + White ink channels tested\n</li>\n\n<li>\n✓ 100㎡ continuous printing test\n</li>\n\n<li>\n✓ Stable printing performance\n</li>\n\n<li>\n✓ No broken lines during testing\n</li>\n\n\n</ul>\n\n\n\n</div>\n\n\n</details>\n\n\n\n\n\n\n\n<!-- 02 -->\n\n\n<details class=\"desceci-test-item\">\n\n\n<summary class=\"desceci-test-summary\">\n\n\n<div class=\"desceci-test-summary__left\">\n\n\n<span class=\"desceci-test-number\">\n02\n</span>\n\n\n<div class=\"desceci-test-heading\">\n\n\n<h3>\nNozzle Stability Test\n</h3>\n\n\n<p>\nStandby printhead performance\n</p>\n\n\n</div>\n\n\n</div>\n\n\n\n<span class=\"desceci-test-toggle\">\n+\n</span>\n\n\n</summary>\n\n\n\n\n<div class=\"desceci-test-content\">\n\n\n<p class=\"desceci-test-intro\">\n\nEvaluated after extended standby periods to maintain reliable printhead performance.\n\n</p>\n\n\n\n<ul class=\"desceci-test-points\">\n\n\n<li>\n✓ 12 Hour Standby Test\n</li>\n\n<li>\n✓ 24 Hour Standby Test\n</li>\n\n<li>\n✓ 36 Hour Standby Test\n</li>\n\n<li>\n✓ Stable nozzle performance\n</li>\n\n\n</ul>\n\n\n</div>\n\n\n</details>\n\n\n\n\n\n\n\n<!-- 03 -->\n\n\n<details class=\"desceci-test-item\">\n\n\n<summary class=\"desceci-test-summary\">\n\n\n<div class=\"desceci-test-summary__left\">\n\n\n<span class=\"desceci-test-number\">\n03\n</span>\n\n\n\n<div class=\"desceci-test-heading\">\n\n\n<h3>\nColor Fastness Performance\n</h3>\n\n\n<p>\nDurability after transfer\n</p>\n\n\n</div>\n\n\n</div>\n\n\n\n<span class=\"desceci-test-toggle\">\n+\n</span>\n\n\n</summary>\n\n\n\n\n\n<div class=\"desceci-test-content\">\n\n\n<p class=\"desceci-test-intro\">\n\nTested for color durability after transfer application.\n\n</p>\n\n\n\n<ul class=\"desceci-test-points\">\n\n\n<li>\n✓ Dry Rubbing: 4-5 Grade\n</li>\n\n\n<li>\n✓ Wet Rubbing: 3 Grade\n</li>\n\n\n<li>\n✓ Washing Resistance: 4-5 Grade\n</li>\n\n\n<li>\n✓ Excellent color retention\n</li>\n\n\n</ul>\n\n\n<p class=\"desceci-test-note\">\n\nGrade scale: 0-5, with 5 being the best performance.\n\n</p>\n\n\n\n</div>\n\n\n</details>\n\n\n\n\n\n\n\n<!-- 04 -->\n\n\n<details class=\"desceci-test-item\">\n\n\n<summary class=\"desceci-test-summary\">\n\n\n<div class=\"desceci-test-summary__left\">\n\n\n<span class=\"desceci-test-number\">\n04\n</span>\n\n\n\n<div class=\"desceci-test-heading\">\n\n\n<h3>\nApplication Compatibility\n</h3>\n\n\n<p>\nSystem-level print application tests\n</p>\n\n\n</div>\n\n\n</div>\n\n\n\n<span class=\"desceci-test-toggle\">\n+\n</span>\n\n\n</summary>\n\n\n\n\n<div class=\"desceci-test-content\">\n\n\n<p class=\"desceci-test-intro\">\n\nVerified across key DTF application scenarios for reliable production performance.\n\n</p>\n\n\n\n<ul class=\"desceci-test-points\">\n\n\n<li>\n✓ Color density testing\n</li>\n\n\n<li>\n✓ White & color ink compatibility\n</li>\n\n\n<li>\n✓ Ink mixing stability\n</li>\n\n\n<li>\n✓ High ink volume printing test\n</li>\n\n\n<li>\n✓ Clean peel performance\n</li>\n\n\n</ul>\n\n\n\n</div>\n\n\n</details>\n\n\n\n\n</div>\n\n\n</div>\n\n\n</section>\n\n\n\n\n\n\n\n<style>\n\n\n.desceci-ink-testing{\n\n\npadding:55px 20px;\n\nbackground:#ffffff;\n\n\n}\n\n\n\n.desceci-ink-testing__inner{\n\n\nmax-width:1180px;\n\nmargin:auto;\n\n\n}\n\n\n\n\n.desceci-ink-testing__header{\n\n\ntext-align:center;\n\nmargin-bottom:35px;\n\n\n}\n\n\n\n\n.desceci-ink-testing__eyebrow{\n\n\nfont-size:12px;\n\nletter-spacing:3px;\n\nfont-weight:600;\n\ncolor:#6f8664;\n\n\n}\n\n\n\n\n.desceci-ink-testing__title{\n\n\nfont-size:36px;\n\nline-height:1.2;\n\nfont-weight:700;\n\ncolor:#111827;\n\nmargin:12px 0;\n\n\n}\n\n\n\n\n\n.desceci-ink-testing__subtitle{\n\n\nfont-size:16px;\n\nline-height:1.6;\n\ncolor:#6b7280;\n\nmax-width:720px;\n\nmargin:auto;\n\n\n}\n\n\n\n\n\n.desceci-ink-testing__accordion{\n\n\ndisplay:grid;\n\ngrid-template-columns:repeat(2,1fr);\n\ngap:18px;\n\n\n}\n\n\n\n\n\n.desceci-test-item{\n\n\nbackground:#f8fafc;\n\nborder:1px solid #e5e7eb;\n\n\n}\n\n\n\n\n.desceci-test-summary{\n\n\npadding:20px 22px;\n\ndisplay:flex;\n\njustify-content:space-between;\n\nalign-items:center;\n\ncursor:pointer;\n\nlist-style:none;\n\n\n}\n\n\n\n.desceci-test-summary::-webkit-details-marker{\n\n\ndisplay:none;\n\n\n}\n\n\n\n\n.desceci-test-summary__left{\n\n\ndisplay:flex;\n\nalign-items:center;\n\ngap:18px;\n\n\n}\n\n\n\n\n\n.desceci-test-number{\n\n\nfont-size:32px;\n\nfont-weight:700;\n\ncolor:#6f8664;\n\n\n}\n\n\n\n\n.desceci-test-heading h3{\n\n\nfont-size:22px;\n\nline-height:1.25;\n\nfont-weight:700;\n\ncolor:#111827;\n\nmargin:0 0 5px;\n\n\n}\n\n\n\n\n.desceci-test-heading p{\n\n\nfont-size:14px;\n\ncolor:#6b7280;\n\nmargin:0;\n\n\n}\n\n\n\n\n.desceci-test-toggle{\n\n\nfont-size:24px;\n\ncolor:#111827;\n\n\n}\n\n\n\n\n.desceci-test-content{\n\n\npadding:0 22px 22px;\n\nborder-top:1px solid #e5e7eb;\n\n\n}\n\n\n\n\n.desceci-test-intro{\n\n\nfont-size:15px;\n\nline-height:1.7;\n\ncolor:#6b7280;\n\nmargin:18px 0;\n\n\n}\n\n\n\n\n\n.desceci-test-points{\n\n\npadding-left:0;\n\nlist-style:none;\n\nmargin:0;\n\n\n}\n\n\n\n.desceci-test-points li{\n\n\nfont-size:15px;\n\ncolor:#374151;\n\nmargin-bottom:10px;\n\n\n}\n\n\n\n\n.desceci-test-note{\n\n\nfont-size:13px;\n\ncolor:#6b7280;\n\nmargin-top:15px;\n\n\n}\n\n\n\n\n.desceci-test-item[open] .desceci-test-toggle{\n\n\ntransform:rotate(45deg);\n\n\n}\n\n\n\n\n\n@media(max-width:900px){\n\n\n.desceci-ink-testing__accordion{\n\n\ngrid-template-columns:1fr;\n\n\n}\n\n\n\n.desceci-ink-testing__title{\n\n\nfont-size:30px;\n\n\n}\n\n\n}\n\n\n\n</style>",
+        "custom_liquid": "<section class=\"desceci-applications\">\n\n\n<div class=\"application-container\">\n\n\n<div class=\"application-header\">\n\n\n<span>\nDTF INK APPLICATIONS\n</span>\n\n\n<h2>\nDTF Ink For Multiple Printing Applications\n</h2>\n\n\n<p>\nDesigned for apparel businesses, custom printing,\nand professional DTF production environments.\n</p>\n\n\n</div>\n\n\n\n\n<div class=\"application-grid\">\n\n\n\n<!-- Card 1 -->\n\n\n<div class=\"application-card\">\n\n\n<div class=\"application-image\">\n\n<img\nsrc=\"https://cdn.shopify.com/s/files/1/1030/0420/9521/files/e7d2870f-16bc-46d2-b62d-733b8fd562c8.png?v=1789807661\"\nalt=\"DTF ink printing custom t shirts\"\nloading=\"lazy\"\n>\n\n</div>\n\n\n\n<div class=\"application-content\">\n\n\n<h3>\nCustom T-Shirts\n</h3>\n\n\n<p>\nCreate vibrant custom apparel with excellent\ncolor accuracy and smooth transfer results.\n</p>\n\n\n</div>\n\n\n</div>\n\n\n\n\n\n\n<!-- Card 2 -->\n\n\n<div class=\"application-card\">\n\n\n<div class=\"application-image\">\n\n\n<img\nsrc=\"YOUR-HOODIE-IMAGE-URL\"\nalt=\"DTF ink hoodie printing application\"\nloading=\"lazy\"\n>\n\n\n</div>\n\n\n\n\n<div class=\"application-content\">\n\n\n<h3>\nHoodie Printing\n</h3>\n\n\n<p>\nProduce large detailed graphics with strong\ncolor coverage and long-lasting durability.\n</p>\n\n\n</div>\n\n\n</div>\n\n\n\n\n\n\n\n\n<!-- Card 3 -->\n\n\n<div class=\"application-card\">\n\n\n<div class=\"application-image\">\n\n\n<img\nsrc=\"YOUR-BUSINESS-IMAGE-URL\"\nalt=\"DTF printing for small apparel business\"\nloading=\"lazy\"\n>\n\n\n</div>\n\n\n\n\n<div class=\"application-content\">\n\n\n<h3>\nSmall Business Printing\n</h3>\n\n\n<p>\nPerfect for custom orders, online shops,\nand on-demand apparel production.\n</p>\n\n\n</div>\n\n\n</div>\n\n\n\n\n\n\n\n\n<!-- Card 4 -->\n\n\n<div class=\"application-card\">\n\n\n<div class=\"application-image\">\n\n\n<img\nsrc=\"YOUR-PRINT-SHOP-IMAGE-URL\"\nalt=\"professional DTF printing shop\"\nloading=\"lazy\"\n>\n\n\n</div>\n\n\n\n<div class=\"application-content\">\n\n\n<h3>\nProfessional Print Shops\n</h3>\n\n\n<p>\nReliable ink performance for continuous\ncommercial DTF printing.\n</p>\n\n\n</div>\n\n\n</div>\n\n\n\n\n</div>\n\n\n</div>\n\n\n</section>\n\n\n\n\n\n\n<style>\n\n\n.desceci-applications{\n\n\npadding:60px 20px;\n\nbackground:#ffffff;\n\n\n}\n\n\n\n.application-container{\n\n\nmax-width:1200px;\n\nmargin:auto;\n\n\n}\n\n\n\n.application-header{\n\n\ntext-align:center;\n\nmargin-bottom:35px;\n\n\n}\n\n\n\n\n.application-header span{\n\n\nfont-size:12px;\n\nletter-spacing:3px;\n\nfont-weight:600;\n\ncolor:#6f8664;\n\n\n}\n\n\n\n\n\n.application-header h2{\n\n\nfont-size:36px;\n\nline-height:1.25;\n\nfont-weight:700;\n\ncolor:#111827;\n\nmargin:12px 0;\n\n\n}\n\n\n\n\n\n.application-header p{\n\n\nfont-size:16px;\n\nline-height:1.7;\n\ncolor:#6b7280;\n\nmax-width:720px;\n\nmargin:auto;\n\n\n}\n\n\n\n\n.application-grid{\n\n\ndisplay:grid;\n\ngrid-template-columns:repeat(4,1fr);\n\ngap:20px;\n\n\n}\n\n\n\n\n\n.application-card{\n\n\nborder:1px solid #e5e7eb;\n\nbackground:#ffffff;\n\noverflow:hidden;\n\ntransition:.3s;\n\n\n}\n\n\n\n\n.application-card:hover{\n\n\ntransform:translateY(-4px);\n\nbox-shadow:0 10px 25px rgba(0,0,0,.06);\n\n\n}\n\n\n\n\n.application-image{\n\n\nheight:230px;\n\nbackground:#f8fafc;\n\noverflow:hidden;\n\n\n}\n\n\n\n\n.application-image img{\n\n\nwidth:100%;\n\nheight:100%;\n\nobject-fit:cover;\n\n\n}\n\n\n\n\n\n.application-content{\n\n\npadding:22px;\n\n\n}\n\n\n\n\n\n.application-content h3{\n\n\nfont-size:22px;\n\nline-height:1.3;\n\nfont-weight:700;\n\ncolor:#111827;\n\nmargin:0 0 10px;\n\n\n}\n\n\n\n\n.application-content p{\n\n\nfont-size:15px;\n\nline-height:1.65;\n\ncolor:#6b7280;\n\nmargin:0;\n\n\n}\n\n\n\n\n\n@media(max-width:1000px){\n\n\n.application-grid{\n\n\ngrid-template-columns:repeat(2,1fr);\n\n\n}\n\n\n}\n\n\n\n\n@media(max-width:600px){\n\n\n.application-grid{\n\n\ngrid-template-columns:1fr;\n\n\n}\n\n\n\n.application-header h2{\n\n\nfont-size:30px;\n\n\n}\n\n\n}\n\n\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -150,155 +170,6 @@
         "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 28
-      }
-    },
-    "product_advantages_atd6MJ": {
-      "type": "product-advantages",
-      "blocks": {
-        "advantage_item_dpRABR": {
-          "type": "advantage_item",
-          "settings": {
-            "image": "shopify://shop_images/32a04a92-7bc6-4b72-997b-078ff76a9420.png",
-            "image_alt": "",
-            "item_title": "PRINT",
-            "item_description": "High color density for brilliant and vivid prints.",
-            "icon_1": "shopify://shop_images/15885382-0ac7-4ffa-ac23-42199ea71682.png",
-            "icon_label_1": "50+ Wash Cycles Tested",
-            "icon_2": "shopify://shop_images/a1786707-d226-42fe-b5fb-957387ae30ce.png",
-            "icon_label_2": "Fade Resistant",
-            "icon_3": "shopify://shop_images/791c9706-06fe-45ed-a8a8-725a58376122.png",
-            "icon_label_3": "Eco-Friendly Inks",
-            "icon_4": "shopify://shop_images/d38aa5f1-b672-485d-8efd-ad4d33790baf.png",
-            "icon_label_4": "Long-Lasting Prints"
-          }
-        },
-        "advantage_item_bTLtmw": {
-          "type": "advantage_item",
-          "settings": {
-            "image": "shopify://shop_images/e4ff946d-4335-446c-87c3-0ff3d02b7a80.png",
-            "image_alt": "",
-            "item_title": "TRANSFER",
-            "item_description": "Excellent flowability, no clogging, no fading.",
-            "icon_1": "shopify://shop_images/807d218d-f83b-4753-b567-816e55abfc91.png",
-            "icon_label_1": "T-SHIRTS",
-            "icon_2": "shopify://shop_images/bb38e394-b7dd-472f-a1d1-60599c8c3437.png",
-            "icon_label_2": "Canvas Bags",
-            "icon_3": "shopify://shop_images/c373c0b3-f399-4048-8bdd-e137636b2250.png",
-            "icon_label_3": "Headwear",
-            "icon_4": "shopify://shop_images/3c0a9680-adea-4d92-9e5c-5abf67fea834.png",
-            "icon_label_4": "Hoodies"
-          }
-        },
-        "advantage_item_6mAhXC": {
-          "type": "advantage_item",
-          "settings": {
-            "image": "shopify://shop_images/4fe72c6e-87c4-43e9-ab61-d32454d8b1fa.png",
-            "image_alt": "",
-            "item_title": "FINISHED",
-            "item_description": "High opacity and strong coverage for perfect white prints.",
-            "icon_1": "shopify://shop_images/1799ecd5-2f20-4cd5-b4ef-5a1588cd2baf.png",
-            "icon_label_1": "Vibrant Colors",
-            "icon_2": "shopify://shop_images/a46eb8ae-e03e-47c8-88c0-cf1138daac04.png",
-            "icon_label_2": "Smooth Printing",
-            "icon_3": "shopify://shop_images/c66ef3de-a3d9-4f76-b8dc-1a1819b2896b.png",
-            "icon_label_3": "Stable White Ink",
-            "icon_4": "shopify://shop_images/9b5e2c48-fb4b-42d1-9080-1aa7fd0c1cca.png",
-            "icon_label_4": "Excellent Wash Durability"
-          }
-        }
-      },
-      "block_order": [
-        "advantage_item_dpRABR",
-        "advantage_item_bTLtmw",
-        "advantage_item_6mAhXC"
-      ],
-      "name": "产品优势",
-      "settings": {
-        "heading": "FROM PRINT TO PERFECTION",
-        "heading_color": "#121212",
-        "heading_size": 36,
-        "mobile_heading_size": 26,
-        "description": "VIBRANT COLORS. STRONG ADHESION. LONG LASTING.",
-        "description_color": "#4b5563",
-        "description_size": 14,
-        "section_background": "#f7f8f8",
-        "card_background": "#ffffff",
-        "card_border_color": "#e5e7eb",
-        "card_radius": 16,
-        "card_title_color": "#121212",
-        "card_title_size": 22,
-        "title_underline_color": "#11a9a4",
-        "card_description_color": "#6b7280",
-        "card_description_size": 14,
-        "icon_size": 34,
-        "icon_label_color": "#4b5563",
-        "icon_label_size": 12,
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "mobile_padding_top": 20,
-        "mobile_padding_bottom": 20
-      }
-    },
-    "collapsible_content_fdKQDU": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_w6Y9t6": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Product Details",
-            "icon": "check_mark",
-            "row_content": "<p>DESCECI Premium DTF Ink is formulated for professional Direct to Film printing, delivering vibrant color reproduction, smooth ink flow, and consistent printing performance.</p><ul><li><strong>Ink Type:</strong> Water-Based Pigment Ink</li><li><strong>Colors:</strong> Cyan, Magenta, Yellow, Black & White</li><li><strong>Available Sizes:</strong> 250ML / 500ML / 1000ML</li><li><strong>Application:</strong> Direct to Film (DTF) Printing</li><li><strong>Recommended For:</strong> T-Shirts, Hoodies, Tote Bags, Sweatshirts & More</li></ul>",
-            "page": ""
-          }
-        },
-        "collapsible_row_DRx9MH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Printer Compatibility",
-            "icon": "check_mark",
-            "row_content": "<p>Designed for a wide range of DTF printing systems.</p><ul><li>XP600 Print Heads</li><li>I3200 Print Heads</li><li>Epson-Based DTF Printers</li><li>Most DTF Printing Systems</li></ul><p>For best results, always confirm ink compatibility with your printer model and existing ink system before use.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_CVPTEf": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Storage & Usage",
-            "icon": "check_mark",
-            "row_content": "<p>For consistent printing performance, store DTF ink properly and follow your printer manufacturer's maintenance recommendations.</p><ul><li>Store at <strong>59°F–86°F (15°C–30°C)</strong></li><li>Keep away from direct sunlight and excessive heat</li><li>Keep the bottle tightly sealed when not in use</li><li>Shake white ink thoroughly before use</li><li>Avoid mixing with incompatible ink formulations</li><li>Recommended shelf life: <strong>12 months</strong> when properly stored</li></ul><p>For best results, maintain regular circulation and printer maintenance, especially when using white DTF ink.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_hmFQ83": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Shipping & Support",
-            "icon": "check_mark",
-            "row_content": "<p>Every bottle is securely packaged to help prevent leaks and damage during transportation.</p><p>If your order arrives damaged, leaking, or with an incorrect item, please contact our customer support team with your order number and photos of the package and product.</p><p>Our team is available to help with product questions, compatibility concerns, and order support.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_w6Y9t6",
-        "collapsible_row_DRx9MH",
-        "collapsible_row_CVPTEf",
-        "collapsible_row_hmFQ83"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
-      "settings": {
-        "caption": "About DESCECI DTF Ink",
-        "heading": "DTF Ink Product Information",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
-        "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "newsletter_77jK67": {
@@ -335,30 +206,18 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "contact_form_m3iNWa": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
-      "settings": {
-        "heading": "Contact form",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "main",
+    "custom_liquid_VW3Ngf",
+    "custom_liquid_BYthXQ",
     "custom_liquid_djKKCe",
     "custom_liquid_jixTAN",
     "custom_liquid_dT9UjK",
-    "custom_liquid_BYthXQ",
+    "custom_liquid_zBMLaK",
     "disclosures",
     "related-products",
-    "product_advantages_atd6MJ",
-    "collapsible_content_fdKQDU",
-    "newsletter_77jK67",
-    "contact_form_m3iNWa"
+    "newsletter_77jK67"
   ]
 }
