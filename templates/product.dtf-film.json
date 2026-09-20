@@ -132,6 +132,26 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_PCMUaQ": {
+      "type": "custom-liquid",
+      "name": "Fast U.S. Shipping & Local Pickup",
+      "settings": {
+        "custom_liquid": "<style>\n  .desceci-film-shipping {\n    width: 100%;\n    padding: 62px 20px;\n    background: #15243a;\n    font-family: Helvetica, Arial, sans-serif;\n  }\n\n  .desceci-film-shipping__wrapper {\n    max-width: 1180px;\n    margin: 0 auto;\n  }\n\n  .desceci-film-shipping__content {\n    text-align: center;\n  }\n\n  .desceci-film-shipping__eyebrow {\n    margin: 0 0 13px;\n    color: #a7d58d;\n    font-size: 13px;\n    font-weight: 700;\n    letter-spacing: 1.6px;\n    text-transform: uppercase;\n  }\n\n  .desceci-film-shipping h2 {\n    margin: 0 0 15px;\n    color: #ffffff;\n    font-size: 34px;\n    font-weight: 700;\n    line-height: 1.2;\n  }\n\n  .desceci-film-shipping__description {\n    max-width: 720px;\n    margin: 0 auto;\n    color: #dce5ed;\n    font-size: 16px;\n    line-height: 1.7;\n  }\n\n  .desceci-film-shipping__features {\n    max-width: 900px;\n    margin: 38px auto 0;\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    border-top: 1px solid rgba(255, 255, 255, .2);\n    border-bottom: 1px solid rgba(255, 255, 255, .2);\n  }\n\n  .desceci-film-shipping__feature {\n    padding: 24px 18px;\n    border-right: 1px solid rgba(255, 255, 255, .2);\n  }\n\n  .desceci-film-shipping__feature:last-child {\n    border-right: 0;\n  }\n\n  .desceci-film-shipping__feature strong {\n    display: block;\n    margin-bottom: 8px;\n    color: #a7d58d;\n    font-size: 17px;\n    font-weight: 700;\n  }\n\n  .desceci-film-shipping__feature span {\n    color: #dce5ed;\n    font-size: 14px;\n    line-height: 1.5;\n  }\n\n  @media screen and (max-width: 700px) {\n    .desceci-film-shipping {\n      padding: 52px 18px;\n    }\n\n    .desceci-film-shipping h2 {\n      font-size: 29px;\n    }\n\n    .desceci-film-shipping__description {\n      font-size: 15px;\n    }\n\n    .desceci-film-shipping__features {\n      grid-template-columns: 1fr;\n    }\n\n    .desceci-film-shipping__feature {\n      border-right: 0;\n      border-bottom: 1px solid rgba(255, 255, 255, .2);\n    }\n\n    .desceci-film-shipping__feature:last-child {\n      border-bottom: 0;\n    }\n  }\n</style>\n\n<section class=\"desceci-film-shipping\">\n  <div class=\"desceci-film-shipping__wrapper\">\n\n    <div class=\"desceci-film-shipping__content\">\n      <p class=\"desceci-film-shipping__eyebrow\">\n        FAST U.S. FULFILLMENT\n      </p>\n\n      <h2>\n        Get Your DTF Film Ready for Production\n      </h2>\n\n      <p class=\"desceci-film-shipping__description\">\n        DTF Film orders ship from our Baldwin Park, California warehouse. Same-day shipping is available for qualifying orders, and local pickup is also supported.\n      </p>\n    </div>\n\n    <div class=\"desceci-film-shipping__features\">\n\n      <div class=\"desceci-film-shipping__feature\">\n        <strong>California Warehouse</strong>\n        <span>\n          13462 Brooks Dr, Baldwin Park, CA 91706\n        </span>\n      </div>\n\n      <div class=\"desceci-film-shipping__feature\">\n        <strong>Same-Day Shipping</strong>\n        <span>\n          Available for qualifying orders placed during business hours.\n        </span>\n      </div>\n\n      <div class=\"desceci-film-shipping__feature\">\n        <strong>Local Pickup</strong>\n        <span>\n          Pickup is available from our Baldwin Park warehouse.\n        </span>\n      </div>\n\n    </div>\n\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_WtcjVB": {
+      "type": "custom-liquid",
+      "name": "Final Call to Action",
+      "settings": {
+        "custom_liquid": "<style>\n  .desceci-film-final-cta {\n    width: 100%;\n    padding: 72px 20px 82px;\n    background: #ffffff;\n    font-family: Helvetica, Arial, sans-serif;\n  }\n\n  .desceci-film-final-cta__box {\n    max-width: 1080px;\n    margin: 0 auto;\n    padding: 48px 35px;\n    border: 1px solid #dfe7df;\n    border-radius: 8px;\n    background: #f7faf6;\n    text-align: center;\n  }\n\n  .desceci-film-final-cta__eyebrow {\n    margin: 0 0 13px;\n    color: #5c9143;\n    font-size: 13px;\n    font-weight: 700;\n    letter-spacing: 1.6px;\n    text-transform: uppercase;\n  }\n\n  .desceci-film-final-cta h2 {\n    margin: 0 0 15px;\n    color: #15243a;\n    font-size: 35px;\n    font-weight: 700;\n    line-height: 1.2;\n  }\n\n  .desceci-film-final-cta p {\n    max-width: 680px;\n    margin: 0 auto;\n    color: #687586;\n    font-size: 16px;\n    line-height: 1.7;\n  }\n\n  .desceci-film-final-cta__buttons {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    gap: 13px;\n    margin-top: 28px;\n  }\n\n  .desceci-film-final-cta__button {\n    min-height: 48px;\n    padding: 0 25px;\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    border-radius: 4px;\n    font-size: 14px;\n    font-weight: 700;\n    text-decoration: none;\n    transition: all .2s ease;\n  }\n\n  .desceci-film-final-cta__button--primary {\n    background: #5c9143;\n    color: #ffffff;\n  }\n\n  .desceci-film-final-cta__button--primary:hover {\n    background: #15243a;\n    color: #ffffff;\n  }\n\n  .desceci-film-final-cta__button--secondary {\n    border: 1px solid #15243a;\n    color: #15243a;\n    background: transparent;\n  }\n\n  .desceci-film-final-cta__button--secondary:hover {\n    background: #15243a;\n    color: #ffffff;\n  }\n\n  @media screen and (max-width: 600px) {\n    .desceci-film-final-cta {\n      padding: 55px 16px 65px;\n    }\n\n    .desceci-film-final-cta__box {\n      padding: 38px 20px;\n    }\n\n    .desceci-film-final-cta h2 {\n      font-size: 29px;\n    }\n\n    .desceci-film-final-cta p {\n      font-size: 15px;\n    }\n\n    .desceci-film-final-cta__buttons {\n      display: grid;\n    }\n\n    .desceci-film-final-cta__button {\n      width: 100%;\n    }\n  }\n</style>\n\n<section class=\"desceci-film-final-cta\">\n  <div class=\"desceci-film-final-cta__box\">\n\n    <p class=\"desceci-film-final-cta__eyebrow\">\n      READY TO PRINT?\n    </p>\n\n    <h2>\n      Choose Reliable DTF Film for Your Next Production Run\n    </h2>\n\n    <p>\n      Get consistent film performance, vibrant print results, and fast U.S. fulfillment from DESCECI.\n    </p>\n\n    <div class=\"desceci-film-final-cta__buttons\">\n      <a\n        href=\"#MainProduct\"\n        class=\"desceci-film-final-cta__button desceci-film-final-cta__button--primary\">\n        Choose Your Film\n      </a>\n\n      <a\n        href=\"/collections/dtf-consumables\"\n        class=\"desceci-film-final-cta__button desceci-film-final-cta__button--secondary\">\n        Shop DTF Consumables\n      </a>\n    </div>\n\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "disclosures": {
       "type": "disclosures",
       "settings": {
@@ -143,70 +163,9 @@
         "padding_bottom": 0
       }
     },
-    "collapsible_content_fdKQDU": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_w6Y9t6": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "1. Product Specifications",
-            "icon": "check_mark",
-            "row_content": "<p><strong>Premium DTF Transfer Film</strong> designed for consistent, high-quality direct-to-film printing.</p><ul><li><strong>Material:</strong> Premium PET Film</li><li><strong>Film Type:</strong> DTF Transfer Film</li><li><strong>Size:</strong> 24\" × 328 ft (60 cm × 100 m)</li><li><strong>Surface:</strong> Specially Coated Printing Surface</li><li><strong>Color:</strong> Translucent / Milky White</li><li><strong>Application:</strong> Direct-to-Film (DTF) Printing</li><li><strong>Compatible Inks:</strong> DTF Pigment Ink</li><li><strong>Compatible Powder:</strong> DTF Hot Melt Adhesive Powder</li></ul><p>Engineered for smooth ink absorption, sharp image details, vibrant color output, and reliable transfer performance.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_DRx9MH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "2. How to Use",
-            "icon": "check_mark",
-            "row_content": "<p>Getting professional DTF transfers is simple:</p><p><strong>Step 1 — Print Your Design</strong><br/>Print your artwork onto the coated side of the DTF film using compatible DTF ink.</p><p><strong>Step 2 — Apply DTF Powder</strong><br/>Apply hot melt adhesive powder evenly while the printed ink is still wet.</p><p><strong>Step 3 — Cure the Transfer</strong><br/>Cure the powder using your DTF curing system according to your equipment and powder specifications.</p><p><strong>Step 4 — Heat Press</strong><br/>Place the finished transfer onto the garment and heat press using the recommended settings for your transfer system.</p><p><strong>Step 5 — Peel & Finish</strong><br/>Peel the film according to the film's recommended peel method. A second press may be used when appropriate for your workflow.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_CVPTEf": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "3. Compatibility & Applications",
-            "icon": "check_mark",
-            "row_content": "<p>DESCECI DTF Film is designed for professional DTF printing workflows and can be used for custom apparel, print shops, small businesses, and commercial production.</p><p><strong>Suitable for decorating:</strong></p><ul><li>T-Shirts</li><li>Hoodies & Sweatshirts</li><li>Tote Bags</li><li>Workwear</li><li>Sportswear</li><li>Custom Apparel</li><li>Promotional Products</li></ul><p><strong>Common Fabric Applications:</strong></p><p>Cotton • Polyester • Cotton/Poly Blends • Canvas</p><p>For best results, always test your complete ink, powder, film, curing, and heat-press settings before production.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_hmFQ83": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "4. Storage & Care",
-            "icon": "check_mark",
-            "row_content": "<p>Proper storage helps maintain consistent film performance.</p><ul><li>Store in a <strong>cool, dry environment</strong></li><li>Keep away from <strong>direct sunlight, heat, and excessive humidity</strong></li><li>Keep the film in its <strong>original protective packaging</strong> when not in use</li><li>Avoid touching the printable surface with bare hands</li><li>Keep the film surface clean and free from dust, moisture, and oil</li><li>Allow film to acclimate to your production environment before printing when necessary</li></ul><p>For consistent results, keep unused film properly sealed between production runs.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_w6Y9t6",
-        "collapsible_row_DRx9MH",
-        "collapsible_row_CVPTEf",
-        "collapsible_row_hmFQ83"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
-      "settings": {
-        "caption": "",
-        "heading": "DTF FILM PRODUCT DETAILS",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
-        "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -258,15 +217,14 @@
         "padding_bottom": 52
       }
     },
-    "contact_form_Q6zmPQ": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
+    "custom_liquid_8wHiW8": {
+      "type": "custom-liquid",
+      "name": "Email Contact",
       "settings": {
-        "heading": "Contact form",
-        "heading_size": "h1",
+        "custom_liquid": "<style>\n  .desceci-film-email {\n    width: 100%;\n    padding: 62px 20px;\n    background: #f7f9fc;\n    font-family: Helvetica, Arial, sans-serif;\n  }\n\n  .desceci-film-email__wrapper {\n    max-width: 900px;\n    margin: 0 auto;\n    text-align: center;\n  }\n\n  .desceci-film-email__icon {\n    width: 58px;\n    height: 58px;\n    margin: 0 auto 20px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border-radius: 50%;\n    background: #e8f1e4;\n    color: #5c9143;\n    font-size: 25px;\n  }\n\n  .desceci-film-email__eyebrow {\n    margin: 0 0 12px;\n    color: #5c9143;\n    font-size: 13px;\n    font-weight: 700;\n    letter-spacing: 1.6px;\n    text-transform: uppercase;\n  }\n\n  .desceci-film-email h2 {\n    margin: 0 0 15px;\n    color: #15243a;\n    font-size: 32px;\n    font-weight: 700;\n    line-height: 1.2;\n  }\n\n  .desceci-film-email p {\n    max-width: 650px;\n    margin: 0 auto;\n    color: #697586;\n    font-size: 16px;\n    line-height: 1.7;\n  }\n\n  .desceci-film-email__button {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    min-height: 48px;\n    margin-top: 25px;\n    padding: 0 25px;\n    border-radius: 4px;\n    background: #15243a;\n    color: #ffffff;\n    font-size: 14px;\n    font-weight: 700;\n    text-decoration: none;\n    transition: background .2s ease;\n  }\n\n  .desceci-film-email__button:hover {\n    background: #5c9143;\n    color: #ffffff;\n  }\n\n  .desceci-film-email__address {\n    display: block;\n    margin-top: 14px;\n    color: #5c9143;\n    font-size: 14px;\n    font-weight: 700;\n    text-decoration: none;\n  }\n\n  @media screen and (max-width: 600px) {\n    .desceci-film-email {\n      padding: 52px 18px;\n    }\n\n    .desceci-film-email h2 {\n      font-size: 28px;\n    }\n\n    .desceci-film-email p {\n      font-size: 15px;\n    }\n\n    .desceci-film-email__button {\n      width: 100%;\n    }\n  }\n</style>\n\n<section class=\"desceci-film-email\">\n  <div class=\"desceci-film-email__wrapper\">\n\n    <div class=\"desceci-film-email__icon\">\n      ✉\n    </div>\n\n    <p class=\"desceci-film-email__eyebrow\">\n      NEED ASSISTANCE?\n    </p>\n\n    <h2>\n      Have Questions About DTF Film?\n    </h2>\n\n    <p>\n      Our team can help you choose the right film size, peel type, and printing setup for your workflow.\n    </p>\n\n    <a\n      href=\"mailto:desceci@outloonk.com\"\n      class=\"desceci-film-email__button\">\n      Email Our Team\n    </a>\n\n    <a\n      href=\"mailto:desceci@outloonk.com\"\n      class=\"desceci-film-email__address\">\n      desceci@outloonk.com\n    </a>\n\n  </div>\n</section>",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -277,10 +235,11 @@
     "custom_liquid_AnpHex",
     "custom_liquid_xPBE7V",
     "custom_liquid_xCg4wg",
+    "custom_liquid_PCMUaQ",
+    "custom_liquid_WtcjVB",
     "disclosures",
-    "collapsible_content_fdKQDU",
     "related-products",
     "newsletter_77jK67",
-    "contact_form_Q6zmPQ"
+    "custom_liquid_8wHiW8"
   ]
 }
