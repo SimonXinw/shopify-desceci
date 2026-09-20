@@ -45,7 +45,7 @@
       "settings": {
         "collection": "dtf-pres-machine",
         "products_to_show": 3,
-        "title": "Shop DTF Trasnsfer",
+        "title": "",
         "heading_size": "h1",
         "description": "<p>Choose the transfer option that works best for your project</p>",
         "show_description": false,
