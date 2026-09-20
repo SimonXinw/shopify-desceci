@@ -102,6 +102,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_qTjU8C": {
+      "type": "custom-liquid",
+      "name": "Fast U.S. Shipping & Local Pickup",
+      "settings": {
+        "custom_liquid": "<style>\n  .desceci-powder-shipping {\n    width: 100%;\n    padding: 64px 20px;\n    background: #eef5f7;\n    font-family: Helvetica, Arial, sans-serif;\n  }\n\n  .desceci-powder-shipping__wrapper {\n    max-width: 1120px;\n    margin: 0 auto;\n    text-align: center;\n  }\n\n  .desceci-powder-shipping__eyebrow {\n    margin: 0 0 12px;\n    color: #5c9143;\n    font-size: 13px;\n    font-weight: 700;\n    letter-spacing: 1.6px;\n    text-transform: uppercase;\n  }\n\n  .desceci-powder-shipping h2 {\n    margin: 0 0 15px;\n    color: #15243a;\n    font-size: 34px;\n    font-weight: 700;\n    line-height: 1.2;\n  }\n\n  .desceci-powder-shipping__description {\n    max-width: 720px;\n    margin: 0 auto;\n    color: #697586;\n    font-size: 16px;\n    line-height: 1.7;\n  }\n\n  .desceci-powder-shipping__details {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    margin: 38px auto 0;\n    max-width: 920px;\n    border-top: 1px solid rgba(21, 36, 58, .18);\n    border-bottom: 1px solid rgba(21, 36, 58, .18);\n  }\n\n  .desceci-powder-shipping__item {\n    padding: 23px 18px;\n    border-right: 1px solid rgba(21, 36, 58, .18);\n  }\n\n  .desceci-powder-shipping__item:last-child {\n    border-right: 0;\n  }\n\n  .desceci-powder-shipping__item strong {\n    display: block;\n    margin-bottom: 8px;\n    color: #15243a;\n    font-size: 17px;\n    font-weight: 700;\n  }\n\n  .desceci-powder-shipping__item span {\n    color: #697586;\n    font-size: 14px;\n    line-height: 1.5;\n  }\n\n  @media screen and (max-width: 700px) {\n    .desceci-powder-shipping {\n      padding: 52px 18px;\n    }\n\n    .desceci-powder-shipping h2 {\n      font-size: 29px;\n    }\n\n    .desceci-powder-shipping__description {\n      font-size: 15px;\n    }\n\n    .desceci-powder-shipping__details {\n      grid-template-columns: 1fr;\n    }\n\n    .desceci-powder-shipping__item {\n      border-right: 0;\n      border-bottom: 1px solid rgba(21, 36, 58, .18);\n    }\n\n    .desceci-powder-shipping__item:last-child {\n      border-bottom: 0;\n    }\n  }\n</style>\n\n<section class=\"desceci-powder-shipping\">\n  <div class=\"desceci-powder-shipping__wrapper\">\n\n    <p class=\"desceci-powder-shipping__eyebrow\">\n      FAST U.S. FULFILLMENT\n    </p>\n\n    <h2>\n      Get DTF Powder Ready for Your Next Production Run\n    </h2>\n\n    <p class=\"desceci-powder-shipping__description\">\n      DTF Powder orders ship from our Baldwin Park, California warehouse. Same-day shipping is available for qualifying orders, and local pickup is also supported.\n    </p>\n\n    <div class=\"desceci-powder-shipping__details\">\n\n      <div class=\"desceci-powder-shipping__item\">\n        <strong>California Warehouse</strong>\n        <span>\n          13462 Brooks Dr, Baldwin Park, CA 91706\n        </span>\n      </div>\n\n      <div class=\"desceci-powder-shipping__item\">\n        <strong>Same-Day Shipping</strong>\n        <span>\n          Available for qualifying orders placed during business hours.\n        </span>\n      </div>\n\n      <div class=\"desceci-powder-shipping__item\">\n        <strong>Local Pickup</strong>\n        <span>\n          Pickup is available from our Baldwin Park warehouse.\n        </span>\n      </div>\n\n    </div>\n\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "custom_liquid_caLUHa": {
       "type": "custom-liquid",
       "name": "How DTF Powder Works",
@@ -142,11 +152,21 @@
         "padding_bottom": 52
       }
     },
-    "custom_liquid_qTjU8C": {
+    "custom_liquid_cAqMym": {
       "type": "custom-liquid",
-      "name": "Fast U.S. Shipping & Local Pickup",
+      "name": "Email Contact",
       "settings": {
-        "custom_liquid": "<style>\n  .desceci-powder-shipping {\n    width: 100%;\n    padding: 64px 20px;\n    background: #eef5f7;\n    font-family: Helvetica, Arial, sans-serif;\n  }\n\n  .desceci-powder-shipping__wrapper {\n    max-width: 1120px;\n    margin: 0 auto;\n    text-align: center;\n  }\n\n  .desceci-powder-shipping__eyebrow {\n    margin: 0 0 12px;\n    color: #5c9143;\n    font-size: 13px;\n    font-weight: 700;\n    letter-spacing: 1.6px;\n    text-transform: uppercase;\n  }\n\n  .desceci-powder-shipping h2 {\n    margin: 0 0 15px;\n    color: #15243a;\n    font-size: 34px;\n    font-weight: 700;\n    line-height: 1.2;\n  }\n\n  .desceci-powder-shipping__description {\n    max-width: 720px;\n    margin: 0 auto;\n    color: #697586;\n    font-size: 16px;\n    line-height: 1.7;\n  }\n\n  .desceci-powder-shipping__details {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    margin: 38px auto 0;\n    max-width: 920px;\n    border-top: 1px solid rgba(21, 36, 58, .18);\n    border-bottom: 1px solid rgba(21, 36, 58, .18);\n  }\n\n  .desceci-powder-shipping__item {\n    padding: 23px 18px;\n    border-right: 1px solid rgba(21, 36, 58, .18);\n  }\n\n  .desceci-powder-shipping__item:last-child {\n    border-right: 0;\n  }\n\n  .desceci-powder-shipping__item strong {\n    display: block;\n    margin-bottom: 8px;\n    color: #15243a;\n    font-size: 17px;\n    font-weight: 700;\n  }\n\n  .desceci-powder-shipping__item span {\n    color: #697586;\n    font-size: 14px;\n    line-height: 1.5;\n  }\n\n  @media screen and (max-width: 700px) {\n    .desceci-powder-shipping {\n      padding: 52px 18px;\n    }\n\n    .desceci-powder-shipping h2 {\n      font-size: 29px;\n    }\n\n    .desceci-powder-shipping__description {\n      font-size: 15px;\n    }\n\n    .desceci-powder-shipping__details {\n      grid-template-columns: 1fr;\n    }\n\n    .desceci-powder-shipping__item {\n      border-right: 0;\n      border-bottom: 1px solid rgba(21, 36, 58, .18);\n    }\n\n    .desceci-powder-shipping__item:last-child {\n      border-bottom: 0;\n    }\n  }\n</style>\n\n<section class=\"desceci-powder-shipping\">\n  <div class=\"desceci-powder-shipping__wrapper\">\n\n    <p class=\"desceci-powder-shipping__eyebrow\">\n      FAST U.S. FULFILLMENT\n    </p>\n\n    <h2>\n      Get DTF Powder Ready for Your Next Production Run\n    </h2>\n\n    <p class=\"desceci-powder-shipping__description\">\n      DTF Powder orders ship from our Baldwin Park, California warehouse. Same-day shipping is available for qualifying orders, and local pickup is also supported.\n    </p>\n\n    <div class=\"desceci-powder-shipping__details\">\n\n      <div class=\"desceci-powder-shipping__item\">\n        <strong>California Warehouse</strong>\n        <span>\n          13462 Brooks Dr, Baldwin Park, CA 91706\n        </span>\n      </div>\n\n      <div class=\"desceci-powder-shipping__item\">\n        <strong>Same-Day Shipping</strong>\n        <span>\n          Available for qualifying orders placed during business hours.\n        </span>\n      </div>\n\n      <div class=\"desceci-powder-shipping__item\">\n        <strong>Local Pickup</strong>\n        <span>\n          Pickup is available from our Baldwin Park warehouse.\n        </span>\n      </div>\n\n    </div>\n\n  </div>\n</section>",
+        "custom_liquid": "<style>\n  .desceci-powder-email {\n    width: 100%;\n    padding: 62px 20px;\n    background: #ffffff;\n    font-family: Helvetica, Arial, sans-serif;\n  }\n\n  .desceci-powder-email__wrapper {\n    max-width: 900px;\n    margin: 0 auto;\n    text-align: center;\n  }\n\n  .desceci-powder-email__icon {\n    width: 58px;\n    height: 58px;\n    margin: 0 auto 20px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border-radius: 50%;\n    background: #e8f1e4;\n    color: #5c9143;\n    font-size: 25px;\n  }\n\n  .desceci-powder-email__eyebrow {\n    margin: 0 0 12px;\n    color: #5c9143;\n    font-size: 13px;\n    font-weight: 700;\n    letter-spacing: 1.6px;\n    text-transform: uppercase;\n  }\n\n  .desceci-powder-email h2 {\n    margin: 0 0 15px;\n    color: #15243a;\n    font-size: 32px;\n    font-weight: 700;\n    line-height: 1.2;\n  }\n\n  .desceci-powder-email p {\n    max-width: 650px;\n    margin: 0 auto;\n    color: #697586;\n    font-size: 16px;\n    line-height: 1.7;\n  }\n\n  .desceci-powder-email__button {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    min-height: 48px;\n    margin-top: 25px;\n    padding: 0 25px;\n    border-radius: 4px;\n    background: #15243a;\n    color: #ffffff;\n    font-size: 14px;\n    font-weight: 700;\n    text-decoration: none;\n    transition: background .2s ease;\n  }\n\n  .desceci-powder-email__button:hover {\n    background: #5c9143;\n    color: #ffffff;\n  }\n\n  .desceci-powder-email__address {\n    display: block;\n    margin-top: 14px;\n    color: #5c9143;\n    font-size: 14px;\n    font-weight: 700;\n    text-decoration: none;\n  }\n\n  @media screen and (max-width: 600px) {\n    .desceci-powder-email {\n      padding: 52px 18px;\n    }\n\n    .desceci-powder-email h2 {\n      font-size: 28px;\n    }\n\n    .desceci-powder-email p {\n      font-size: 15px;\n    }\n\n    .desceci-powder-email__button {\n      width: 100%;\n    }\n  }\n</style>\n\n<section class=\"desceci-powder-email\">\n  <div class=\"desceci-powder-email__wrapper\">\n\n    <div class=\"desceci-powder-email__icon\">\n      ✉\n    </div>\n\n    <p class=\"desceci-powder-email__eyebrow\">\n      NEED ASSISTANCE?\n    </p>\n\n    <h2>\n      Have Questions About DTF Powder?\n    </h2>\n\n    <p>\n      Our team can help you with powder application, curing, storage, and choosing the right supplies for your DTF workflow.\n    </p>\n\n    <a\n      href=\"mailto:desceci@outloonk.com\"\n      class=\"desceci-powder-email__button\">\n      Email Our Team\n    </a>\n\n    <a\n      href=\"mailto:desceci@outloonk.com\"\n      class=\"desceci-powder-email__address\">\n      desceci@outloonk.com\n    </a>\n\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_9HbVRr": {
+      "type": "custom-liquid",
+      "name": "Final Call to Action",
+      "settings": {
+        "custom_liquid": "<style>\n  .desceci-powder-final-cta {\n    width: 100%;\n    padding: 72px 20px 82px;\n    background: #f7f9fc;\n    font-family: Helvetica, Arial, sans-serif;\n  }\n\n  .desceci-powder-final-cta__box {\n    max-width: 1080px;\n    margin: 0 auto;\n    padding: 48px 35px;\n    border: 1px solid #dfe7df;\n    border-radius: 8px;\n    background: #ffffff;\n    text-align: center;\n  }\n\n  .desceci-powder-final-cta__eyebrow {\n    margin: 0 0 13px;\n    color: #5c9143;\n    font-size: 13px;\n    font-weight: 700;\n    letter-spacing: 1.6px;\n    text-transform: uppercase;\n  }\n\n  .desceci-powder-final-cta h2 {\n    margin: 0 0 15px;\n    color: #15243a;\n    font-size: 35px;\n    font-weight: 700;\n    line-height: 1.2;\n  }\n\n  .desceci-powder-final-cta p {\n    max-width: 680px;\n    margin: 0 auto;\n    color: #697586;\n    font-size: 16px;\n    line-height: 1.7;\n  }\n\n  .desceci-powder-final-cta__buttons {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    gap: 13px;\n    margin-top: 28px;\n  }\n\n  .desceci-powder-final-cta__button {\n    min-height: 48px;\n    padding: 0 25px;\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    border-radius: 4px;\n    font-size: 14px;\n    font-weight: 700;\n    text-decoration: none;\n    transition: all .2s ease;\n  }\n\n  .desceci-powder-final-cta__button--primary {\n    background: #5c9143;\n    color: #ffffff;\n  }\n\n  .desceci-powder-final-cta__button--primary:hover {\n    background: #15243a;\n    color: #ffffff;\n  }\n\n  .desceci-powder-final-cta__button--secondary {\n    border: 1px solid #15243a;\n    background: transparent;\n    color: #15243a;\n  }\n\n  .desceci-powder-final-cta__button--secondary:hover {\n    background: #15243a;\n    color: #ffffff;\n  }\n\n  @media screen and (max-width: 600px) {\n    .desceci-powder-final-cta {\n      padding: 55px 16px 65px;\n    }\n\n    .desceci-powder-final-cta__box {\n      padding: 38px 20px;\n    }\n\n    .desceci-powder-final-cta h2 {\n      font-size: 29px;\n    }\n\n    .desceci-powder-final-cta p {\n      font-size: 15px;\n    }\n\n    .desceci-powder-final-cta__buttons {\n      display: grid;\n    }\n\n    .desceci-powder-final-cta__button {\n      width: 100%;\n    }\n  }\n</style>\n\n<section class=\"desceci-powder-final-cta\">\n  <div class=\"desceci-powder-final-cta__box\">\n\n    <p class=\"desceci-powder-final-cta__eyebrow\">\n      READY TO PRINT?\n    </p>\n\n    <h2>\n      Choose Reliable DTF Powder for Your Next Production Run\n    </h2>\n\n    <p>\n      Create strong, vibrant, and durable DTF transfers with DESCECI Hot Melt Powder.\n    </p>\n\n    <div class=\"desceci-powder-final-cta__buttons\">\n\n      <a\n        href=\"#MainProduct\"\n        class=\"desceci-powder-final-cta__button desceci-powder-final-cta__button--primary\">\n        Add DTF Powder to Cart\n      </a>\n\n      <a\n        href=\"/collections/dtf-consumables\"\n        class=\"desceci-powder-final-cta__button desceci-powder-final-cta__button--secondary\">\n        Shop DTF Consumables\n      </a>\n\n    </div>\n\n  </div>\n</section>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -216,17 +236,6 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "contact_form_hEcELV": {
-      "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
-      "settings": {
-        "heading": "Contact form",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -238,9 +247,10 @@
     "custom_liquid_nqCdKz",
     "custom_liquid_wF8GzD",
     "custom_liquid_zXhJRY",
+    "custom_liquid_cAqMym",
+    "custom_liquid_9HbVRr",
     "disclosures",
     "related-products",
-    "newsletter_77jK67",
-    "contact_form_hEcELV"
+    "newsletter_77jK67"
   ]
 }
