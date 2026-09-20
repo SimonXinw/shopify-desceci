@@ -109,6 +109,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_kf4hgk": {
+      "type": "custom-liquid",
+      "name": "比较",
+      "settings": {
+        "custom_liquid": "<style>\n  .desceci-printhead-compare {\n    width: 100%;\n    padding: 78px 20px;\n    background: #f7f9fc;\n    font-family: Helvetica, Arial, sans-serif;\n  }\n\n  .desceci-printhead-compare__container {\n    max-width: 1180px;\n    margin: 0 auto;\n  }\n\n  .desceci-printhead-compare__header {\n    max-width: 820px;\n    margin: 0 auto 42px;\n    text-align: center;\n  }\n\n  .desceci-printhead-compare__eyebrow {\n    margin: 0 0 13px;\n    color: #5c9143;\n    font-size: 13px;\n    font-weight: 700;\n    letter-spacing: 1.8px;\n    text-transform: uppercase;\n  }\n\n  .desceci-printhead-compare h2 {\n    margin: 0 0 16px;\n    color: #15243a;\n    font-size: 36px;\n    font-weight: 700;\n    line-height: 1.2;\n  }\n\n  .desceci-printhead-compare__intro {\n    margin: 0;\n    color: #697586;\n    font-size: 16px;\n    line-height: 1.7;\n  }\n\n  .desceci-printhead-compare__table-wrap {\n    overflow-x: auto;\n    border: 1px solid #dce4eb;\n    border-radius: 8px;\n    background: #ffffff;\n  }\n\n  .desceci-printhead-compare__table {\n    width: 100%;\n    min-width: 760px;\n    border-collapse: collapse;\n    table-layout: fixed;\n  }\n\n  .desceci-printhead-compare__table th,\n  .desceci-printhead-compare__table td {\n    padding: 19px 18px;\n    border-bottom: 1px solid #e4e9ee;\n    text-align: center;\n    vertical-align: middle;\n    font-size: 14px;\n    line-height: 1.55;\n  }\n\n  .desceci-printhead-compare__table thead th {\n    background: #15243a;\n    color: #ffffff;\n    font-size: 16px;\n    font-weight: 700;\n  }\n\n  .desceci-printhead-compare__table thead th:first-child {\n    width: 24%;\n    background: #eef3f7;\n    color: #15243a;\n    text-align: left;\n  }\n\n  .desceci-printhead-compare__table tbody th {\n    background: #f1f5f8;\n    color: #15243a;\n    font-weight: 700;\n    text-align: left;\n  }\n\n  .desceci-printhead-compare__table tbody td {\n    color: #697586;\n    background: #ffffff;\n  }\n\n  .desceci-printhead-compare__table tbody tr:last-child th,\n  .desceci-printhead-compare__table tbody tr:last-child td {\n    border-bottom: none;\n  }\n\n  .desceci-printhead-compare__recommended {\n    display: inline-block;\n    margin-top: 7px;\n    padding: 4px 9px;\n    border-radius: 3px;\n    background: #e8f1e3;\n    color: #5c9143;\n    font-size: 11px;\n    font-weight: 700;\n    letter-spacing: .4px;\n    text-transform: uppercase;\n  }\n\n  .desceci-printhead-compare__choice {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 16px;\n    margin-top: 24px;\n  }\n\n  .desceci-printhead-compare__choice-item {\n    padding: 20px 18px;\n    border-radius: 6px;\n    background: #ffffff;\n    text-align: center;\n  }\n\n  .desceci-printhead-compare__choice-item strong {\n    display: block;\n    margin-bottom: 7px;\n    color: #15243a;\n    font-size: 15px;\n  }\n\n  .desceci-printhead-compare__choice-item span {\n    color: #697586;\n    font-size: 13px;\n    line-height: 1.55;\n  }\n\n  .desceci-printhead-compare__note {\n    max-width: 900px;\n    margin: 28px auto 0;\n    color: #697586;\n    font-size: 13px;\n    line-height: 1.7;\n    text-align: center;\n  }\n\n  .desceci-printhead-compare__contact {\n    margin-top: 24px;\n    text-align: center;\n  }\n\n  .desceci-printhead-compare__contact a {\n    color: #5c9143;\n    font-size: 14px;\n    font-weight: 700;\n    text-decoration: none;\n  }\n\n  .desceci-printhead-compare__contact a:hover {\n    color: #15243a;\n    text-decoration: underline;\n  }\n\n  @media screen and (max-width: 700px) {\n    .desceci-printhead-compare {\n      padding: 55px 16px;\n    }\n\n    .desceci-printhead-compare h2 {\n      font-size: 29px;\n    }\n\n    .desceci-printhead-compare__intro {\n      font-size: 15px;\n    }\n\n    .desceci-printhead-compare__choice {\n      grid-template-columns: 1fr;\n      gap: 10px;\n    }\n\n    .desceci-printhead-compare__table th,\n    .desceci-printhead-compare__table td {\n      padding: 15px 13px;\n      font-size: 13px;\n    }\n  }\n</style>\n\n<section class=\"desceci-printhead-compare\">\n  <div class=\"desceci-printhead-compare__container\">\n\n    <div class=\"desceci-printhead-compare__header\">\n      <p class=\"desceci-printhead-compare__eyebrow\">\n        FIND THE RIGHT PRINTHEAD\n      </p>\n\n      <h2>\n        I3200 vs I1600 vs XP600 Printheads\n      </h2>\n\n      <p class=\"desceci-printhead-compare__intro\">\n        Compare the three popular printhead options and choose the model\n        that best fits your printer system, production volume, and print quality needs.\n      </p>\n    </div>\n\n    <div class=\"desceci-printhead-compare__table-wrap\">\n      <table class=\"desceci-printhead-compare__table\">\n        <thead>\n          <tr>\n            <th>Comparison</th>\n\n            <th>\n              I3200-A1\n              <span class=\"desceci-printhead-compare__recommended\">\n                High Production\n              </span>\n            </th>\n\n            <th>\n              I1600-A1\n              <span class=\"desceci-printhead-compare__recommended\">\n                Balanced Choice\n              </span>\n            </th>\n\n            <th>\n              XP600\n              <span class=\"desceci-printhead-compare__recommended\">\n                Entry Level\n              </span>\n            </th>\n          </tr>\n        </thead>\n\n        <tbody>\n          <tr>\n            <th>Best For</th>\n            <td>Professional and high-volume DTF production</td>\n            <td>Small to medium production environments</td>\n            <td>Entry-level and light-duty DTF printing</td>\n          </tr>\n\n          <tr>\n            <th>Printhead Class</th>\n            <td>High-output professional printhead</td>\n            <td>Compact professional printhead</td>\n            <td>Compact entry-level printhead</td>\n          </tr>\n\n          <tr>\n            <th>Print Quality</th>\n            <td>Excellent detail and smooth color output</td>\n            <td>Sharp detail with consistent color output</td>\n            <td>Good quality for everyday printing</td>\n          </tr>\n\n          <tr>\n            <th>Production Capacity</th>\n            <td>Best suited for demanding production schedules</td>\n            <td>Suitable for regular small-business production</td>\n            <td>Suitable for lower-volume printing</td>\n          </tr>\n\n          <tr>\n            <th>Main Advantage</th>\n            <td>High nozzle count and strong production capability</td>\n            <td>Good balance of quality, size, and performance</td>\n            <td>Lower entry cost and compact setup</td>\n          </tr>\n\n          <tr>\n            <th>Recommended User</th>\n            <td>Print shops and growing apparel businesses</td>\n            <td>Small businesses and regular DTF users</td>\n            <td>Beginners and occasional users</td>\n          </tr>\n\n          <tr>\n            <th>Important Reminder</th>\n            <td>Requires a compatible I3200 printer system</td>\n            <td>Requires a compatible I1600 printer system</td>\n            <td>Requires a compatible XP600 printer system</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n\n    <div class=\"desceci-printhead-compare__choice\">\n      <div class=\"desceci-printhead-compare__choice-item\">\n        <strong>Choose I3200 if...</strong>\n        <span>\n          You need higher production capacity and professional print performance.\n        </span>\n      </div>\n\n      <div class=\"desceci-printhead-compare__choice-item\">\n        <strong>Choose I1600 if...</strong>\n        <span>\n          You want a balanced option for regular small-business production.\n        </span>\n      </div>\n\n      <div class=\"desceci-printhead-compare__choice-item\">\n        <strong>Choose XP600 if...</strong>\n        <span>\n          You are starting out or mainly handle lower-volume printing jobs.\n        </span>\n      </div>\n    </div>\n\n    <p class=\"desceci-printhead-compare__note\">\n      Compatibility depends on the printer model, wiring, ink system,\n      connector configuration, and control system. Printhead models are not interchangeable\n      unless your printer is specifically designed to support them.\n    </p>\n\n    <div class=\"desceci-printhead-compare__contact\">\n      <a href=\"mailto:desceci@outloonk.com?subject=Printhead%20Model%20Recommendation\">\n        Not sure which model to choose? Email us for help →\n      </a>\n    </div>\n\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_liquid_3QUB9M": {
       "type": "custom-liquid",
       "name": "Compatibility & Installation Guide",
@@ -162,6 +172,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -240,53 +251,19 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "newsletter_77jK67": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_zJHfhF": {
-          "type": "heading",
-          "settings": {
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_9V7QUD": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
-          }
-        },
-        "email_form_tTTRw7": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading_zJHfhF",
-        "paragraph_9V7QUD",
-        "email_form_tTTRw7"
-      ],
-      "name": "t:sections.newsletter.presets.name",
-      "settings": {
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "main",
     "custom_liquid_mmDmRp",
     "custom_liquid_VMn99X",
+    "custom_liquid_kf4hgk",
     "custom_liquid_3QUB9M",
     "custom_liquid_WTgPta",
     "custom_liquid_QFTG8R",
     "custom_liquid_TyYJGW",
     "disclosures",
     "related-products",
-    "collapsible_content_fdKQDU",
-    "newsletter_77jK67"
+    "collapsible_content_fdKQDU"
   ]
 }
