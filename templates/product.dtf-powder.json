@@ -142,6 +142,16 @@
         "padding_bottom": 52
       }
     },
+    "custom_liquid_qTjU8C": {
+      "type": "custom-liquid",
+      "name": "Fast U.S. Shipping & Local Pickup",
+      "settings": {
+        "custom_liquid": "<style>\n  .desceci-powder-shipping {\n    width: 100%;\n    padding: 64px 20px;\n    background: #eef5f7;\n    font-family: Helvetica, Arial, sans-serif;\n  }\n\n  .desceci-powder-shipping__wrapper {\n    max-width: 1120px;\n    margin: 0 auto;\n    text-align: center;\n  }\n\n  .desceci-powder-shipping__eyebrow {\n    margin: 0 0 12px;\n    color: #5c9143;\n    font-size: 13px;\n    font-weight: 700;\n    letter-spacing: 1.6px;\n    text-transform: uppercase;\n  }\n\n  .desceci-powder-shipping h2 {\n    margin: 0 0 15px;\n    color: #15243a;\n    font-size: 34px;\n    font-weight: 700;\n    line-height: 1.2;\n  }\n\n  .desceci-powder-shipping__description {\n    max-width: 720px;\n    margin: 0 auto;\n    color: #697586;\n    font-size: 16px;\n    line-height: 1.7;\n  }\n\n  .desceci-powder-shipping__details {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    margin: 38px auto 0;\n    max-width: 920px;\n    border-top: 1px solid rgba(21, 36, 58, .18);\n    border-bottom: 1px solid rgba(21, 36, 58, .18);\n  }\n\n  .desceci-powder-shipping__item {\n    padding: 23px 18px;\n    border-right: 1px solid rgba(21, 36, 58, .18);\n  }\n\n  .desceci-powder-shipping__item:last-child {\n    border-right: 0;\n  }\n\n  .desceci-powder-shipping__item strong {\n    display: block;\n    margin-bottom: 8px;\n    color: #15243a;\n    font-size: 17px;\n    font-weight: 700;\n  }\n\n  .desceci-powder-shipping__item span {\n    color: #697586;\n    font-size: 14px;\n    line-height: 1.5;\n  }\n\n  @media screen and (max-width: 700px) {\n    .desceci-powder-shipping {\n      padding: 52px 18px;\n    }\n\n    .desceci-powder-shipping h2 {\n      font-size: 29px;\n    }\n\n    .desceci-powder-shipping__description {\n      font-size: 15px;\n    }\n\n    .desceci-powder-shipping__details {\n      grid-template-columns: 1fr;\n    }\n\n    .desceci-powder-shipping__item {\n      border-right: 0;\n      border-bottom: 1px solid rgba(21, 36, 58, .18);\n    }\n\n    .desceci-powder-shipping__item:last-child {\n      border-bottom: 0;\n    }\n  }\n</style>\n\n<section class=\"desceci-powder-shipping\">\n  <div class=\"desceci-powder-shipping__wrapper\">\n\n    <p class=\"desceci-powder-shipping__eyebrow\">\n      FAST U.S. FULFILLMENT\n    </p>\n\n    <h2>\n      Get DTF Powder Ready for Your Next Production Run\n    </h2>\n\n    <p class=\"desceci-powder-shipping__description\">\n      DTF Powder orders ship from our Baldwin Park, California warehouse. Same-day shipping is available for qualifying orders, and local pickup is also supported.\n    </p>\n\n    <div class=\"desceci-powder-shipping__details\">\n\n      <div class=\"desceci-powder-shipping__item\">\n        <strong>California Warehouse</strong>\n        <span>\n          13462 Brooks Dr, Baldwin Park, CA 91706\n        </span>\n      </div>\n\n      <div class=\"desceci-powder-shipping__item\">\n        <strong>Same-Day Shipping</strong>\n        <span>\n          Available for qualifying orders placed during business hours.\n        </span>\n      </div>\n\n      <div class=\"desceci-powder-shipping__item\">\n        <strong>Local Pickup</strong>\n        <span>\n          Pickup is available from our Baldwin Park warehouse.\n        </span>\n      </div>\n\n    </div>\n\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "disclosures": {
       "type": "disclosures",
       "settings": {
@@ -155,6 +165,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -169,68 +180,6 @@
         "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 28
-      }
-    },
-    "collapsible_content_fdKQDU": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_w6Y9t6": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "1. Product Specifications",
-            "icon": "check_mark",
-            "row_content": "<p><strong>DESCECI Premium DTF Powder</strong> is a hot melt adhesive powder designed for professional Direct-to-Film printing, providing reliable bonding and consistent transfer performance.</p><ul><li><strong>Product:</strong> DTF Hot Melt Adhesive Powder</li><li><strong>Material:</strong> TPU Hot Melt Adhesive</li><li><strong>Color:</strong> White</li><li><strong>Application:</strong> Direct-to-Film (DTF) Transfer Printing</li><li><strong>Compatible With:</strong> DTF Film & DTF Pigment Ink</li><li><strong>Suitable For:</strong> Commercial & Small-Business DTF Production</li><li><strong>Available Weight:</strong> 1KG / 5KG / 20KG</li></ul><p>Designed for smooth powder application, strong adhesion, flexible transfers, and dependable wash durability.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_DRx9MH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "2. How to Use",
-            "icon": "check_mark",
-            "row_content": "<p>Follow these steps for consistent DTF transfer results:</p><p><strong>Step 1 — Print Your Design</strong><br/>Print your artwork onto DTF film using compatible DTF pigment ink.</p><p><strong>Step 2 — Apply DTF Powder</strong><br/>While the ink is still wet, apply DTF powder evenly across the entire printed area.</p><p><strong>Step 3 — Remove Excess Powder</strong><br/>Gently shake off excess powder to leave an even adhesive coating over the printed design.</p><p><strong>Step 4 — Cure the Powder</strong><br/>Cure the powdered transfer using your DTF oven, shaker/oven system, or other compatible curing equipment.</p><p><strong>Step 5 — Heat Press</strong><br/>Place the cured transfer onto your garment and heat press according to your film, powder, fabric, and equipment requirements.</p><p>For best results, always test your complete DTF workflow before full production.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_CVPTEf": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "3. Compatible Fabrics & Applications",
-            "icon": "check_mark",
-            "row_content": "<p>DESCECI DTF Powder is designed for a wide range of custom apparel and textile applications.</p><p><strong>Common Fabric Applications:</strong></p><ul><li>Cotton</li><li>Polyester</li><li>Cotton/Poly Blends</li><li>Canvas</li><li>Performance Fabrics*</li></ul><p><strong>Perfect For:</strong></p><p>T-Shirts • Hoodies • Sweatshirts • Tote Bags • Workwear • Sportswear • Custom Apparel</p><p>Ideal for print shops, apparel decorators, custom clothing businesses, and commercial DTF production.</p><p>*Always test the complete transfer process on the specific fabric before production.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_hmFQ83": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "4. Storage & Handling",
-            "icon": "check_mark",
-            "row_content": "<p>Proper storage helps maintain consistent powder performance and prevents moisture-related issues.</p><ul><li>Store in a <strong>cool, dry environment</strong></li><li>Keep away from <strong>direct sunlight, heat, and moisture</strong></li><li>Keep the package <strong>tightly sealed when not in use</strong></li><li>Avoid prolonged exposure to humid environments</li><li>Use clean, dry tools when handling the powder</li><li>Keep unused powder free from dust and contamination</li><li>Reseal immediately after each use</li></ul><p>For best performance, allow the powder and other DTF materials to acclimate to your production environment when necessary.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_w6Y9t6",
-        "collapsible_row_DRx9MH",
-        "collapsible_row_CVPTEf",
-        "collapsible_row_hmFQ83"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
-      "settings": {
-        "caption": "",
-        "heading": "DTF POWDER PRODUCT DETAILS",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
-        "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "newsletter_77jK67": {
@@ -284,13 +233,13 @@
     "main",
     "custom_liquid_XPXDGq",
     "custom_liquid_6zWRCa",
+    "custom_liquid_qTjU8C",
     "custom_liquid_caLUHa",
     "custom_liquid_nqCdKz",
     "custom_liquid_wF8GzD",
     "custom_liquid_zXhJRY",
     "disclosures",
     "related-products",
-    "collapsible_content_fdKQDU",
     "newsletter_77jK67",
     "contact_form_hEcELV"
   ]
