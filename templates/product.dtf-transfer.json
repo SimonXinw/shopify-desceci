@@ -205,6 +205,7 @@
         "row_ima9mt",
         "row_VW7k8U"
       ],
+      "disabled": true,
       "name": "t:sections.multirow.presets.name",
       "settings": {
         "image_height": "medium",
