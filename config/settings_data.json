@@ -172,7 +172,7 @@
             "custom-dtf-transfers",
             "dtf-ink"
           ],
-          "background_color": "#ffffff",
+          "background_color": "#16A34A",
           "font_color": "#121212",
           "agent_invert_activator_colors": false,
           "button_color": "#000000",
