@@ -12,16 +12,16 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
         "vendor": {
           "type": "text",
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
           }
-        },
-        "title": {
-          "type": "title",
-          "settings": {}
         },
         "price": {
           "type": "price",
@@ -68,6 +68,13 @@
             "show_gift_card_recipient": true
           }
         },
+        "custom_liquid_bGTQpj": {
+          "type": "custom_liquid",
+          "name": "运输说明",
+          "settings": {
+            "custom_liquid": "<div class=\"dtf-shipping-box\">\n  <h3>Shipping Information</h3>\n  <p>\n    Orders may ship via <strong>USPS, UPS, or FedEx</strong>.\n    Shipping rates and available services are calculated at checkout based on\n    your delivery address and package details.\n  </p>\n  <p>\n    Orders placed before 2 PM ship the same business day.\n    Free shipping is available on DTF Transfer orders over $150.\n  </p>\n  <p>\n    Local pickup is available in Anaheim, CA.\n  </p>\n</div>\n\n<style>\n  .dtf-shipping-box {\n    margin: 22px 0;\n    padding: 16px 20px;\n    background: #f4faef;\n    border-left: 4px solid #86d83f;\n    border-radius: 6px;\n    color: #333;\n    font-size: 14px;\n    line-height: 1.6;\n  }\n\n  .dtf-shipping-box h3 {\n    margin: 0 0 8px;\n    color: #111;\n    font-size: 18px;\n  }\n\n  .dtf-shipping-box p {\n    margin: 7px 0;\n  }\n</style>"
+          }
+        },
         "icon_with_text_YYxGpe": {
           "type": "icon-with-text",
           "disabled": true,
@@ -109,14 +116,15 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
+        "vendor",
         "price",
         "inventory_hiBiYL",
         "variant_picker",
         "quantity_selector",
         "kixxl_gangify_upload_button_DzGLBY",
         "buy_buttons",
+        "custom_liquid_bGTQpj",
         "icon_with_text_YYxGpe",
         "icon_with_text_UjxtEQ",
         "description",
