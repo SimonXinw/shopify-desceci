@@ -23,8 +23,8 @@
           "type": "title",
           "settings": {}
         },
-        "price": {
-          "type": "price",
+        "description": {
+          "type": "description",
           "settings": {}
         },
         "variant_picker": {
@@ -33,6 +33,10 @@
             "picker_type": "button",
             "swatch_shape": "circle"
           }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
         },
         "uploadly_file_upload_app_block_WcGLFW": {
           "type": "shopify://apps/uploadly-file-upload/blocks/app-block/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
@@ -51,9 +55,12 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
+        "custom_liquid_GHNCUr": {
+          "type": "custom_liquid",
+          "name": "运输说明",
+          "settings": {
+            "custom_liquid": "<div class=\"dtf-shipping-box\">\n  <h3>Shipping Information</h3>\n  <p>\n    Orders may ship via <strong>USPS, UPS, or FedEx</strong>.\n    Shipping rates and available services are calculated at checkout based on\n    your delivery address and package details.\n  </p>\n  <p>\n    Orders placed before 2 PM ship the same business day.\n    Free shipping is available on DTF Transfer orders over $150.\n  </p>\n  <p>\n    Local pickup is available in Anaheim, CA.\n  </p>\n</div>\n\n<style>\n  .dtf-shipping-box {\n    margin: 22px 0;\n    padding: 16px 20px;\n    background: #f4faef;\n    border-left: 4px solid #86d83f;\n    border-radius: 6px;\n    color: #333;\n    font-size: 14px;\n    line-height: 1.6;\n  }\n\n  .dtf-shipping-box h3 {\n    margin: 0 0 8px;\n    color: #111;\n    font-size: 18px;\n  }\n\n  .dtf-shipping-box p {\n    margin: 7px 0;\n  }\n</style>"
+          }
         },
         "share": {
           "type": "share",
@@ -65,12 +72,13 @@
       "block_order": [
         "vendor",
         "title",
-        "price",
+        "description",
         "variant_picker",
+        "price",
         "uploadly_file_upload_app_block_WcGLFW",
         "quantity_selector",
         "buy_buttons",
-        "description",
+        "custom_liquid_GHNCUr",
         "share"
       ],
       "settings": {
