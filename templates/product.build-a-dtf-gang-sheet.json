@@ -27,6 +27,13 @@
           "type": "price",
           "settings": {}
         },
+        "custom_liquid_YRiyNy": {
+          "type": "custom_liquid",
+          "name": "营销活动",
+          "settings": {
+            "custom_liquid": "<!-- DESCECI DTF Transfer Savings -->\n\n<div class=\"desceci-savings-box\">\n\n  <div class=\"desceci-savings-title\">\n    🎁 DTF Transfer Savings\n  </div>\n\n  <div class=\"desceci-savings-subtitle\">\n    The more you order, the more you save!\n  </div>\n\n\n  <div class=\"desceci-savings-grid\">\n\n    <div>\n      <strong>$25+</strong>\n      <span>$3 OFF</span>\n    </div>\n\n    <div>\n      <strong>$40+</strong>\n      <span>$5 OFF</span>\n    </div>\n\n    <div>\n      <strong>$80+</strong>\n      <span>$8 OFF</span>\n    </div>\n\n    <div>\n      <strong>$150+</strong>\n      <span>$15 OFF</span>\n    </div>\n\n    <div>\n      <strong>$300+</strong>\n      <span>$30 OFF</span>\n    </div>\n\n  </div>\n\n\n  <div class=\"desceci-shipping\">\n    🚚 Free shipping on orders $150+\n  </div>\n\n</div>\n\n\n<style>\n\n.desceci-savings-box{\n  margin:18px 0;\n  padding:16px;\n  border:1px solid #d6e3f5;\n  border-radius:12px;\n  background:#f8fbff;\n}\n\n\n.desceci-savings-title{\n  font-size:18px;\n  font-weight:700;\n  color:#102a56;\n  margin-bottom:6px;\n}\n\n\n.desceci-savings-subtitle{\n  font-size:14px;\n  color:#4b5563;\n  margin-bottom:14px;\n}\n\n\n.desceci-savings-grid{\n  display:flex;\n  flex-wrap:wrap;\n  gap:8px;\n}\n\n\n.desceci-savings-grid div{\n  flex:1;\n  min-width:75px;\n  background:#ffffff;\n  border:1px solid #2563eb;\n  border-radius:8px;\n  padding:8px 6px;\n  text-align:center;\n}\n\n\n.desceci-savings-grid strong{\n  display:block;\n  font-size:14px;\n  color:#102a56;\n}\n\n\n.desceci-savings-grid span{\n  display:block;\n  font-size:13px;\n  color:#2563eb;\n  font-weight:600;\n}\n\n\n.desceci-shipping{\n  margin-top:14px;\n  font-size:14px;\n  font-weight:600;\n  color:#2563eb;\n}\n\n\n@media(max-width:768px){\n\n.desceci-savings-grid div{\n  min-width:60px;\n}\n\n.desceci-savings-title{\n  font-size:16px;\n}\n\n}\n\n</style>"
+          }
+        },
         "inventory_hiBiYL": {
           "type": "inventory",
           "disabled": true,
@@ -119,6 +126,7 @@
         "title",
         "vendor",
         "price",
+        "custom_liquid_YRiyNy",
         "inventory_hiBiYL",
         "variant_picker",
         "quantity_selector",
