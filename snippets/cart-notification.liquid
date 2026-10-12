@@ -53,8 +53,99 @@
 
 </div>
 
+<div class="desceci-cart-reward">
 
-      <div class="cart-notification__links">
+{% assign cart_total = cart.total_price | divided_by: 100 %}
+
+<div class="reward-title">
+🎁 DTF Transfer Savings
+</div>
+
+
+{% if cart_total >= 300 %}
+
+<div class="reward-text">
+You've unlocked $30 OFF!
+</div>
+
+
+{% elsif cart_total >= 150 %}
+
+<div class="reward-text">
+You've unlocked $15 OFF!
+</div>
+
+<div class="reward-text">
+Add ${{ 300 | minus: cart_total }} more to unlock $30 OFF
+</div>
+
+
+{% elsif cart_total >= 80 %}
+
+<div class="reward-text">
+You've unlocked $8 OFF!
+</div>
+
+<div class="reward-text">
+Add ${{ 150 | minus: cart_total }} more to unlock $15 OFF
+</div>
+
+
+{% elsif cart_total >= 40 %}
+
+<div class="reward-text">
+You've unlocked $5 OFF!
+</div>
+
+<div class="reward-text">
+Add ${{ 80 | minus: cart_total }} more to unlock $8 OFF
+</div>
+
+
+{% elsif cart_total >= 25 %}
+
+<div class="reward-text">
+You've unlocked $3 OFF!
+</div>
+
+<div class="reward-text">
+Add ${{ 40 | minus: cart_total }} more to unlock $5 OFF
+</div>
+
+
+{% else %}
+
+<div class="reward-text">
+Add ${{ 25 | minus: cart_total }} more to unlock $3 OFF
+</div>
+
+{% endif %}
+
+
+<div class="reward-list">
+
+Rewards:
+
+<br>
+$25 → $3 OFF
+<br>
+$40 → $5 OFF
+<br>
+$80 → $8 OFF
+<br>
+$150 → $15 OFF
+<br>
+$300 → $30 OFF
+
+</div>
+
+
+<div class="reward-shipping">
+🚚 Free shipping on orders $150+
+</div>
+
+
+</div>      <div class="cart-notification__links">
         <a
           href="{{ routes.cart_url }}"
           id="cart-notification-button"
