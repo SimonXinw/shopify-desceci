@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "cart-items": {
@@ -10,31 +19,40 @@
     },
     "cart-footer": {
       "type": "main-cart-footer",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "padding_top": 20,
-        "padding_bottom": 40
-      },
       "blocks": {
         "subtotal": {
           "type": "subtotal",
-          "settings": {
-          }
+          "settings": {}
         },
         "buttons": {
           "type": "buttons",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
         "subtotal",
         "buttons"
-      ]
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 40
+      }
+    },
+    "custom_liquid_Tb8YWf": {
+      "type": "custom-liquid",
+      "name": "满减活动",
+      "settings": {
+        "custom_liquid": "{% comment %}\nDESCECI Cart Rewards - Custom Liquid\nEligible collection: dtf-transfer\nCurrency: USD\n{% endcomment %}\n\n{% assign dc_total = 0 %}\n\n{% for item in cart.items %}\n  {% assign dc_eligible = false %}\n\n  {% for col in item.product.collections %}\n    {% if col.handle == 'dtf-transfer' %}\n      {% assign dc_eligible = true %}\n      {% break %}\n    {% endif %}\n  {% endfor %}\n\n  {% if dc_eligible %}\n    {% assign dc_total = dc_total\n      | plus: item.original_line_price %}\n  {% endif %}\n{% endfor %}\n\n{% assign dc_save = 0 %}\n{% assign dc_code = '' %}\n{% assign dc_next = 2500 %}\n{% assign dc_next_save = 3 %}\n\n{% if dc_total >= 30000 %}\n  {% assign dc_save = 30 %}\n  {% assign dc_code = 'DTF30' %}\n  {% assign dc_next = 0 %}\n{% elsif dc_total >= 15000 %}\n  {% assign dc_save = 15 %}\n  {% assign dc_code = 'DTF15' %}\n  {% assign dc_next = 30000 %}\n  {% assign dc_next_save = 30 %}\n{% elsif dc_total >= 8000 %}\n  {% assign dc_save = 8 %}\n  {% assign dc_code = 'DTF8' %}\n  {% assign dc_next = 15000 %}\n  {% assign dc_next_save = 15 %}\n{% elsif dc_total >= 4000 %}\n  {% assign dc_save = 5 %}\n  {% assign dc_code = 'DTF5' %}\n  {% assign dc_next = 8000 %}\n  {% assign dc_next_save = 8 %}\n{% elsif dc_total >= 2500 %}\n  {% assign dc_save = 3 %}\n  {% assign dc_code = 'DTF3' %}\n  {% assign dc_next = 4000 %}\n  {% assign dc_next_save = 5 %}\n{% endif %}\n\n{% assign dc_progress = 100 %}\n\n{% if dc_next > 0 %}\n  {% assign dc_progress = dc_total\n    | times: 100\n    | divided_by: dc_next %}\n\n  {% if dc_progress > 100 %}\n    {% assign dc_progress = 100 %}\n  {% endif %}\n{% endif %}\n\n<style>\n.dc-liquid-rewards {\n  max-width: 1100px;\n  margin: 22px auto;\n  padding: 0 16px;\n  font-family: \"Helvetica Neue\", Arial, sans-serif;\n  color: #111827;\n}\n.dc-liquid-card {\n  background: #fff;\n  border: 1px solid #dbe3ee;\n  border-radius: 14px;\n  padding: 22px;\n}\n.dc-liquid-card h2 {\n  font-size: 22px;\n  font-weight: 700;\n  margin: 0 0 6px;\n}\n.dc-liquid-sub {\n  font-size: 13px;\n  color: #64748b;\n  margin: 0 0 18px;\n}\n.dc-liquid-row {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 12px;\n  font-size: 14px;\n}\n.dc-liquid-total {\n  font-size: 20px;\n  font-weight: 700;\n}\n.dc-liquid-track {\n  height: 10px;\n  background: #e2e8f0;\n  border-radius: 20px;\n  overflow: hidden;\n  margin: 16px 0;\n}\n.dc-liquid-fill {\n  height: 100%;\n  border-radius: 20px;\n  background: #2563eb;\n  transition: width .3s ease;\n}\n.dc-liquid-success {\n  color: #15803d;\n  font-weight: 700;\n  font-size: 15px;\n  margin: 12px 0;\n}\n.dc-liquid-next {\n  font-size: 14px;\n  color: #334155;\n  line-height: 1.6;\n}\n.dc-liquid-code {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 12px;\n  padding: 13px;\n  background: #eff6ff;\n  border: 1px solid #bfdbfe;\n  border-radius: 9px;\n  margin-top: 15px;\n}\n.dc-liquid-code strong {\n  font-size: 18px;\n  letter-spacing: 1px;\n}\n.dc-liquid-copy {\n  background: #111827;\n  color: #fff;\n  border: none;\n  border-radius: 7px;\n  padding: 9px 14px;\n  cursor: pointer;\n}\n.dc-liquid-tiers {\n  display: grid;\n  grid-template-columns: repeat(5,minmax(0,1fr));\n  gap: 8px;\n  margin-top: 20px;\n}\n.dc-liquid-tier {\n  background: #f8fafc;\n  border: 1px solid #e2e8f0;\n  padding: 11px 5px;\n  border-radius: 8px;\n  text-align: center;\n}\n.dc-liquid-tier span {\n  display: block;\n  color: #64748b;\n  font-size: 11px;\n}\n.dc-liquid-tier strong {\n  display: block;\n  color: #2563eb;\n  margin-top: 5px;\n  font-size: 16px;\n}\n.dc-liquid-note {\n  font-size: 11px;\n  color: #64748b;\n  line-height: 1.7;\n  border-top: 1px solid #e2e8f0;\n  padding-top: 13px;\n  margin-top: 18px;\n}\n@media(max-width:600px) {\n  .dc-liquid-rewards {padding:0 10px;}\n  .dc-liquid-card {padding:15px;}\n  .dc-liquid-card h2 {font-size:19px;}\n  .dc-liquid-tiers {\n    grid-template-columns:repeat(3,minmax(0,1fr));\n  }\n  .dc-liquid-total {font-size:17px;}\n}\n</style>\n\n<div class=\"dc-liquid-rewards\"\n     data-dc-liquid\n     data-dc-section=\"{{ section.id | escape }}\">\n\n  <div class=\"dc-liquid-card\" data-dc-inner>\n\n    <h2>BUY MORE, SAVE MORE</h2>\n\n    <p class=\"dc-liquid-sub\">\n      Save up to $30 on Custom DTF Transfers\n    </p>\n\n    <div class=\"dc-liquid-row\">\n      <span>Eligible DTF Transfers Subtotal</span>\n      <strong class=\"dc-liquid-total\">\n        {{ dc_total | money }}\n      </strong>\n    </div>\n\n    <div class=\"dc-liquid-track\"\n         role=\"progressbar\"\n         aria-label=\"Discount progress\"\n         aria-valuemin=\"0\"\n         aria-valuemax=\"100\"\n         aria-valuenow=\"{{ dc_progress }}\">\n      <div class=\"dc-liquid-fill\"\n           style=\"width:{{ dc_progress }}%\">\n      </div>\n    </div>\n\n    {% if dc_save > 0 %}\n      <p class=\"dc-liquid-success\">\n        ✓ You've unlocked ${{ dc_save }} OFF!\n      </p>\n\n      <div class=\"dc-liquid-code\">\n        <div>\n          <small>Your Discount Code</small>\n          <br>\n          <strong>{{ dc_code }}</strong>\n        </div>\n        <button type=\"button\"\n                class=\"dc-liquid-copy\"\n                data-dc-code=\"{{ dc_code }}\">\n          Copy Code\n        </button>\n      </div>\n    {% endif %}\n\n    {% if dc_next > 0 %}\n      {% assign dc_missing = dc_next\n        | minus: dc_total %}\n\n      <p class=\"dc-liquid-next\">\n        Add <strong>{{ dc_missing | money }}</strong>\n        more in DTF Transfers to unlock\n        <strong>${{ dc_next_save }} OFF!</strong>\n      </p>\n    {% else %}\n      <p class=\"dc-liquid-success\">\n        Congratulations! Highest reward unlocked!\n      </p>\n    {% endif %}\n\n    <div class=\"dc-liquid-tiers\">\n      {% assign goals = '25,40,80,150,300' | split: ',' %}\n      {% assign rewards = '3,5,8,15,30' | split: ',' %}\n\n      {% for goal in goals %}\n        <div class=\"dc-liquid-tier\">\n          <span>Spend ${{ goal }}+</span>\n          <strong>\n            ${{ rewards[forloop.index0] }} OFF\n          </strong>\n        </div>\n      {% endfor %}\n    </div>\n\n    <div class=\"dc-liquid-note\">\n      Free shipping on eligible orders $150+.\n      <br>\n      DTF Transfers only. One qualifying code\n      per order. Discounts cannot be stacked.\n      Enter your code at checkout.\n      Final eligibility is verified at checkout.\n    </div>\n\n  </div>\n</div>\n\n<script>\n(function () {\n  const all = document.querySelectorAll(\n    '[data-dc-liquid]'\n  );\n  const root = all[all.length - 1];\n\n  if (!root || root.dataset.ready === '1') return;\n  root.dataset.ready = '1';\n\n  const sectionId = root.dataset.dcSection;\n  const shopRoot = window.Shopify?.routes?.root || '/';\n  let lastCart = '';\n  let loading = false;\n\n  async function update() {\n    if (loading || document.hidden || !root.isConnected) {\n      return;\n    }\n\n    loading = true;\n\n    try {\n      const cartResponse = await fetch(\n        shopRoot + 'cart.js',\n        {cache:'no-store'}\n      );\n\n      if (!cartResponse.ok) return;\n\n      const cart = await cartResponse.json();\n\n      const signature = JSON.stringify({\n        items:cart.items.map(i => [\n          i.key, i.quantity,\n          i.original_line_price, i.line_price\n        ]),\n        discount:cart.total_discount\n      });\n\n      if (signature === lastCart) return;\n\n      const response = await fetch(\n        shopRoot + 'cart?section_id=' +\n        encodeURIComponent(sectionId),\n        {cache:'no-store'}\n      );\n\n      if (!response.ok) return;\n\n      const html = await response.text();\n      const doc = new DOMParser()\n        .parseFromString(html,'text/html');\n\n      const fresh = doc.querySelector(\n        '[data-dc-liquid]'\n      );\n\n      const source = fresh?.querySelector(\n        '[data-dc-inner]'\n      );\n\n      const target = root.querySelector(\n        '[data-dc-inner]'\n      );\n\n      if (!source || !target) return;\n\n      target.innerHTML = source.innerHTML;\n      lastCart = signature;\n\n    } catch (error) {\n      console.warn('DESCECI reward refresh:',error);\n    } finally {\n      loading = false;\n    }\n  }\n\n  root.addEventListener('click', async event => {\n    const btn = event.target.closest(\n      '[data-dc-code]'\n    );\n    if (!btn) return;\n\n    const code = btn.dataset.dcCode;\n    try {\n      await navigator.clipboard.writeText(code);\n      btn.textContent = 'Copied!';\n    } catch(e) {\n      btn.textContent = code;\n    }\n  });\n\n  const timer = setInterval(() => {\n    if (!root.isConnected) {\n      clearInterval(timer);\n      return;\n    }\n    update();\n  }, 2000);\n\n  document.addEventListener(\n    'visibilitychange',\n    () => {\n      if (!document.hidden) update();\n    }\n  );\n\n  update();\n})();\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "cart-items",
-    "cart-footer"
+    "cart-footer",
+    "custom_liquid_Tb8YWf"
   ]
 }
