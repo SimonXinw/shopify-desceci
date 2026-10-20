@@ -186,6 +186,11 @@
           "agent_activator_font_size": 24,
           "agent_border_radius": 24
         }
+      },
+      "11068332061543699368": {
+        "type": "shopify://apps/booster-page-speed-optimizer/blocks/app-embed/d920faf3-7c60-423a-9636-22618b5561b5",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
